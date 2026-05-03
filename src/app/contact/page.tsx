@@ -10,13 +10,13 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--color-surface)]">
+      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-6">
               聯絡我們
             </h1>
-            <p className="text-xl text-[var(--color-text-secondary)]">
+            <p className="text-xl text-[var(--text-secondary)]">
               有任何需求或疑問？歡迎透過以下方式與我們聯繫
             </p>
           </div>
@@ -24,37 +24,37 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-[var(--bg)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-[var(--color-primary)] mb-8">
+              <h2 className="text-2xl font-bold text-[var(--primary)] mb-8">
                 聯絡資訊
               </h2>
 
               <div className="space-y-6 mb-12">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-[var(--color-accent)]" />
+                  <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--color-primary)] mb-1">地址</h3>
-                    <p className="text-[var(--color-text-secondary)]">
+                    <h3 className="font-bold text-[var(--primary)] mb-1">地址</h3>
+                    <p className="text-[var(--text-secondary)]">
                       台中市烏日區環中路八段332巷118弄35號
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-[var(--color-accent)]" />
+                  <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--color-primary)] mb-1">電話</h3>
+                    <h3 className="font-bold text-[var(--primary)] mb-1">電話</h3>
                     <a
                       href="tel:0423356451"
-                      className="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+                      className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                     >
                       04-23356451
                     </a>
@@ -62,14 +62,14 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-[var(--color-accent)]" />
+                  <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--color-primary)] mb-1">Email</h3>
+                    <h3 className="font-bold text-[var(--primary)] mb-1">Email</h3>
                     <a
                       href="mailto:agesmyth@gmail.com"
-                      className="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+                      className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                     >
                       agesmyth@gmail.com
                     </a>
@@ -77,12 +77,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-[var(--color-accent)]" />
+                  <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-[var(--accent)]" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--color-primary)] mb-1">營業時間</h3>
-                    <p className="text-[var(--color-text-secondary)]">
+                    <h3 className="font-bold text-[var(--primary)] mb-1">營業時間</h3>
+                    <p className="text-[var(--text-secondary)]">
                       週一至週六 08:00 - 17:30
                     </p>
                   </div>
@@ -90,9 +90,9 @@ export default function ContactPage() {
               </div>
 
               {/* Map */}
-              <div className="aspect-video rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden">
+              <div className="aspect-video rounded-xl bg-[var(--surface)] border border-[var(--border)] overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0!2d120.6!3d24.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA2JzAwLjAiTiAxMjDCsDM2JzAwLjAiRQ!5e0!3m2!1szh-TW!2stw!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3640.97!2d120.6218!3d24.1154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e7b8b8b8b8b!2z5a2455Sc5biC5b-X5pyI5bKz5bCP5Y-w!5e0!3m2!1szh-TW!2stw!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
