@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { CSSProperties } from "react";
 
 export const metadata: Metadata = {
@@ -38,15 +39,15 @@ export default function GalleryPage() {
               // 奇數列群（1,3,5...）→ 從 col 1 開始（第 7 格空）
               const colStart = rowGroup % 2 === 0 ? posInRow + 2 : posInRow + 1;
               return (
-                <div
+                <Link
                   key={work.id}
-                  className="aspect-[279/186] bg-cover bg-center md:col-start-[var(--col-start)]"
+                  href={`/works/${work.id}`}
+                  className="aspect-[279/186] bg-cover bg-center md:col-start-[var(--col-start)] block hover:opacity-80 transition-opacity"
                   style={{
                     backgroundImage: `url(${work.image})`,
                     "--col-start": colStart,
                   } as CSSProperties}
-                  role="img"
-                  aria-label={`偉勇工業社加工實績 ${work.id}`}
+                  aria-label={`查看實績 ${work.id} 詳細`}
                 />
               );
             })}
