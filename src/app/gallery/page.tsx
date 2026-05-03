@@ -29,7 +29,7 @@ export default function GalleryPage() {
           奇數列：第 1 格空，第 2-7 格填滿
           偶數列：第 1-6 格填滿，第 7 格空 */}
       <section className="py-8 lg:py-12 bg-white">
-        <div className="max-w-screen-2xl mx-auto">
+        <div className="w-full">
           <div className="grid grid-cols-2 md:grid-cols-7 gap-0">
             {works.map((work, i) => {
               const rowGroup = Math.floor(i / 6); // 0-based 列群（0,1,2...）
