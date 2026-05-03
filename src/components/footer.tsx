@@ -7,6 +7,7 @@ const navigation = [
   { name: "加工品目", href: "/products" },
   { name: "實績展示", href: "/gallery" },
   { name: "部落格", href: "/blog" },
+  { name: "常見問題", href: "/faq" },
   { name: "聯絡我們", href: "/contact" },
 ];
 
