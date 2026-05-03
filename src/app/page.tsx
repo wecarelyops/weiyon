@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Award, Users, Cog, Zap, Phone } from "lucide-react";
+import { ArrowRight, Award, Users, Cog, Zap, Phone, Diamond, Layers, Clock } from "lucide-react";
 
 export default function Home() {
   return (
@@ -173,40 +173,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Preview Section */}
+      {/* Differentiation / Promise Section */}
       <section className="py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary)] mb-6">
-                40 年傳承
-                <br />
-                <span className="text-[var(--accent)]">專業品質</span>
-              </h2>
-              <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
-                我們是深耕產業 40 年的金屬零件製造專家，憑藉卓越的 CNC 精密加工技術，
-                致力於為全球客戶提供高品質的製造解決方案。
-              </p>
-              <p className="text-[var(--text-secondary)] leading-relaxed mb-8">
-                除傳統的金屬零件、氣壓缸及汽車配件外，我們更將技術觸角延伸至尖端科技領域，
-                提供半導體設備零件、機器人自動化組件以及無人機關鍵航太零件的專業加工服務。
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary)] text-[var(--bg)] font-medium rounded-lg hover:bg-[var(--secondary)] transition-colors"
-              >
-                了解更多
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
+          {/* "搖頭" Hook */}
+          <div className="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
+            <p className="text-2xl lg:text-3xl font-bold text-[var(--primary)] leading-relaxed mb-4">
+              當別家工廠搖頭說
+              <span className="text-[var(--accent)]">「這個做不出來」</span>
+              <br className="hidden sm:block" />
+              我們往往是客戶會想到的
+              <span className="underline decoration-[var(--accent)] decoration-2 underline-offset-4">
+                下一通電話
+              </span>
+            </p>
+            <p className="text-[var(--text-secondary)]">
+              以品質、交期、合理價格三大優勢，服務全台與海外客戶
+            </p>
+          </div>
 
-            <div className="relative">
-              <div className="aspect-video rounded-xl bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-[var(--bg)]/50 text-sm">公司/工廠圖片</span>
+          {/* 3 Promise Cards */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+            {[
+              {
+                icon: Diamond,
+                title: "難加工材料專長",
+                description:
+                  "不鏽鋼、鈦合金、鉬、硬質合金等一般工廠避之唯恐不及的材料皆可承接",
+              },
+              {
+                icon: Layers,
+                title: "一站式整合製造",
+                description:
+                  "從 CNC 車銑、放電加工、鈑金到表面處理，單一窗口為您統籌全製程",
+              },
+              {
+                icon: Clock,
+                title: "短交期 · 高品質",
+                description:
+                  "從單件試作、小量多樣到量產訂單，皆能以合理價格、短交期、高品質交付",
+              },
+            ].map((promise) => (
+              <div
+                key={promise.title}
+                className="p-6 lg:p-8 bg-white rounded-xl border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
+              >
+                <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-4">
+                  <promise.icon className="w-6 h-6 text-[var(--accent)]" />
                 </div>
+                <h3 className="font-bold text-lg text-[var(--primary)] mb-2">
+                  {promise.title}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {promise.description}
+                </p>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary)] text-[var(--bg)] font-medium rounded-lg hover:bg-[var(--secondary)] transition-colors"
+            >
+              認識偉勇工業社
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
