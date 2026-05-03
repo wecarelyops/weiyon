@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { CSSProperties } from "react";
 
 export const metadata: Metadata = {
   title: "實績展示 | 偉勇工業社",
@@ -24,23 +25,31 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Works Grid */}
+      {/* Works Grid — staggered 6-per-row in a 7-column frame
+          奇數列：第 1 格空，第 2-7 格填滿
+          偶數列：第 1-6 格填滿，第 7 格空 */}
       <section className="py-8 lg:py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            {works.map((work) => (
-              <div
-                key={work.id}
-                className="w-[279px] h-[186px] overflow-hidden"
-                style={{
-                  backgroundImage: `url(${work.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                role="img"
-                aria-label={`偉勇工業社加工實績 ${work.id}`}
-              />
-            ))}
+        <div className="max-w-screen-2xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-7 gap-0">
+            {works.map((work, i) => {
+              const rowGroup = Math.floor(i / 6); // 0-based 列群（0,1,2...）
+              const posInRow = i % 6; // 該列群中的位置（0-5）
+              // 偶數列群（0,2,4...）→ 從 col 2 開始（第 1 格空）
+              // 奇數列群（1,3,5...）→ 從 col 1 開始（第 7 格空）
+              const colStart = rowGroup % 2 === 0 ? posInRow + 2 : posInRow + 1;
+              return (
+                <div
+                  key={work.id}
+                  className="aspect-[279/186] bg-cover bg-center md:col-start-[var(--col-start)]"
+                  style={{
+                    backgroundImage: `url(${work.image})`,
+                    "--col-start": colStart,
+                  } as CSSProperties}
+                  role="img"
+                  aria-label={`偉勇工業社加工實績 ${work.id}`}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
