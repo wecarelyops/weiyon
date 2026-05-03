@@ -61,13 +61,13 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--color-surface)]">
+      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-6">
               部落格
             </h1>
-            <p className="text-xl text-[var(--color-text-secondary)]">
+            <p className="text-xl text-[var(--text-secondary)]">
               最新消息、產業趨勢、技術文章與公司動態
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function BlogPage() {
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-white border-b border-[var(--color-border)]">
+      <section className="py-8 bg-white border-b border-[var(--border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
             {["全部", "技術分享", "公司動態", "知識庫", "產業趨勢"].map((category) => (
@@ -83,8 +83,8 @@ export default function BlogPage() {
                 key={category}
                 className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
                   category === "全部"
-                    ? "bg-[var(--color-primary)] text-white"
-                    : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-border)]"
+                    ? "bg-[var(--primary)] text-white"
+                    : "bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]"
                 }`}
               >
                 {category}
@@ -104,38 +104,38 @@ export default function BlogPage() {
                 className="group cursor-pointer"
               >
                 {/* Featured Image */}
-                <div className="aspect-video rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden mb-4 relative">
+                <div className="aspect-video rounded-xl bg-[var(--surface)] border border-[var(--border)] overflow-hidden mb-4 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[var(--color-text-muted)] text-sm">文章圖片</span>
+                    <span className="text-[var(--text-muted)] text-sm">文章圖片</span>
                   </div>
-                  <div className="absolute inset-0 bg-[var(--color-primary)]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[var(--primary)]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-medium">閱讀更多</span>
                   </div>
                 </div>
 
                 {/* Meta */}
                 <div className="flex items-center gap-4 mb-3">
-                  <span className="px-3 py-1 bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-medium rounded-full">
                     {post.category}
                   </span>
-                  <div className="flex items-center gap-1 text-xs text-[var(--color-text-muted)]">
+                  <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
                     <Calendar className="w-3 h-3" />
                     {post.date}
                   </div>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl font-bold text-[var(--color-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                <h2 className="text-xl font-bold text-[var(--primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">
                   {post.title}
                 </h2>
 
                 {/* Excerpt */}
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
                   {post.excerpt}
                 </p>
 
                 {/* Read More */}
-                <div className="flex items-center gap-1 text-sm font-medium text-[var(--color-accent)] group-hover:gap-2 transition-all">
+                <div className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] group-hover:gap-2 transition-all">
                   <span>閱讀更多</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
@@ -145,16 +145,16 @@ export default function BlogPage() {
 
           {/* Pagination */}
           <div className="flex justify-center gap-2 mt-12">
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--color-primary)] text-white font-medium">
+            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--primary)] text-white font-medium">
               1
             </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-border)]">
+            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]">
               2
             </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-border)]">
+            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]">
               3
             </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-border)]">
+            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]">
               ...
             </button>
           </div>
@@ -162,24 +162,24 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 lg:py-24 bg-[var(--color-surface)]">
+      <section className="py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-[var(--color-primary)] mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-4">
               訂閱最新消息
             </h2>
-            <p className="text-[var(--color-text-secondary)] mb-6">
+            <p className="text-[var(--text-secondary)] mb-6">
               留下您的Email，接收產業資訊與技術分享
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="輸入您的Email"
-                className="flex-1 px-4 py-3 border border-[var(--color-border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                className="flex-1 px-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:bg-[var(--color-secondary)] transition-colors"
+                className="px-6 py-3 bg-[var(--primary)] text-white font-medium rounded-lg hover:bg-[var(--secondary)] transition-colors"
               >
                 訂閱
               </button>

@@ -10,13 +10,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--color-surface)]">
+      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-primary)] mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-6">
               關於偉勇工業社
             </h1>
-            <p className="text-xl text-[var(--color-text-secondary)]">
+            <p className="text-xl text-[var(--text-secondary)]">
               深耕產業 40 年，以專業技術與品質承諾，成為客戶最信賴的製造夥伴
             </p>
           </div>
@@ -28,10 +28,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[var(--color-primary)] mb-6">
+              <h2 className="text-3xl font-bold text-[var(--primary)] mb-6">
                 我們的故事
               </h2>
-              <div className="space-y-4 text-[var(--color-text-secondary)] leading-relaxed">
+              <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
                 <p>
                   偉勇工業社成立於民國時期，從一家小型金屬加工廠起步，歷經四十年的深耕與發展，
                   如今已成為中部地區知名的精密金屬零件製造專家。
@@ -49,11 +49,11 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden">
+              <div className="aspect-square rounded-xl bg-[var(--surface)] border border-[var(--border)] overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <Users className="w-24 h-24 text-[var(--color-accent)] mx-auto mb-4 opacity-20" />
-                    <p className="text-[var(--color-text-muted)]">公司歷史照片</p>
+                    <Users className="w-24 h-24 text-[var(--accent)] mx-auto mb-4 opacity-20" />
+                    <p className="text-[var(--text-muted)]">公司歷史照片</p>
                   </div>
                 </div>
               </div>
@@ -63,13 +63,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 lg:py-24 bg-[var(--color-surface)]">
+      <section className="py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-[var(--color-primary)] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary)] mb-4">
               我們的核心價值
             </h2>
-            <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
               這些價值觀驅使著我們不斷前進，為客戶提供最好的服務
             </p>
           </div>
@@ -99,15 +99,15 @@ export default function AboutPage() {
             ].map((value) => (
               <div
                 key={value.title}
-                className="p-6 bg-white rounded-xl border border-[var(--color-border)]"
+                className="p-6 bg-white rounded-xl border border-[var(--border)]"
               >
-                <div className="w-12 h-12 bg-[var(--color-accent)]/10 rounded-xl flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-[var(--color-accent)]" />
+                <div className="w-12 h-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-4">
+                  <value.icon className="w-6 h-6 text-[var(--accent)]" />
                 </div>
-                <h3 className="font-bold text-lg text-[var(--color-primary)] mb-2">
+                <h3 className="font-bold text-lg text-[var(--primary)] mb-2">
                   {value.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 lg:py-24 bg-[var(--color-primary)]">
+      <section className="py-16 lg:py-24 bg-[var(--primary)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -129,15 +129,15 @@ export default function AboutPage() {
             </p>
             <div className="mt-8 grid grid-cols-3 gap-8">
               <div className="text-center">
-                <p className="text-3xl lg:text-4xl font-bold text-[var(--color-accent)] mb-2">40+</p>
+                <p className="text-3xl lg:text-4xl font-bold text-[var(--accent)] mb-2">40+</p>
                 <p className="text-sm text-gray-400">年產業經驗</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl lg:text-4xl font-bold text-[var(--color-accent)] mb-2">500+</p>
+                <p className="text-3xl lg:text-4xl font-bold text-[var(--accent)] mb-2">500+</p>
                 <p className="text-sm text-gray-400">服務客戶數</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl lg:text-4xl font-bold text-[var(--color-accent)] mb-2">99%</p>
+                <p className="text-3xl lg:text-4xl font-bold text-[var(--accent)] mb-2">99%</p>
                 <p className="text-sm text-gray-400">客戶滿意度</p>
               </div>
             </div>

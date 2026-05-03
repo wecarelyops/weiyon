@@ -106,67 +106,67 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-bold text-[var(--color-primary)] mb-8">
+              <h2 className="text-2xl font-bold text-[var(--primary)] mb-8">
                 傳送訊息
               </h2>
 
               <form className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                       姓名 <span className="text-red-500">*</span>
                     </label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--color-text-muted)]" />
+                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
                       <input
                         type="text"
                         id="name"
                         required
                         placeholder="請輸入您的姓名"
-                        className="w-full pl-10 pr-4 py-3 border border-[var(--color-border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                       電話
                     </label>
                     <div className="relative">
-                      <PhoneIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--color-text-muted)]" />
+                      <PhoneIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
                       <input
                         type="tel"
                         id="phone"
                         placeholder="04-XXXXXXX"
-                        className="w-full pl-10 pr-4 py-3 border border-[var(--color-border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--color-text-muted)]" />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
                     <input
                       type="email"
                       id="email"
                       required
                       placeholder="example@email.com"
-                      className="w-full pl-10 pr-4 py-3 border border-[var(--color-border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                      className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     主題
                   </label>
                   <select
                     id="subject"
-                    className="w-full px-4 py-3 border border-[var(--color-border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] bg-white"
+                    className="w-full px-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] bg-white"
                   >
                     <option value="">請選擇詢問主題</option>
                     <option value="quote">取得報價</option>
@@ -177,24 +177,24 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     訊息內容 <span className="text-red-500">*</span>
                   </label>
                   <div className="relative">
-                    <MessageCircle className="absolute left-3 top-4 w-5 h-5 text-[var(--color-text-muted)]" />
+                    <MessageCircle className="absolute left-3 top-4 w-5 h-5 text-[var(--text-muted)]" />
                     <textarea
                       id="message"
                       required
                       rows={5}
                       placeholder="請描述您的需求或問題..."
-                      className="w-full pl-10 pr-4 py-3 border border-[var(--color-border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] resize-none"
+                      className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] resize-none"
                     />
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[var(--color-primary)] text-white font-medium rounded-lg hover:bg-[var(--color-secondary)] transition-colors"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[var(--primary)] text-white font-medium rounded-lg hover:bg-[var(--secondary)] transition-colors"
                 >
                   <Send className="w-4 h-4" />
                   送出訊息

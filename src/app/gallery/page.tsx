@@ -44,10 +44,10 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-24 py-10 lg:py-12 bg-[var(--color-surface)]">
+      <section className="pt-20 lg:pt-24 py-10 lg:py-12 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl lg:text-4xl font-bold text-[var(--color-primary)] mb-2">
+            <h1 className="text-3xl lg:text-4xl font-bold text-[var(--primary)] mb-2">
               實績展示
             </h1>
           </div>
@@ -65,7 +65,7 @@ export default function GalleryPage() {
                 className="group block"
               >
                 <div
-                  className="w-[279px] h-[186px] bg-[var(--color-surface)] border border-[var(--color-border)] overflow-hidden relative"
+                  className="w-[279px] h-[186px] bg-[var(--surface)] border border-[var(--border)] overflow-hidden relative"
                   style={{
                     backgroundImage: `url(${work.image})`,
                     backgroundSize: "cover",
@@ -86,9 +86,9 @@ export default function GalleryPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-8 lg:py-10 bg-[var(--color-surface)]">
+      <section className="py-8 lg:py-10 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-[var(--color-text-secondary)]">
+          <p className="text-sm text-[var(--text-secondary)]">
              更多作品歡迎來電或來信詢問
           </p>
         </div>
