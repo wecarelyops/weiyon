@@ -209,7 +209,26 @@
     "cat3Item8": "其他合金：超硬合金、64 鈦合金、銅鎢合金、重合金、硬鉛",
     "ctaTitle": "估價・諮詢",
     "ctaSubtitle": "歡迎隨時諮詢。我們會根據圖面、形狀、數量、材料等提供最好的解決方案。",
-    "ctaButton": "聯絡我們"
+    "ctaButton": "聯絡我們",
+    "processesLabel": "加工製程",
+    "processesTitle": "從車削銑削到表面處理，五大製程一站式整合",
+    "scopeLabel": "服務範圍",
+    "scopeTitle": "加工品目、技術與材料總覽",
+    "learnMore": "了解詳情"
+  },
+  "ProcessDetail": {
+    "backToProducts": "返回加工品目",
+    "inHouseTag": "廠內主力製程",
+    "partnerNetworkTag": "合作廠整合服務",
+    "overviewLabel": "製程說明",
+    "equipmentTitle": "設備配置",
+    "applicationsTitle": "適用零件",
+    "materialsTitle": "對應材料",
+    "specsTitle": "規格與精度",
+    "otherProcessesLabel": "其他製程",
+    "otherProcessesTitle": "探索我們的完整加工能力",
+    "learnMore": "了解詳情",
+    "ctaTitle": "需要客製化加工解決方案？"
   },
   "Faq": {
     "metaTitle": "常見問題 | 偉勇工業社",

@@ -209,7 +209,26 @@
     "cat3Item8": "Other alloys: cemented carbide, Ti-6Al-4V, copper-tungsten alloy, heavy alloy, hard lead",
     "ctaTitle": "Quotes & Consultation",
     "ctaSubtitle": "Reach out anytime. Based on your drawings, geometry, quantity, and material — we will recommend the best solution.",
-    "ctaButton": "Contact Us"
+    "ctaButton": "Contact Us",
+    "processesLabel": "Machining Processes",
+    "processesTitle": "From turning and milling to surface treatment — five processes, one integrated service.",
+    "scopeLabel": "Scope of Service",
+    "scopeTitle": "Part categories, technologies, and materials overview",
+    "learnMore": "Learn more"
+  },
+  "ProcessDetail": {
+    "backToProducts": "Back to Services",
+    "inHouseTag": "In-House Process",
+    "partnerNetworkTag": "Partner-Network Integrated Service",
+    "overviewLabel": "Overview",
+    "equipmentTitle": "Equipment",
+    "applicationsTitle": "Applicable Parts",
+    "materialsTitle": "Compatible Materials",
+    "specsTitle": "Specs & Tolerances",
+    "otherProcessesLabel": "Other Processes",
+    "otherProcessesTitle": "Explore our complete machining capabilities",
+    "learnMore": "Learn more",
+    "ctaTitle": "Need a custom machining solution?"
   },
   "Faq": {
     "metaTitle": "FAQ | Weiyon Industry",
