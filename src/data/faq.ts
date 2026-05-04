@@ -18,7 +18,7 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
           q: "怎麼向偉勇詢價？需要費用嗎？",
           a: `詢價完全免費，無任何手續費。歡迎透過以下方式聯絡：
 
-・電話：04-23356451（週一至週六 08:00 - 17:30）
+・電話：04-23356451（週一至週五 08:00 - 17:30）
 ・Email：agesmyth@gmail.com
 
 詢價時建議提供：
@@ -374,7 +374,7 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
           q: "How do I request a quote? Is there a fee?",
           a: `Quotes are completely free — no service fee. You can reach us via:
 
-・Phone: +886-4-2335-6451 (Mon - Sat 08:00 - 17:30, Taiwan time)
+・Phone: +886-4-2335-6451 (Mon - Fri 08:00 - 17:30, Taiwan time)
 ・Email: agesmyth@gmail.com
 
 When requesting a quote, please include:
