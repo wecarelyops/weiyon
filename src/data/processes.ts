@@ -29,8 +29,8 @@ export const processes: Process[] = [
       en: "Machining centers, CNC mills, gantry mills",
     },
     description: {
-      zh: "提供高精度 CNC 銑削加工服務，擅長處理複雜幾何零件、機構件、模具零件等。憑藉 40 餘年現場經驗，能依設計需求選擇最適合的刀具策略與加工順序，控制變形與公差。",
-      en: "High-precision CNC milling for complex geometries, mechanism parts, and mold components. With 40+ years of shop-floor experience, we tailor tooling strategy and machining sequence to control deformation and meet tight tolerances.",
+      zh: "提供高精度 CNC 銑削加工服務，擅長處理複雜幾何零件、機構件、模具零件等。憑藉 40 餘年現場經驗，能依設計需求選擇最適合的刀具策略與加工順序，控制變形與公差。\n\n典型承接案例包括：半導體設備真空腔體、機器人關節座、模具承板、產線專用治具與結構支架。對於薄壁件、深腔內輪廓或多角度配合面需求，可整合放電加工或精磨補強最終公差。",
+      en: "High-precision CNC milling for complex geometries, mechanism parts, and mold components. With 40+ years of shop-floor experience, we tailor tooling strategy and machining sequence to control deformation and meet tight tolerances.\n\nTypical projects include: semiconductor vacuum chamber parts, robot joint mounts, mold mounting plates, production-line jigs, and structural brackets. For thin-walled parts, deep internal cavities, or multi-angle mating surfaces, we can integrate EDM or precision grinding to meet final tolerance.",
     },
     equipment: {
       zh: [
@@ -107,8 +107,8 @@ export const processes: Process[] = [
       en: "CNC lathes, automatic lathes, conventional lathes",
     },
     description: {
-      zh: "高精度 CNC 車削加工，承接軸類、套筒、銷類、特殊規格緊固件等迴轉體零件。CNC 自動車床支援連續批量生產，通用車床搭配老師傅調機，靈活處理試做與小量訂單。",
-      en: "High-precision CNC turning for shafts, sleeves, pins, and custom fasteners. Automatic CNC lathes support continuous volume production, while conventional lathes — operated by senior technicians — handle prototypes and small-batch orders flexibly.",
+      zh: "高精度 CNC 車削加工，承接軸類、套筒、銷類、特殊規格緊固件等迴轉體零件。CNC 自動車床支援連續批量生產，通用車床搭配老師傅調機，靈活處理試做與小量訂單。\n\n典型承接案例包括：精密軸類（馬達軸、傳動軸）、特殊規格螺絲螺帽、氣壓缸活塞、軸承內外環、電子接頭等。對於外徑精度 ±0.005 mm 或表面粗糙度 Ra 0.4 以下的需求，可進一步整合精磨處理。",
+      en: "High-precision CNC turning for shafts, sleeves, pins, and custom fasteners. Automatic CNC lathes support continuous volume production, while conventional lathes — operated by senior technicians — handle prototypes and small-batch orders flexibly.\n\nTypical projects include: precision shafts (motor and drive shafts), custom screws and nuts, pneumatic cylinder pistons, bearing rings, and electrical connectors. For OD tolerances within ±0.005 mm or surface finish Ra 0.4 or better, we can integrate precision grinding.",
     },
     equipment: {
       zh: [
@@ -185,8 +185,8 @@ export const processes: Process[] = [
       en: "Wire-cut, sinker EDM, micro-hole EDM (via partner network)",
     },
     description: {
-      zh: "放電加工適合處理高硬度材料、複雜內輪廓、深窄槽等難以用切削加工的形狀。我們透過長期合作的精密放電廠商整合服務，與廠內 CNC 加工銜接，為您提供完整一站式方案。",
-      en: "EDM is ideal for high-hardness materials, complex internal contours, and deep narrow slots that conventional cutting can't reach. Through our long-standing partner network, we integrate EDM with our in-house CNC machining for a complete one-stop solution.",
+      zh: "放電加工適合處理高硬度材料、複雜內輪廓、深窄槽等難以用切削加工的形狀。我們透過長期合作的精密放電廠商整合服務，與廠內 CNC 加工銜接，為您提供完整一站式方案。\n\n典型承接案例包括：模具上方斜頂的內輪廓、量規通止規、深窄槽零件、燃油噴嘴的微孔加工等。線切割可在熱處理後的高硬度鋼上維持 ±0.002 mm 精度，是 CNC 銑削難以勝任的補強製程。",
+      en: "EDM is ideal for high-hardness materials, complex internal contours, and deep narrow slots that conventional cutting can't reach. Through our long-standing partner network, we integrate EDM with our in-house CNC machining for a complete one-stop solution.\n\nTypical projects include: mold lifter internal contours, go/no-go gauges, deep narrow slots, and micro-hole machining for fuel injectors. Wire EDM maintains ±0.002 mm accuracy on hardened steels — handling features that CNC milling cannot.",
     },
     equipment: {
       zh: [
@@ -259,8 +259,8 @@ export const processes: Process[] = [
       en: "Laser cutting, turret punch, press, bending, rolling (via partner network)",
     },
     description: {
-      zh: "鈑金加工提供從板材切割、沖孔、折彎到組裝的完整服務。我們透過長期合作的鈑金廠商整合，與精密 CNC 加工件搭配，為您交付完整的機殼、結構件、面板成品。",
-      en: "Sheet metal fabrication services from cutting, punching, and bending to assembly. We integrate through our long-standing sheet metal partners — combining with our precision CNC parts to deliver complete enclosures, structures, and panels.",
+      zh: "鈑金加工提供從板材切割、沖孔、折彎到組裝的完整服務。我們透過長期合作的鈑金廠商整合，與精密 CNC 加工件搭配，為您交付完整的機殼、結構件、面板成品。\n\n典型承接案例包括：機台機殼、控制箱、儀表面板、自動化產線護蓋、客製化金屬展示架等。鈑金通常與 CNC 精密件搭配 — 例如外殼鈑金件 + 內部 CNC 加工的安裝座 — 可一站式整合包裝出貨。",
+      en: "Sheet metal fabrication services from cutting, punching, and bending to assembly. We integrate through our long-standing sheet metal partners — combining with our precision CNC parts to deliver complete enclosures, structures, and panels.\n\nTypical projects include: machine enclosures, control boxes, instrument panels, automation guards, and custom metal displays. Sheet metal often pairs with CNC precision parts — for example, a sheet-metal enclosure combined with internal CNC-machined mounts — and we ship the assembled set together.",
     },
     equipment: {
       zh: [
@@ -339,8 +339,8 @@ export const processes: Process[] = [
       en: "Heat treatment, plating, anodizing, painting, polishing, sandblasting (via partner network)",
     },
     description: {
-      zh: "表面處理是金屬零件的最後一道工序，影響耐蝕、耐磨、外觀與功能性。我們透過長期合作的專業表面處理廠商，提供完整整合服務 — 您只需對偉勇單一窗口負責，全程不必分頭協調。",
-      en: "Surface treatment is the final step for metal parts — impacting corrosion resistance, wear resistance, appearance, and function. Through our long-term professional surface-treatment partners, we provide a complete integrated service: a single point of contact at Weiyon coordinates the full workflow for you.",
+      zh: "表面處理是金屬零件的最後一道工序，影響耐蝕、耐磨、外觀與功能性。我們透過長期合作的專業表面處理廠商，提供完整整合服務 — 您只需對偉勇單一窗口負責，全程不必分頭協調。\n\n典型承接案例包括：航太零件硬陽氧化、半導體零件電解拋光與鈍化、機構件鍍鎳、汽車零件粉體塗裝、量規零件鏡面拋光等。處理規格依客戶圖面安排，可協助配合 ASTM、JIS、RoHS 等認證需求。",
+      en: "Surface treatment is the final step for metal parts — impacting corrosion resistance, wear resistance, appearance, and function. Through our long-term professional surface-treatment partners, we provide a complete integrated service: a single point of contact at Weiyon coordinates the full workflow for you.\n\nTypical projects include: aerospace parts hard-anodizing, semiconductor parts electropolishing and passivation, mechanism parts nickel plating, automotive parts powder coating, and gauge parts mirror polishing. Spec compliance with ASTM, JIS, RoHS, and other certifications is coordinated per customer requirement.",
     },
     equipment: {
       zh: [

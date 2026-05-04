@@ -99,9 +99,13 @@ export default async function ProcessDetailPage({
             <span className="block w-10 h-px bg-[var(--accent)]" />
             {t("overviewLabel")}
           </div>
-          <p className="text-xl lg:text-2xl text-[var(--primary)] leading-relaxed font-medium">
-            {proc.description[lang]}
-          </p>
+          <div className="space-y-6 text-xl lg:text-2xl text-[var(--primary)] leading-relaxed font-medium">
+            {proc.description[lang]
+              .split("\n\n")
+              .map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+          </div>
         </div>
       </section>
 
