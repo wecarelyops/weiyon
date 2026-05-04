@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/routing";
 import { Calendar, ArrowRight } from "lucide-react";
+import { blogPosts } from "@/data/blog";
 
 export async function generateMetadata({
   params,
@@ -24,52 +26,35 @@ export default async function BlogPage({
   setRequestLocale(locale);
   const t = await getTranslations("Blog");
 
-  // Pexels stock photos（已授權商業使用，依文章主題挑選）
-  const postImages = [
-    "https://images.pexels.com/photos/8865187/pexels-photo-8865187.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-    "https://images.pexels.com/photos/12951626/pexels-photo-12951626.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-    "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-    "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-    "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-    "https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
-  ];
+  const lang = locale === "en" ? "en" : "zh";
 
-  const posts = Array.from({ length: 6 }, (_, i) => ({
-    id: i + 1,
-    title: t(`post${i + 1}Title`),
-    excerpt: t(`post${i + 1}Excerpt`),
-    category: t(`post${i + 1}Category`),
-    date: t(`post${i + 1}Date`),
-    image: postImages[i],
-  }));
-
-  const categories = [
-    t("catAll"),
-    t("catTech"),
-    t("catCompany"),
-    t("catKnowledge"),
-    t("catTrends"),
-  ];
+  // 從 blogPosts 撈取唯一的 categories（依語系）
+  const uniqueCategories = Array.from(
+    new Set(blogPosts.map((p) => p.category[lang]))
+  );
+  const categories = [t("catAll"), ...uniqueCategories];
 
   return (
     <>
       {/* Hero */}
-      <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--surface)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-[var(--primary)] mb-6">
-              {t("heroTitle")}
-            </h1>
-            <p className="text-xl text-[var(--text-secondary)]">
-              {t("heroSubtitle")}
-            </p>
+      <section className="pt-28 lg:pt-36 pb-16 lg:pb-24 bg-[var(--bg)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+            <span className="block w-10 h-px bg-[var(--accent)]" />
+            Blog
           </div>
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-[var(--primary)] tracking-tight leading-[1.05] mb-6">
+            {t("heroTitle")}
+          </h1>
+          <p className="text-lg text-[var(--text-secondary)] max-w-2xl">
+            {t("heroSubtitle")}
+          </p>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-8 bg-white border-b border-[var(--border)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 bg-[var(--surface)] border-y border-[var(--border)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="flex flex-wrap gap-2">
             {categories.map((category, idx) => (
               <button
@@ -77,7 +62,7 @@ export default async function BlogPage({
                 className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
                   idx === 0
                     ? "bg-[var(--primary)] text-white"
-                    : "bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]"
+                    : "bg-[var(--bg)] text-[var(--text-secondary)] hover:bg-[var(--border)]"
                 }`}
               >
                 {category}
@@ -88,16 +73,20 @@ export default async function BlogPage({
       </section>
 
       {/* Posts Grid */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.id} className="group cursor-pointer">
+      <section className="py-16 lg:py-24 bg-[var(--bg)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {blogPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col"
+              >
                 <div
                   className="aspect-video rounded-xl border border-[var(--border)] overflow-hidden mb-4 relative bg-cover bg-center"
-                  style={{ backgroundImage: `url('${post.image}')` }}
+                  style={{ backgroundImage: `url('${post.imageUrl}')` }}
                   role="img"
-                  aria-label={post.title}
+                  aria-label={post.title[lang]}
                 >
                   <div className="absolute inset-0 bg-[var(--primary)]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-medium">
@@ -108,7 +97,7 @@ export default async function BlogPage({
 
                 <div className="flex items-center gap-4 mb-3">
                   <span className="px-3 py-1 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-medium rounded-full">
-                    {post.category}
+                    {post.category[lang]}
                   </span>
                   <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
                     <Calendar className="w-3 h-3" />
@@ -116,42 +105,27 @@ export default async function BlogPage({
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-[var(--primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">
-                  {post.title}
+                <h2 className="text-xl font-bold text-[var(--primary)] mb-2 group-hover:text-[var(--accent)] transition-colors leading-tight">
+                  {post.title[lang]}
                 </h2>
 
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-                  {post.excerpt}
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 flex-1">
+                  {post.excerpt[lang]}
                 </p>
 
                 <div className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] group-hover:gap-2 transition-all">
                   <span>{t("readMore")}</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
-              </article>
+              </Link>
             ))}
-          </div>
-
-          <div className="flex justify-center gap-2 mt-12">
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--primary)] text-white font-medium">
-              1
-            </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]">
-              2
-            </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]">
-              3
-            </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-lg bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)]">
-              ...
-            </button>
           </div>
         </div>
       </section>
 
       {/* Newsletter */}
       <section className="py-16 lg:py-24 bg-[var(--surface)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-4">
               {t("newsletterTitle")}
