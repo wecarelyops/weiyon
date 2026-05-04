@@ -150,11 +150,11 @@
     "mapTitle": "Weiyon Industry Location",
     "formTitle": "Send a Message",
     "formNameLabel": "Name",
-    "formNamePlaceholder": "Your full name",
+    "formNamePlaceholder": "e.g., John Smith",
     "formPhoneLabel": "Phone",
-    "formPhonePlaceholder": "+886-XX-XXXXXXX",
+    "formPhonePlaceholder": "+886-XX-XXXX-XXXX or country code + number",
     "formEmailLabel": "Email",
-    "formEmailPlaceholder": "example@email.com",
+    "formEmailPlaceholder": "your.name@company.com",
     "formSubjectLabel": "Subject",
     "formSubjectPlaceholder": "Select a subject",
     "formSubjectQuote": "Request a quote",
@@ -162,7 +162,7 @@
     "formSubjectCooperation": "Business cooperation",
     "formSubjectOther": "Other",
     "formMessageLabel": "Message",
-    "formMessagePlaceholder": "Tell us about your project or question...",
+    "formMessagePlaceholder": "Tell us about your project: part type, material, quantity, target lead time.\nExample: 100 pcs SUS304 shaft machining, drawing attached as PDF, needed within 14 days.",
     "formRequired": "*",
     "formSubmit": "Send Message"
   },
@@ -230,6 +230,12 @@
     "learnMore": "Learn more",
     "ctaTitle": "Need a custom machining solution?"
   },
+  "Gallery": {
+    "metaTitle": "Works — 32 Precision Machining Projects | Weiyon Industry",
+    "metaDescription": "Selected machining works from Weiyon Industry: semiconductor equipment parts, aerospace components, automation mechanisms, pneumatic cylinder parts, and automotive components — 32 real customer shipments.",
+    "heroTitle": "Works",
+    "heroSubtitle": "32 selected projects — semiconductor, aerospace, automation, and precision machinery"
+  },
   "Faq": {
     "metaTitle": "FAQ — CNC Machining Quotes, Lead Time, Materials | Weiyon Industry",
     "metaDescription": "Frequently asked questions about Weiyon Industry's CNC precision machining service: quoting process, response time, MOQ, lead times, payment terms, supported materials (stainless, aluminum, copper, titanium, difficult alloys), processes, and shipping.",
@@ -272,7 +278,7 @@
     "imageAriaLabel": "Weiyon Industry machining work {id}"
   },
   "Footer": {
-    "tagline": "A precision metal parts manufacturer with 40+ years of industry experience, committed to high-quality CNC precision machining.",
+    "tagline": "A 40-year precision machining shop in Taichung. Specialists in difficult materials, custom specs, and short lead times — from raw stock to finished part, fully integrated.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contactInfo": "Contact",

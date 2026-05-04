@@ -150,11 +150,11 @@
     "mapTitle": "偉勇工業社位置",
     "formTitle": "傳送訊息",
     "formNameLabel": "姓名",
-    "formNamePlaceholder": "請輸入您的姓名",
+    "formNamePlaceholder": "例：王先生",
     "formPhoneLabel": "電話",
-    "formPhonePlaceholder": "04-XXXXXXX",
+    "formPhonePlaceholder": "04-XXXX-XXXX 或 09XX-XXX-XXX",
     "formEmailLabel": "Email",
-    "formEmailPlaceholder": "example@email.com",
+    "formEmailPlaceholder": "your.name@company.com",
     "formSubjectLabel": "主題",
     "formSubjectPlaceholder": "請選擇詢問主題",
     "formSubjectQuote": "取得報價",
@@ -162,7 +162,7 @@
     "formSubjectCooperation": "業務合作",
     "formSubjectOther": "其他",
     "formMessageLabel": "訊息內容",
-    "formMessagePlaceholder": "請描述您的需求或問題...",
+    "formMessagePlaceholder": "請說明您的需求：零件種類、材質、數量、預期交期等。\n例：100 件 SUS304 軸類加工，圖面附 PDF，希望 14 天內交貨。",
     "formRequired": "*",
     "formSubmit": "送出訊息"
   },
@@ -230,6 +230,12 @@
     "learnMore": "了解詳情",
     "ctaTitle": "需要客製化加工解決方案？"
   },
+  "Gallery": {
+    "metaTitle": "實績展示 — 32 件精密加工作品 | 偉勇工業社",
+    "metaDescription": "偉勇工業社多年精密加工實績展示。涵蓋半導體設備零件、航太零件、自動化機構件、氣壓缸零件、汽車配件等各類型實際出貨案例 32 件。",
+    "heroTitle": "實績展示",
+    "heroSubtitle": "精選 32 件實際出貨案例 — 半導體、航太、自動化、精密機械各產業"
+  },
   "Faq": {
     "metaTitle": "常見問題 — CNC 加工詢價、交期、材質 | 偉勇工業社",
     "metaDescription": "偉勇工業社 CNC 精密加工常見問題彙整：詢價流程、報價時間、最小起訂量（MOQ）、交期、付款條件、可加工材質（不鏽鋼、鋁合金、銅、鈦、難切削合金）、加工製程與物流配送等說明。",
@@ -272,7 +278,7 @@
     "imageAriaLabel": "偉勇工業社加工實績 {id}"
   },
   "Footer": {
-    "tagline": "深耕產業 40 餘年的金屬零件製造專家，致力於提供高品質的 CNC 精密加工服務。",
+    "tagline": "台中 40 年精密加工廠。專長難加工材料、客製規格、短交期 — 從一塊素材到一件成品，全程整合。",
     "quickLinks": "快速連結",
     "services": "加工品目",
     "contactInfo": "聯絡資訊",
