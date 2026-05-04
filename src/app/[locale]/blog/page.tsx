@@ -24,12 +24,23 @@ export default async function BlogPage({
   setRequestLocale(locale);
   const t = await getTranslations("Blog");
 
+  // Pexels stock photos（已授權商業使用，依文章主題挑選）
+  const postImages = [
+    "https://images.pexels.com/photos/8865187/pexels-photo-8865187.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    "https://images.pexels.com/photos/12951626/pexels-photo-12951626.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+    "https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop",
+  ];
+
   const posts = Array.from({ length: 6 }, (_, i) => ({
     id: i + 1,
     title: t(`post${i + 1}Title`),
     excerpt: t(`post${i + 1}Excerpt`),
     category: t(`post${i + 1}Category`),
     date: t(`post${i + 1}Date`),
+    image: postImages[i],
   }));
 
   const categories = [
@@ -82,12 +93,12 @@ export default async function BlogPage({
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <article key={post.id} className="group cursor-pointer">
-                <div className="aspect-video rounded-xl bg-[var(--surface)] border border-[var(--border)] overflow-hidden mb-4 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[var(--text-muted)] text-sm">
-                      {t("imagePlaceholder")}
-                    </span>
-                  </div>
+                <div
+                  className="aspect-video rounded-xl border border-[var(--border)] overflow-hidden mb-4 relative bg-cover bg-center"
+                  style={{ backgroundImage: `url('${post.image}')` }}
+                  role="img"
+                  aria-label={post.title}
+                >
                   <div className="absolute inset-0 bg-[var(--primary)]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-medium">
                       {t("readMore")}

@@ -125,16 +125,15 @@ export default async function AboutPage({
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-xl bg-[var(--surface)] border border-[var(--border)] overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <Users className="w-24 h-24 text-[var(--accent)] mx-auto mb-4 opacity-20" />
-                    <p className="text-[var(--text-muted)]">
-                      {t("storyImagePlaceholder")}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <div
+                className="aspect-square rounded-xl border border-[var(--border)] overflow-hidden bg-cover bg-center"
+                style={{
+                  backgroundImage:
+                    "url('https://images.pexels.com/photos/28929510/pexels-photo-28929510.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1200&fit=crop')",
+                }}
+                role="img"
+                aria-label={t("storyImagePlaceholder")}
+              />
             </div>
           </div>
         </div>
