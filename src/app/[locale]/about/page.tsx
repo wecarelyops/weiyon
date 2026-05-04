@@ -82,6 +82,15 @@ export default async function AboutPage({
     t("industry5"),
   ];
 
+  const areas = [
+    t("area1"),
+    t("area2"),
+    t("area3"),
+    t("area4"),
+    t("area5"),
+    t("area6"),
+  ];
+
   const values = [
     { icon: Award, title: t("value1Title"), description: t("value1Desc") },
     { icon: Users, title: t("value2Title"), description: t("value2Desc") },
@@ -227,7 +236,7 @@ export default async function AboutPage({
           </div>
 
           {/* Industries */}
-          <div>
+          <div className="mb-16">
             <h3 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-2 text-center">
               {t("industriesTitle")}
             </h3>
@@ -241,6 +250,30 @@ export default async function AboutPage({
                   className="px-5 py-2 bg-white border border-[var(--border)] rounded-full text-sm font-medium text-[var(--primary)]"
                 >
                   {ind}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Service Coverage / Geographic Areas */}
+          <div>
+            <h3 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-2 text-center">
+              {t("areasTitle")}
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] text-center mb-8">
+              {t("areasSubtitle")}
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {areas.map((area, idx) => (
+                <span
+                  key={area}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                    idx === 0
+                      ? "bg-[var(--accent)] text-white border-2 border-[var(--accent)]"
+                      : "bg-white border border-[var(--border)] text-[var(--primary)]"
+                  }`}
+                >
+                  {area}
                 </span>
               ))}
             </div>
