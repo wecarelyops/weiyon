@@ -358,20 +358,10 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
         },
         {
           q: "營業時間？",
-          a: `週一至週六 08:00 - 17:30
-週日及國定假日休息
+          a: `週一至週五 08:00 - 17:30
+週六、週日及國定假日休息
 
 緊急聯繫如休息日有需求，可先 Email 留言，我們會於工作日優先回覆。`,
-        },
-        {
-          q: "目前有徵才嗎？",
-          a: `如有職缺需求，會於相關平台公告。
-
-歡迎對 CNC 精密加工有興趣的朋友主動投履歷或來電：
-・電話：04-23356451
-・Email：agesmyth@gmail.com
-
-不論是有經驗的師傅或學徒培訓，我們都樂意聊聊。`,
         },
       ],
     },
@@ -724,20 +714,10 @@ Please confirm visit time and purpose ahead of time so we don't disrupt active p
         },
         {
           q: "What are your business hours?",
-          a: `Mon - Sat 08:00 - 17:30 (Taiwan time)
-Closed on Sundays and Taiwan public holidays
+          a: `Mon - Fri 08:00 - 17:30 (Taiwan time)
+Closed on Saturdays, Sundays, and Taiwan public holidays
 
 For urgent off-hours inquiries, please email — we will respond first thing on the next business day.`,
-        },
-        {
-          q: "Are you currently hiring?",
-          a: `Open positions are posted on relevant job platforms when available.
-
-If you're interested in CNC precision machining, you're welcome to send a resume or contact us:
-・Phone: +886-4-2335-6451
-・Email: agesmyth@gmail.com
-
-Whether experienced machinist or apprentice, we're happy to talk.`,
         },
       ],
     },
