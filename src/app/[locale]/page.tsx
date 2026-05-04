@@ -75,7 +75,7 @@ export default async function Home({
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[var(--border)]">
             {[
               { label: t("statsExperience"), value: "40+" },
-              { label: t("statsEquipment"), value: "20+" },
+              { label: t("statsEquipment"), value: "10+" },
               { label: t("statsCustomers"), value: "500+" },
               { label: t("statsProducts"), value: "1000+" },
             ].map((stat, idx) => (
