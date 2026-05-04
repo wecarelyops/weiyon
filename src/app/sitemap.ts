@@ -1,44 +1,85 @@
 import { MetadataRoute } from "next";
+import { processes } from "@/data/processes";
+
+const BASE = "https://www.weiyon.com";
+const TOTAL_WORKS = 32;
+
+type ChangeFreq =
+  | "always"
+  | "hourly"
+  | "daily"
+  | "weekly"
+  | "monthly"
+  | "yearly"
+  | "never";
+
+type Page = {
+  path: string;
+  priority: number;
+  changeFrequency: ChangeFreq;
+};
+
+// 為每個頁面產生 zh + en 兩條目，並附 hreflang alternates
+function localizedEntries(pages: Page[]): MetadataRoute.Sitemap {
+  const out: MetadataRoute.Sitemap = [];
+  for (const page of pages) {
+    const zhUrl = `${BASE}${page.path}`;
+    const enUrl = `${BASE}/en${page.path}`;
+    const alternates = {
+      languages: {
+        "zh-TW": zhUrl,
+        en: enUrl,
+        "x-default": zhUrl,
+      },
+    };
+    const lastModified = new Date();
+    out.push({
+      url: zhUrl,
+      lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates,
+    });
+    out.push({
+      url: enUrl,
+      lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority * 0.95, // en 略低，因預設語言為 zh
+      alternates,
+    });
+  }
+  return out;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://weiyon-website.vercel.app";
+  // 主要頁面
+  const mainPages: Page[] = [
+    { path: "", priority: 1.0, changeFrequency: "weekly" },
+    { path: "/about", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/products", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/gallery", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/faq", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
+  ];
+
+  // 加工製程子頁
+  const processPages: Page[] = processes.map((p) => ({
+    path: `/products/${p.slug}`,
+    priority: 0.85,
+    changeFrequency: "monthly" as const,
+  }));
+
+  // 實績詳情頁（32 件）
+  const worksPages: Page[] = Array.from({ length: TOTAL_WORKS }, (_, i) => ({
+    path: `/works/${i + 1}`,
+    priority: 0.5,
+    changeFrequency: "yearly" as const,
+  }));
 
   return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/products`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/gallery`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
+    ...localizedEntries(mainPages),
+    ...localizedEntries(processPages),
+    ...localizedEntries(worksPages),
   ];
 }
