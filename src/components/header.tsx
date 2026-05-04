@@ -1,22 +1,25 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const navigation = [
-  { name: "首頁", href: "/" },
-  { name: "關於我們", href: "/about" },
-  { name: "加工品目", href: "/products" },
-  { name: "實績展示", href: "/gallery" },
-  { name: "部落格", href: "/blog" },
-  { name: "常見問題", href: "/faq" },
-  { name: "聯絡我們", href: "/contact" },
-];
+import LanguageSwitcher from "./language-switcher";
 
 export default function Header() {
+  const t = useTranslations("Nav");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: t("home"), href: "/" },
+    { name: t("about"), href: "/about" },
+    { name: t("products"), href: "/products" },
+    { name: t("gallery"), href: "/gallery" },
+    { name: t("blog"), href: "/blog" },
+    { name: t("faq"), href: "/faq" },
+    { name: t("contact"), href: "/contact" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/95 backdrop-blur-sm border-b border-[var(--border)]">
@@ -28,16 +31,20 @@ export default function Header() {
               <span className="text-[var(--accent)] font-bold text-lg">W</span>
             </div>
             <div className="hidden sm:block">
-              <span className="font-bold text-lg text-[var(--primary)]">偉勇工業社</span>
-              <span className="block text-xs text-[var(--text-secondary)]">Weiyon Industry</span>
+              <span className="font-bold text-lg text-[var(--primary)]">
+                偉勇工業社
+              </span>
+              <span className="block text-xs text-[var(--text-secondary)]">
+                Weiyon Industry
+              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navigation.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-200"
               >
@@ -46,20 +53,21 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Contact Button */}
+          {/* Right side: phone + language + CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:0423356451"
               className="flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--accent)] transition-colors"
             >
               <Phone className="w-4 h-4" />
-              04-23356451
+              {t("phone")}
             </a>
+            <LanguageSwitcher />
             <Link
               href="/contact"
               className="px-4 py-2 bg-[var(--primary)] text-[var(--bg)] text-sm font-medium rounded-lg hover:bg-[var(--secondary)] transition-colors duration-200"
             >
-              取得報價
+              {t("getQuote")}
             </Link>
           </div>
 
@@ -68,6 +76,7 @@ export default function Header() {
             type="button"
             className="lg:hidden p-2 -mr-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6 text-[var(--primary)]" />
@@ -81,13 +90,13 @@ export default function Header() {
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            mobileMenuOpen ? "max-h-96 pb-4" : "max-h-0"
+            mobileMenuOpen ? "max-h-[32rem] pb-4" : "max-h-0"
           )}
         >
           <div className="flex flex-col gap-2 pt-4 border-t border-[var(--border)]">
             {navigation.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 href={item.href}
                 className="px-2 py-3 text-base font-medium text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors rounded-lg hover:bg-[var(--surface)]"
                 onClick={() => setMobileMenuOpen(false)}
@@ -95,14 +104,15 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center gap-4 pt-4 border-t border-[var(--border)] mt-2">
+            <div className="flex items-center justify-between gap-4 pt-4 border-t border-[var(--border)] mt-2 px-2">
               <a
                 href="tel:0423356451"
                 className="flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)]"
               >
                 <Phone className="w-4 h-4" />
-                04-23356451
+                {t("phone")}
               </a>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>

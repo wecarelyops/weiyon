@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ChevronDown, Phone, Mail } from "lucide-react";
 import { faqData } from "@/data/faq";
 

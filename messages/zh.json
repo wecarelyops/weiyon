@@ -1,0 +1,89 @@
+{
+  "Metadata": {
+    "title": "偉勇工業社 | Weiyon Industry — 精密金屬零件加工專家",
+    "description": "深耕產業 40 餘年的金屬零件製造專家，提供 CNC 精密加工、半導體設備零件、機器人自動化、無人機航太零件等專業服務",
+    "keywords": "金屬加工, CNC 加工, 精密零件, 半導體設備, 自動化, 航太零件, 台中, 烏日",
+    "ogTitle": "偉勇工業社 | Weiyon Industry",
+    "ogDescription": "深耕產業 40 餘年的金屬零件製造專家"
+  },
+  "Nav": {
+    "home": "首頁",
+    "about": "關於我們",
+    "products": "加工品目",
+    "gallery": "實績展示",
+    "blog": "部落格",
+    "faq": "常見問題",
+    "contact": "聯絡我們",
+    "getQuote": "取得報價",
+    "phone": "04-23356451"
+  },
+  "LanguageSwitcher": {
+    "label": "語言",
+    "zh": "中文",
+    "en": "English"
+  },
+  "Home": {
+    "heroBadge": "深耕產業 40 餘年",
+    "heroTitleLine1": "精密金屬零件",
+    "heroTitleLine2": "加工專家",
+    "heroDescription": "從傳統金屬零件到尖端半導體設備、航太零件，我們以卓越的 CNC 精密加工技術，成就您的創新設計。",
+    "heroCtaQuote": "取得報價",
+    "heroCtaProducts": "了解服務項目",
+    "heroBadgeYears": "40+ 年",
+    "heroBadgeYearsLabel": "產業經驗",
+
+    "statsExperience": "產業經驗",
+    "statsEquipment": "專業設備",
+    "statsCustomers": "服務客戶",
+    "statsProducts": "產品種類",
+
+    "servicesTitle": "專業服務項目",
+    "servicesSubtitle": "提供從傳統加工到高科技領域的全面解決方案",
+    "service1Title": "CNC 精密加工",
+    "service1Desc": "高精度 CNC 車床、銑床加工，適用於各種複雜幾何形狀的零件製造",
+    "service2Title": "半導體設備零件",
+    "service2Desc": "半導體製程設備關鍵零件加工，符合高科技產業嚴格標準",
+    "service3Title": "機器人自動化",
+    "service3Desc": "工業機器人關節、自動化組件加工，助力智能製造升級",
+    "service4Title": "航太零件",
+    "service4Desc": "無人機關鍵航太零件加工，滿足輕量化與高精度要求",
+    "service5Title": "氣壓缸零件",
+    "service5Desc": "各類氣壓缸核心零件，耐用性與密封性兼顧",
+    "service6Title": "汽車配件",
+    "service6Desc": "汽車引擎、傳動系統零件加工，品質符合車廠標準",
+    "viewAllServices": "查看所有服務",
+
+    "promiseHookLine1": "當別家工廠搖頭說",
+    "promiseHookHighlight": "「這個做不出來」",
+    "promiseHookLine2": "我們往往是客戶會想到的",
+    "promiseHookCallText": "下一通電話",
+    "promiseSubtitle": "以品質、交期、合理價格三大優勢，服務全台與海外客戶",
+    "promise1Title": "難加工材料專長",
+    "promise1Desc": "不鏽鋼、鈦合金、鉬、硬質合金等一般工廠避之唯恐不及的材料皆可承接",
+    "promise2Title": "一站式整合製造",
+    "promise2Desc": "從 CNC 車銑、放電加工、鈑金到表面處理，單一窗口為您統籌全製程",
+    "promise3Title": "短交期 · 高品質",
+    "promise3Desc": "從單件試作、小量多樣到量產訂單，皆能以合理價格、短交期、高品質交付",
+    "promiseCta": "認識偉勇工業社",
+
+    "ctaTitle": "準備好開始您的專案了嗎？",
+    "ctaSubtitle": "聯絡我們取得專業報價，我們的團隊將儘快回覆您的需求",
+    "ctaContact": "聯絡我們"
+  },
+  "Footer": {
+    "tagline": "深耕產業 40 餘年的金屬零件製造專家，致力於提供高品質的 CNC 精密加工服務。",
+    "quickLinks": "快速連結",
+    "services": "加工品目",
+    "contactInfo": "聯絡資訊",
+    "address": "台中市烏日區環中路八段 332 巷 118 弄 35 號",
+    "hours": "週一至週六 08:00 - 17:30",
+    "copyright": "偉勇工業社. All rights reserved.",
+    "subtitle": "專業 CNC 精密加工 / 金屬零件製造",
+    "service1": "CNC 精密加工",
+    "service2": "半導體設備零件",
+    "service3": "機器人自動化組件",
+    "service4": "航太零件加工",
+    "service5": "氣壓缸零件",
+    "service6": "汽車配件"
+  }
+}

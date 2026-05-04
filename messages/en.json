@@ -1,0 +1,89 @@
+{
+  "Metadata": {
+    "title": "Weiyon Industry | Precision Metal Parts Manufacturing Expert",
+    "description": "A 40+ year metal parts manufacturer specializing in CNC precision machining, semiconductor equipment parts, robotics automation components, and aerospace parts.",
+    "keywords": "metal machining, CNC machining, precision parts, semiconductor equipment, automation, aerospace parts, Taichung, Wuri",
+    "ogTitle": "Weiyon Industry",
+    "ogDescription": "Precision metal parts manufacturer with 40+ years of industry experience"
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Services",
+    "gallery": "Works",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "getQuote": "Get a Quote",
+    "phone": "+886-4-2335-6451"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "zh": "中文",
+    "en": "English"
+  },
+  "Home": {
+    "heroBadge": "40+ Years of Industry Experience",
+    "heroTitleLine1": "Precision Metal Parts",
+    "heroTitleLine2": "Machining Specialist",
+    "heroDescription": "From traditional metal parts to cutting-edge semiconductor equipment and aerospace components, we power your innovative designs with exceptional CNC precision machining.",
+    "heroCtaQuote": "Get a Quote",
+    "heroCtaProducts": "Explore Services",
+    "heroBadgeYears": "40+ yrs",
+    "heroBadgeYearsLabel": "Industry experience",
+
+    "statsExperience": "Years of experience",
+    "statsEquipment": "Professional machines",
+    "statsCustomers": "Clients served",
+    "statsProducts": "Product varieties",
+
+    "servicesTitle": "Our Services",
+    "servicesSubtitle": "Comprehensive solutions from traditional machining to high-tech applications",
+    "service1Title": "CNC Precision Machining",
+    "service1Desc": "High-precision CNC turning and milling for complex geometries across diverse part types.",
+    "service2Title": "Semiconductor Equipment Parts",
+    "service2Desc": "Critical components for semiconductor processing equipment, meeting strict industry standards.",
+    "service3Title": "Robotics & Automation",
+    "service3Desc": "Industrial robot joints and automation components — fueling smart manufacturing.",
+    "service4Title": "Aerospace Components",
+    "service4Desc": "UAV and aerospace components engineered for lightweighting and high precision.",
+    "service5Title": "Pneumatic Cylinder Parts",
+    "service5Desc": "Core components for pneumatic cylinders — durable and well-sealed.",
+    "service6Title": "Automotive Components",
+    "service6Desc": "Engine and powertrain parts machined to OEM-grade quality standards.",
+    "viewAllServices": "View all services",
+
+    "promiseHookLine1": "When other shops shake their heads and say",
+    "promiseHookHighlight": "\"It can't be done\"",
+    "promiseHookLine2": "we are often the next call our customers make",
+    "promiseHookCallText": "next call",
+    "promiseSubtitle": "Three core strengths — quality, lead time, and fair pricing — for clients across Taiwan and overseas.",
+    "promise1Title": "Difficult Materials Specialist",
+    "promise1Desc": "Stainless steel, titanium alloys, molybdenum, cemented carbides — materials most shops avoid, we machine.",
+    "promise2Title": "One-Stop Integrated Manufacturing",
+    "promise2Desc": "CNC turning/milling, EDM, sheet metal, surface treatment — a single point of contact for the full process.",
+    "promise3Title": "Short Lead Time · High Quality",
+    "promise3Desc": "From one-off prototypes and small batches to production runs — delivered with fair pricing, short lead times, and consistent quality.",
+    "promiseCta": "About Weiyon Industry",
+
+    "ctaTitle": "Ready to start your project?",
+    "ctaSubtitle": "Contact us for a professional quote — our team will respond as quickly as possible.",
+    "ctaContact": "Contact Us"
+  },
+  "Footer": {
+    "tagline": "A precision metal parts manufacturer with 40+ years of industry experience, committed to high-quality CNC precision machining.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactInfo": "Contact",
+    "address": "No. 35, Ln. 118, Aly. 332, Sec. 8, Huanzhong Rd., Wuri Dist., Taichung City, Taiwan",
+    "hours": "Mon - Sat 08:00 - 17:30",
+    "copyright": "Weiyon Industry. All rights reserved.",
+    "subtitle": "Professional CNC Precision Machining / Metal Parts Manufacturing",
+    "service1": "CNC Precision Machining",
+    "service2": "Semiconductor Equipment Parts",
+    "service3": "Robotics & Automation Components",
+    "service4": "Aerospace Component Machining",
+    "service5": "Pneumatic Cylinder Parts",
+    "service6": "Automotive Components"
+  }
+}
