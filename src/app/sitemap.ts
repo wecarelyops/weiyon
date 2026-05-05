@@ -20,16 +20,18 @@ type Page = {
   changeFrequency: ChangeFreq;
 };
 
-// 為每個頁面產生 zh + en 兩條目，並附 hreflang alternates
+// 為每個頁面產生 zh + en + de 三條目，並附 hreflang alternates
 function localizedEntries(pages: Page[]): MetadataRoute.Sitemap {
   const out: MetadataRoute.Sitemap = [];
   for (const page of pages) {
     const zhUrl = `${BASE}${page.path}`;
     const enUrl = `${BASE}/en${page.path}`;
+    const deUrl = `${BASE}/de${page.path}`;
     const alternates = {
       languages: {
         "zh-TW": zhUrl,
         en: enUrl,
+        de: deUrl,
         "x-default": zhUrl,
       },
     };
@@ -45,7 +47,14 @@ function localizedEntries(pages: Page[]): MetadataRoute.Sitemap {
       url: enUrl,
       lastModified,
       changeFrequency: page.changeFrequency,
-      priority: page.priority * 0.95, // en 略低，因預設語言為 zh
+      priority: page.priority * 0.95,
+      alternates,
+    });
+    out.push({
+      url: deUrl,
+      lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority * 0.9,
       alternates,
     });
   }

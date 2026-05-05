@@ -26,7 +26,7 @@ export default async function BlogPage({
   setRequestLocale(locale);
   const t = await getTranslations("Blog");
 
-  const lang = locale === "en" ? "en" : "zh";
+  const lang = locale === "zh" ? "zh" : "en";
 
   // 從 blogPosts 撈取唯一的 categories（依語系）
   const uniqueCategories = Array.from(

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
-  const lang = locale === "en" ? "en" : "zh";
+  const lang = locale === "zh" ? "zh" : "en";
   return {
     title: post.title[lang],
     description: post.excerpt[lang],
@@ -50,7 +50,7 @@ export default async function BlogPostPage({
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const lang = locale === "en" ? "en" : "zh";
+  const lang = locale === "zh" ? "zh" : "en";
 
   // Related posts: 3 random others
   const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);

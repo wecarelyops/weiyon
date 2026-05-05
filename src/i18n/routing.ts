@@ -2,9 +2,9 @@ import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
 
 export const routing = defineRouting({
-  locales: ["zh", "en"],
+  locales: ["zh", "en", "de"],
   defaultLocale: "zh",
-  // Chinese 不加前綴（網址 /），英文加 /en/ 前綴
+  // Chinese 不加前綴（網址 /），英文加 /en/ 前綴，德文加 /de/ 前綴
   localePrefix: "as-needed",
 });
 

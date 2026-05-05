@@ -24,7 +24,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const ind = getIndustryBySlug(slug);
   if (!ind) return {};
-  const lang = (locale === "en" ? "en" : "zh") as IndustryLocale;
+  const lang = (locale === "zh" ? "zh" : "en") as IndustryLocale;
   return {
     title: ind.metaTitle[lang],
     description: ind.metaDescription[lang],
@@ -48,7 +48,7 @@ export default async function IndustryPage({
   const ind = getIndustryBySlug(slug);
   if (!ind) notFound();
 
-  const lang = (locale === "en" ? "en" : "zh") as IndustryLocale;
+  const lang = (locale === "zh" ? "zh" : "en") as IndustryLocale;
 
   return (
     <>

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const proc = getProcessBySlug(slug);
   if (!proc) return {};
-  const lang = (locale === "en" ? "en" : "zh") as Locale;
+  const lang = (locale === "zh" ? "zh" : "en") as Locale;
   const suffix = lang === "zh" ? "偉勇工業社" : "Weiyon Industry";
   return {
     title: `${proc.title[lang]} | ${suffix}`,
@@ -45,7 +45,7 @@ export default async function ProcessDetailPage({
   const proc = getProcessBySlug(slug);
   if (!proc) notFound();
 
-  const lang = (locale === "en" ? "en" : "zh") as Locale;
+  const lang = (locale === "zh" ? "zh" : "en") as Locale;
 
   return (
     <>
