@@ -218,6 +218,309 @@ export const industries: Industry[] = [
     imageUrl:
       "https://images.pexels.com/photos/8865187/pexels-photo-8865187.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
   },
+  {
+    slug: "medical",
+    title: {
+      zh: "醫療器材精密零件加工",
+      en: "Medical Device Precision Parts Machining",
+    },
+    shortTitle: { zh: "醫療", en: "Medical" },
+    metaTitle: {
+      zh: "醫療器材零件加工 | 生醫不鏽鋼 SUS316L / 純鈦 — 偉勇工業社",
+      en: "Medical Device Parts Machining | SUS316L, Pure Titanium — Weiyon Industry",
+    },
+    metaDescription: {
+      zh: "偉勇工業社承接醫療器材精密零件加工 — 手術器械、檢測設備機構件、影像系統零件。提供 SUS316L 生醫不鏽鋼、純鈦 Grade 1-4、Ti-6Al-4V ELI、PEEK 等生物相容材料加工經驗。可配合 ISO 13485 供應鏈品管。台中 40 年精密加工廠。",
+      en: "Weiyon Industry machines medical device precision parts — surgical instruments, diagnostic equipment mechanisms, imaging system components. Experience with SUS316L medical-grade stainless steel, pure titanium Grade 1-4, Ti-6Al-4V ELI, PEEK and other biocompatible materials. ISO 13485 supply-chain QC compatible. 40-year Taichung shop.",
+    },
+    heroSubtitle: {
+      zh: "生物相容材料、嚴格表面要求、完整追溯 — 偉勇的醫療器材加工",
+      en: "Biocompatible materials, strict surface specs, full traceability — Weiyon's medical device machining",
+    },
+    intro: {
+      zh: "醫療器材的零件要面對人體接觸、滅菌循環、長期使用等嚴苛要求。SUS316L 生醫不鏽鋼、純鈦、PEEK 等生物相容材料的加工，需要的不只是精度，更要考慮表面處理、潔淨度與材料追溯。偉勇承接醫療零件多年，能配合醫療器材廠的供應鏈品管流程。",
+      en: "Medical device parts face skin contact, sterilization cycles, and long-duration use — demands that go beyond precision alone. Machining biocompatible materials like SUS316L, pure titanium, and PEEK requires careful attention to surface treatment, cleanliness, and material traceability. Weiyon's experience with medical clients lets us fit smoothly into device-maker supply chains.",
+    },
+    whyTitle: {
+      zh: "為什麼選擇偉勇承接醫療零件",
+      en: "Why Weiyon for Medical Parts",
+    },
+    whyPoints: {
+      zh: [
+        "SUS316L、純鈦、PEEK 等生醫材料加工經驗",
+        "表面處理整合：電解拋光、鈍化、鏡面",
+        "材質證明（Mill Test Cert）+ 生醫等級認證",
+        "完整批次追溯（每批可追溯至原料來源）",
+        "可配合 ISO 13485 客戶供應鏈品管",
+        "從原型開發到小量量產彈性配合",
+      ],
+      en: [
+        "Experience with SUS316L, pure titanium, and PEEK biomedical materials",
+        "Integrated surface treatments: electropolishing, passivation, mirror finish",
+        "Mill test certificates + medical-grade material verification",
+        "Full batch traceability back to raw material source",
+        "Compatible with ISO 13485 customer supply-chain QC",
+        "Flexibility from prototyping through low-volume production",
+      ],
+    },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    parts: {
+      zh: [
+        "手術器械零件（持針器、夾鉗、鑷類零件）",
+        "植入物固定座、生醫鈦合金零件",
+        "檢測設備機構件、移動軸零件",
+        "影像設備機構件、調整機構",
+        "醫療輔具零件、機構連桿",
+        "牙科器械精密零件",
+      ],
+      en: [
+        "Surgical instrument parts (needle holders, forceps, tweezer components)",
+        "Implant mounting bases, biomedical titanium components",
+        "Diagnostic equipment mechanisms, motion-axis parts",
+        "Imaging system mechanisms and adjustment assemblies",
+        "Medical assistive device parts, mechanism linkages",
+        "Dental instrument precision parts",
+      ],
+    },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materials: {
+      zh: [
+        "SUS316L（生醫等級不鏽鋼）",
+        "純鈦 Grade 1-4（耐蝕、生物相容）",
+        "Ti-6Al-4V ELI（Extra Low Interstitial，生醫植入物用）",
+        "PEEK（生物相容工程塑膠）",
+        "醫用級鋁合金",
+      ],
+      en: [
+        "SUS316L (medical-grade stainless)",
+        "Pure titanium Grade 1-4 (corrosion-resistant, biocompatible)",
+        "Ti-6Al-4V ELI (Extra Low Interstitial, for biomedical implants)",
+        "PEEK (biocompatible engineering plastic)",
+        "Medical-grade aluminum alloys",
+      ],
+    },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standards: {
+      zh: [
+        "公差控制：可達 ±0.005 mm",
+        "表面處理：電解拋光、鈍化、Ra 0.2 鏡面",
+        "材質證明：Mill Test Cert + 生醫等級認證",
+        "包裝：依客戶需求（潔淨包裝可配合）",
+        "可配合 ISO 13485 供應鏈品管要求",
+      ],
+      en: [
+        "Tolerance: down to ±0.005 mm",
+        "Surface: electropolishing, passivation, Ra 0.2 mirror finish",
+        "Mill test certs + medical-grade material verification",
+        "Packaging: per customer requirement (cleanroom packaging available)",
+        "Compatible with ISO 13485 supply-chain QC",
+      ],
+    },
+    imageUrl:
+      "https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+  },
+  {
+    slug: "automotive",
+    title: {
+      zh: "汽車零組件精密加工",
+      en: "Automotive Precision Parts Machining",
+    },
+    shortTitle: { zh: "汽車", en: "Automotive" },
+    metaTitle: {
+      zh: "汽車零件加工 | 引擎 / 傳動 / 底盤精密零件 — 偉勇工業社",
+      en: "Automotive Parts Machining | Engine, Drivetrain, Chassis — Weiyon Industry",
+    },
+    metaDescription: {
+      zh: "偉勇工業社承接汽車零組件精密加工 — 引擎周邊、傳動系統零件、底盤結構件、車載感測器外殼。SCM440、S45C、A6061、SUS304 等汽車常用材料加工經驗，可配合 IATF 16949 客戶 PPAP 文件、批次追溯需求。台中 40 年精密加工廠。",
+      en: "Weiyon Industry machines automotive precision parts — engine peripherals, drivetrain components, chassis structures, automotive sensor housings. Experience with SCM440, S45C, A6061, SUS304, and other automotive materials. Compatible with IATF 16949 customer PPAP and batch traceability. 40-year Taichung shop.",
+    },
+    heroSubtitle: {
+      zh: "量產穩定、規範配合、批次追溯 — 偉勇的汽車零件加工",
+      en: "Volume stability, standards compliance, batch traceability — Weiyon's automotive parts machining",
+    },
+    intro: {
+      zh: "汽車產業對量產穩定性、品質一致性、批次追溯的要求都比一般機械業嚴格。從引擎周邊的高溫零件、傳動系統的精密軸，到底盤結構件，每個零件都需要在大批量生產中維持穩定品質。我們能配合汽車零件供應商的 PPAP 文件、批次追溯、抽樣檢驗等品管流程。",
+      en: "Automotive demands more volume stability, consistency, and traceability than general machinery. From engine peripherals to drivetrain shafts to chassis structures, each part must hold quality across large production runs. We coordinate with automotive supply chain processes — PPAP documentation, batch traceability, sampling inspection — without missing a beat.",
+    },
+    whyTitle: {
+      zh: "為什麼選擇偉勇承接汽車零件",
+      en: "Why Weiyon for Automotive Parts",
+    },
+    whyPoints: {
+      zh: [
+        "量產穩定性 — 大批量生產經驗",
+        "SCM 系列鉻鉬鋼、易切削碳鋼加工經驗",
+        "熱處理整合（淬火、回火、滲碳、氮化）",
+        "批次追溯紀錄完整",
+        "可配合 IATF 16949 客戶 PPAP 文件需求",
+        "抽樣計畫與 SPC 統計製程管制",
+      ],
+      en: [
+        "Volume stability backed by years of large-batch production",
+        "Experience with SCM Cr-Mo steel and free-machining carbon steel",
+        "Integrated heat treatment (quench, temper, carburize, nitride)",
+        "Complete batch traceability records",
+        "Compatible with IATF 16949 customer PPAP requirements",
+        "Sampling plans and SPC statistical process control",
+      ],
+    },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    parts: {
+      zh: [
+        "引擎周邊零件（軸承座、軸類）",
+        "傳動系統零件（齒輪、軸、套筒）",
+        "底盤結構件、懸吊機構件",
+        "車載感測器外殼",
+        "制動系統機構件",
+        "客製化緊固件（特殊螺絲螺帽）",
+      ],
+      en: [
+        "Engine peripherals (bearing seats, shafts)",
+        "Drivetrain components (gears, shafts, sleeves)",
+        "Chassis structures, suspension mechanism parts",
+        "Sensor housings for automotive electronics",
+        "Brake-system mechanism parts",
+        "Custom fasteners (special bolts and nuts)",
+      ],
+    },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materials: {
+      zh: [
+        "SCM435 / SCM440（高強度結構鋼）",
+        "S45C / S50C（中碳鋼，可熱處理）",
+        "A6061 / A2024（鋁合金，輕量化件）",
+        "SUS304 / SUS316（耐蝕零件）",
+        "銅合金（軸承、襯套）",
+      ],
+      en: [
+        "SCM435 / SCM440 (high-strength structural steel)",
+        "S45C / S50C (medium-carbon steel, heat-treatable)",
+        "A6061 / A2024 (aluminum alloys for lightweight parts)",
+        "SUS304 / SUS316 (corrosion-resistant components)",
+        "Copper alloys (bearings, bushings)",
+      ],
+    },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standards: {
+      zh: [
+        "公差控制：可達 ±0.005 mm",
+        "表面處理：電鍍鋅、發黑、粉體塗裝、達克鋅",
+        "熱處理：淬火、回火、滲碳、氮化",
+        "批次追溯與 PPAP 文件配合",
+        "SPC 統計製程管制（量產訂單）",
+      ],
+      en: [
+        "Tolerance: down to ±0.005 mm",
+        "Surface: zinc plating, blackening, powder coating, Dacromet",
+        "Heat treatment: quench, temper, carburize, nitride",
+        "Batch traceability and PPAP documentation",
+        "SPC statistical process control for volume orders",
+      ],
+    },
+    imageUrl:
+      "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+  },
+  {
+    slug: "automation",
+    title: {
+      zh: "自動化機械精密零件加工",
+      en: "Automation Equipment Precision Parts Machining",
+    },
+    shortTitle: { zh: "自動化", en: "Automation" },
+    metaTitle: {
+      zh: "自動化零件加工 | 機器人 / 機構件 / 夾爪 — 偉勇工業社",
+      en: "Automation Parts Machining | Robotics, Mechanisms, Grippers — Weiyon Industry",
+    },
+    metaDescription: {
+      zh: "偉勇工業社承接自動化機械精密零件加工 — 機器人關節座、線軌座、夾爪、定位塊、滑軌座、感測器固定座等。A6061、SUS304、SUS440C 等自動化常用材料加工，重複精度與長期穩定性兼顧。台中 40 年精密加工廠。",
+      en: "Weiyon Industry machines automation equipment precision parts — robot joint mounts, linear-rail seats, grippers, locating blocks, sensor mounts. Experience with A6061, SUS304, SUS440C, and other automation-friendly materials. Repeatability and long-term stability balanced. 40-year Taichung shop.",
+    },
+    heroSubtitle: {
+      zh: "機構件、關節座、夾爪 — 偉勇的自動化零件加工",
+      en: "Mechanism parts, joint mounts, grippers — Weiyon's automation parts machining",
+    },
+    intro: {
+      zh: "自動化機械的零件需要在連續運轉中保持精度與穩定性。每個關節座的尺寸、每條導軌的平行度、每個夾爪的重複定位精度，都會直接影響產線良率與效率。我們長期承接機器人手臂、自動化模組、產線設備的精密零件，從機構件的尺寸控制到耐用性都有具體經驗。",
+      en: "Automation parts must hold precision and stability across continuous operation. Joint-mount dimensions, linear-rail parallelism, gripper repeatability — every detail flows through to line yield and efficiency. With years of experience machining for robot arms, automation modules, and production line equipment, we know how to control dimensions and durability where it matters.",
+    },
+    whyTitle: {
+      zh: "為什麼選擇偉勇承接自動化零件",
+      en: "Why Weiyon for Automation Parts",
+    },
+    whyPoints: {
+      zh: [
+        "機構件的尺寸與形位公差控制",
+        "鋁合金、不鏽鋼大量加工經驗",
+        "可整合陽極氧化、發黑、鈍化等表面處理",
+        "長期合作的自動化客戶 — 流程熟悉",
+        "從打樣到量產彈性配合",
+        "對機構運動精度需求的具體理解",
+      ],
+      en: [
+        "Tight control on dimensions and geometric tolerances of mechanism parts",
+        "Extensive aluminum and stainless steel machining",
+        "Integrated surface treatments: anodizing, blackening, passivation",
+        "Long-term automation clients — familiar with their workflow",
+        "Flexibility from prototyping to volume production",
+        "Concrete understanding of motion-precision requirements",
+      ],
+    },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    parts: {
+      zh: [
+        "機器人關節座、基座",
+        "線軌座、滑軌固定座",
+        "自動化夾爪、夾治具",
+        "定位塊、軸承塊",
+        "馬達軸、減速器零件",
+        "感測器固定座、限位座",
+      ],
+      en: [
+        "Robot joint mounts and bases",
+        "Linear rail seats, slide mounts",
+        "Automation grippers, fixturing",
+        "Locating blocks, bearing blocks",
+        "Motor shafts, gearbox components",
+        "Sensor mounts, limit-switch bases",
+      ],
+    },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materials: {
+      zh: [
+        "A6061-T6（最常用，輕量化結構件）",
+        "A7075（高強度受力結構件）",
+        "SUS304 / SUS440C（耐蝕、可熱處理）",
+        "銅合金（軸承、襯套）",
+        "POM 工程塑膠（耐磨件、絕緣件）",
+      ],
+      en: [
+        "A6061-T6 (most common, lightweight structures)",
+        "A7075 (high-strength load-bearing parts)",
+        "SUS304 / SUS440C (corrosion-resistant, heat-treatable)",
+        "Copper alloys (bearings, bushings)",
+        "POM engineering plastic (wear-resistant, insulating parts)",
+      ],
+    },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standards: {
+      zh: [
+        "公差控制：可達 ±0.005 mm",
+        "形位公差：平行度、垂直度、平面度檢驗",
+        "表面處理：陽極氧化（鋁件）、發黑（鋼件）、鈍化（不鏽鋼）",
+        "量測報告 + 形位公差檢驗",
+        "可配合客戶供應商品管要求",
+      ],
+      en: [
+        "Tolerance: down to ±0.005 mm",
+        "Geometric tolerances: parallelism, perpendicularity, flatness inspected",
+        "Surface: anodizing (aluminum), blackening (steel), passivation (stainless)",
+        "Measurement reports with geometric tolerance verification",
+        "Compatible with customer supplier QC requirements",
+      ],
+    },
+    imageUrl:
+      "https://images.pexels.com/photos/28929510/pexels-photo-28929510.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+  },
 ];
 
 export type IndustryLocale = "zh" | "en";

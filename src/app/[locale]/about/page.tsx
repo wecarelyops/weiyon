@@ -74,13 +74,13 @@ export default async function AboutPage({
     },
   ];
 
-  // industry tags — slug 對應到 industries landing pages 的有 semiconductor / aerospace
+  // industry tags — 5 個產業全部有對應 landing page
   const industries = [
     { name: t("industry1"), slug: "semiconductor" },
-    { name: t("industry2"), slug: null }, // 醫療器材：尚無 landing page
+    { name: t("industry2"), slug: "medical" },
     { name: t("industry3"), slug: "aerospace" },
-    { name: t("industry4"), slug: null }, // 汽車
-    { name: t("industry5"), slug: null }, // 精密機械
+    { name: t("industry4"), slug: "automotive" },
+    { name: t("industry5"), slug: "automation" },
   ];
 
   const areas = [
