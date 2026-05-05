@@ -74,12 +74,13 @@ export default async function AboutPage({
     },
   ];
 
+  // industry tags — slug 對應到 industries landing pages 的有 semiconductor / aerospace
   const industries = [
-    t("industry1"),
-    t("industry2"),
-    t("industry3"),
-    t("industry4"),
-    t("industry5"),
+    { name: t("industry1"), slug: "semiconductor" },
+    { name: t("industry2"), slug: null }, // 醫療器材：尚無 landing page
+    { name: t("industry3"), slug: "aerospace" },
+    { name: t("industry4"), slug: null }, // 汽車
+    { name: t("industry5"), slug: null }, // 精密機械
   ];
 
   const areas = [
@@ -244,14 +245,25 @@ export default async function AboutPage({
               {t("industriesSubtitle")}
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {industries.map((ind) => (
-                <span
-                  key={ind}
-                  className="px-5 py-2 bg-white border border-[var(--border)] rounded-full text-sm font-medium text-[var(--primary)]"
-                >
-                  {ind}
-                </span>
-              ))}
+              {industries.map((ind) =>
+                ind.slug ? (
+                  <Link
+                    key={ind.name}
+                    href={`/industries/${ind.slug}`}
+                    className="group px-5 py-2 bg-white border border-[var(--accent)] rounded-full text-sm font-medium text-[var(--primary)] hover:bg-[var(--accent)] hover:text-white transition-colors inline-flex items-center gap-2"
+                  >
+                    {ind.name}
+                    <ArrowRight className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                  </Link>
+                ) : (
+                  <span
+                    key={ind.name}
+                    className="px-5 py-2 bg-white border border-[var(--border)] rounded-full text-sm font-medium text-[var(--primary)]"
+                  >
+                    {ind.name}
+                  </span>
+                )
+              )}
             </div>
           </div>
 

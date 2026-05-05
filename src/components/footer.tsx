@@ -10,6 +10,7 @@ export default function Footer() {
     { name: tNav("home"), href: "/" },
     { name: tNav("about"), href: "/about" },
     { name: tNav("products"), href: "/products" },
+    { name: tNav("workflow"), href: "/workflow" },
     { name: tNav("gallery"), href: "/gallery" },
     { name: tNav("blog"), href: "/blog" },
     { name: tNav("faq"), href: "/faq" },

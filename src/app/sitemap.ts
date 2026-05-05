@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { processes } from "@/data/processes";
+import { industries } from "@/data/industries";
 
 const BASE = "https://www.weiyon.com";
 const TOTAL_WORKS = 32;
@@ -57,11 +58,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1.0, changeFrequency: "weekly" },
     { path: "/about", priority: 0.9, changeFrequency: "monthly" },
     { path: "/products", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/workflow", priority: 0.85, changeFrequency: "monthly" },
     { path: "/gallery", priority: 0.8, changeFrequency: "monthly" },
     { path: "/faq", priority: 0.8, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
     { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
   ];
+
+  // 產業 landing pages
+  const industryPages: Page[] = industries.map((ind) => ({
+    path: `/industries/${ind.slug}`,
+    priority: 0.85,
+    changeFrequency: "monthly" as const,
+  }));
 
   // 加工製程子頁
   const processPages: Page[] = processes.map((p) => ({
@@ -80,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...localizedEntries(mainPages),
     ...localizedEntries(processPages),
+    ...localizedEntries(industryPages),
     ...localizedEntries(worksPages),
   ];
 }
