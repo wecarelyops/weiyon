@@ -9,7 +9,7 @@
   "Nav": {
     "home": "首頁",
     "about": "關於我們",
-    "products": "加工品目",
+    "products": "加工項目",
     "workflow": "合作流程",
     "gallery": "實績展示",
     "blog": "部落格",
@@ -177,12 +177,12 @@
     "formSubmit": "送出訊息"
   },
   "Products": {
-    "metaTitle": "CNC 加工品目 | 車削 / 銑削 / 放電 / 鈑金 / 表面處理 — 偉勇工業社",
+    "metaTitle": "CNC 加工項目 | 車削 / 銑削 / 放電 / 鈑金 / 表面處理 — 偉勇工業社",
     "metaDescription": "偉勇工業社提供完整 CNC 加工服務 — CNC 銑削、CNC 車削、精密放電加工、鈑金加工、表面處理。承接半導體、航太、醫療、汽車、自動化等產業精密零件，從 1 件起接單。台中烏日 40 年加工廠。",
-    "heroTitle": "加工品目",
+    "heroTitle": "加工項目",
     "heroTagline": "精密金屬零件加工專家",
     "heroDescription": "從 1 個零件開始，滿足您多樣化的加工需求",
-    "cat1Title": "加工品目",
+    "cat1Title": "加工品項",
     "cat1Item1": "半導體製造設備零件",
     "cat1Item2": "航太相關零件（衛星零件）",
     "cat1Item3": "醫療器材零件",
@@ -223,11 +223,11 @@
     "processesLabel": "加工製程",
     "processesTitle": "從車削銑削到表面處理，五大製程一站式整合",
     "scopeLabel": "服務範圍",
-    "scopeTitle": "加工品目、技術與材料總覽",
+    "scopeTitle": "加工項目、技術與材料總覽",
     "learnMore": "了解詳情"
   },
   "ProcessDetail": {
-    "backToProducts": "返回加工品目",
+    "backToProducts": "返回加工項目",
     "inHouseTag": "廠內主力製程",
     "partnerNetworkTag": "合作廠整合服務",
     "overviewLabel": "製程說明",
@@ -335,7 +335,7 @@
   "Footer": {
     "tagline": "台中 40 年精密加工廠。專長難加工材料、客製規格、短交期 — 從一塊素材到一件成品，全程整合。",
     "quickLinks": "快速連結",
-    "services": "加工品目",
+    "services": "加工項目",
     "contactInfo": "聯絡資訊",
     "address": "台中市烏日區環中路八段 332 巷 118 弄 35 號",
     "hours": "週一至週五 08:00 - 17:30",
