@@ -74,7 +74,7 @@ export default async function AboutPage({
     },
   ];
 
-  // industry tags — 6 個產業，5 個有對應 landing page，精密機械為廣義分類保留
+  // industry tags — 7 個產業，6 個有對應 landing page，精密機械為廣義分類保留
   const industries = [
     { name: t("industry1"), slug: "semiconductor" },
     { name: t("industry2"), slug: "medical" },
@@ -82,6 +82,7 @@ export default async function AboutPage({
     { name: t("industry4"), slug: "automotive" },
     { name: t("industry5"), slug: null }, // 精密機械（廣義分類）
     { name: t("industry6"), slug: "automation" },
+    { name: t("industry7"), slug: "tuning" },
   ];
 
   const areas = [

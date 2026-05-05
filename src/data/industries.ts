@@ -708,6 +708,143 @@ export const industries: Industry[] = [
     imageUrl:
       "https://images.pexels.com/photos/28929510/pexels-photo-28929510.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
   },
+  {
+    slug: "tuning",
+    title: {
+      zh: "改裝車零件精密加工",
+      en: "Aftermarket & Tuning Parts Machining",
+      de: "Tuning- und Aftermarket-Teile",
+    },
+    shortTitle: { zh: "改裝車", en: "Tuning", de: "Tuning" },
+    metaTitle: {
+      zh: "改裝車零件加工 | 排氣 / 進氣 / 底盤強化件 — 偉勇工業社",
+      en: "Aftermarket & Tuning Parts | Exhaust, Intake, Chassis — Weiyon Industry",
+      de: "Tuning-Teile-Bearbeitung | Auspuff, Ansaugung, Fahrwerk — Weiyon Industry",
+    },
+    metaDescription: {
+      zh: "偉勇工業社承接改裝車零件精密加工 — 排氣管路、進氣管段、防傾桿座、引擎室件、底盤強化件、客製化緊固件。SUS304、A6061、SCM440 等改裝常用材料，從 1 件起接、設計修正彈性配合、表面處理整合。台中 40 年精密加工廠，改裝品牌與車隊長期合作。",
+      en: "Weiyon Industry machines aftermarket and tuning parts — exhaust piping, intake components, anti-roll bar mounts, engine bay parts, chassis bracing, custom fasteners. SUS304, A6061, SCM440 and more. From 1 piece up, flexible revisions, integrated surface finishes. 40-year Taichung shop trusted by tuning brands and racing teams.",
+      de: "Weiyon Industry fertigt Tuning- und Aftermarket-Teile — Auspuffrohre, Ansaugkomponenten, Stabilisatorhalter, Motorraumteile, Fahrwerksverstärkungen, Sonderverbindungselemente. SUS304, A6061, SCM440 u. v. m. Ab 1 Stück, flexible Anpassungen, integrierte Oberflächen. 40 Jahre Präzisionsbearbeitung in Taichung — Partner für Tuning-Marken und Rennteams.",
+    },
+    heroSubtitle: {
+      zh: "排氣 / 進氣 / 底盤 / 引擎室 — 改裝品牌與車隊的精密加工夥伴",
+      en: "Exhaust, intake, chassis, engine bay — your precision partner for tuning brands and racing teams",
+      de: "Auspuff, Ansaugung, Fahrwerk, Motorraum — Ihr Präzisionspartner für Tuning-Marken und Rennteams",
+    },
+    intro: {
+      zh: "改裝車市場跟一般 OEM 不同 — 訂單常以單件、小批量為主，客戶要的是設計自由度、表面質感、與短交期。從一條客製排氣中段、一組防傾桿座到一個 catch can 固定架，每個案子都需要工廠能配合靈活的設計修正、提供漂亮的成品外觀。我們長期承接改裝品牌、車隊、與個人玩家的客製需求。",
+      en: "Aftermarket isn't OEM — orders are often single-piece or small-batch, and clients prize design freedom, surface quality, and quick turnaround. From a custom exhaust section to anti-roll bar mounts to a catch-can bracket, each project needs a shop that handles flexible revisions and produces parts that look as good as they perform. We've supported tuning brands, racing teams, and enthusiasts on countless one-off and short-run projects.",
+      de: "Aftermarket ist kein OEM-Geschäft — Aufträge sind meist Einzelstücke oder Kleinserien, und Kunden legen Wert auf Designfreiheit, Oberflächenqualität und schnelle Durchlaufzeit. Vom maßgefertigten Mittelschalldämpfer über Stabilisatorhalter bis zur Catch-Can-Halterung braucht jedes Projekt eine Werkstatt, die flexibel auf Konstruktionsänderungen reagiert und Teile liefert, die genauso gut aussehen wie sie funktionieren. Wir unterstützen Tuning-Marken, Rennteams und Enthusiasten seit Jahren bei Einzelanfertigungen und Kleinserien.",
+    },
+    whyTitle: {
+      zh: "為什麼改裝品牌選擇偉勇",
+      en: "Why Tuning Brands Choose Weiyon",
+      de: "Warum Tuning-Marken sich für Weiyon entscheiden",
+    },
+    whyPoints: {
+      zh: [
+        "1 件起接，沒有最低量門檻 — 試做、客製、收藏件都接",
+        "設計修正配合度高 — 改裝件常邊做邊調，我們配合",
+        "SUS304 / 不鏽鋼髮絲、鏡面拋光整合",
+        "A6061 陽極處理（黑、紅、藍、灰、消光），CNC 刀痕保留可指定",
+        "短交期 — 急件可協調 5-7 天內出貨",
+        "直接面對玩家、工作室、車隊，溝通沒有層層轉達",
+      ],
+      en: [
+        "1-piece minimum — prototypes, customs, one-offs all welcome",
+        "Flexible design revisions — aftermarket parts often iterate during production",
+        "Integrated brushed and mirror polishing for SUS304 and stainless",
+        "A6061 anodizing in black / red / blue / grey / matte; CNC tool-mark retention on request",
+        "Short lead times — rush orders can ship within 5-7 days",
+        "Direct communication with enthusiasts, tuning shops, racing teams — no layered handoffs",
+      ],
+      de: [
+        "Ab 1 Stück — Prototypen, Sonderanfertigungen, Einzelstücke willkommen",
+        "Flexible Konstruktionsänderungen — Tuning-Teile werden oft während der Fertigung angepasst",
+        "Integriertes Schliff- und Spiegelpolieren für SUS304 und Edelstahl",
+        "A6061-Eloxierung in Schwarz / Rot / Blau / Grau / Matt; CNC-Fräsriefen auf Wunsch erhalten",
+        "Kurze Lieferzeiten — Eilaufträge in 5-7 Tagen versandbereit",
+        "Direkte Kommunikation mit Enthusiasten, Tuning-Werkstätten und Rennteams — ohne Zwischenstationen",
+      ],
+    },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
+    parts: {
+      zh: [
+        "排氣管路：中段、尾段、頭段法蘭、消音器外殼",
+        "進氣管段：濾芯固定座、節氣門連接管、進氣歧管法蘭",
+        "底盤強化件：防傾桿座、引擎室拉桿、底盤連桿",
+        "引擎室件：catch can 固定座、機油冷卻器座、渦輪 / 中冷器管路法蘭",
+        "輪圈墊片、輪圈轉接座（hub-centric）",
+        "客製緊固件、油管接頭、特殊螺絲螺帽",
+      ],
+      en: [
+        "Exhaust system: mid-section, tail section, header flanges, muffler housings",
+        "Intake parts: air filter mounts, throttle body adapters, manifold flanges",
+        "Chassis bracing: anti-roll bar mounts, engine bay strut bars, chassis links",
+        "Engine bay: catch-can mounts, oil cooler brackets, turbo / IC piping flanges",
+        "Wheel spacers, hub-centric wheel adapters",
+        "Custom fasteners, fluid line fittings, special bolts and nuts",
+      ],
+      de: [
+        "Abgasanlage: Mittelteil, Endrohrabschnitt, Krümmerflansche, Schalldämpfergehäuse",
+        "Ansaugteile: Luftfilterhalter, Drosselklappenadapter, Ansaugkrümmerflansche",
+        "Fahrwerksverstärkung: Stabilisatorhalter, Motorraum-Domstreben, Fahrwerksstreben",
+        "Motorraum: Catch-Can-Halter, Ölkühlerhalter, Turbo- / Ladeluftrohrflansche",
+        "Distanzscheiben, hub-zentrische Spurplatten",
+        "Sonderverbindungselemente, Fluidanschlüsse, Spezialschrauben und -muttern",
+      ],
+    },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
+    materials: {
+      zh: [
+        "SUS304 / SUS316 / SUS321（耐高溫排氣件首選）",
+        "A6061-T6 / A7075（輕量化結構、可陽極處理）",
+        "SCM440 / S45C（高強度受力件、可熱處理）",
+        "鈦合金 Ti-6Al-4V（高階改裝排氣 / 輕量化）",
+        "銅合金（接點、特殊接頭）",
+      ],
+      en: [
+        "SUS304 / SUS316 / SUS321 (top choice for high-temp exhaust)",
+        "A6061-T6 / A7075 (lightweight, anodizable)",
+        "SCM440 / S45C (high-strength load-bearing, heat-treatable)",
+        "Titanium Ti-6Al-4V (premium exhaust / weight reduction)",
+        "Copper alloys (contacts, specialty fittings)",
+      ],
+      de: [
+        "SUS304 / SUS316 / SUS321 (erste Wahl für Hochtemperatur-Abgas)",
+        "A6061-T6 / A7075 (leicht, eloxierbar)",
+        "SCM440 / S45C (hochfest tragend, härtbar)",
+        "Titan Ti-6Al-4V (Premium-Auspuff / Gewichtsreduktion)",
+        "Kupferlegierungen (Kontakte, Spezialanschlüsse)",
+      ],
+    },
+    standardsTitle: { zh: "規格與表面處理", en: "Quality & Finish", de: "Qualität & Oberfläche" },
+    standards: {
+      zh: [
+        "公差控制：±0.01 ~ ±0.05 mm（依零件性質彈性調整）",
+        "陽極處理：黑、紅、藍、灰、消光（鋁件）",
+        "不鏽鋼處理：髮絲、鏡面拋光、噴砂",
+        "雷雕 logo / 序號（合作品牌可代雕）",
+        "焊接整合：TIG 焊接 SUS / 鈦（透過合作廠）",
+      ],
+      en: [
+        "Tolerance: ±0.01 ~ ±0.05 mm depending on part type",
+        "Anodizing: black, red, blue, grey, matte (aluminum parts)",
+        "Stainless finishes: brushed, mirror polish, bead-blasted",
+        "Laser engraving for logos / serial numbers (we engrave for partner brands)",
+        "Integrated welding: TIG for stainless and titanium (via partner shop)",
+      ],
+      de: [
+        "Toleranzen: ±0,01 bis ±0,05 mm je nach Bauteil",
+        "Eloxieren: Schwarz, Rot, Blau, Grau, Matt (Aluminiumteile)",
+        "Edelstahl-Oberflächen: Schliff, Spiegelpolitur, Strahlen",
+        "Lasergravur für Logos / Seriennummern (auf Wunsch für Partnermarken)",
+        "Integriertes Schweißen: TIG für Edelstahl und Titan (über Partnerbetrieb)",
+      ],
+    },
+    imageUrl:
+      "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+  },
 ];
 
 export function getIndustryBySlug(slug: string): Industry | undefined {
