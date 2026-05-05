@@ -1,5 +1,6 @@
-export type Bilingual = { zh: string; en: string };
-export type BilingualList = { zh: string[]; en: string[] };
+export type Bilingual = { zh: string; en: string; de: string };
+export type BilingualList = { zh: string[]; en: string[]; de: string[] };
+export type IndustryLocale = "zh" | "en" | "de";
 
 export type Industry = {
   slug: string;
@@ -20,32 +21,41 @@ export type Industry = {
   imageUrl: string;
 };
 
-// 2 個產業專屬 landing pages（中英雙語）
+// 5 個產業專屬 landing pages（中 / 英 / 德 三語）
 export const industries: Industry[] = [
   {
     slug: "semiconductor",
     title: {
       zh: "半導體設備精密零件加工",
       en: "Semiconductor Equipment Precision Parts Machining",
+      de: "Präzisionsteile für Halbleiterausrüstung",
     },
-    shortTitle: { zh: "半導體", en: "Semiconductor" },
+    shortTitle: { zh: "半導體", en: "Semiconductor", de: "Halbleiter" },
     metaTitle: {
       zh: "半導體設備零件加工 | 真空腔體 / 晶圓搬運機構 — 偉勇工業社",
       en: "Semiconductor Equipment Parts Machining | Vacuum Chambers, Wafer Handling — Weiyon Industry",
+      de: "Halbleiter-Präzisionsteile | Vakuumkammern, Wafer-Handling — Weiyon Industry",
     },
     metaDescription: {
       zh: "偉勇工業社 40 年加工經驗，專業承接半導體製造設備關鍵零件 — 真空腔體、晶圓搬運機構、機台結構件、氣體閥相關零件。提供 SUS304/316、A6061 加工、Class 100 潔淨包裝、表面處理整合。台中烏日精密加工廠。",
       en: "Weiyon Industry's 40-year experience serves Taiwan's semiconductor industry — vacuum chambers, wafer-handling mechanisms, machine structures, gas / vacuum valve parts. SUS304/316, A6061 machining with Class 100 cleanroom packaging and integrated surface treatment. Based in Taichung.",
+      de: "Weiyon Industry — 40 Jahre Erfahrung für Taiwans Halbleiterindustrie. Vakuumkammern, Wafer-Handling-Mechaniken, Maschinenstrukturen, Gas- und Vakuumventilteile. SUS304/316, A6061-Bearbeitung mit Class-100-Reinraumverpackung und integrierter Oberflächenbehandlung. Standort Taichung, Taiwan.",
     },
     heroSubtitle: {
       zh: "40 年加工經驗服務台灣半導體產業 — 嚴格潔淨度、短交期、客戶長期合作",
       en: "40 years serving Taiwan's semiconductor industry — strict cleanliness, short lead times, long-term partnerships",
+      de: "40 Jahre für Taiwans Halbleiterindustrie — strenge Reinheit, kurze Lieferzeiten, langjährige Partnerschaften",
     },
     intro: {
       zh: "半導體製程環境嚴苛 — 真空、高潔淨、腐蝕性氣體、超精密配合面。每一個零件的尺寸、材質、表面處理都直接影響晶圓良率。我們長期承接半導體設備零件加工，深知這個產業對品質與時效的雙重要求。",
       en: "Semiconductor processing is unforgiving — vacuum, ultra-clean, corrosive gases, sub-micron mating surfaces. Every dimension, material, and surface finish directly impacts wafer yield. We've supported semiconductor equipment manufacturers for decades and understand the industry's dual demand for quality and speed.",
+      de: "Die Halbleiterfertigung verzeiht keine Fehler — Vakuum, Reinstumgebung, korrosive Gase, Passflächen im Submikrometerbereich. Jede Bemaßung, jedes Material und jede Oberfläche wirkt sich direkt auf die Wafer-Ausbeute aus. Seit Jahrzehnten beliefern wir Hersteller von Halbleiterausrüstung und kennen die doppelte Anforderung dieser Branche an Qualität und Termintreue.",
     },
-    whyTitle: { zh: "為什麼選擇偉勇承接半導體零件", en: "Why Weiyon for Semiconductor Parts" },
+    whyTitle: {
+      zh: "為什麼選擇偉勇承接半導體零件",
+      en: "Why Weiyon for Semiconductor Parts",
+      de: "Warum Weiyon für Halbleiterteile",
+    },
     whyPoints: {
       zh: [
         "40 年加工經驗，半導體客戶長期合作",
@@ -63,8 +73,16 @@ export const industries: Industry[] = [
         "Rush orders accepted — even when other shops decline",
         "Full measurement reports and material traceability",
       ],
+      de: [
+        "40 Jahre Erfahrung mit langjährigen Halbleiterkunden",
+        "Lagerbestände gängiger Werkstoffe: SUS304, SUS316, A6061",
+        "Integrierte Oberflächenbehandlungen: Elektropolieren, Passivieren, Harteloxieren",
+        "Reinraumverpackung Class 100 / Class 10 auf Anfrage",
+        "Eilaufträge angenommen — auch wenn andere Werkstätten ablehnen",
+        "Vollständige Messprotokolle und Materialrückverfolgbarkeit",
+      ],
     },
-    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
     parts: {
       zh: [
         "真空腔體零件（Chamber components）",
@@ -82,8 +100,16 @@ export const industries: Industry[] = [
         "Cleanliness-critical parts, mechanism guides",
         "Wafer processing fixtures",
       ],
+      de: [
+        "Vakuumkammer-Komponenten",
+        "Wafer-Handling: Endeffektoren, Handlerarme, Greifer",
+        "Maschinenstrukturen, Montagesockel, Justiersitze",
+        "Gas- und Vakuumventilteile",
+        "Reinheitskritische Teile, Mechanikführungen",
+        "Wafer-Bearbeitungsvorrichtungen",
+      ],
     },
-    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
     materials: {
       zh: [
         "SUS304 / SUS316 / SUS316L（耐腐蝕、低顆粒）",
@@ -97,8 +123,14 @@ export const industries: Industry[] = [
         "C1100 / C1220 pure copper (high thermal conductivity)",
         "POM, PEEK engineering plastics (case-by-case)",
       ],
+      de: [
+        "SUS304 / SUS316 / SUS316L (korrosionsbeständig, partikelarm)",
+        "A6061-T6 / A7075 (nach Eloxieren einsetzbar)",
+        "C1100 / C1220 Reinkupfer (hohe Wärmeleitfähigkeit)",
+        "POM, PEEK Konstruktionskunststoffe (fallweise)",
+      ],
     },
-    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
         "公差控制：可達 ±0.005 mm",
@@ -114,6 +146,13 @@ export const industries: Industry[] = [
         "Documentation: dimensional inspection reports, mill test certs",
         "Compliance with ASTM, JIS, SEMI as required",
       ],
+      de: [
+        "Toleranzen: bis ±0,005 mm",
+        "Oberflächen: Elektropolieren, Eloxieren, Passivieren",
+        "Reinheit: Class 100 / Class 10 Verpackung",
+        "Dokumentation: Maßprüfberichte, Werksattestate (Mill Cert)",
+        "Konform mit ASTM, JIS, SEMI nach Bedarf",
+      ],
     },
     imageUrl:
       "https://images.pexels.com/photos/12951626/pexels-photo-12951626.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -123,25 +162,34 @@ export const industries: Industry[] = [
     title: {
       zh: "航太精密零件加工",
       en: "Aerospace Precision Parts Machining",
+      de: "Präzisionsteile für die Luft- und Raumfahrt",
     },
-    shortTitle: { zh: "航太", en: "Aerospace" },
+    shortTitle: { zh: "航太", en: "Aerospace", de: "Luft- & Raumfahrt" },
     metaTitle: {
       zh: "航太零件加工 | 鈦合金 / 高強度鋁 / 5 軸 CNC — 偉勇工業社",
       en: "Aerospace Parts Machining | Titanium, High-Strength Aluminum, 5-Axis CNC — Weiyon Industry",
+      de: "Luft- & Raumfahrt-Präzisionsteile | Titan, hochfestes Aluminium, 5-Achs-CNC — Weiyon Industry",
     },
     metaDescription: {
       zh: "偉勇工業社承接航太精密零件加工 — 衛星零件、無人機機構件、結構骨架接頭、引擎周邊零件。鈦合金（Ti-6Al-4V）、A7075、A2024 等難切削材料加工經驗。提供材質證明、量測報告、追溯紀錄。台中 40 年精密加工廠。",
       en: "Weiyon Industry machines aerospace precision parts — satellite components, UAV mechanisms, structural joints, engine peripherals. Experience with difficult materials including Ti-6Al-4V, A7075, A2024. Material certificates, measurement reports, traceability. 40-year Taichung precision machining shop.",
+      de: "Weiyon Industry fertigt Präzisionsteile für die Luft- und Raumfahrt — Satellitenkomponenten, UAV-Mechaniken, Strukturverbinder, Triebwerksperipherie. Erfahrung mit schwer zerspanbaren Werkstoffen wie Ti-6Al-4V, A7075, A2024. Werkszeugnisse, Messprotokolle, Rückverfolgbarkeit. 40 Jahre Präzisionsbearbeitung in Taichung.",
     },
     heroSubtitle: {
       zh: "難切削合金、高精度公差、輕量化結構 — 偉勇的航太加工專長",
       en: "Difficult alloys, tight tolerances, lightweight structures — Weiyon's aerospace expertise",
+      de: "Schwer zerspanbare Legierungen, enge Toleranzen, Leichtbaustrukturen — Weiyons Kompetenz für die Luft- und Raumfahrt",
     },
     intro: {
       zh: "航太零件對精度、材料性能、可追溯性的要求都比一般機械業更嚴。鈦合金切削難、A7075 高強度鋁加工易變形、薄壁結構需要精準的應力控制。偉勇承接航太零件多年，掌握難切削材料的加工策略與品管流程，是中小企業航太供應鏈的可靠選項。",
       en: "Aerospace parts demand more — tighter tolerances, exotic materials, full traceability. Titanium is hard to cut, A7075 deforms easily, thin walls require precise stress control. With years of aerospace work, Weiyon has the difficult-material strategies and quality processes that mid-tier aerospace supply chains rely on.",
+      de: "Luft- und Raumfahrtteile stellen höhere Anforderungen — engere Toleranzen, exotische Werkstoffe, vollständige Rückverfolgbarkeit. Titan ist schwer zerspanbar, A7075 verzieht sich leicht, dünnwandige Strukturen verlangen präzise Spannungskontrolle. Mit langjähriger Erfahrung in der Luft- und Raumfahrtfertigung verfügt Weiyon über die Strategien und Qualitätsprozesse, auf die mittelständische Luft- und Raumfahrt-Lieferketten angewiesen sind.",
     },
-    whyTitle: { zh: "為什麼選擇偉勇承接航太零件", en: "Why Weiyon for Aerospace Parts" },
+    whyTitle: {
+      zh: "為什麼選擇偉勇承接航太零件",
+      en: "Why Weiyon for Aerospace Parts",
+      de: "Warum Weiyon für Luft- und Raumfahrtteile",
+    },
     whyPoints: {
       zh: [
         "鈦合金、Inconel 等難切削材料加工經驗",
@@ -159,8 +207,16 @@ export const industries: Industry[] = [
         "Long-term partnerships with material suppliers and surface treatment shops",
         "Mill test certificates and inspection reports provided",
       ],
+      de: [
+        "Erfahrung mit Titan, Inconel und weiteren schwer zerspanbaren Legierungen",
+        "Enge Toleranzführung (±0,005 mm Standard)",
+        "Vollständiger Mess- und Rückverfolgbarkeits-Workflow",
+        "Einzelstück-Prototyping bis zur Kleinserienfertigung (F&E-freundlich)",
+        "Langjährige Partnerschaften mit Werkstoff- und Oberflächenbehandlungs-Lieferanten",
+        "Werksattestate (Mill Test Cert) und Prüfberichte inklusive",
+      ],
     },
-    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
     parts: {
       zh: [
         "衛星零件、結構配件",
@@ -178,8 +234,16 @@ export const industries: Industry[] = [
         "Custom fasteners, special bolts and nuts",
         "Prototype parts",
       ],
+      de: [
+        "Satellitenkomponenten, Strukturbeschläge",
+        "UAV-Mechanikteile, Rahmenverbinder",
+        "Triebwerksperipherie: hitzebeständige Teile, Lagersitze",
+        "Tragflächenstrukturen, leichte tragende Bauteile",
+        "Sonderverbindungselemente, Spezialschrauben und -muttern",
+        "Prototypen",
+      ],
     },
-    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
     materials: {
       zh: [
         "鈦合金 Ti-6Al-4V（Grade 5）— 主流航太鈦",
@@ -197,8 +261,16 @@ export const industries: Industry[] = [
         "SUS630 / 17-4PH precipitation-hardened stainless",
         "Other difficult alloys including Inconel (case-by-case)",
       ],
+      de: [
+        "Ti-6Al-4V (Grade 5) — das Standardtitan der Luftfahrt",
+        "Reintitan Grade 1-4 (Spezialanwendungen)",
+        "A7075-T6 hochfestes Aluminium (tragende Teile)",
+        "A2024 ermüdungsbeständiges Aluminium",
+        "SUS630 / 17-4PH ausscheidungsgehärteter Edelstahl",
+        "Weitere schwer zerspanbare Legierungen wie Inconel (fallweise)",
+      ],
     },
-    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
         "公差控制：標配 ±0.005 mm，特殊規格可洽",
@@ -214,6 +286,13 @@ export const industries: Industry[] = [
         "Dimensional reports: measurement records per batch",
         "Compatible with AS9100 customer supply-chain QC requirements",
       ],
+      de: [
+        "Toleranzen: ±0,005 mm Standard, engere Werte auf Anfrage",
+        "Oberflächengüte: Ra 0,4 – Ra 1,6 (Präzisionsdrehen / -fräsen)",
+        "Werkszeugnisse: Mill Test Certificates in Luftfahrtqualität",
+        "Maßprüfberichte: Messprotokolle pro Charge",
+        "Kompatibel mit AS9100-Anforderungen der Kundenlieferkette",
+      ],
     },
     imageUrl:
       "https://images.pexels.com/photos/8865187/pexels-photo-8865187.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -223,27 +302,33 @@ export const industries: Industry[] = [
     title: {
       zh: "醫療器材精密零件加工",
       en: "Medical Device Precision Parts Machining",
+      de: "Präzisionsteile für die Medizintechnik",
     },
-    shortTitle: { zh: "醫療", en: "Medical" },
+    shortTitle: { zh: "醫療", en: "Medical", de: "Medizintechnik" },
     metaTitle: {
       zh: "醫療器材零件加工 | 生醫不鏽鋼 SUS316L / 純鈦 — 偉勇工業社",
       en: "Medical Device Parts Machining | SUS316L, Pure Titanium — Weiyon Industry",
+      de: "Medizintechnik-Präzisionsteile | SUS316L, Reintitan — Weiyon Industry",
     },
     metaDescription: {
       zh: "偉勇工業社承接醫療器材精密零件加工 — 手術器械、檢測設備機構件、影像系統零件。提供 SUS316L 生醫不鏽鋼、純鈦 Grade 1-4、Ti-6Al-4V ELI、PEEK 等生物相容材料加工經驗。可配合 ISO 13485 供應鏈品管。台中 40 年精密加工廠。",
       en: "Weiyon Industry machines medical device precision parts — surgical instruments, diagnostic equipment mechanisms, imaging system components. Experience with SUS316L medical-grade stainless steel, pure titanium Grade 1-4, Ti-6Al-4V ELI, PEEK and other biocompatible materials. ISO 13485 supply-chain QC compatible. 40-year Taichung shop.",
+      de: "Weiyon Industry fertigt Präzisionsteile für die Medizintechnik — Operationsinstrumente, Diagnosegerätemechaniken, Bildgebungskomponenten. Erfahrung mit SUS316L medizinischem Edelstahl, Reintitan Grade 1-4, Ti-6Al-4V ELI, PEEK und weiteren biokompatiblen Werkstoffen. Kompatibel mit ISO-13485-Lieferketten-QM. 40 Jahre Präzisionsbearbeitung in Taichung.",
     },
     heroSubtitle: {
       zh: "生物相容材料、嚴格表面要求、完整追溯 — 偉勇的醫療器材加工",
       en: "Biocompatible materials, strict surface specs, full traceability — Weiyon's medical device machining",
+      de: "Biokompatible Werkstoffe, strenge Oberflächenanforderungen, lückenlose Rückverfolgbarkeit — Weiyons Medizintechnik-Fertigung",
     },
     intro: {
       zh: "醫療器材的零件要面對人體接觸、滅菌循環、長期使用等嚴苛要求。SUS316L 生醫不鏽鋼、純鈦、PEEK 等生物相容材料的加工，需要的不只是精度，更要考慮表面處理、潔淨度與材料追溯。偉勇承接醫療零件多年，能配合醫療器材廠的供應鏈品管流程。",
       en: "Medical device parts face skin contact, sterilization cycles, and long-duration use — demands that go beyond precision alone. Machining biocompatible materials like SUS316L, pure titanium, and PEEK requires careful attention to surface treatment, cleanliness, and material traceability. Weiyon's experience with medical clients lets us fit smoothly into device-maker supply chains.",
+      de: "Medizintechnikteile sind Hautkontakt, Sterilisationszyklen und Langzeiteinsatz ausgesetzt — Anforderungen, die über reine Präzision hinausgehen. Die Bearbeitung biokompatibler Werkstoffe wie SUS316L, Reintitan und PEEK erfordert sorgfältige Berücksichtigung von Oberflächenbehandlung, Reinheit und Materialrückverfolgbarkeit. Weiyons langjährige Erfahrung mit Medizinkunden erlaubt eine reibungslose Integration in Lieferketten von Geräteherstellern.",
     },
     whyTitle: {
       zh: "為什麼選擇偉勇承接醫療零件",
       en: "Why Weiyon for Medical Parts",
+      de: "Warum Weiyon für Medizintechnikteile",
     },
     whyPoints: {
       zh: [
@@ -262,8 +347,16 @@ export const industries: Industry[] = [
         "Compatible with ISO 13485 customer supply-chain QC",
         "Flexibility from prototyping through low-volume production",
       ],
+      de: [
+        "Erfahrung mit SUS316L, Reintitan und PEEK als biomedizinische Werkstoffe",
+        "Integrierte Oberflächenbehandlungen: Elektropolieren, Passivieren, Hochglanz",
+        "Werkszeugnisse plus medizinische Werkstoffprüfung",
+        "Vollständige Chargenrückverfolgbarkeit bis zum Rohmaterial",
+        "Kompatibel mit ISO-13485-QM in Kundenlieferketten",
+        "Flexibilität vom Prototyp bis zur Kleinserie",
+      ],
     },
-    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
     parts: {
       zh: [
         "手術器械零件（持針器、夾鉗、鑷類零件）",
@@ -281,8 +374,16 @@ export const industries: Industry[] = [
         "Medical assistive device parts, mechanism linkages",
         "Dental instrument precision parts",
       ],
+      de: [
+        "Operationsinstrumententeile (Nadelhalter, Zangen, Pinzettenkomponenten)",
+        "Implantatträger, Titan-Komponenten für die Biomedizin",
+        "Diagnosegerätemechaniken, Bewegungsachsenteile",
+        "Bildgebungssysteme: Mechaniken und Justierbaugruppen",
+        "Medizinische Hilfsmittel, Mechanikgestänge",
+        "Dentalinstrumente in Präzisionsausführung",
+      ],
     },
-    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
     materials: {
       zh: [
         "SUS316L（生醫等級不鏽鋼）",
@@ -298,8 +399,15 @@ export const industries: Industry[] = [
         "PEEK (biocompatible engineering plastic)",
         "Medical-grade aluminum alloys",
       ],
+      de: [
+        "SUS316L (medizinischer Edelstahl)",
+        "Reintitan Grade 1-4 (korrosionsbeständig, biokompatibel)",
+        "Ti-6Al-4V ELI (Extra Low Interstitial, für biomedizinische Implantate)",
+        "PEEK (biokompatibler Konstruktionskunststoff)",
+        "Aluminiumlegierungen in Medizinqualität",
+      ],
     },
-    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
         "公差控制：可達 ±0.005 mm",
@@ -315,6 +423,13 @@ export const industries: Industry[] = [
         "Packaging: per customer requirement (cleanroom packaging available)",
         "Compatible with ISO 13485 supply-chain QC",
       ],
+      de: [
+        "Toleranzen: bis ±0,005 mm",
+        "Oberflächen: Elektropolieren, Passivieren, Ra 0,2 Hochglanz",
+        "Werkszeugnisse plus medizinische Werkstoffprüfung",
+        "Verpackung: nach Kundenanforderung (Reinraumverpackung möglich)",
+        "Kompatibel mit ISO-13485-Lieferketten-QM",
+      ],
     },
     imageUrl:
       "https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -324,27 +439,33 @@ export const industries: Industry[] = [
     title: {
       zh: "汽車零組件精密加工",
       en: "Automotive Precision Parts Machining",
+      de: "Präzisionsteile für die Automobilindustrie",
     },
-    shortTitle: { zh: "汽車", en: "Automotive" },
+    shortTitle: { zh: "汽車", en: "Automotive", de: "Automobil" },
     metaTitle: {
       zh: "汽車零件加工 | 引擎 / 傳動 / 底盤精密零件 — 偉勇工業社",
       en: "Automotive Parts Machining | Engine, Drivetrain, Chassis — Weiyon Industry",
+      de: "Automobilteile-Bearbeitung | Motor, Antriebsstrang, Fahrwerk — Weiyon Industry",
     },
     metaDescription: {
       zh: "偉勇工業社承接汽車零組件精密加工 — 引擎周邊、傳動系統零件、底盤結構件、車載感測器外殼。SCM440、S45C、A6061、SUS304 等汽車常用材料加工經驗，可配合 IATF 16949 客戶 PPAP 文件、批次追溯需求。台中 40 年精密加工廠。",
       en: "Weiyon Industry machines automotive precision parts — engine peripherals, drivetrain components, chassis structures, automotive sensor housings. Experience with SCM440, S45C, A6061, SUS304, and other automotive materials. Compatible with IATF 16949 customer PPAP and batch traceability. 40-year Taichung shop.",
+      de: "Weiyon Industry fertigt Präzisionsteile für die Automobilindustrie — Motorperipherie, Antriebsstrangteile, Fahrwerksstrukturen, Sensorgehäuse. Erfahrung mit SCM440, S45C, A6061, SUS304 und weiteren Automobilwerkstoffen. Kompatibel mit IATF-16949-PPAP-Anforderungen und Chargenrückverfolgbarkeit. 40 Jahre Präzisionsbearbeitung in Taichung.",
     },
     heroSubtitle: {
       zh: "量產穩定、規範配合、批次追溯 — 偉勇的汽車零件加工",
       en: "Volume stability, standards compliance, batch traceability — Weiyon's automotive parts machining",
+      de: "Serienstabilität, Normenkonformität, Chargenrückverfolgbarkeit — Weiyons Automobilteilefertigung",
     },
     intro: {
       zh: "汽車產業對量產穩定性、品質一致性、批次追溯的要求都比一般機械業嚴格。從引擎周邊的高溫零件、傳動系統的精密軸，到底盤結構件，每個零件都需要在大批量生產中維持穩定品質。我們能配合汽車零件供應商的 PPAP 文件、批次追溯、抽樣檢驗等品管流程。",
       en: "Automotive demands more volume stability, consistency, and traceability than general machinery. From engine peripherals to drivetrain shafts to chassis structures, each part must hold quality across large production runs. We coordinate with automotive supply chain processes — PPAP documentation, batch traceability, sampling inspection — without missing a beat.",
+      de: "Die Automobilindustrie fordert mehr Serienstabilität, Konsistenz und Rückverfolgbarkeit als der allgemeine Maschinenbau. Von Motorperipherie über Antriebswellen bis zu Fahrwerksstrukturen muss jedes Teil seine Qualität über große Serienläufe halten. Wir bedienen Lieferketten-Prozesse der Automobilindustrie — PPAP-Dokumentation, Chargenrückverfolgbarkeit, Stichprobenprüfung — ohne Reibungsverluste.",
     },
     whyTitle: {
       zh: "為什麼選擇偉勇承接汽車零件",
       en: "Why Weiyon for Automotive Parts",
+      de: "Warum Weiyon für Automobilteile",
     },
     whyPoints: {
       zh: [
@@ -363,8 +484,16 @@ export const industries: Industry[] = [
         "Compatible with IATF 16949 customer PPAP requirements",
         "Sampling plans and SPC statistical process control",
       ],
+      de: [
+        "Serienstabilität auf Basis langjähriger Großserienfertigung",
+        "Erfahrung mit SCM Cr-Mo-Stahl und automatenfähigem Kohlenstoffstahl",
+        "Integrierte Wärmebehandlung (Härten, Anlassen, Aufkohlen, Nitrieren)",
+        "Vollständige Chargenrückverfolgbarkeit",
+        "Kompatibel mit IATF-16949-PPAP-Anforderungen",
+        "Stichprobenpläne und statistische Prozessregelung (SPC)",
+      ],
     },
-    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
     parts: {
       zh: [
         "引擎周邊零件（軸承座、軸類）",
@@ -382,8 +511,16 @@ export const industries: Industry[] = [
         "Brake-system mechanism parts",
         "Custom fasteners (special bolts and nuts)",
       ],
+      de: [
+        "Motorperipherie (Lagersitze, Wellen)",
+        "Antriebsstrangteile (Zahnräder, Wellen, Hülsen)",
+        "Fahrwerksstrukturen, Aufhängungsmechaniken",
+        "Sensorgehäuse für Fahrzeugelektronik",
+        "Bremsanlagen-Mechanikteile",
+        "Sonderverbindungselemente (Spezialschrauben und -muttern)",
+      ],
     },
-    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
     materials: {
       zh: [
         "SCM435 / SCM440（高強度結構鋼）",
@@ -399,8 +536,15 @@ export const industries: Industry[] = [
         "SUS304 / SUS316 (corrosion-resistant components)",
         "Copper alloys (bearings, bushings)",
       ],
+      de: [
+        "SCM435 / SCM440 (hochfester Konstruktionsstahl)",
+        "S45C / S50C (mittlerer Kohlenstoffstahl, härtbar)",
+        "A6061 / A2024 (Aluminiumlegierungen für Leichtbau)",
+        "SUS304 / SUS316 (korrosionsbeständige Bauteile)",
+        "Kupferlegierungen (Lager, Buchsen)",
+      ],
     },
-    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
         "公差控制：可達 ±0.005 mm",
@@ -416,6 +560,13 @@ export const industries: Industry[] = [
         "Batch traceability and PPAP documentation",
         "SPC statistical process control for volume orders",
       ],
+      de: [
+        "Toleranzen: bis ±0,005 mm",
+        "Oberflächen: Verzinken, Brünieren, Pulverbeschichten, Dacromet",
+        "Wärmebehandlung: Härten, Anlassen, Aufkohlen, Nitrieren",
+        "Chargenrückverfolgbarkeit und PPAP-Dokumentation",
+        "SPC-Prozessregelung für Serienaufträge",
+      ],
     },
     imageUrl:
       "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -425,27 +576,33 @@ export const industries: Industry[] = [
     title: {
       zh: "自動化機械精密零件加工",
       en: "Automation Equipment Precision Parts Machining",
+      de: "Präzisionsteile für die Automatisierungstechnik",
     },
-    shortTitle: { zh: "自動化", en: "Automation" },
+    shortTitle: { zh: "自動化", en: "Automation", de: "Automatisierung" },
     metaTitle: {
       zh: "自動化零件加工 | 機器人 / 機構件 / 夾爪 — 偉勇工業社",
       en: "Automation Parts Machining | Robotics, Mechanisms, Grippers — Weiyon Industry",
+      de: "Automatisierungs-Präzisionsteile | Robotik, Mechaniken, Greifer — Weiyon Industry",
     },
     metaDescription: {
       zh: "偉勇工業社承接自動化機械精密零件加工 — 機器人關節座、線軌座、夾爪、定位塊、滑軌座、感測器固定座等。A6061、SUS304、SUS440C 等自動化常用材料加工，重複精度與長期穩定性兼顧。台中 40 年精密加工廠。",
       en: "Weiyon Industry machines automation equipment precision parts — robot joint mounts, linear-rail seats, grippers, locating blocks, sensor mounts. Experience with A6061, SUS304, SUS440C, and other automation-friendly materials. Repeatability and long-term stability balanced. 40-year Taichung shop.",
+      de: "Weiyon Industry fertigt Präzisionsteile für die Automatisierungstechnik — Robotergelenkträger, Linearschienensitze, Greifer, Positionsblöcke, Sensorhalter. Erfahrung mit A6061, SUS304, SUS440C und weiteren automatisierungsgeeigneten Werkstoffen. Wiederholgenauigkeit und Langzeitstabilität im Gleichgewicht. 40 Jahre Präzisionsbearbeitung in Taichung.",
     },
     heroSubtitle: {
       zh: "機構件、關節座、夾爪 — 偉勇的自動化零件加工",
       en: "Mechanism parts, joint mounts, grippers — Weiyon's automation parts machining",
+      de: "Mechanikteile, Gelenkträger, Greifer — Weiyons Fertigung für Automatisierungsteile",
     },
     intro: {
       zh: "自動化機械的零件需要在連續運轉中保持精度與穩定性。每個關節座的尺寸、每條導軌的平行度、每個夾爪的重複定位精度，都會直接影響產線良率與效率。我們長期承接機器人手臂、自動化模組、產線設備的精密零件，從機構件的尺寸控制到耐用性都有具體經驗。",
       en: "Automation parts must hold precision and stability across continuous operation. Joint-mount dimensions, linear-rail parallelism, gripper repeatability — every detail flows through to line yield and efficiency. With years of experience machining for robot arms, automation modules, and production line equipment, we know how to control dimensions and durability where it matters.",
+      de: "Automatisierungsteile müssen Präzision und Stabilität im Dauerbetrieb halten. Maße der Gelenkträger, Parallelität der Linearschienen, Wiederholgenauigkeit der Greifer — jedes Detail wirkt sich auf Linienausbeute und Effizienz aus. Mit langjähriger Erfahrung in der Bearbeitung von Roboterarmen, Automatisierungsmodulen und Produktionsanlagen wissen wir, wie sich Maßhaltigkeit und Lebensdauer dort kontrollieren lassen, wo es zählt.",
     },
     whyTitle: {
       zh: "為什麼選擇偉勇承接自動化零件",
       en: "Why Weiyon for Automation Parts",
+      de: "Warum Weiyon für Automatisierungsteile",
     },
     whyPoints: {
       zh: [
@@ -464,8 +621,16 @@ export const industries: Industry[] = [
         "Flexibility from prototyping to volume production",
         "Concrete understanding of motion-precision requirements",
       ],
+      de: [
+        "Strenge Kontrolle von Maßen und Form-/Lagetoleranzen an Mechanikteilen",
+        "Umfangreiche Bearbeitung von Aluminium und Edelstahl",
+        "Integrierte Oberflächenbehandlungen: Eloxieren, Brünieren, Passivieren",
+        "Langjährige Automatisierungskunden — vertraut mit deren Arbeitsabläufen",
+        "Flexibilität vom Prototyp bis zur Serie",
+        "Konkretes Verständnis für Bewegungs- und Präzisionsanforderungen",
+      ],
     },
-    partsTitle: { zh: "常見承接零件", en: "Typical Parts" },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
     parts: {
       zh: [
         "機器人關節座、基座",
@@ -483,8 +648,16 @@ export const industries: Industry[] = [
         "Motor shafts, gearbox components",
         "Sensor mounts, limit-switch bases",
       ],
+      de: [
+        "Robotergelenkträger und Grundgestelle",
+        "Linearschienensitze, Schlittenhalterungen",
+        "Automatisierungsgreifer, Vorrichtungen",
+        "Positionsblöcke, Lagerblöcke",
+        "Motorwellen, Getriebekomponenten",
+        "Sensorhalter, Endschaltersockel",
+      ],
     },
-    materialsTitle: { zh: "對應材料", en: "Compatible Materials" },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
     materials: {
       zh: [
         "A6061-T6（最常用，輕量化結構件）",
@@ -500,8 +673,15 @@ export const industries: Industry[] = [
         "Copper alloys (bearings, bushings)",
         "POM engineering plastic (wear-resistant, insulating parts)",
       ],
+      de: [
+        "A6061-T6 (am häufigsten verwendet, Leichtbaustrukturen)",
+        "A7075 (hochfeste tragende Bauteile)",
+        "SUS304 / SUS440C (korrosionsbeständig, härtbar)",
+        "Kupferlegierungen (Lager, Buchsen)",
+        "POM Konstruktionskunststoff (verschleißfest, isolierend)",
+      ],
     },
-    standardsTitle: { zh: "規格與品管", en: "Quality & Standards" },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
         "公差控制：可達 ±0.005 mm",
@@ -517,13 +697,18 @@ export const industries: Industry[] = [
         "Measurement reports with geometric tolerance verification",
         "Compatible with customer supplier QC requirements",
       ],
+      de: [
+        "Toleranzen: bis ±0,005 mm",
+        "Form-/Lagetoleranzen: Prüfung von Parallelität, Rechtwinkligkeit, Ebenheit",
+        "Oberflächen: Eloxieren (Aluminium), Brünieren (Stahl), Passivieren (Edelstahl)",
+        "Messprotokolle mit Form-/Lagetoleranzprüfung",
+        "Kompatibel mit Lieferanten-QM-Anforderungen der Kunden",
+      ],
     },
     imageUrl:
       "https://images.pexels.com/photos/28929510/pexels-photo-28929510.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
   },
 ];
-
-export type IndustryLocale = "zh" | "en";
 
 export function getIndustryBySlug(slug: string): Industry | undefined {
   return industries.find((i) => i.slug === slug);

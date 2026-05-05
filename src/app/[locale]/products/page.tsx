@@ -26,7 +26,7 @@ export default async function ProductsPage({
   setRequestLocale(locale);
   const t = await getTranslations("Products");
 
-  const lang = (locale === "zh" ? "zh" : "en") as Locale;
+  const lang = (locale === "zh" ? "zh" : locale === "de" ? "de" : "en") as Locale;
 
   const cat1Items = Array.from({ length: 15 }, (_, i) =>
     t(`cat1Item${i + 1}`)

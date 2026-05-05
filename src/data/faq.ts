@@ -8,8 +8,8 @@ export type FaqCategory = {
   items: FaqItem[];
 };
 
-// 中英雙語 FAQ — 可直接編輯本檔
-export const faqData: Record<"zh" | "en", FaqCategory[]> = {
+// 中 / 英 / 德 三語 FAQ — 可直接編輯本檔
+export const faqData: Record<"zh" | "en" | "de", FaqCategory[]> = {
   zh: [
     {
       title: "報價與訂單",
@@ -715,6 +715,361 @@ Confirming the time and purpose ahead lets us arrange the right person to host y
           a: `Mon - Fri 08:00 - 17:30 (Taiwan time). Closed on Saturdays, Sundays, and Taiwan public holidays.
 
 For urgent off-hours inquiries, drop us an email — we'll get back to you first thing on the next business day.`,
+        },
+      ],
+    },
+  ],
+  de: [
+    {
+      title: "Angebot & Bestellung",
+      items: [
+        {
+          q: "Wie fordere ich ein Angebot bei Weiyon an? Fallen Kosten an?",
+          a: `Anfragen sind vollkommen kostenlos — keine Bearbeitungsgebühr. Sie erreichen uns über:
+
+‧Telefon: +886-4-2335-6451 (Mo - Fr 08:00 - 17:30, Taiwan-Zeit)
+‧E-Mail: agesmyth@gmail.com
+
+Bei der Anfrage senden Sie uns idealerweise:
+‧Zeichnung (2D oder 3D) oder Produktfoto
+‧Werkstoffspezifikation (z. B. SUS304, A6061)
+‧geplante Stückzahl
+‧Anforderungen an die Oberflächenbehandlung (falls vorhanden)
+‧gewünschten Liefertermin
+
+In der Regel erhalten Sie unser Angebot innerhalb von 1-2 Arbeitstagen. Bei Sonderspezifikationen oder Vor-Ort-Bewertung melden wir uns telefonisch zur Detailabstimmung.`,
+        },
+        {
+          q: "Können Sie Teile auch ohne Zeichnung — nur nach Muster — fertigen?",
+          a: `Ja, kein Problem. Es gibt zwei gängige Wege:
+
+1. Reverse Engineering aus dem Muster: Senden Sie das Bauteil ein, wir vermessen es, erstellen die Zeichnung und fertigen anschließend.
+2. Vor-Ort-Termin: Wenn der Versand schwierig ist, vereinbaren wir einen Vertriebsbesuch zur Bewertung.
+
+Den Aufwand für die Zeichnungserstellung quotieren wir vorab zur Freigabe — die Arbeiten beginnen erst nach Ihrer Bestätigung. Sofern wir auch die Serie übernehmen, lassen sich die Zeichnungskosten in der Regel auf die Folgeaufträge anrechnen.`,
+        },
+        {
+          q: "Welche Zeichnungsformate akzeptieren Sie?",
+          a: `Alle gängigen Konstruktionsformate sind möglich:
+
+‧2D: DWG (AutoCAD), DXF, PDF
+‧3D: STEP (.stp), IGES (.igs), STL
+‧Handskizzen: möglich, aber die Angebotsgenauigkeit kann eingeschränkt sein
+
+3D-Modelle erleichtern die CAM-Programmierung und verkürzen Lieferzeiten. Bei Sonderformaten oder Konvertierungsbedarf bitte bei der Anfrage vermerken — wir helfen, soweit möglich.`,
+        },
+        {
+          q: "Gibt es eine Mindestbestellmenge (MOQ)?",
+          a: `Keine verbindliche MOQ — wir akzeptieren Aufträge bereits ab 1 Stück. Prototypen, F&E- und Sonderaufträge gehören seit jeher zu unserem Tagesgeschäft.
+
+Praktische Hinweise:
+
+‧Kleinmengen: Fixkosten für Maschineneinrichtung und Vorrichtungsbau verteilen sich auf wenige Stück — der Stückpreis fällt höher aus.
+‧Serienaufträge: Mit steigender Losgröße sinkt der durchschnittliche Stückpreis.
+‧Übergang Prototyp → Serie: Werkzeug- und Vorrichtungskosten lassen sich meist auf spätere Serien anrechnen.
+
+Maßgeblich ist stets das jeweilige Einzelangebot.`,
+        },
+      ],
+    },
+    {
+      title: "Zahlung & Lieferzeit",
+      items: [
+        {
+          q: "Welche Zahlungsbedingungen bieten Sie?",
+          a: `Inländische Erstkunden rechnen wir standardmäßig mit Ziel 30 Tage netto ab; bei langjährigen Kunden ist die Handhabung flexibel.
+
+Bei Auslandsaufträgen besprechen wir die Zahlungsmodalitäten (T/T, L/C usw.) separat.
+
+Die Rechnungsausstellung passen wir an Ihren Bedarf an (Standardsteuerbeleg, vereinfachte Form etc.) — bitte bei der Bestellung mitteilen.`,
+        },
+        {
+          q: "Wie lang sind die üblichen Lieferzeiten?",
+          a: `Inlandsaufträge:
+
+‧Einzelteil / Kleinserie: 7-14 Arbeitstage
+‧Serien- / Großauftrag: je nach Stückzahl und Komplexität in der Regel 14-30 Arbeitstage
+‧Eilaufträge: nach Absprache, im Einzelfall innerhalb von 3-5 Tagen — bitte bereits bei der Bestellung erwähnen
+
+Auslandsaufträge: Lieferzeit nach Absprache (inkl. Versanddauer).
+
+Vor Feiertagen (chinesisches Neujahr, Qingming-Brücke etc.) informieren wir gesondert. Bitte rechtzeitig bestellen.`,
+        },
+        {
+          q: "Sind Teillieferungen möglich?",
+          a: `Ja, gerne. Übliche Modelle:
+
+‧Nach Stückzahl: z. B. 1.000 Stück Gesamtmenge in monatlichen Tranchen zu je 200 Stück
+‧Nach Fertigungsfortschritt: fertiggestellte Teile zuerst, der Rest folgt
+‧Nach Ihrem Betriebsrhythmus: abgestimmt auf Ihre Produktions- oder Lagerplanung
+
+Erwähnen Sie den Teillieferwunsch bei der Bestellung — so können Fertigung und Versand von Anfang an koordiniert geplant werden.`,
+        },
+      ],
+    },
+    {
+      title: "Werkstoffe & Fertigungskompetenz",
+      items: [
+        {
+          q: "Welche Werkstoffe kann Weiyon bearbeiten?",
+          a: `Gängige Werkstoffe:
+
+[Metalle]
+‧Edelstähle: SUS303, SUS304, SUS316 usw.
+‧Aluminiumlegierungen: A6061, A7075, A2024 usw.
+‧Kupferlegierungen: Messing, Bronze, Phosphorbronze
+‧Stähle: S45C, SCM440 usw.
+‧Sonderwerkstoffe: Titanlegierungen u. a. (weitere Sorten auf Anfrage prüfbar)
+
+[Nichtmetalle]
+‧Konstruktionskunststoffe (POM, PEEK, Teflon u. a.) — fallweise
+‧Keramiken — fallweise
+
+Werkstoffe außerhalb dieser Liste — sprechen Sie uns an.`,
+        },
+        {
+          q: "Welche Edelstahlsorten verarbeiten Sie häufig?",
+          a: `Gängige Sorten:
+
+‧SUS303: automatenfähiger Edelstahl, häufig für Schrauben und Wellen
+‧SUS304: meistgenutzter Edelstahl, breite Anwendung mit guter Korrosionsbeständigkeit
+‧SUS316: molybdänlegiert, höhere Korrosionsbeständigkeit, ideal für Marine- und Chemieumgebungen
+‧SUS440C: hochfester Edelstahl, härtbar bis HRC 58 und höher
+
+Weitere Sondersorten (z. B. SUS630 / 17-4PH, SUS630H) auf Anfrage prüfbar.`,
+        },
+        {
+          q: "Welche Aluminiumlegierungen verarbeiten Sie?",
+          a: `Gängige Sorten:
+
+‧A6061: universelle Konstruktionsteile, bestes Preis-Leistungs-Verhältnis, am häufigsten eingesetzt
+‧A7075: hochfestes Luftfahrt-Aluminium, geeignet für tragende Bauteile
+‧A2024: hochfest und ermüdungsbeständig, häufig in der Luft- und Raumfahrt
+
+Oberflächenbehandlungen über Partnerbetriebe:
+‧Eloxieren (klar, farbig, schwarz)
+‧Harteloxieren (verschleißfest)
+‧Beschichtungen
+
+Weitere Sorten wie A5052, A2017 auf Anfrage.`,
+        },
+        {
+          q: "Welche Kupferlegierungen verarbeiten Sie?",
+          a: `Gängige Kupferwerkstoffe:
+
+[Reinkupfer / hochreines Kupfer]
+‧C1020 (sauerstofffreies Kupfer): hohe Leitfähigkeit, Elektronikteile
+‧C1100 (Tough-Pitch-Kupfer): universelles Reinkupfer, korrosionsbeständig
+‧C1220 (phosphor-desoxidiertes Kupfer): gut schweißbar, Wärmetauscher
+
+[Messing]
+‧C2801: Schiffsmessing, korrosionsbeständig und fest
+‧C3604 (Automatenmessing): bleihaltig, das am häufigsten zerspante Messing
+
+[Phosphorbronze / Aluminiumbronze]
+‧C5191 (Phosphorbronze): federelastisch, verschleißfest — Lager, Federteile
+‧C5341 (automatenfähige Phosphorbronze): bessere Zerspanbarkeit
+‧C6191 (Aluminiumbronze): hochfest, verschleiß- und korrosionsbeständig
+
+Weitere Sonderkupfer auf Anfrage prüfbar.`,
+        },
+        {
+          q: "Welche Eisen- und Kohlenstoffstähle bearbeiten Sie?",
+          a: `Gängige Eisen- und Kohlenstoffstähle:
+
+[Allgemeiner Konstruktionsstahl]
+‧SS400: universeller Konstruktionsstahl
+
+[Maschinenbaustähle (S-C-Reihe)]
+‧S10C / S15C / S20C: niedriger Kohlenstoffanteil, gut schweißbar
+‧S25C / S35C: mittlerer Kohlenstoffanteil
+‧S45C / S48C / S50C / S55C: universelle Maschinenteile, härtbar
+
+[Cr-Mo-Stähle (Chrom-Molybdän)]
+‧SCM415 / SCM420: häufig mit Aufkohlung
+‧SCM435 / SCM440: hochfeste Strukturteile, Wellen, Zahnräder
+
+Wärmebehandlung (Härten, Anlassen, Aufkohlen, Nitrieren) erfolgt über Partnerbetriebe als integrierte Dienstleistung.`,
+        },
+        {
+          q: "Können Sie Werkzeug- und Formenstahl bearbeiten?",
+          a: `Wir verarbeiten gängige Werkzeug- und Formenstähle:
+
+[Kaltarbeitsstahl]
+‧SK3 / SK4 (Kohlenstoff-Werkzeugstahl): Basis-Werkzeugstahl
+‧SKS3 / SKS93, GOA, SGT: verzugsarmer Werkzeugstahl, häufig für Lehren und Stanzwerkzeuge
+‧SKD11: hochchromhaltiger Kaltarbeitsstahl, verschleiß- und schlagfest
+
+[Warmarbeitsstahl]
+‧SKD61: universeller Warmarbeitsstahl, Druckguss und Schmieden
+
+[Schnellarbeitsstahl]
+‧SKH51: Universal-HSS, Schneidwerkzeuge und Stempel
+
+Die nachgelagerte Wärmebehandlung (Härten, Anlassen) übernehmen Partnerbetriebe.`,
+        },
+        {
+          q: "Können Sie vorvergüteten Stahl (Pre-hardened steel) bearbeiten?",
+          a: `Vorvergüteter Stahl wird mit HRC 30-40 ausgeliefert — eine nachgelagerte Wärmebehandlung entfällt:
+
+‧NAK55, NAK80: hervorragend hochglanzpolierbar, häufig im Kunststoffformenbau
+‧HPM38, HPM1: korrosionsbeständig, polierbar
+‧GO40F, PXS: universeller vorvergüteter Formenstahl
+
+Vorvergüteter Stahl eignet sich für Anwendungen mit hoher Maßhaltigkeit, die direkt poliert werden sollen.`,
+        },
+        {
+          q: "Welche Titanlegierungen können Sie bearbeiten?",
+          a: `Gängige Titanlegierungen:
+
+‧Reintitan (Grade 1 ~ Grade 4): korrosionsbeständig, biomedizinische Anwendungen
+‧Ti-6Al-4V (Grade 5, „64-Titan"): die am häufigsten eingesetzte Titanlegierung — Luft- und Raumfahrt, Medizintechnik, Präzisionsausrüstung
+
+Titanbearbeitung reagiert empfindlich auf Werkzeug und Kühlmittel. Bitte stellen Sie vollständige Werkstoffangaben, Zeichnungen und Toleranzangaben für eine belastbare Bewertung bereit.
+
+Hinweis: Blechumformung, Biegen und Schweißen von Titan zählen nicht zu unseren hauseigenen Hauptprozessen — wir koordinieren nach Bedarf mit Partnerbetrieben.`,
+        },
+        {
+          q: "Worauf sollte ich bei der Bearbeitung schwer zerspanbarer Werkstoffe achten?",
+          a: `Bei schwer zerspanbaren Werkstoffen wie Titanlegierungen und hochchromhaltigen Edelstählen (440C, 630 / 17-4PH usw.) passen wir die Bearbeitung an die Werkstoffeigenschaften an:
+
+‧Werkzeugauswahl: beschichtetes Hartmetall oder keramische Wendeschneidplatten — abgestimmt auf Härte und Zähigkeit
+‧Schnitt- und Vorschubwerte: niedrige Drehzahlen und Vorschübe, um Kaltverfestigung und Verzug zu vermeiden
+‧Kühlmittel: passende Kühlstrategie zur Steuerung von Werkzeugstandzeit und thermischer Ausdehnung
+‧Werkzeugstandzeit: schwer zerspanbare Werkstoffe verbrauchen mehr Werkzeuge — dies spiegelt sich im Preis wider
+
+Bitte senden Sie bei der Anfrage vollständige Werkstoffangaben/Sorten, Zeichnungen mit Toleranzen und den geplanten Einsatzzweck — so können wir Werkzeugbestückung und realistischen Liefertermin planen.`,
+        },
+        {
+          q: "Können Kunden eigenes Material beistellen?",
+          a: `Ja. Zwei gängige Modelle:
+
+‧Kundenbeistellung: Sie liefern das Material (vorhandener Bestand oder festgelegte Quelle), wir bearbeiten ausschließlich
+‧Wir beschaffen: Material wird gemäß Spezifikation eingekauft und im Angebot enthalten — Komplettleistung aus einer Hand
+
+Bei Kundenbeistellung bitte beachten:
+‧Werkstoffangaben müssen mit den Zeichnungsanforderungen übereinstimmen
+‧Werkstoffzeugnisse bei Bedarf beifügen (z. B. Luft- und Raumfahrt, Medizintechnik)
+‧Rohling möglichst auf Maß zugeschnitten anliefern oder Zuschnitt durch uns beauftragen
+
+Bei Abweichungen in Werkstoff oder Maßen müssen Bearbeitungskosten und -zeiten neu bewertet werden.`,
+        },
+        {
+          q: "Welche Prozesse deckt die Werkstatt ab?",
+          a: `Hauseigene Ausrüstung:
+‧CNC-Drehmaschinen (Präzisionsdrehen)
+‧CNC-Fräsmaschinen / Bearbeitungszentren (mehrachsiges Fräsen)
+
+Integrierte Leistungen (über langjährige Partnerbetriebe):
+‧Oberflächenbehandlung: Eloxieren, Vernickeln, Verchromen, Brünieren, Passivieren
+‧Wärmebehandlung: Härten, Anlassen, Aufkohlen, Nitrieren
+‧Blechbearbeitung
+‧Drahterodieren und Senkerodieren
+
+Wir liefern eine durchgängige Lösung von der Zeichnung bis zum Fertigteil — Sie haben einen einzigen Ansprechpartner und müssen keine mehreren Werkstätten selbst koordinieren.`,
+        },
+        {
+          q: "Welche Branchen bedienen Sie hauptsächlich?",
+          a: `Mit über 40 Jahren Branchenerfahrung beliefern wir vor allem:
+
+‧Halbleiterausrüstung: Maschinenteile, Wafer-Handling-Mechaniken, Vakuumkammerteile
+‧Luft- und Raumfahrt: hochpräzise, leichtbaufähige Teile aus schwer zerspanbaren Werkstoffen
+‧Robotik & Automatisierung: Mechanikteile, Greifer, Bewegungsachsenkomponenten
+‧Pneumatik / Hydraulik: Zylinderteile, Kolben, Lagersitze
+‧Automobil: Motorperipherie, Fahrwerk, Antriebsteile
+‧Maschinenbau: Präzisionswellen, Zahnräder, Formenteile
+
+Über 500 Kunden aus den wichtigsten Industriezweigen Taiwans haben uns langfristig gewählt.`,
+        },
+      ],
+    },
+    {
+      title: "Bauteiltypen",
+      items: [
+        {
+          q: "Welche Auftragstypen nehmen Sie an?",
+          a: `Praktisch alle gängigen Auftragstypen:
+
+‧Prototypen / Muster — F&E und Validierung neuer Produkte
+‧Serie — stabile Mengenfertigung
+‧Sonderspezifikationen — Teile, die Sie nicht von der Stange bekommen
+‧Konstruktionsänderungen / Verbesserungen — angepasst an Ihre Felderfahrung
+‧Ersatzteile — Nachfertigung bei abgekündigten OEM-Teilen
+
+Ab 1 Stück, praktisch ohne Obergrenze. Sagen Sie uns, was Sie brauchen — wir schlagen den passenden Weg vor.`,
+        },
+        {
+          q: "Können Sie Sonderschrauben und -muttern fertigen?",
+          a: `Ja! Sonderschrauben und -muttern fertigen wir regelmäßig. Häufige Varianten:
+
+‧Kopfformen: Sechskant, Innensechskant, Kreuzschlitz, Schlitz, Sonderkonturen
+‧Längen: extra lang, extra kurz, nicht-standardisierte Längen
+‧Werkstoffe: SUS304, SUS316, Titanlegierungen, Kupfer, Aluminium etc.
+‧Gewinde: metrisch (M), zöllig (UNF / UNC), Sondersteigungen
+‧Oberflächen: Brünieren, Verzinken, Passivieren etc.
+
+Senden Sie uns Zeichnung oder Muster — wir bewerten Bearbeitungsweise und Lieferzeit.`,
+        },
+        {
+          q: "Können Sie Vorrichtungen, Spannmittel und Werkzeuge fertigen?",
+          a: `Ja. Typischerweise umgesetzte Aufgaben:
+
+‧Produktionsvorrichtungen: Positionier-, Montage- und Prüfvorrichtungen
+‧Spannmittel: CNC-Spannmittel, Frässpannmittel, Automatisierungsgreifer
+‧Werkzeuge / Werkzeughalter: hauseigene Werkzeuge, Spezialhalter
+‧Prüfmittel: Gut-/Ausschusslehren, Messvorrichtungen
+
+Liegt nur ein Anwendungsfall ohne Zeichnung vor, vereinbaren wir einen Vertriebsbesuch zur Vor-Ort-Bewertung — wir konstruieren und fertigen anschließend.`,
+        },
+        {
+          q: "Können Sie Mechanik- und Strukturteile fertigen?",
+          a: `Ja — diese Bauteilkategorien gehören zu unserem Tagesgeschäft:
+
+‧Halbleiteranlagenteile: Kammern, Mechanikteile, Antriebswellen
+‧Roboterstrukturteile: Grundgestelle, Lenker, Gelenkkomponenten
+‧Pneumatik- / Hydraulikteile: Zylinderkörper, Kolben, Lagersitze
+‧Automobilkomponenten: Motorperipherie, Fahrwerksstrukturen
+‧Automatisierungsmechaniken: Linearschienensitze, Positionsblöcke, Lagerblöcke
+
+Senden Sie eine Zeichnung oder ein Musterteil — wir bewerten gerne.`,
+        },
+      ],
+    },
+    {
+      title: "Versand & Auslieferung",
+      items: [
+        {
+          q: "Wie versenden Sie Aufträge?",
+          a: `Für den Versand im Inland gibt es mehrere Optionen:
+
+‧Logistikdienstleister: T-cat, Hsinchu Express u. a. — gewünschtes Lieferdatum möglich
+‧Selbstabholung: jederzeit willkommen, bitte Abholtermin vorab vereinbaren
+‧Kundenseitige Logistik: Sie bestimmen den Spediteur, wir verpacken und übergeben entsprechend
+
+Auslandsversand klären wir gemeinsam (Spediteur, Verzollung, Versandart).
+
+Die Verpackung wird auf das Produkt abgestimmt (Korrosions- und Stoßschutz). Sonderwünsche bei der Verpackung (festgelegte Paletten, Spezialkisten) bitte bei der Bestellung mitteilen.`,
+        },
+      ],
+    },
+    {
+      title: "Sonstiges",
+      items: [
+        {
+          q: "Kann ich die Werkstatt besichtigen?",
+          a: `Geschäftspartner sind willkommen — bitte vorab anmelden.
+
+Termin vereinbaren über:
+‧Telefon: +886-4-2335-6451
+‧E-Mail: agesmyth@gmail.com
+
+Eine vorherige Abstimmung von Termin und Anliegen erlaubt es uns, eine geeignete Begleitung bereitzustellen, ohne den laufenden Betrieb zu stören.`,
+        },
+        {
+          q: "Wie sind Ihre Geschäftszeiten?",
+          a: `Mo - Fr 08:00 - 17:30 (Taiwan-Zeit). Geschlossen samstags, sonntags und an taiwanischen Feiertagen.
+
+Bei dringenden Anfragen außerhalb dieser Zeiten senden Sie bitte eine E-Mail — wir antworten am nächsten Werktag bevorzugt.`,
         },
       ],
     },

@@ -1,15 +1,15 @@
 export type BlogPost = {
   slug: string;
-  title: { zh: string; en: string };
-  excerpt: { zh: string; en: string };
-  category: { zh: string; en: string };
+  title: { zh: string; en: string; de: string };
+  excerpt: { zh: string; en: string; de: string };
+  category: { zh: string; en: string; de: string };
   date: string; // YYYY-MM-DD
   imageUrl: string;
   // HTML 字串內容（已是受信任、由作者撰寫）
-  content: { zh: string; en: string };
+  content: { zh: string; en: string; de: string };
 };
 
-// 6 篇部落格實質內容（Chinese full version；English 之後可逐步翻譯）
+// 6 篇部落格實質內容（中文完整版；英 / 德為精簡摘要）
 // 內容均為原創，依業界通用知識撰寫
 export const blogPosts: BlogPost[] = [
   {
@@ -17,12 +17,14 @@ export const blogPosts: BlogPost[] = [
     title: {
       zh: "CNC 加工技術在航太產業的應用與展望",
       en: "CNC Machining in Aerospace: Applications and Outlook",
+      de: "CNC-Bearbeitung in der Luft- und Raumfahrt: Anwendungen und Ausblick",
     },
     excerpt: {
       zh: "航太零件公差以微米計、材料極難切削、結構日益複雜。本文從技術需求、5 軸加工、難切削材料策略到產業趨勢，剖析 CNC 加工如何支撐現代航太製造。",
       en: "Aerospace parts demand tolerances in microns, work in difficult materials, and feature increasingly complex geometries. This article explores how CNC machining supports modern aerospace manufacturing.",
+      de: "Luft- und Raumfahrtteile fordern Toleranzen im Mikrometerbereich, schwer zerspanbare Werkstoffe und zunehmend komplexe Geometrien. Wie die CNC-Bearbeitung die moderne Luftfahrtfertigung trägt.",
     },
-    category: { zh: "技術分享", en: "Technical" },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
     date: "2026-04-15",
     imageUrl:
       "https://images.pexels.com/photos/8865187/pexels-photo-8865187.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -75,6 +77,17 @@ export const blogPosts: BlogPost[] = [
 <p>5-axis simultaneous machining handles complex curves and reduces fixturing errors. Coated carbide and ceramic inserts are essential for difficult materials, with carefully tuned speeds and feeds to avoid work-hardening. Wire EDM complements milling for hardened parts requiring precise internal contours.</p>
 <h2>Industry trends</h2>
 <p>Modern aerospace manufacturing is moving toward unmanned production, real-time process data, digital twins, and hybrid 3D-print-plus-CNC manufacturing. Shops that master difficult materials, 5-axis work, and integrated processes are positioned to thrive in this high-barrier, high-value market.</p>`,
+      de: `<p>Die Luft- und Raumfahrt zählt weltweit zu den anspruchsvollsten Bereichen der Präzisionsfertigung. Von tragenden Tragflächenstrukturen bis zu Triebwerksbauteilen in Fingernagelgröße — jedes Teil beeinflusst Sicherheit und Leistung des Flugzeugs. Die <strong>CNC-Präzisionsbearbeitung</strong> ist deshalb eine unverzichtbare Schlüsselkompetenz.</p>
+<h2>Drei zentrale Anforderungen</h2>
+<ul>
+<li><strong>Enge Toleranzen</strong> — häufig innerhalb ±0,005 mm.</li>
+<li><strong>Schwer zerspanbare Werkstoffe</strong> — Titan (Ti-6Al-4V), Inconel, hochfestes Aluminium (A7075).</li>
+<li><strong>Leichtbau</strong> — dünne Wände und komplexe Innenkavitäten, häufig nur durch 5-Achs-Simultanbearbeitung in einer Aufspannung herstellbar.</li>
+</ul>
+<h2>Schlüsseltechnologien</h2>
+<p>5-Achs-Simultanbearbeitung beherrscht komplexe Freiformflächen und reduziert Aufspannfehler. Beschichtete Hartmetall- und Keramikwendeschneidplatten sind bei schwer zerspanbaren Werkstoffen Pflicht — mit sorgfältig abgestimmten Schnitt- und Vorschubwerten gegen Kaltverfestigung. Drahterodieren ergänzt das Fräsen bei gehärteten Teilen mit präzisen Innenkonturen.</p>
+<h2>Branchentrends</h2>
+<p>Die moderne Luftfahrtfertigung bewegt sich in Richtung mannlose Produktion, Echtzeit-Prozessdaten, Digital Twins und Hybridfertigung aus 3D-Druck und CNC. Werkstätten, die schwer zerspanbare Werkstoffe, 5-Achs-Bearbeitung und integrierte Prozesse sicher beherrschen, sind in diesem Hochbarriere-Hochwertmarkt bestens positioniert.</p>`,
     },
   },
   {
@@ -82,12 +95,14 @@ export const blogPosts: BlogPost[] = [
     title: {
       zh: "半導體設備零件的表面處理技術",
       en: "Surface Treatment for Semiconductor Equipment Parts",
+      de: "Oberflächenbehandlung von Halbleiteranlagenteilen",
     },
     excerpt: {
       zh: "半導體製程環境嚴苛 — 真空、高溫、強腐蝕氣體、等離子體衝擊都會侵蝕零件。表面處理是延長設備壽命、確保製程穩定的關鍵。本文介紹常見處理方法與選擇邏輯。",
       en: "Semiconductor processing environments are extreme — vacuum, heat, corrosive gases, and plasma all attack equipment parts. Surface treatment is key to longevity and process stability.",
+      de: "Halbleiterprozessumgebungen sind extrem — Vakuum, Hitze, korrosive Gase und Plasma greifen Anlagenteile an. Die Oberflächenbehandlung ist entscheidend für Lebensdauer und Prozessstabilität.",
     },
-    category: { zh: "技術分享", en: "Technical" },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
     date: "2026-03-28",
     imageUrl:
       "https://images.pexels.com/photos/12951626/pexels-photo-12951626.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -151,6 +166,16 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <h2>Selection considerations</h2>
 <p>Choose based on environment (vacuum, gases, temperature), mechanical and electrical requirements, cleanliness level (Class 100 / Class 10 packaging), and cost. The right surface treatment can extend part life 3-5×; the wrong one fails within days.</p>`,
+      de: `<p>Halbleiterausrüstung setzt Metallteile extremen Bedingungen aus — Vakuum, Hitze, korrosive Gase und Plasma. <strong>Oberflächenbehandlung</strong> ist nicht optional, sondern eine grundlegende Konstruktionsentscheidung.</p>
+<h2>Gängige Oberflächenbehandlungen</h2>
+<ul>
+<li><strong>Eloxieren (Aluminium)</strong> — klar, farbig, hart (25-50 μm) für Verschleiß- und Korrosionsschutz.</li>
+<li><strong>Vernickeln</strong> — einschließlich chemisch Nickel-Phosphor, mit gleichmäßiger Schichtdicke auch bei komplexen Geometrien.</li>
+<li><strong>PVD- / DLC-Beschichtungen</strong> — TiN, CrN, AlTiN für extreme Verschleiß- und Reibungsanforderungen.</li>
+<li><strong>Elektropolieren + Passivieren</strong> — Standard für Edelstahlteile in Prozesskammern.</li>
+</ul>
+<h2>Auswahlkriterien</h2>
+<p>Wahl nach Umgebung (Vakuum, Gase, Temperatur), mechanischen und elektrischen Anforderungen, Reinheitsklasse (Class 100 / Class 10) und Kosten. Die richtige Behandlung verlängert die Lebensdauer um das 3- bis 5-Fache; die falsche versagt schon nach Tagen.</p>`,
     },
   },
   {
@@ -158,12 +183,14 @@ export const blogPosts: BlogPost[] = [
     title: {
       zh: "5 軸 CNC vs 3 軸 CNC：何時值得升級？",
       en: "5-axis vs 3-axis CNC: When Is the Upgrade Worth It?",
+      de: "5-Achs- vs. 3-Achs-CNC: Wann lohnt sich der Umstieg?",
     },
     excerpt: {
       zh: "5 軸 CNC 投資高、操作複雜，但對的應用情境下能大幅縮短交期、減少裝夾誤差。本文解析兩者差異與升級判斷標準，幫助加工廠與客戶共同做最佳選擇。",
       en: "5-axis CNC machines are pricier and more complex, but in the right scenarios they dramatically reduce lead times and fixturing errors. This article explains how to decide.",
+      de: "5-Achs-CNC ist teurer und komplexer, kann aber im richtigen Einsatz Lieferzeiten und Aufspannfehler drastisch reduzieren. So fällt die Entscheidung leichter.",
     },
-    category: { zh: "技術分享", en: "Technical" },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
     date: "2026-03-10",
     imageUrl:
       "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -242,6 +269,25 @@ export const blogPosts: BlogPost[] = [
 <li>No 5-axis CAM software or trained operators</li>
 </ul>
 <p>The decision hinges on order mix, not technology FOMO.</p>`,
+      de: `<p>„Brauche ich für dieses Teil eine 5-Achs-CNC?" gehört zu den häufigsten Fragen in der Werkstatt. Die Antwort lautet nicht „mehr Achsen = besser", sondern „die richtige Maschine zum richtigen Teil".</p>
+<h2>3-Achs-CNC: das Arbeitstier</h2>
+<p>Platten, Halter und rechtwinklige Bauteile. Günstiger, einfachere Programmierung, niedrigere Stückkosten.</p>
+<h2>5-Achs-CNC: Spezialist für komplexe Flächen</h2>
+<p>Turbinenschaufeln, Verbinder, Innenkonturen von Formen, medizinische Implantate — alles, was Mehrwinkelzugang in einer Aufspannung verlangt.</p>
+<h2>Wann sich der Umstieg lohnt</h2>
+<ul>
+<li>Teile erfordern Bearbeitung aus mehreren Winkeln</li>
+<li>Mehr als 3 Aufspannungen pro Teil</li>
+<li>Kundenkreis aus Luft- und Raumfahrt / Medizin / Formenbau</li>
+<li>Einzelteil-Bearbeitungszeit über 2 Stunden</li>
+</ul>
+<h2>Wann man warten sollte</h2>
+<ul>
+<li>Auftragsmix besteht überwiegend aus Platten und rechtwinkligen Teilen</li>
+<li>Vorhandene 3-Achs-Maschinen sind noch nicht ausgelastet</li>
+<li>Keine 5-Achs-CAM-Software oder geschulten Bediener</li>
+</ul>
+<p>Die Entscheidung hängt vom Auftragsmix ab — nicht von technologischer Mode.</p>`,
     },
   },
   {
@@ -249,12 +295,14 @@ export const blogPosts: BlogPost[] = [
     title: {
       zh: "金屬材料知識：鋁合金與鈦合金的特性比較",
       en: "Materials 101: Aluminum vs. Titanium Alloys",
+      de: "Werkstoffkunde: Aluminium- vs. Titanlegierungen",
     },
     excerpt: {
       zh: "鋁合金輕、便宜、好加工；鈦合金強度高、耐蝕優、但難切削且貴。本文逐項對比兩種材料的特性、加工性、應用場景，協助設計者做合適選擇。",
       en: "Aluminum alloys are light, affordable, and easy to machine; titanium alloys offer high strength and corrosion resistance but are hard to cut and expensive. A side-by-side comparison.",
+      de: "Aluminiumlegierungen sind leicht, günstig und gut zerspanbar; Titanlegierungen bieten hohe Festigkeit und Korrosionsbeständigkeit, sind aber schwer zerspanbar und teuer. Ein direkter Vergleich.",
     },
-    category: { zh: "知識庫", en: "Knowledge Base" },
+    category: { zh: "知識庫", en: "Knowledge Base", de: "Wissen" },
     date: "2026-02-20",
     imageUrl:
       "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -342,6 +390,15 @@ export const blogPosts: BlogPost[] = [
 <p>Aluminum is easy to machine and supports high speeds. Titanium has low thermal conductivity and tends to work-harden — tool life can drop to 10% of aluminum, requiring lower speeds, high-pressure coolant, and coated carbide or ceramic inserts. Cost reflects this: titanium machining is typically 3-8× more expensive than aluminum.</p>
 <h2>When to choose which</h2>
 <p>Aluminum: consumer electronics, structural parts, anodizing finishes, cost-sensitive volume production. Titanium: aerospace critical parts, medical implants, marine/chemical environments, high-temp applications.</p>`,
+      de: `<p>Wenn ein Teil leicht, fest und korrosionsbeständig sein soll, fällt die Wahl meist zwischen <strong>Aluminium</strong>- und <strong>Titanlegierungen</strong>. Beide sind leichter als Stahl, unterscheiden sich aber deutlich.</p>
+<h2>Dichte</h2>
+<p>Aluminium ~2,7 g/cm³, Titan ~4,4 g/cm³, Stahl ~7,85 g/cm³. Aluminium gewinnt beim reinen Gewicht; Titan hat das bessere Festigkeits-Gewichts-Verhältnis.</p>
+<h2>Festigkeit</h2>
+<p>Ti-6Al-4V (~950 MPa) ist rund dreimal so fest wie A6061 (~310 MPa) und behält seine Festigkeit bis 400 °C. A7075 liegt dazwischen.</p>
+<h2>Zerspanbarkeit</h2>
+<p>Aluminium ist gut zerspanbar und erlaubt hohe Schnittgeschwindigkeiten. Titan hat niedrige Wärmeleitfähigkeit und neigt zur Kaltverfestigung — die Werkzeugstandzeit kann auf 10 % des Aluminiums fallen und erfordert niedrigere Drehzahlen, Hochdruckkühlung und beschichtete Hartmetall- oder Keramikschneiden. Die Kosten spiegeln das: Titanbearbeitung ist üblicherweise 3-8× teurer als Aluminium.</p>
+<h2>Wann was wählen</h2>
+<p>Aluminium: Konsumelektronik, Strukturbauteile, eloxierte Oberflächen, kostensensitive Serien. Titan: kritische Luft- und Raumfahrtteile, medizinische Implantate, Meer- und Chemieumgebungen, Hochtemperaturanwendungen.</p>`,
     },
   },
   {
@@ -349,12 +406,14 @@ export const blogPosts: BlogPost[] = [
     title: {
       zh: "工業 4.0 時代下的智慧製造趨勢",
       en: "Smart Manufacturing in the Industry 4.0 Era",
+      de: "Smart Manufacturing in der Ära Industrie 4.0",
     },
     excerpt: {
       zh: "工業 4.0 不只是大廠的專利。中小型 CNC 加工廠也能用 IoT、雲端、AI 提升產能與品質。本文盤點台灣中小廠在 5 年內可務實落地的關鍵項目。",
       en: "Industry 4.0 isn't just for large factories. Small and mid-sized CNC shops can leverage IoT, cloud, and AI to boost productivity and quality. Practical steps for the next 5 years.",
+      de: "Industrie 4.0 ist nicht nur etwas für Großbetriebe. Kleine und mittelständische CNC-Werkstätten können IoT, Cloud und KI nutzen, um Produktivität und Qualität zu steigern. Eine praxisnahe Roadmap für die nächsten 5 Jahre.",
     },
-    category: { zh: "產業趨勢", en: "Industry Trends" },
+    category: { zh: "產業趨勢", en: "Industry Trends", de: "Branchentrends" },
     date: "2026-02-05",
     imageUrl:
       "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -433,6 +492,18 @@ export const blogPosts: BlogPost[] = [
 </ol>
 <h2>Common myths</h2>
 <p><strong>"We're too small."</strong> — Actually, small shops deploy faster and adapt quicker than large enterprises. <strong>"It costs too much."</strong> — Stage 1 typically pays back within 6-12 months. <strong>"My staff won't adopt it."</strong> — Modern interfaces are app-like; the key is showing tangible benefits to operators.</p>`,
+      de: `<p>Industrie 4.0 ist nicht nur etwas für Großbetriebe. Kleine und mittelständische CNC-Werkstätten können IoT, Cloud und KI nutzen, um den Betrieb deutlich zu verbessern.</p>
+<h2>Worum es eigentlich geht</h2>
+<p>Maschinen, Prozesse und Produkte über IoT-Sensoren, Cloud-Plattformen, KI-Analytik und Automatisierung verknüpfen. Ergebnis: weniger Stillstand, geringere Ausschussraten, höherer Output pro Maschine.</p>
+<h2>Praxisnahe Roadmap für KMU-Werkstätten</h2>
+<ol>
+<li><strong>Jahr 1:</strong> Maschinenvernetzung (OPC-UA / MTConnect) + OEE-Monitoring + digitale Tagesberichte.</li>
+<li><strong>Jahr 2:</strong> Werkzeuglebensdauer-Management + Messdaten-Rückverfolgbarkeit.</li>
+<li><strong>Jahr 3-4:</strong> Predictive Maintenance via KI-Modelle + Teilautomatisierung.</li>
+<li><strong>Jahr 5:</strong> Kunden-Auftragsstatus + automatisierte Angebote + datengetriebene Planung.</li>
+</ol>
+<h2>Häufige Mythen</h2>
+<p><strong>„Wir sind zu klein."</strong> — Tatsächlich rollen kleine Betriebe schneller aus und passen sich agiler an als Großunternehmen. <strong>„Zu teuer."</strong> — Stufe 1 amortisiert sich meist innerhalb von 6-12 Monaten. <strong>„Mein Team macht nicht mit."</strong> — Moderne Oberflächen sind App-ähnlich; entscheidend ist der spürbare Nutzen für die Bediener.</p>`,
     },
   },
   {
@@ -440,12 +511,14 @@ export const blogPosts: BlogPost[] = [
     title: {
       zh: "精密加工的品質管控：從原料到出貨",
       en: "Quality Control in Precision Machining: From Material to Shipment",
+      de: "Qualitätskontrolle in der Präzisionsfertigung: Vom Material bis zum Versand",
     },
     excerpt: {
       zh: "好品質不是出貨前才檢驗出來的，而是從進料、加工到出貨每一個階段都做對。本文拆解精密加工品質管控的 5 大環節，與業界常用的工具與做法。",
       en: "Quality isn't checked at the end — it's built in at every stage from material receipt to shipment. We break down the 5 key checkpoints and common tools.",
+      de: "Qualität entsteht nicht erst bei der Endprüfung — sie wird in jeder Phase von Wareneingang bis Versand aufgebaut. Die 5 zentralen Kontrollpunkte und gängigen Werkzeuge im Überblick.",
     },
-    category: { zh: "技術分享", en: "Technical" },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
     date: "2026-01-18",
     imageUrl:
       "https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
@@ -534,6 +607,19 @@ export const blogPosts: BlogPost[] = [
 <p>Statistical Process Control (SPC) catches drift before defects occur. FMEA prevents failures by mapping risks upfront. 8D reports drive systematic root-cause analysis after customer complaints.</p>
 <h2>Bottom line</h2>
 <p>Customers value robust quality processes, detailed inspection reports, and standardized complaint handling more than the latest machinery. These "soft" capabilities win long-term trust.</p>`,
+      de: `<p>„Ist Qualität nur eine Frage der Endprüfung?" Die Antwort lautet nein — Qualität wird in jeder Phase aufgebaut. Die Prüfung fängt nur ab, was bereits schiefgelaufen ist.</p>
+<h2>Fünf zentrale Kontrollpunkte</h2>
+<ol>
+<li><strong>Wareneingangsprüfung (IQC):</strong> Werkszeugnisse, Maßprüfung, Chargenrückverfolgbarkeit.</li>
+<li><strong>Rüsten vor der Bearbeitung:</strong> Zeichnungsprüfung, Werkzeugwahl, Vorrichtungsverifikation, Erstmusterprüfung.</li>
+<li><strong>In-Prozess-Überwachung:</strong> regelmäßige Stichproben (alle 10-50 Stück), Maschinenzustandsbeobachtung, Prozessprotokolle.</li>
+<li><strong>Endprüfung (FQC):</strong> Messschieber und Lehren für allgemeine Toleranzen; KMG und Profilprojektoren für ±0,005 mm; Rauheitsmessgeräte; Form- und Lagetoleranzmessung.</li>
+<li><strong>Vor dem Versand:</strong> Stückzahl, Sauberkeit, Verpackung gemäß Spezifikation, Kennzeichnung, Prüfberichte nach Bedarf.</li>
+</ol>
+<h2>Branchenwerkzeuge</h2>
+<p>Statistische Prozessregelung (SPC) erkennt Drift, bevor Ausschuss entsteht. FMEA verhindert Ausfälle durch vorausschauende Risikobewertung. 8D-Berichte treiben die systematische Ursachenanalyse nach Kundenreklamationen.</p>
+<h2>Fazit</h2>
+<p>Kunden schätzen robuste Qualitätsprozesse, detaillierte Prüfberichte und standardisierte Reklamationsbearbeitung höher ein als die neueste Maschine. Diese „weichen" Fähigkeiten gewinnen langfristiges Vertrauen.</p>`,
     },
   },
 ];

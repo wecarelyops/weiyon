@@ -26,7 +26,7 @@ export default async function FaqPage({
   setRequestLocale(locale);
   const t = await getTranslations("Faq");
 
-  const data = faqData[locale === "zh" ? "zh" : "en"];
+  const data = faqData[locale === "zh" ? "zh" : locale === "de" ? "de" : "en"];
 
   return (
     <>
