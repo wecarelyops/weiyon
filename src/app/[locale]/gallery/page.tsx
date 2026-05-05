@@ -36,12 +36,9 @@ export default async function GalleryPage({
       <section className="pt-20 lg:pt-24 py-10 lg:py-14 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl lg:text-4xl font-bold text-[var(--primary)] mb-3">
+            <h1 className="text-3xl lg:text-4xl font-bold text-[var(--primary)]">
               {t("heroTitle")}
             </h1>
-            <p className="text-base lg:text-lg text-[var(--text-secondary)]">
-              {t("heroSubtitle")}
-            </p>
           </div>
         </div>
       </section>
