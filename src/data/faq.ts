@@ -32,12 +32,12 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
         },
         {
           q: "沒有圖面只有實品，可以加工嗎？",
-          a: `可以，常見有兩種協助方式：
+          a: `沒問題！常見有兩種方式：
 
-1. 實品反推圖面：將樣品送至工廠，我們協助測量並繪製圖面後再進行加工。
-2. 業務拜訪取件：樣品若不便寄送，可預約業務到府取件評估。
+1. 實品反推圖面：把樣品送來工廠，我們幫您測量、繪圖之後再加工。
+2. 業務拜訪取件：樣品不方便寄送的話，可以預約業務到府取件評估。
 
-繪圖工本費會先行報價，確認後才進行。若同時委由我方加工量產，繪圖費用通常可協商折抵於後續訂單。`,
+繪圖的工本費會先報價給您確認，您 OK 之後我們才動工。如果之後也是由我們加工量產，繪圖費用通常可以協商折抵到後續訂單。`,
         },
         {
           q: "接受哪些圖面格式？",
@@ -51,14 +51,15 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
         },
         {
           q: "有最小起訂量（MOQ）嗎？",
-          a: `沒有強制 MOQ，1 件起即可接單。這是我們長期服務試做、研發、客製訂單的彈性。
+          a: `沒有強制 MOQ，1 件起就接。試做、研發、客製訂單我們從以前到現在都這樣做。
 
-實務上注意：
-・少量訂單：因設備調機、夾治具準備等固定成本攤提，單件單價會較高
+不過實務上要提醒您：
+
+・少量訂單：因為設備調機、夾治具準備等固定成本要攤提，單件單價會比較高
 ・量產訂單：批量越大，平均單價越低
-・試做轉量產：相關工治具費用通常可協商折抵
+・試做轉量產：相關工治具費用通常可以協商折抵
 
-實際單價以個案報價為準。`,
+實際單價請以正式報價為準。`,
         },
       ],
     },
@@ -67,34 +68,33 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
       items: [
         {
           q: "付款方式？",
-          a: `國內客戶：
-・首次合作：以月結 30 天為主要付款條件
-・長期合作客戶：可依合作關係彈性配合
+          a: `國內客戶首次合作我們以月結 30 天為主，老客戶可以依合作關係彈性配合。
 
-海外訂單：付款方式（T/T、L/C 等）請另行洽談。
+海外訂單的付款方式（T/T、L/C 等）我們另外洽談。
 
-開立發票方式可配合您的需求（一般稅額、免用統一發票等），下單時請告知。`,
+開立發票可配合您的需求（一般稅額、免用統一發票等），下單時告訴我們就好。`,
         },
         {
           q: "一般交期多久？",
-          a: `國內訂單：
+          a: `國內訂單的交期：
+
 ・一般單件 / 小批量：7-14 個工作天
 ・量產 / 大批量：依數量、複雜度評估，通常 14-30 個工作天
-・急件：可協調安排，部分情況可 3-5 天交貨，請於下單時告知
+・急件：可以幫您協調，特殊情況最快 3-5 天交貨 — 下單時跟我們提一下就行
 
-海外訂單交期需另行洽談（含運送時間）。
+海外訂單的交期我們另外算（含運送時間）。
 
-年節期間（春節、清明連假等）會另行公告，建議提前下單。`,
+年節期間（春節、清明連假等）會另行公告，記得提前下單。`,
         },
         {
           q: "可以分批出貨嗎？",
-          a: `可以。常見分批方式：
+          a: `可以喔。常見的分批方式：
 
 ・依數量分批：總量 1000 件，分 200 件一批，每月出貨
 ・依完工進度：先做完的先出，後段持續加工
 ・依您現場節奏：配合您的生產或庫存狀況排程
 
-請於下單時一併告知分批需求，方便我們同步排程，避免後續調整。`,
+下單時跟我們提一下分批的需求就好，這樣可以一起排好生產，省得後面再調整。`,
         },
       ],
     },
@@ -279,7 +279,7 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
       items: [
         {
           q: "接受哪些類型的訂單？",
-          a: `常見訂單類型皆可承接：
+          a: `常見的訂單類型我們都接：
 
 ・試作品 / 樣品：研發階段、新產品打樣
 ・量產：穩定批量生產
@@ -287,11 +287,11 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
 ・設計修改 / 改良：依您現場使用回饋調整
 ・替代品研發：原廠零件停產時的替代加工
 
-從 1 件起接單，沒有上限。歡迎告知您的具體需求，我們會評估最佳方案。`,
+從 1 件起接，沒有上限。告訴我們您的需求，我們會給您最合適的方案。`,
         },
         {
           q: "可加工特殊規格的螺絲、螺帽嗎？",
-          a: `可以承接客製。常見變化：
+          a: `可以！特殊螺絲、螺帽的客製我們做很多。常見變化：
 
 ・頭型：六角、內六角、十字、一字、特殊頭型
 ・長度：超長、超短、非標長度
@@ -299,22 +299,22 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
 ・螺紋：公制（M）、英制（UNF / UNC）、特殊牙距
 ・表面處理：染黑、鍍鋅、鈍化等
 
-請提供圖面或樣品，我們依規格評估加工方式與交期。`,
+把圖面或樣品給我們，我們會依規格評估加工方式跟交期。`,
         },
         {
           q: "治具、夾具、刀具能加工嗎？",
-          a: `可以。常見承接項目：
+          a: `可以喔。我們常承接的項目：
 
 ・產線治具：定位治具、組裝治具、檢驗治具
 ・夾具：CNC 夾具、銑床夾具、自動化夾爪
 ・刀具 / 刀把：自製刀具、特殊刀把
 ・檢測工具：通止規、量測 fixture
 
-若您只有現場使用情境但尚無圖面，可預約業務到廠評估，協助設計後加工。`,
+如果您只有現場使用情境、還沒圖面，可以約我們業務到廠評估，幫您設計再加工。`,
         },
         {
           q: "可加工機構零件、結構件嗎？",
-          a: `可以。日常承接的類型包含：
+          a: `可以，日常常做的類型包括：
 
 ・半導體設備零件：腔體、機構件、傳動軸
 ・機器人結構件：基座、連桿、關節零件
@@ -322,7 +322,7 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
 ・汽車零組件：引擎周邊、底盤結構件
 ・自動化機構：滑軌座、定位塊、軸承塊
 
-歡迎提供圖面或實品供我們評估。`,
+圖面或實品給我們評估都可以。`,
         },
       ],
     },
@@ -331,15 +331,15 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
       items: [
         {
           q: "配送方式？",
-          a: `國內配送：
+          a: `國內配送有幾種選擇：
 
-・物流配送：黑貓宅急便、新竹貨運等，可指定送達日期
-・客戶自取：歡迎事前預約取貨時間
+・物流配送：黑貓宅急便、新竹貨運等，可以指定送達日期
+・客戶自取：歡迎，事先預約取貨時間就好
 ・客戶委派物流：您指定物流公司，我們配合包裝出貨
 
-海外配送：請另行洽談（含貨代、清關、運送方式等）。
+海外配送請另外洽談（含貨代、清關、運送方式等）。
 
-包裝會依產品特性適度防護（防鏽、防撞）。若有特殊包裝需求（客戶指定棧板、專用箱等），請於下單時告知。`,
+包裝會依產品特性適度防護（防鏽、防撞）。如果有特殊包裝需求（指定棧板、專用箱等），下單時告訴我們。`,
         },
       ],
     },
@@ -348,20 +348,19 @@ export const faqData: Record<"zh" | "en", FaqCategory[]> = {
       items: [
         {
           q: "可以參觀工廠嗎？",
-          a: `歡迎合作客戶事前預約參觀。
+          a: `歡迎，合作客戶事先預約就可以。
 
 預約方式：
 ・電話：04-23356451
 ・Email：agesmyth@gmail.com
 
-請事前確認參觀時段與目的，避免影響現場生產作業，同時方便我們安排相關人員接待您。`,
+事前確認時段跟目的，這樣我們可以安排好接待人員，也不會影響現場作業。`,
         },
         {
           q: "營業時間？",
-          a: `週一至週五 08:00 - 17:30
-週六、週日及國定假日休息
+          a: `週一至週五 08:00 - 17:30，週六、週日跟國定假日休息。
 
-緊急聯繫如休息日有需求，可先 Email 留言，我們會於工作日優先回覆。`,
+如果是週末/假日有急事，先 Email 留言，我們週一上班會優先回覆。`,
         },
       ],
     },
@@ -388,12 +387,12 @@ We typically respond with a quote within 1-2 business days. For special specific
         },
         {
           q: "Can you machine parts without drawings, only a sample?",
-          a: `Yes. We commonly assist in two ways:
+          a: `Sure! Two common ways:
 
-1. Reverse-engineer from sample: Send the physical sample to our factory and we will measure and create drawings before machining.
-2. On-site visit: If shipping the sample is inconvenient, we can schedule a sales visit to evaluate on-site.
+1. Reverse-engineer from sample — send the part to our factory and we'll measure it, create drawings, then machine.
+2. On-site visit — if shipping is inconvenient, we'll schedule a sales visit to evaluate.
 
-Drafting fees will be quoted upfront for your approval. If we also handle the production, drafting fees can typically be credited toward future orders.`,
+We'll quote the drafting fee upfront for your approval before any work begins. If we also handle the production, drafting fees can typically be credited toward your next order.`,
         },
         {
           q: "Which drawing formats do you accept?",
@@ -407,14 +406,15 @@ Drafting fees will be quoted upfront for your approval. If we also handle the pr
         },
         {
           q: "Is there a minimum order quantity (MOQ)?",
-          a: `No mandatory MOQ — we accept orders starting from 1 piece. This flexibility supports our long-standing service to prototype, R&D, and custom-order clients.
+          a: `No mandatory MOQ — we accept orders starting from 1 piece. Prototype, R&D, and custom orders are part of our daily work.
 
-Important notes:
-・Small orders: Fixed costs (machine setup, fixturing) are amortized over fewer units, so unit price is higher.
-・Volume orders: Larger batches mean lower average unit cost.
-・Prototype to production: Tooling costs may be credited toward subsequent production runs.
+A few practical notes:
 
-Final pricing is based on individual quotes.`,
+・Small orders — fixed costs (machine setup, fixturing) are spread over fewer units, so unit price is higher.
+・Volume orders — larger batches mean lower average unit cost.
+・Prototype to production — tooling costs can usually be credited toward later production runs.
+
+Final pricing is based on the individual quote.`,
         },
       ],
     },
@@ -423,13 +423,11 @@ Final pricing is based on individual quotes.`,
       items: [
         {
           q: "What are the payment terms?",
-          a: `Domestic clients:
-・First-time orders: Net 30 days as the standard payment term
-・Long-term clients: Flexible terms based on the relationship
+          a: `For domestic first-time clients we use Net 30 as the standard term; long-term clients have flexibility based on the relationship.
 
-International orders: Payment terms (T/T, L/C, etc.) to be discussed separately.
+For international orders, we'll discuss payment terms (T/T, L/C, etc.) with you separately.
 
-Invoice format can be tailored to your needs (standard tax invoice, no-invoice format, etc.) — please specify when ordering.`,
+Invoice format can be tailored to your needs (standard tax invoice, no-invoice format, etc.) — just let us know when ordering.`,
         },
         {
           q: "What's the typical lead time?",
@@ -444,13 +442,13 @@ Holiday periods (Lunar New Year, Tomb-Sweeping holidays, etc.) will be announced
         },
         {
           q: "Can orders be shipped in batches?",
-          a: `Yes. Common partial-shipment options:
+          a: `Sure. Common partial-shipment options:
 
-・By quantity: e.g., 1,000 pieces total, 200 pieces per batch, monthly shipments
-・By completion progress: Finished items ship first; remainder follows
-・By your operational pace: Aligned with your production or inventory schedule
+・By quantity — e.g., 1,000 pieces total, 200 pieces per batch, monthly shipments
+・By completion progress — finished items ship first, remainder follows
+・By your operational pace — aligned with your production or inventory schedule
 
-Please mention partial-shipment requirements at order time so we can plan production and shipping accordingly.`,
+Just let us know your batch needs at order time so we can plan production and shipping together.`,
         },
       ],
     },
@@ -635,50 +633,50 @@ We have served 500+ clients across major Taiwan industries.`,
       items: [
         {
           q: "What kinds of orders do you accept?",
-          a: `We handle all common order types:
+          a: `We handle pretty much every common order type:
 
-・Prototypes / samples: For R&D and new product validation
-・Production: Stable volume runs
-・Custom specs: Parts not available off-the-shelf
-・Design modifications / improvements: Adjustments based on field feedback
-・Replacement parts: Substitute machining when OEM parts are discontinued
+・Prototypes / samples — R&D and new product validation
+・Production — stable volume runs
+・Custom specs — parts you can't find off-the-shelf
+・Design modifications / improvements — based on field feedback
+・Replacement parts — substitute machining when OEM parts are discontinued
 
-From 1 piece to virtually no upper limit. Tell us what you need and we will propose the best approach.`,
+From 1 piece to virtually no upper limit. Tell us what you need and we'll propose the best approach.`,
         },
         {
           q: "Can you make custom screws and nuts?",
-          a: `Yes — we accept custom orders. Common variations:
+          a: `Yes! We do a lot of custom screw and nut work. Common variations:
 
-・Head types: hex, socket-head, Phillips, slotted, custom shapes
-・Lengths: extra-long, extra-short, non-standard
-・Materials: SUS304, SUS316, titanium alloys, copper, aluminum, etc.
-・Threads: metric (M), imperial (UNF / UNC), special pitch
-・Surface finish: blackening, zinc plating, passivation, etc.
+・Head types — hex, socket-head, Phillips, slotted, custom shapes
+・Lengths — extra-long, extra-short, non-standard
+・Materials — SUS304, SUS316, titanium alloys, copper, aluminum, etc.
+・Threads — metric (M), imperial (UNF / UNC), special pitch
+・Surface finish — blackening, zinc plating, passivation, etc.
 
-Provide a drawing or sample and we will evaluate the machining method and lead time.`,
+Send us a drawing or sample and we'll evaluate the machining approach and lead time.`,
         },
         {
           q: "Can you machine jigs, fixtures, and tooling?",
-          a: `Yes. Common items we accept:
+          a: `Sure. Items we typically handle:
 
-・Production jigs: locating jigs, assembly jigs, inspection jigs
-・Fixtures: CNC fixtures, mill fixtures, automation grippers
-・Tooling / tool holders: custom cutters, special holders
-・Inspection tools: go/no-go gauges, measurement fixtures
+・Production jigs — locating, assembly, inspection
+・Fixtures — CNC fixtures, mill fixtures, automation grippers
+・Tooling / tool holders — custom cutters, special holders
+・Inspection tools — go/no-go gauges, measurement fixtures
 
-If you have a use case but no drawing yet, we can schedule a sales visit, evaluate on-site, and design before machining.`,
+If you have a use case but no drawing yet, we can schedule a sales visit, evaluate on-site, then design before machining.`,
         },
         {
           q: "Can you machine mechanical and structural parts?",
-          a: `Yes. Typical part categories we handle daily:
+          a: `Yes — these are part categories we handle daily:
 
-・Semiconductor equipment parts: chambers, mechanism parts, drive shafts
-・Robot structural parts: bases, linkages, joint components
-・Pneumatic / hydraulic parts: cylinder bodies, pistons, bearing seats
-・Automotive components: engine peripherals, chassis structural parts
-・Automation mechanisms: linear-rail seats, locating blocks, bearing blocks
+・Semiconductor equipment parts — chambers, mechanism parts, drive shafts
+・Robot structural parts — bases, linkages, joint components
+・Pneumatic / hydraulic parts — cylinder bodies, pistons, bearing seats
+・Automotive components — engine peripherals, chassis structural parts
+・Automation mechanisms — linear-rail seats, locating blocks, bearing blocks
 
-Send drawings or physical samples and we will evaluate.`,
+Send a drawing or physical sample and we'll evaluate.`,
         },
       ],
     },
@@ -687,15 +685,15 @@ Send drawings or physical samples and we will evaluate.`,
       items: [
         {
           q: "How do you ship orders?",
-          a: `Domestic shipping:
+          a: `For domestic shipping you have a few options:
 
-・Logistics: T-cat, Hsinchu Express, etc., with date specification available
-・Customer pickup: Welcome — please schedule pickup time in advance
-・Customer-arranged logistics: You designate the carrier; we package and ship accordingly
+・Logistics — T-cat, Hsinchu Express, etc., with date specification available
+・Customer pickup — welcome, just schedule a pickup time in advance
+・Customer-arranged logistics — you designate the carrier, we package and ship accordingly
 
-International shipping: To be discussed (forwarder, customs clearance, shipping mode).
+International shipping — let's discuss it together (forwarder, customs clearance, shipping mode).
 
-Packaging is appropriate to the product (rust prevention, shock protection). For special packaging needs (designated pallets, custom crates), please mention at order time.`,
+Packaging is matched to the product (rust prevention, shock protection). For special packaging needs (designated pallets, custom crates), just let us know at order time.`,
         },
       ],
     },
@@ -704,20 +702,19 @@ Packaging is appropriate to the product (rust prevention, shock protection). For
       items: [
         {
           q: "Can I visit the factory?",
-          a: `Partner clients are welcome to schedule a visit in advance.
+          a: `Partner clients are welcome — please schedule in advance.
 
-To schedule:
+To book a visit:
 ・Phone: +886-4-2335-6451
 ・Email: agesmyth@gmail.com
 
-Please confirm visit time and purpose ahead of time so we don't disrupt active production and so we can arrange the right person to host you.`,
+Confirming the time and purpose ahead lets us arrange the right person to host you and avoid disrupting active production.`,
         },
         {
           q: "What are your business hours?",
-          a: `Mon - Fri 08:00 - 17:30 (Taiwan time)
-Closed on Saturdays, Sundays, and Taiwan public holidays
+          a: `Mon - Fri 08:00 - 17:30 (Taiwan time). Closed on Saturdays, Sundays, and Taiwan public holidays.
 
-For urgent off-hours inquiries, please email — we will respond first thing on the next business day.`,
+For urgent off-hours inquiries, drop us an email — we'll get back to you first thing on the next business day.`,
         },
       ],
     },
