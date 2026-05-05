@@ -50,10 +50,12 @@ export async function generateMetadata({
       telephone: false,
     },
     alternates: {
-      canonical: isEn ? "/en" : "/",
+      canonical:
+        locale === "en" ? "/en" : locale === "de" ? "/de" : "/",
       languages: {
         "zh-TW": "/",
         en: "/en",
+        de: "/de",
         "x-default": "/",
       },
     },
@@ -176,8 +178,11 @@ export default async function LocaleLayout({
 
   const jsonLd = buildJsonLd(locale);
 
+  const htmlLang =
+    locale === "zh" ? "zh-TW" : locale === "de" ? "de" : "en";
+
   return (
-    <html lang={locale === "zh" ? "zh-TW" : "en"}>
+    <html lang={htmlLang}>
       <head>
         {/* JSON-LD 結構化資料：協助 Google 識別組織與在地商家資訊 */}
         <script
