@@ -11,6 +11,7 @@ import {
   Layers,
   Clock,
 } from "lucide-react";
+import { industries, type IndustryLocale } from "@/data/industries";
 
 export default async function Home({
   params,
@@ -20,6 +21,8 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("Home");
+
+  const lang = (locale === "zh" ? "zh" : locale === "de" ? "de" : "en") as IndustryLocale;
 
   return (
     <>
@@ -145,6 +148,60 @@ export default async function Home({
               className="inline-flex items-center gap-2 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
             >
               <span className="border-b border-current pb-1">{t("viewAllServices")}</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Grid — 6 產業 landing page 內鏈 */}
+      <section className="py-24 lg:py-40 bg-[var(--surface)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-16 lg:mb-24">
+            <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+              <span className="block w-10 h-px bg-[var(--accent)]" />
+              {t("industriesLabel")}
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[var(--primary)] tracking-tight leading-[1.05] max-w-5xl">
+              {t("industriesTitle")}
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mt-6">
+              {t("industriesSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {industries.map((ind, idx) => (
+              <Link
+                key={ind.slug}
+                href={`/industries/${ind.slug}`}
+                className="group relative bg-[var(--surface)] hover:bg-[var(--bg)] transition-colors p-8 lg:p-10 flex flex-col min-h-[280px]"
+              >
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+                  0{idx + 1}
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-3 group-hover:text-[var(--accent)] transition-colors leading-tight">
+                  {ind.title[lang]}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-1">
+                  {ind.heroSubtitle[lang]}
+                </p>
+                <div className="flex items-center gap-2 text-sm font-medium text-[var(--primary)] group-hover:text-[var(--accent)] group-hover:gap-3 transition-all">
+                  <span className="border-b border-current pb-0.5">
+                    {ind.shortTitle[lang]}
+                  </span>
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
+            >
+              <span className="border-b border-current pb-1">{t("viewAllIndustries")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
