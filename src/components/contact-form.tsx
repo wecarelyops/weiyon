@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef, ChangeEvent } from "react";
 import { useTranslations } from "next-intl";
 import {
   Mail,
@@ -11,6 +11,9 @@ import {
   CheckCircle2,
   AlertCircle,
   Loader2,
+  Paperclip,
+  X,
+  FileText,
 } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -25,10 +28,71 @@ declare global {
   }
 }
 
+const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
+const MAX_FILES = 5;
+const ACCEPT_EXTENSIONS = ".pdf,.dwg,.dxf,.step,.stp,.iges,.igs,.stl,.jpg,.jpeg,.png,.webp";
+const ALLOWED_EXTENSIONS = [
+  "pdf",
+  "dwg",
+  "dxf",
+  "step",
+  "stp",
+  "iges",
+  "igs",
+  "stl",
+  "jpg",
+  "jpeg",
+  "png",
+  "webp",
+];
+
+function formatBytes(bytes: number): string {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
 export default function ContactForm() {
   const t = useTranslations("Contact");
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [files, setFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const newFiles = Array.from(e.target.files || []);
+    const valid: File[] = [];
+    let firstError = "";
+
+    for (const f of newFiles) {
+      const ext = f.name.split(".").pop()?.toLowerCase() || "";
+      if (!ALLOWED_EXTENSIONS.includes(ext)) {
+        if (!firstError) firstError = t("formAttachmentTypeError", { name: f.name });
+        continue;
+      }
+      if (f.size > MAX_FILE_SIZE) {
+        if (!firstError) firstError = t("formAttachmentSizeError", { name: f.name });
+        continue;
+      }
+      valid.push(f);
+    }
+
+    const merged = [...files, ...valid].slice(0, MAX_FILES);
+    if (files.length + valid.length > MAX_FILES && !firstError) {
+      firstError = t("formAttachmentMaxError", { max: MAX_FILES });
+    }
+
+    setFiles(merged);
+    if (firstError) setErrorMessage(firstError);
+    else setErrorMessage("");
+
+    // 重置 input 讓使用者可以再次選擇相同檔案
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
+  const removeFile = (idx: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== idx));
+  };
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -36,19 +100,17 @@ export default function ContactForm() {
     setErrorMessage("");
 
     const formData = new FormData(e.currentTarget);
-    const payload = {
-      name: String(formData.get("name") || ""),
-      email: String(formData.get("email") || ""),
-      phone: String(formData.get("phone") || ""),
-      subject: String(formData.get("subject") || ""),
-      message: String(formData.get("message") || ""),
-    };
+
+    // 移除原本 input 內的 attachments，改用 state 內的 files
+    formData.delete("attachments");
+    files.forEach((f) => formData.append("attachments", f));
+
+    const subjectValue = String(formData.get("subject") || "");
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       const data = await res.json();
@@ -59,12 +121,14 @@ export default function ContactForm() {
 
       setStatus("success");
       (e.target as HTMLFormElement).reset();
+      setFiles([]);
 
       // GA4: generate_lead 自訂事件
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("event", "generate_lead", {
           form_name: "contact_form",
-          subject: payload.subject || "unspecified",
+          subject: subjectValue || "unspecified",
+          attachments: files.length,
           currency: "TWD",
           value: 1,
         });
@@ -185,6 +249,60 @@ export default function ContactForm() {
         </div>
       </div>
 
+      {/* 附件上傳 */}
+      <div>
+        <label className="block text-sm font-medium text-[var(--text-primary)] mb-2">
+          {t("formAttachmentsLabel")}
+        </label>
+        <p className="text-xs text-[var(--text-muted)] mb-3">
+          {t("formAttachmentsHint")}
+        </p>
+
+        <input
+          ref={fileInputRef}
+          type="file"
+          name="attachments"
+          multiple
+          accept={ACCEPT_EXTENSIONS}
+          onChange={handleFileChange}
+          className="sr-only"
+          id="attachments-input"
+        />
+
+        <label
+          htmlFor="attachments-input"
+          className="inline-flex items-center gap-2 px-4 py-2.5 border-2 border-dashed border-[var(--border-strong)] rounded-lg text-sm text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--accent)] cursor-pointer transition-colors"
+        >
+          <Paperclip className="w-4 h-4" />
+          {t("formAttachmentsButton")}
+        </label>
+
+        {files.length > 0 && (
+          <ul className="mt-3 space-y-2">
+            {files.map((file, idx) => (
+              <li
+                key={idx}
+                className="flex items-center gap-3 px-3 py-2 bg-[var(--surface)] border border-[var(--border)] rounded-lg text-sm"
+              >
+                <FileText className="w-4 h-4 text-[var(--accent)] flex-shrink-0" />
+                <span className="flex-1 truncate">{file.name}</span>
+                <span className="text-xs text-[var(--text-muted)] flex-shrink-0">
+                  {formatBytes(file.size)}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => removeFile(idx)}
+                  aria-label={t("formAttachmentRemove")}
+                  className="p-1 text-[var(--text-muted)] hover:text-red-500 transition-colors flex-shrink-0"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
       {status === "success" && (
         <div className="flex items-start gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
           <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -198,6 +316,13 @@ export default function ContactForm() {
           <p className="text-sm text-red-800">
             {errorMessage || t("formError")}
           </p>
+        </div>
+      )}
+
+      {errorMessage && status !== "error" && (
+        <div className="flex items-start gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+          <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-amber-800">{errorMessage}</p>
         </div>
       )}
 
