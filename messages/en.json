@@ -179,7 +179,10 @@
     "formMessageLabel": "Message",
     "formMessagePlaceholder": "Tell us about your project: part type, material, quantity, target lead time.\nExample: 100 pcs SUS304 shaft machining, drawing attached as PDF, needed within 14 days.",
     "formRequired": "*",
-    "formSubmit": "Send Message"
+    "formSubmit": "Send Message",
+    "formSubmitting": "Sending…",
+    "formSuccess": "Thanks for your message! We've received your inquiry and will get back to you shortly.",
+    "formError": "Submission failed. Please try again later or call +886-4-2335-6451."
   },
   "Products": {
     "metaTitle": "CNC Services — Milling / Turning / EDM / Sheet Metal / Surface Treatment | Weiyon Industry",

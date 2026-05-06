@@ -179,7 +179,10 @@
     "formMessageLabel": "訊息內容",
     "formMessagePlaceholder": "請說明您的需求：零件種類、材質、數量、預期交期等。\n例：100 件 SUS304 軸類加工，圖面附 PDF，希望 14 天內交貨。",
     "formRequired": "*",
-    "formSubmit": "送出訊息"
+    "formSubmit": "送出訊息",
+    "formSubmitting": "送出中…",
+    "formSuccess": "感謝您的訊息！我們已收到您的詢價，將儘快與您聯繫。",
+    "formError": "送出失敗，請稍後再試或直接致電 04-23356451。"
   },
   "Products": {
     "metaTitle": "CNC 加工項目 | 車削 / 銑削 / 放電 / 鈑金 / 表面處理 — 偉勇工業社",

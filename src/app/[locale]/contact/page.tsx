@@ -1,15 +1,8 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Send,
-  MessageCircle,
-  User,
-  Phone as PhoneIcon,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import ContactForm from "@/components/contact-form";
+import TrackedLink from "@/components/tracked-link";
 
 export async function generateMetadata({
   params,
@@ -82,12 +75,14 @@ export default async function ContactPage({
                     <h3 className="font-bold text-[var(--primary)] mb-1">
                       {t("phoneLabel")}
                     </h3>
-                    <a
+                    <TrackedLink
                       href="tel:0423356451"
+                      eventName="phone_click"
+                      eventParams={{ source: "contact_page" }}
                       className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                     >
                       04-23356451
-                    </a>
+                    </TrackedLink>
                   </div>
                 </div>
 
@@ -99,12 +94,14 @@ export default async function ContactPage({
                     <h3 className="font-bold text-[var(--primary)] mb-1">
                       {t("emailLabel")}
                     </h3>
-                    <a
+                    <TrackedLink
                       href="mailto:agesmyth@gmail.com"
+                      eventName="email_click"
+                      eventParams={{ source: "contact_page" }}
                       className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                     >
                       agesmyth@gmail.com
-                    </a>
+                    </TrackedLink>
                   </div>
                 </div>
 
@@ -144,116 +141,7 @@ export default async function ContactPage({
                 {t("formTitle")}
               </h2>
 
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-[var(--text-primary)] mb-2"
-                    >
-                      {t("formNameLabel")}{" "}
-                      <span className="text-red-500">{t("formRequired")}</span>
-                    </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
-                      <input
-                        type="text"
-                        id="name"
-                        required
-                        placeholder={t("formNamePlaceholder")}
-                        className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-[var(--text-primary)] mb-2"
-                    >
-                      {t("formPhoneLabel")}
-                    </label>
-                    <div className="relative">
-                      <PhoneIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
-                      <input
-                        type="tel"
-                        id="phone"
-                        placeholder={t("formPhonePlaceholder")}
-                        className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-[var(--text-primary)] mb-2"
-                  >
-                    {t("formEmailLabel")}{" "}
-                    <span className="text-red-500">{t("formRequired")}</span>
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      placeholder={t("formEmailPlaceholder")}
-                      className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-[var(--text-primary)] mb-2"
-                  >
-                    {t("formSubjectLabel")}
-                  </label>
-                  <select
-                    id="subject"
-                    className="w-full px-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] bg-white"
-                  >
-                    <option value="">{t("formSubjectPlaceholder")}</option>
-                    <option value="quote">{t("formSubjectQuote")}</option>
-                    <option value="product">{t("formSubjectProduct")}</option>
-                    <option value="cooperation">
-                      {t("formSubjectCooperation")}
-                    </option>
-                    <option value="other">{t("formSubjectOther")}</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-[var(--text-primary)] mb-2"
-                  >
-                    {t("formMessageLabel")}{" "}
-                    <span className="text-red-500">{t("formRequired")}</span>
-                  </label>
-                  <div className="relative">
-                    <MessageCircle className="absolute left-3 top-4 w-5 h-5 text-[var(--text-muted)]" />
-                    <textarea
-                      id="message"
-                      required
-                      rows={5}
-                      placeholder={t("formMessagePlaceholder")}
-                      className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] resize-none"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-[var(--primary)] text-white font-medium rounded-lg hover:bg-[var(--secondary)] transition-colors"
-                >
-                  <Send className="w-4 h-4" />
-                  {t("formSubmit")}
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
