@@ -10,6 +10,9 @@ import {
   Diamond,
   Layers,
   Clock,
+  Beaker,
+  Crosshair,
+  Timer,
 } from "lucide-react";
 import { industries, type IndustryLocale } from "@/data/industries";
 
@@ -96,6 +99,170 @@ export default async function Home({
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capability Snapshot — Materials × Tolerance × Lead Time */}
+      <section className="py-20 lg:py-32 bg-[var(--surface)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-12 lg:mb-16 max-w-4xl">
+            <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+              <span className="block w-10 h-px bg-[var(--accent)]" />
+              {t("capabilityLabel")}
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--primary)] tracking-tight leading-[1.05]">
+              {t("capabilityTitle")}
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] mt-6 max-w-2xl">
+              {t("capabilitySubtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {/* Materials */}
+            <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <Beaker className="w-5 h-5 text-[var(--accent)]" />
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)]">
+                  {t("capability1Label")}
+                </div>
+              </div>
+              <div className="text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-3 leading-none">
+                {t("capability1Value")}
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-1">
+                {t("capability1Desc")}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {[
+                  t("capability1Tag1"),
+                  t("capability1Tag2"),
+                  t("capability1Tag3"),
+                  t("capability1Tag4"),
+                  t("capability1Tag5"),
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 text-xs bg-[var(--bg)] border border-[var(--border)] rounded-full text-[var(--text-secondary)]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link
+                href="/materials"
+                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
+              >
+                <span className="border-b border-current pb-0.5">
+                  {t("capability1Link")}
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Tolerance */}
+            <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <Crosshair className="w-5 h-5 text-[var(--accent)]" />
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)]">
+                  {t("capability2Label")}
+                </div>
+              </div>
+              <div className="text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-3 leading-none">
+                ±0.005<span className="text-3xl ml-1">mm</span>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-1">
+                {t("capability2Desc")}
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--text-secondary)]">
+                    {t("capability2Item1Label")}
+                  </span>
+                  <span className="text-[var(--primary)] font-medium font-mono">
+                    {t("capability2Item1Value")}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--text-secondary)]">
+                    {t("capability2Item2Label")}
+                  </span>
+                  <span className="text-[var(--primary)] font-medium font-mono">
+                    {t("capability2Item2Value")}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--text-secondary)]">
+                    {t("capability2Item3Label")}
+                  </span>
+                  <span className="text-[var(--primary)] font-medium font-mono">
+                    {t("capability2Item3Value")}
+                  </span>
+                </div>
+              </div>
+              <Link
+                href="/blog/machining-tolerance-standards-guide"
+                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
+              >
+                <span className="border-b border-current pb-0.5">
+                  {t("capability2Link")}
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Lead Time */}
+            <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
+              <div className="flex items-center gap-3 mb-6">
+                <Timer className="w-5 h-5 text-[var(--accent)]" />
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)]">
+                  {t("capability3Label")}
+                </div>
+              </div>
+              <div className="text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-3 leading-none">
+                {t("capability3Value")}
+                <span className="text-3xl ml-1">{t("capability3Unit")}</span>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-1">
+                {t("capability3Desc")}
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--text-secondary)]">
+                    {t("capability3Item1Label")}
+                  </span>
+                  <span className="text-[var(--primary)] font-medium font-mono">
+                    {t("capability3Item1Value")}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--text-secondary)]">
+                    {t("capability3Item2Label")}
+                  </span>
+                  <span className="text-[var(--primary)] font-medium font-mono">
+                    {t("capability3Item2Value")}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-[var(--text-secondary)]">
+                    {t("capability3Item3Label")}
+                  </span>
+                  <span className="text-[var(--primary)] font-medium font-mono">
+                    {t("capability3Item3Value")}
+                  </span>
+                </div>
+              </div>
+              <Link
+                href="/workflow"
+                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
+              >
+                <span className="border-b border-current pb-0.5">
+                  {t("capability3Link")}
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

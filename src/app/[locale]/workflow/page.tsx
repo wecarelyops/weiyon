@@ -159,6 +159,117 @@ export default async function WorkflowPage({
         </div>
       </section>
 
+      {/* Lead Time 參考表 — B2B 採購最關心 */}
+      <section className="py-16 lg:py-24 bg-[var(--bg)] border-t border-[var(--border)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-12 max-w-3xl">
+            <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+              <span className="block w-10 h-px bg-[var(--accent)]" />
+              {t("leadTimeLabel")}
+            </div>
+            <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight leading-[1.1]">
+              {t("leadTimeTitle")}
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] mt-6">
+              {t("leadTimeSubtitle")}
+            </p>
+          </div>
+
+          <div className="border border-[var(--border)] rounded-xl overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-[var(--surface)] border-b border-[var(--border)]">
+                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
+                    {t("leadTimeColType")}
+                  </th>
+                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden sm:table-cell">
+                    {t("leadTimeColQty")}
+                  </th>
+                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium">
+                    {t("leadTimeColTime")}
+                  </th>
+                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden lg:table-cell">
+                    {t("leadTimeColNote")}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    type: t("leadTimeRow1Type"),
+                    qty: t("leadTimeRow1Qty"),
+                    time: t("leadTimeRow1Time"),
+                    note: t("leadTimeRow1Note"),
+                  },
+                  {
+                    type: t("leadTimeRow2Type"),
+                    qty: t("leadTimeRow2Qty"),
+                    time: t("leadTimeRow2Time"),
+                    note: t("leadTimeRow2Note"),
+                  },
+                  {
+                    type: t("leadTimeRow3Type"),
+                    qty: t("leadTimeRow3Qty"),
+                    time: t("leadTimeRow3Time"),
+                    note: t("leadTimeRow3Note"),
+                  },
+                  {
+                    type: t("leadTimeRow4Type"),
+                    qty: t("leadTimeRow4Qty"),
+                    time: t("leadTimeRow4Time"),
+                    note: t("leadTimeRow4Note"),
+                  },
+                  {
+                    type: t("leadTimeRow5Type"),
+                    qty: t("leadTimeRow5Qty"),
+                    time: t("leadTimeRow5Time"),
+                    note: t("leadTimeRow5Note"),
+                  },
+                  {
+                    type: t("leadTimeRow6Type"),
+                    qty: t("leadTimeRow6Qty"),
+                    time: t("leadTimeRow6Time"),
+                    note: t("leadTimeRow6Note"),
+                    highlight: true,
+                  },
+                ].map((row, idx) => (
+                  <tr
+                    key={idx}
+                    className={`border-b border-[var(--border)] last:border-b-0 ${
+                      row.highlight
+                        ? "bg-[var(--accent)]/5"
+                        : "hover:bg-[var(--surface)]"
+                    } transition-colors`}
+                  >
+                    <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
+                      {row.type}
+                    </td>
+                    <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)] hidden sm:table-cell">
+                      {row.qty}
+                    </td>
+                    <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)]">
+                      {row.time}
+                    </td>
+                    <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)] hidden lg:table-cell">
+                      {row.note}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-6 p-4 bg-[var(--surface)] border border-[var(--border)] rounded-lg">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <span className="font-medium text-[var(--primary)]">
+                {t("leadTimeFootnoteLabel")}
+              </span>{" "}
+              {t("leadTimeFootnote")}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 lg:py-28 bg-[var(--primary)] text-[var(--bg)]">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16 text-center">

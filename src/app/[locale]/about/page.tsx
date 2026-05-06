@@ -122,6 +122,92 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* Milestones / By the Numbers — 40 年數字感 + 信任元素 */}
+      <section className="py-16 lg:py-24 bg-[var(--bg)] border-y border-[var(--border)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-12 lg:mb-16 max-w-3xl">
+            <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+              <span className="block w-10 h-px bg-[var(--accent)]" />
+              {t("milestonesLabel")}
+            </div>
+            <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight leading-[1.1]">
+              {t("milestonesTitle")}
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] mt-6">
+              {t("milestonesSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {[
+              {
+                value: "40+",
+                label: t("milestone1Label"),
+                detail: t("milestone1Detail"),
+              },
+              {
+                value: "500+",
+                label: t("milestone2Label"),
+                detail: t("milestone2Detail"),
+              },
+              {
+                value: "1,000+",
+                label: t("milestone3Label"),
+                detail: t("milestone3Detail"),
+              },
+              {
+                value: "8",
+                label: t("milestone4Label"),
+                detail: t("milestone4Detail"),
+              },
+              {
+                value: "±0.005",
+                unit: "mm",
+                label: t("milestone5Label"),
+                detail: t("milestone5Detail"),
+              },
+              {
+                value: "14",
+                unit: t("milestone6Unit"),
+                label: t("milestone6Label"),
+                detail: t("milestone6Detail"),
+              },
+              {
+                value: "3",
+                unit: t("milestone7Unit"),
+                label: t("milestone7Label"),
+                detail: t("milestone7Detail"),
+              },
+              {
+                value: "1986",
+                label: t("milestone8Label"),
+                detail: t("milestone8Detail"),
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-[var(--bg)] p-6 lg:p-8 hover:bg-[var(--surface)] transition-colors"
+              >
+                <p className="text-3xl lg:text-5xl font-bold text-[var(--primary)] leading-none mb-2 tracking-tight">
+                  {item.value}
+                  {item.unit && (
+                    <span className="text-base lg:text-xl ml-1 font-medium text-[var(--text-secondary)]">
+                      {item.unit}
+                    </span>
+                  )}
+                </p>
+                <p className="text-xs lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium mb-2">
+                  {item.label}
+                </p>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Story Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
