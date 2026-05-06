@@ -845,6 +845,143 @@ export const industries: Industry[] = [
     imageUrl:
       "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
   },
+  {
+    slug: "oil-gas",
+    title: {
+      zh: "油氣產業精密金屬零件加工",
+      en: "Oil & Gas Precision Parts Machining",
+      de: "Präzisionsteile für die Öl- und Gasindustrie",
+    },
+    shortTitle: { zh: "油氣", en: "Oil & Gas", de: "Öl & Gas" },
+    metaTitle: {
+      zh: "油氣零件加工 | 閥門內件 / 法蘭 / 泵浦零件 — 偉勇工業社",
+      en: "Oil & Gas Precision Parts | Valve Internals, Flanges, Pump Parts — Weiyon Industry",
+      de: "Öl- & Gas-Präzisionsteile | Ventilteile, Flansche, Pumpenteile — Weiyon Industry",
+    },
+    metaDescription: {
+      zh: "偉勇工業社承接油氣產業精密金屬零件加工 — 閥門內件（seat / disc / stem / bonnet）、管接頭、法蘭、泵浦零件、Christmas tree 配件、儀錶接頭。對應 SUS316L、Duplex、Super Duplex、Inconel、Monel 等耐蝕難切削合金。可配合 API 6A、API 6D、NORSOK M-650 客戶供應鏈品管。服務 GCC（UAE / 沙烏地 / 卡達 / 科威特 / 阿曼）油氣 MRO 與 EPC 採購鏈。台中 40 年精密加工廠。",
+      en: "Weiyon Industry machines oil & gas precision parts — valve internals (seat, disc, stem, bonnet), pipe fittings, flanges, pump components, Christmas tree fittings, instrument connectors. Compatible with SUS316L, Duplex, Super Duplex, Inconel, Monel. Supports API 6A, API 6D, NORSOK M-650 customer QC. Serving GCC (UAE, Saudi, Qatar, Kuwait, Oman) oil & gas MRO and EPC supply chains. 40-year Taichung precision machining shop.",
+      de: "Weiyon Industry fertigt Öl- & Gas-Präzisionsteile — Ventilinnenteile (Sitz, Scheibe, Spindel, Haube), Rohrverbindungen, Flansche, Pumpenteile, Christmas-Tree-Komponenten, Instrumentenanschlüsse. Verarbeitet SUS316L, Duplex, Super Duplex, Inconel, Monel. Konform mit API 6A, API 6D, NORSOK M-650 in Kundenlieferketten. Bedient GCC-Öl- & Gas-MRO sowie EPC-Lieferketten (VAE, Saudi-Arabien, Katar, Kuwait, Oman). 40 Jahre Präzisionsbearbeitung in Taichung.",
+    },
+    heroSubtitle: {
+      zh: "閥門內件、法蘭、泵浦零件 — 對應 GCC 與全球油氣供應鏈的精密加工",
+      en: "Valve internals, flanges, pump parts — precision machining for GCC and global oil & gas supply chains",
+      de: "Ventilinnenteile, Flansche, Pumpenteile — Präzisionsbearbeitung für GCC und globale Öl- und Gas-Lieferketten",
+    },
+    intro: {
+      zh: "油氣產業的金屬零件，要面對高溫、高壓、強腐蝕、含硫氣體、海水浸泡等嚴苛環境。閥門內件的密封、法蘭的尺寸精度、泵浦零件的耐蝕性 — 任何一處失效，輕則停機損失，重則人員傷亡。我們對應 SUS316L、Duplex、Super Duplex、Inconel 等耐蝕難切削合金多年，能配合歐美閥門品牌（Cameron、Emerson、Flowserve、KSB 等）的 OEM 供應鏈品管，也能配合中東 EPC 承包商與 NOC distributor 的採購要求。",
+      en: "Oil & gas parts face extreme conditions — high temperature, high pressure, corrosive media, sour gas, seawater immersion. Valve seal integrity, flange dimensional accuracy, pump corrosion resistance — any failure means downtime at best, casualties at worst. We've worked with SUS316L, Duplex, Super Duplex, Inconel, and other corrosion-resistant difficult alloys for years. We support OEM supply chains for European/American valve brands (Cameron, Emerson, Flowserve, KSB) and procurement requirements from Middle East EPC contractors and NOC distributors.",
+      de: "Öl- und Gasteile sind extremen Bedingungen ausgesetzt — hohe Temperaturen, hoher Druck, korrosive Medien, Sauergas, Meerwasser. Ventildichtheit, Flanschmaßgenauigkeit, Pumpen-Korrosionsbeständigkeit — jeder Fehler bedeutet bestenfalls Stillstand, schlimmstenfalls Verluste. Wir bearbeiten seit Jahren SUS316L, Duplex, Super Duplex, Inconel und weitere korrosionsbeständige, schwer zerspanbare Legierungen. Wir bedienen OEM-Lieferketten europäischer und amerikanischer Ventilmarken (Cameron, Emerson, Flowserve, KSB) sowie Beschaffungsanforderungen von EPC-Auftragnehmern und NOC-Vertriebshändlern im Nahen Osten.",
+    },
+    whyTitle: {
+      zh: "為什麼選擇偉勇承接油氣零件",
+      en: "Why Weiyon for Oil & Gas Parts",
+      de: "Warum Weiyon für Öl- und Gasteile",
+    },
+    whyPoints: {
+      zh: [
+        "40 年難切削材料加工經驗 — Inconel、Duplex、Monel 為熟悉領域",
+        "SUS316L、Duplex、Super Duplex 庫存與穩定供應",
+        "可整合熱處理、表面處理、量測 / FAI 報告",
+        "材質證明（Mill Test Cert）+ 完整批次追溯",
+        "短交期配合海外油氣 MRO 急件需求",
+        "與歐美閥門品牌 OEM 代工經驗 — 熟悉供應鏈品管流程",
+      ],
+      en: [
+        "40 years of experience with difficult alloys — Inconel, Duplex, Monel are familiar territory",
+        "Stock and steady supply of SUS316L, Duplex, Super Duplex",
+        "Integrated heat treatment, surface treatment, measurement / FAI reports",
+        "Mill Test Certificates + complete batch traceability",
+        "Short lead times for offshore oil & gas MRO rush orders",
+        "OEM experience with European/American valve brands — fluent in supply chain QC",
+      ],
+      de: [
+        "40 Jahre Erfahrung mit schwer zerspanbaren Legierungen — Inconel, Duplex, Monel als vertrautes Terrain",
+        "Bestand und stetige Versorgung mit SUS316L, Duplex, Super Duplex",
+        "Integrierte Wärmebehandlung, Oberflächenbehandlung, Messung / FAI-Berichte",
+        "Werkszeugnisse (Mill Test Cert) + vollständige Chargenrückverfolgbarkeit",
+        "Kurze Lieferzeiten für Offshore-Öl- und Gas-MRO-Eilaufträge",
+        "OEM-Erfahrung mit europäischen und amerikanischen Ventilmarken — vertraut mit Lieferketten-QM",
+      ],
+    },
+    partsTitle: { zh: "常見承接零件", en: "Typical Parts", de: "Typische Bauteile" },
+    parts: {
+      zh: [
+        "閥門內件：seat、disc、stem、bonnet、ball、gate",
+        "法蘭：raised face、ring type joint (RTJ)、blind flange",
+        "管接頭、儀錶接頭、卡套接頭",
+        "泵浦零件：軸、葉輪、密封座、襯套",
+        "Christmas tree 配件、井口設備周邊件",
+        "緊固件：高強度螺栓、螺帽（B7 / 2H、B16 / 4 等）",
+      ],
+      en: [
+        "Valve internals: seat, disc, stem, bonnet, ball, gate",
+        "Flanges: raised face, ring type joint (RTJ), blind flange",
+        "Pipe fittings, instrument fittings, ferrule fittings",
+        "Pump parts: shafts, impellers, mechanical seal seats, sleeves",
+        "Christmas tree fittings, wellhead peripherals",
+        "Fasteners: high-strength bolts and nuts (B7 / 2H, B16 / 4 etc.)",
+      ],
+      de: [
+        "Ventilinnenteile: Sitz, Scheibe, Spindel, Haube, Kugel, Schieber",
+        "Flansche: Vorsprung-Dichtfläche, Ring-Joint (RTJ), Blindflansch",
+        "Rohrverbindungen, Instrumentenanschlüsse, Klemmringverschraubungen",
+        "Pumpenteile: Wellen, Laufräder, Gleitringdichtungssitze, Hülsen",
+        "Christmas-Tree-Komponenten, Bohrlochkopf-Peripherie",
+        "Verbindungselemente: hochfeste Schrauben und Muttern (B7 / 2H, B16 / 4 usw.)",
+      ],
+    },
+    materialsTitle: { zh: "對應材料", en: "Compatible Materials", de: "Verarbeitbare Werkstoffe" },
+    materials: {
+      zh: [
+        "SUS316 / SUS316L（耐氯化物腐蝕，海洋油氣首選）",
+        "Duplex S31803 / Super Duplex S32750（耐酸性、海水）",
+        "Inconel 625 / 718（高溫、酸性氣體環境）",
+        "Monel 400（耐強酸、油氣加工接觸）",
+        "F22 / F11 低合金鋼（壓力閥門、管件）",
+      ],
+      en: [
+        "SUS316 / SUS316L (chloride corrosion resistance, top choice for offshore oil & gas)",
+        "Duplex S31803 / Super Duplex S32750 (sour service, seawater)",
+        "Inconel 625 / 718 (high-temp, sour gas environments)",
+        "Monel 400 (strong acid resistance, oil & gas processing contact)",
+        "F22 / F11 low-alloy steel (pressure valves, fittings)",
+      ],
+      de: [
+        "SUS316 / SUS316L (chloridkorrosionsbeständig, erste Wahl für Offshore-Öl & Gas)",
+        "Duplex S31803 / Super Duplex S32750 (Sauerservice, Meerwasser)",
+        "Inconel 625 / 718 (Hochtemperatur, Sauergas-Umgebungen)",
+        "Monel 400 (starke Säurebeständigkeit, Öl- und Gas-Prozesskontakt)",
+        "F22 / F11 niedriglegierter Stahl (Druckventile, Armaturen)",
+      ],
+    },
+    standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
+    standards: {
+      zh: [
+        "公差控制：可達 ±0.005 mm",
+        "材質證明：Mill Test Cert（全程追溯）",
+        "可配合 API 6A、API 6D、NORSOK M-650 客戶要求",
+        "FAI / PPAP 報告（依客戶需求）",
+        "PED 2014/68/EU 歐系壓力設備指令可整合",
+      ],
+      en: [
+        "Tolerance: down to ±0.005 mm",
+        "Mill Test Certificates (full traceability)",
+        "Compatible with API 6A, API 6D, NORSOK M-650 customer requirements",
+        "FAI / PPAP reports (per customer specification)",
+        "PED 2014/68/EU European pressure equipment directive integration",
+      ],
+      de: [
+        "Toleranzen: bis ±0,005 mm",
+        "Werkszeugnisse (Mill Test Cert) — vollständige Rückverfolgbarkeit",
+        "Konform mit Kundenanforderungen API 6A, API 6D, NORSOK M-650",
+        "FAI- / PPAP-Berichte (je nach Kundenvorgabe)",
+        "Integration der EU-Druckgeräterichtlinie PED 2014/68/EU",
+      ],
+    },
+    imageUrl:
+      "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+  },
 ];
 
 export function getIndustryBySlug(slug: string): Industry | undefined {

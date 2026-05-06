@@ -29,7 +29,7 @@ declare global {
 }
 
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
-const MAX_FILES = 5;
+const MAX_FILES = 10;
 const ACCEPT_EXTENSIONS = ".pdf,.dwg,.dxf,.step,.stp,.iges,.igs,.stl,.jpg,.jpeg,.png,.webp";
 const ALLOWED_EXTENSIONS = [
   "pdf",

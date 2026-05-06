@@ -3,7 +3,7 @@ import { supabaseAdmin } from "@/lib/supabase";
 
 const BUCKET_NAME = "contact-attachments";
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
-const MAX_FILES = 5;
+const MAX_FILES = 10;
 const ALLOWED_EXTENSIONS = [
   "pdf",
   "dwg",
