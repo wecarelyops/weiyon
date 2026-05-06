@@ -8,6 +8,7 @@ import "../globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import GoogleAnalytics from "@/components/google-analytics";
+import MobileFloatingCTA from "@/components/mobile-floating-cta";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -198,6 +199,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <MobileFloatingCTA />
         </NextIntlClientProvider>
         <GoogleAnalytics />
       </body>
