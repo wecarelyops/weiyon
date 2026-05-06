@@ -56,8 +56,45 @@ export default async function BlogPostPage({
   // Related posts: 3 random others
   const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
+  // JSON-LD BlogPosting schema — 給 Google 完整的文章 metadata
+  // 啟用 rich results（日期、作者、來源組織等顯示在搜尋結果）
+  const SITE_URL = "https://www.weiyon.com";
+  const localePrefix = locale === "zh" ? "" : `/${locale}`;
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title[lang],
+    description: post.excerpt[lang],
+    image: post.imageUrl,
+    author: {
+      "@type": "Organization",
+      name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.png`,
+      },
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}${localePrefix}/blog/${post.slug}`,
+    },
+    inLanguage: locale === "zh" ? "zh-TW" : locale,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-12 lg:pb-16 bg-[var(--surface)]">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">

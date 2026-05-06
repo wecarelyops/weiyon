@@ -52,8 +52,43 @@ export default async function IndustryPage({
 
   const lang = (locale === "zh" ? "zh" : locale === "de" ? "de" : "en") as IndustryLocale;
 
+  // JSON-LD Service schema — 告訴 Google：這家公司提供這項精密加工服務
+  const SITE_URL = "https://www.weiyon.com";
+  const localePrefix = locale === "zh" ? "" : `/${locale}`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: ind.title[lang],
+    description: ind.intro[lang],
+    image: ind.imageUrl,
+    provider: {
+      "@type": "Organization",
+      name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      url: SITE_URL,
+      telephone: "+886-4-2335-6451",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: locale === "zh" ? "烏日區" : "Wuri District",
+        addressRegion: locale === "zh" ? "台中市" : "Taichung City",
+        addressCountry: "TW",
+      },
+    },
+    serviceType: ind.shortTitle[lang],
+    areaServed: [
+      { "@type": "Country", name: "Taiwan" },
+      { "@type": "Place", name: "Worldwide" },
+    ],
+    url: `${SITE_URL}${localePrefix}/industries/${ind.slug}`,
+    inLanguage: locale === "zh" ? "zh-TW" : locale,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-16 lg:pb-20 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
