@@ -14,6 +14,10 @@ import {
   Paperclip,
   X,
   FileText,
+  Building2,
+  Globe,
+  Hash,
+  Truck,
 } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -206,6 +210,47 @@ export default function ContactForm() {
         </div>
       </div>
 
+      {/* Company + Country — 海外 B2B 採購商常需 */}
+      <div className="grid sm:grid-cols-2 gap-6">
+        <div>
+          <label
+            htmlFor="company"
+            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+          >
+            {t("formCompanyLabel")}
+          </label>
+          <div className="relative">
+            <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder={t("formCompanyPlaceholder")}
+              className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            htmlFor="country"
+            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+          >
+            {t("formCountryLabel")}
+          </label>
+          <div className="relative">
+            <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
+            <input
+              type="text"
+              id="country"
+              name="country"
+              placeholder={t("formCountryPlaceholder")}
+              className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            />
+          </div>
+        </div>
+      </div>
+
       <div>
         <label
           htmlFor="subject"
@@ -226,6 +271,56 @@ export default function ContactForm() {
           </option>
           <option value="other">{t("formSubjectOther")}</option>
         </select>
+      </div>
+
+      {/* Quantity + INCOTERMS — 國際採購常需 */}
+      <div className="grid sm:grid-cols-2 gap-6">
+        <div>
+          <label
+            htmlFor="quantity"
+            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+          >
+            {t("formQuantityLabel")}
+          </label>
+          <div className="relative">
+            <Hash className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)]" />
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              placeholder={t("formQuantityPlaceholder")}
+              className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            htmlFor="incoterms"
+            className="block text-sm font-medium text-[var(--text-primary)] mb-2"
+          >
+            {t("formIncotermsLabel")}
+          </label>
+          <div className="relative">
+            <Truck className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--text-muted)] pointer-events-none z-10" />
+            <select
+              id="incoterms"
+              name="incoterms"
+              className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] bg-white"
+            >
+              <option value="">{t("formIncotermsPlaceholder")}</option>
+              <option value="EXW">EXW (Ex Works)</option>
+              <option value="FCA">FCA (Free Carrier)</option>
+              <option value="FOB">FOB (Free on Board)</option>
+              <option value="CIF">CIF (Cost, Insurance, Freight)</option>
+              <option value="CFR">CFR (Cost and Freight)</option>
+              <option value="CPT">CPT (Carriage Paid To)</option>
+              <option value="DAP">DAP (Delivered at Place)</option>
+              <option value="DDP">DDP (Delivered Duty Paid)</option>
+              <option value="discuss">{t("formIncotermsDiscuss")}</option>
+            </select>
+          </div>
+        </div>
       </div>
 
       <div>

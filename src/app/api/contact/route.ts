@@ -57,7 +57,25 @@ export async function POST(request: Request) {
     const email = String(formData.get("email") || "").trim();
     const phone = String(formData.get("phone") || "").trim();
     const subject = String(formData.get("subject") || "").trim();
+    const company = String(formData.get("company") || "").trim();
+    const country = String(formData.get("country") || "").trim();
+    const quantity = String(formData.get("quantity") || "").trim();
+    const incoterms = String(formData.get("incoterms") || "").trim();
     let message = String(formData.get("message") || "").trim();
+
+    // 把採購相關欄位串到 message 開頭（不需 DB schema 變動）
+    const procurementInfo: string[] = [];
+    if (company) procurementInfo.push(`Company: ${company}`);
+    if (country) procurementInfo.push(`Country: ${country}`);
+    if (quantity) procurementInfo.push(`Quantity: ${quantity}`);
+    if (incoterms) procurementInfo.push(`INCOTERMS: ${incoterms}`);
+    if (procurementInfo.length > 0) {
+      message =
+        "--- Procurement Info ---\n" +
+        procurementInfo.join("\n") +
+        "\n\n--- Message ---\n" +
+        message;
+    }
 
     // Validate required fields
     if (!name || !email || !message) {
