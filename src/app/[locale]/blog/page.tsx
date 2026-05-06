@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { Calendar, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/data/blog";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateMetadata({
   params,
@@ -15,6 +16,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: buildAlternates("/blog", locale),
   };
 }
 

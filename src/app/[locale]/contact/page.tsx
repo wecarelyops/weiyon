@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import ContactForm from "@/components/contact-form";
 import TrackedLink from "@/components/tracked-link";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateMetadata({
   params,
@@ -14,6 +15,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: buildAlternates("/contact", locale),
   };
 }
 

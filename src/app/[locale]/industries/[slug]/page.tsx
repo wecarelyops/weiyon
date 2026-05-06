@@ -8,6 +8,7 @@ import { industries, getIndustryBySlug, type IndustryLocale } from "@/data/indus
 import { processes } from "@/data/processes";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/breadcrumbs";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -31,6 +32,7 @@ export async function generateMetadata({
   return {
     title: ind.metaTitle[lang],
     description: ind.metaDescription[lang],
+    alternates: buildAlternates(`/industries/${slug}`, locale),
     openGraph: {
       title: ind.metaTitle[lang],
       description: ind.metaDescription[lang],

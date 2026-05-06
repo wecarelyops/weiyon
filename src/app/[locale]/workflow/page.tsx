@@ -10,6 +10,7 @@ import {
   Factory,
   Truck,
 } from "lucide-react";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateMetadata({
   params,
@@ -19,6 +20,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Workflow" });
   return {
+    alternates: buildAlternates("/workflow", locale),
     title: t("metaTitle"),
     description: t("metaDescription"),
   };

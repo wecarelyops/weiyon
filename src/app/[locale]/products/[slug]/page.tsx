@@ -8,6 +8,7 @@ import { processes, getProcessBySlug, type Locale } from "@/data/processes";
 import { industries } from "@/data/industries";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/breadcrumbs";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -32,6 +33,7 @@ export async function generateMetadata({
   return {
     title: proc.title[lang],
     description: proc.description[lang].slice(0, 160),
+    alternates: buildAlternates(`/products/${slug}`, locale),
   };
 }
 

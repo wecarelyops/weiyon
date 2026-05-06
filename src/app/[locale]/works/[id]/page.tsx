@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/breadcrumbs";
+import { buildAlternates } from "@/lib/hreflang";
 
 const TOTAL_WORKS = 32;
 
@@ -29,6 +30,7 @@ export async function generateMetadata({
   return {
     title: t("detailTitle", { id }),
     description: t("detailDescription", { id }),
+    alternates: buildAlternates(`/works/${id}`, locale),
   };
 }
 

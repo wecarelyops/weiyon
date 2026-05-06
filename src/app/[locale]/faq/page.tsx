@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { ChevronDown, Phone, Mail } from "lucide-react";
 import { faqData } from "@/data/faq";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateMetadata({
   params,
@@ -14,6 +15,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: buildAlternates("/faq", locale),
   };
 }
 

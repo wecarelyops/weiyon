@@ -7,6 +7,7 @@ import { Calendar, ArrowRight } from "lucide-react";
 import { blogPosts, getPostBySlug } from "@/data/blog";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/breadcrumbs";
+import { buildAlternates } from "@/lib/hreflang";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -30,6 +31,7 @@ export async function generateMetadata({
   return {
     title: post.title[lang],
     description: post.excerpt[lang],
+    alternates: buildAlternates(`/blog/${slug}`, locale),
     openGraph: {
       title: post.title[lang],
       description: post.excerpt[lang],

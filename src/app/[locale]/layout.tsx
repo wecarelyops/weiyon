@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { buildAlternates } from "@/lib/hreflang";
 import "../globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -54,16 +55,7 @@ export async function generateMetadata({
       address: false,
       telephone: false,
     },
-    alternates: {
-      canonical:
-        locale === "en" ? "/en" : locale === "de" ? "/de" : "/",
-      languages: {
-        "zh-TW": "/",
-        en: "/en",
-        de: "/de",
-        "x-default": "/",
-      },
-    },
+    alternates: buildAlternates("/", locale),
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
+import { buildAlternates } from "@/lib/hreflang";
 import {
   Award,
   Users,
@@ -28,6 +29,7 @@ export async function generateMetadata({
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: buildAlternates("/about", locale),
   };
 }
 
