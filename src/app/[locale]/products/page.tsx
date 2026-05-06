@@ -103,8 +103,34 @@ export default async function ProductsPage({
         </div>
       </section>
 
+      {/* Materials Capability — link to full materials page */}
+      <section className="py-12 lg:py-16 bg-[var(--bg)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <Link
+            href="/materials"
+            className="group flex flex-col md:flex-row md:items-center md:justify-between gap-6 p-8 lg:p-10 bg-gradient-to-br from-[var(--surface)] to-[var(--bg)] border border-[var(--border)] rounded-2xl hover:border-[var(--accent)] transition-colors"
+          >
+            <div className="flex-1">
+              <div className="text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-3">
+                {t("materialsCalloutLabel")}
+              </div>
+              <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-3 group-hover:text-[var(--accent)] transition-colors leading-tight">
+                {t("materialsCalloutTitle")}
+              </h2>
+              <p className="text-sm lg:text-base text-[var(--text-secondary)] leading-relaxed max-w-2xl">
+                {t("materialsCalloutSubtitle")}
+              </p>
+            </div>
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--primary)] group-hover:text-[var(--accent)] group-hover:gap-3 transition-all flex-shrink-0">
+              <span>{t("materialsCalloutLink")}</span>
+              <ArrowRight className="w-4 h-4" />
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Categories Grid */}
-      <section className="py-16 lg:py-24 bg-[var(--bg)]">
+      <section className="py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="mb-12">
             <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-4">

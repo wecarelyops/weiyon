@@ -241,6 +241,10 @@
     "processesTitle": "From turning and milling to surface treatment — five processes, one integrated service.",
     "scopeLabel": "Scope of Service",
     "scopeTitle": "Part categories, technologies, and materials overview",
+    "materialsCalloutLabel": "Materials Capability",
+    "materialsCalloutTitle": "From general grades to difficult alloys — 8 categories, 40+ grades",
+    "materialsCalloutSubtitle": "Stainless, aluminum, titanium, copper alloys, structural steel, tool steel, difficult alloys (Inconel / Monel / Duplex), engineering plastics — see the full list with typical applications.",
+    "materialsCalloutLink": "See full materials capability",
     "learnMore": "Learn more"
   },
   "ProcessDetail": {
@@ -263,6 +267,19 @@
     "metaTitle": "Works — Precision Machining Portfolio | Weiyon Industry",
     "metaDescription": "Selected machining works from Weiyon Industry: semiconductor equipment parts, aerospace components, automation mechanisms, pneumatic cylinder parts, and automotive components — real customer shipments.",
     "heroTitle": "Works"
+  },
+  "Materials": {
+    "metaTitle": "Materials Capability — CNC Machinable Materials List | Weiyon Industry",
+    "metaDescription": "Complete list of materials Weiyon Industry can machine: stainless (SUS304 / 316 / 316L / 321 / 440C / 17-4PH), aluminum (A6061 / A7075 / A2024), titanium, copper alloys, structural / tool / mold steel, difficult alloys (Inconel / Monel / Duplex / Super Duplex), engineering plastics (POM / PEEK / PTFE). 40 years of difficult-material expertise.",
+    "heroLabel": "Materials",
+    "heroTitle": "Materials We Machine",
+    "heroSubtitle": "From general grades to difficult alloys — 8 categories, 40+ grades. Covering semiconductor, aerospace, medical, automotive, oil & gas, and tuning industries. All grades available with integrated surface treatment, heat treatment, and inspection reports.",
+    "typicalApplications": "Typical Applications",
+    "notListedTitle": "Don't see your material?",
+    "notListedSubtitle": "We also machine specialty alloys — Hastelloy, Waspaloy, PH-series, other titanium grades. Send the grade and spec; we'll evaluate.",
+    "ctaTitle": "What material does your part need?",
+    "ctaSubtitle": "Send a drawing or describe your needs — we'll respond within 1-2 business days.",
+    "ctaQuoteButton": "Request a Quote"
   },
   "Workflow": {
     "metaTitle": "Workflow — From Inquiry to Shipment in 5 Steps | Weiyon Industry",

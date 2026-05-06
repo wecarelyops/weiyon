@@ -242,6 +242,10 @@
     "processesTitle": "Vom Drehen und Fräsen bis zur Oberflächenbehandlung — fünf Prozesse, ein integrierter Service.",
     "scopeLabel": "Leistungsumfang",
     "scopeTitle": "Übersicht: Teilekategorien, Technologien und Werkstoffe",
+    "materialsCalloutLabel": "Werkstoffkompetenz",
+    "materialsCalloutTitle": "Von Allzwecklegierungen bis schwer zerspanbar — 8 Kategorien, 40+ Sorten",
+    "materialsCalloutSubtitle": "Edelstahl, Aluminium, Titan, Kupferlegierungen, Konstruktionsstahl, Werkzeugstahl, schwer zerspanbare Legierungen (Inconel / Monel / Duplex), Konstruktionskunststoffe — vollständige Liste mit typischen Anwendungen.",
+    "materialsCalloutLink": "Vollständige Werkstoffkompetenz ansehen",
     "learnMore": "Mehr erfahren"
   },
   "ProcessDetail": {
@@ -259,6 +263,19 @@
     "relatedIndustriesTitle": "Branchen, die dieses Verfahren häufig nutzen",
     "learnMore": "Mehr erfahren",
     "ctaTitle": "Brauchen Sie eine maßgeschneiderte Bearbeitungslösung?"
+  },
+  "Materials": {
+    "metaTitle": "Werkstoffkompetenz — CNC-bearbeitbare Werkstoffe | Weiyon Industry",
+    "metaDescription": "Vollständige Liste der Werkstoffe, die Weiyon Industry zerspanen kann: Edelstahl (SUS304 / 316 / 316L / 321 / 440C / 17-4PH), Aluminium (A6061 / A7075 / A2024), Titan, Kupferlegierungen, Konstruktions- / Werkzeug- / Formenstahl, schwer zerspanbare Legierungen (Inconel / Monel / Duplex / Super Duplex), Konstruktionskunststoffe (POM / PEEK / PTFE). 40 Jahre Erfahrung mit schwer zerspanbaren Werkstoffen.",
+    "heroLabel": "Werkstoffe",
+    "heroTitle": "Werkstoffe, die wir bearbeiten",
+    "heroSubtitle": "Von Allzwecklegierungen bis zu schwer zerspanbaren Werkstoffen — 8 Kategorien, über 40 Sorten. Abdeckung von Halbleiter-, Luftfahrt-, Medizin-, Automobil-, Öl- & Gas- und Tuning-Industrie. Alle Sorten mit integrierter Oberflächenbehandlung, Wärmebehandlung und Prüfberichten.",
+    "typicalApplications": "Typische Anwendungen",
+    "notListedTitle": "Ihr Werkstoff nicht dabei?",
+    "notListedSubtitle": "Wir bearbeiten auch Speziallegierungen — Hastelloy, Waspaloy, PH-Reihe, weitere Titansorten. Senden Sie Sorte und Spezifikation; wir bewerten gerne.",
+    "ctaTitle": "Welcher Werkstoff für Ihr Bauteil?",
+    "ctaSubtitle": "Senden Sie eine Zeichnung oder beschreiben Sie Ihre Anforderungen — wir antworten in 1-2 Werktagen.",
+    "ctaQuoteButton": "Angebot anfordern"
   },
   "Workflow": {
     "metaTitle": "Ablauf — Vom Anfrage bis Versand in 5 Schritten | Weiyon Industry",

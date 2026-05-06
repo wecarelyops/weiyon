@@ -241,6 +241,10 @@
     "processesTitle": "從車削銑削到表面處理，五大製程一站式整合",
     "scopeLabel": "服務範圍",
     "scopeTitle": "加工項目、技術與材料總覽",
+    "materialsCalloutLabel": "材料能力",
+    "materialsCalloutTitle": "從通用級到難切削合金 — 8 大類、40+ 牌號",
+    "materialsCalloutSubtitle": "不鏽鋼、鋁合金、鈦合金、銅合金、結構鋼、工具鋼、難切削合金（Inconel / Monel / Duplex）、工程塑膠 — 看完整清單與典型應用。",
+    "materialsCalloutLink": "看完整材料能力",
     "learnMore": "了解詳情"
   },
   "ProcessDetail": {
@@ -263,6 +267,19 @@
     "metaTitle": "實績展示 — 精密加工作品集 | 偉勇工業社",
     "metaDescription": "偉勇工業社多年精密加工實績展示。涵蓋半導體設備零件、航太零件、自動化機構件、氣壓缸零件、汽車配件等各類型實際出貨案例。",
     "heroTitle": "實績展示"
+  },
+  "Materials": {
+    "metaTitle": "材料能力總表 — CNC 精密加工材料清單 | 偉勇工業社",
+    "metaDescription": "偉勇工業社可加工材料完整清單：不鏽鋼系列（SUS304 / 316 / 316L / 321 / 440C / 17-4PH）、鋁合金（A6061 / A7075 / A2024）、鈦合金、銅合金、結構鋼 / 工具鋼 / 模具鋼、難切削合金（Inconel / Monel / Duplex / Super Duplex）、工程塑膠（POM / PEEK / PTFE）。40 年加工經驗，難切削材料專家。",
+    "heroLabel": "材料能力",
+    "heroTitle": "我們能加工的材料",
+    "heroSubtitle": "從通用級到難切削合金 — 8 大材料類別、40+ 牌號。對應半導體、航太、醫療、汽車、油氣、改裝等各產業需求。所有材料皆可整合表面處理、熱處理、量測報告。",
+    "typicalApplications": "典型應用",
+    "notListedTitle": "沒看到您要的材料？",
+    "notListedSubtitle": "我們也加工特殊材料 — Hastelloy、Waspaloy、PH 系列、其他鈦合金等。歡迎告訴我們牌號與規格，我們協助評估。",
+    "ctaTitle": "您的零件需要什麼材料？",
+    "ctaSubtitle": "提供圖面或描述需求，1-2 工作天內收到我們的回覆。",
+    "ctaQuoteButton": "立即詢價"
   },
   "Workflow": {
     "metaTitle": "合作流程 — 從詢價到出貨 5 步驟 | 偉勇工業社",
