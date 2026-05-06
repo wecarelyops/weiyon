@@ -13,6 +13,481 @@ export type BlogPost = {
 // 內容均為原創，依業界通用知識撰寫
 export const blogPosts: BlogPost[] = [
   {
+    slug: "api-certification-guide-oil-gas",
+    title: {
+      zh: "API 6A / 6D 認證指南：油氣產業精密零件的進場票",
+      en: "API 6A / 6D Certification Guide: The Ticket Into Oil & Gas Procurement",
+      de: "API-6A- und 6D-Zertifizierungs-Leitfaden: Eintrittskarte zur Öl- & Gasbeschaffung",
+    },
+    excerpt: {
+      zh: "想打進中東、北海、北美油氣供應鏈？API 6A 和 API 6D 是基本進場票，沒有就被 distributor 過濾掉。本文拆解兩者差異、適用零件、認證取得邏輯，協助加工廠與品牌商評估投入。",
+      en: "Want to enter Middle East, North Sea, or North American oil & gas supply chains? API 6A and 6D are the basic entry tickets — without them, distributors filter you out. We break down the differences, applicable parts, and certification logic.",
+      de: "Möchten Sie in die Lieferketten der Öl- und Gasindustrie im Nahen Osten, der Nordsee oder Nordamerika einsteigen? API 6A und 6D sind die grundlegenden Eintrittskarten — ohne sie filtern Vertriebshändler Sie heraus. Wir erklären Unterschiede, Anwendungsbereiche und Zertifizierungslogik.",
+    },
+    category: { zh: "採購指南", en: "Procurement Guide", de: "Einkaufsleitfaden" },
+    date: "2026-05-03",
+    imageUrl:
+      "https://images.pexels.com/photos/9799730/pexels-photo-9799730.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>油氣產業（Oil &amp; Gas）是全球最嚴苛的零件採購領域之一。從中東 ARAMCO、ADNOC，到北海 BP、Shell，到墨西哥灣的 Chevron — 這些 NOC（國家油公司）和 IOC（國際油公司）的採購門檻有兩個關鍵字：<strong>API 認證</strong> 和 <strong>NORSOK 規範</strong>。</p>
+
+<p>沒這些，就連報價的機會都沒有。本文拆解最常見的 API 6A、API 6D 兩項認證，協助加工廠、品牌商、貿易商評估該不該投入。</p>
+
+<h2>什麼是 API？</h2>
+
+<p>API（American Petroleum Institute，美國石油協會）成立於 1919 年，是全球油氣產業最具公信力的標準制定機構。其發布的 API Standard 系列規範，涵蓋從鑽井設備、管線、閥門、儲罐到煉化設備的各種零件規格。</p>
+
+<p>API 認證不是「政府強制」，而是 <strong>產業共識</strong>。但因為全球油氣採購商都認，所以實質上等於「沒有就出局」。</p>
+
+<h2>API 6A — 井口設備與 Christmas Tree</h2>
+
+<p>API 6A 全名為 <em>Specification for Wellhead and Christmas Tree Equipment</em>，是井口設備（wellhead）跟「聖誕樹」設備（井口控制系統）的標準。</p>
+
+<h3>適用零件</h3>
+<ul>
+<li>井口閥門（gate valve、ball valve、check valve）</li>
+<li>Christmas tree 配件（chokes、master valves、wing valves）</li>
+<li>井口連接器（connectors、adapters、flanges）</li>
+<li>密封件（seals、gaskets）</li>
+</ul>
+
+<h3>關鍵技術要求</h3>
+<ul>
+<li><strong>材料</strong>：Body 與 Bonnet 通常為碳鋼（4130 / F22 / F11）或不鏽鋼（316L / Duplex），密封件多為 Inconel 625、Monel</li>
+<li><strong>壓力等級</strong>：2,000 / 3,000 / 5,000 / 10,000 / 15,000 / 20,000 psi（PSL 1-4）</li>
+<li><strong>溫度等級</strong>：K-X（-75°F to 350°F），依環境與介質區分</li>
+<li><strong>材質要求</strong>：含 NACE MR0175（抗硫化氫應力腐蝕）為基本</li>
+<li><strong>測試</strong>：FAT（出廠驗收）、Hydrostatic test、Gas test、PSL（Product Specification Level）等多重測試</li>
+</ul>
+
+<h2>API 6D — 管線閥門</h2>
+
+<p>API 6D 全名為 <em>Specification for Pipeline and Piping Valves</em>，是輸送管線跟製程管路閥門的標準。比 API 6A 應用範圍更廣，從上游管線、中游集輸到下游煉化都涵蓋。</p>
+
+<h3>適用零件</h3>
+<ul>
+<li>球閥（ball valve）— 輸送管線最常用</li>
+<li>閘閥（gate valve）— 大口徑切斷</li>
+<li>檢查閥（check valve）— 防止逆流</li>
+<li>截止閥（plug valve）— 控制流量</li>
+</ul>
+
+<h3>關鍵技術要求</h3>
+<ul>
+<li><strong>材料</strong>：碳鋼（A105 / LF2）、不鏽鋼（316L）、Duplex S31803、Super Duplex S32750</li>
+<li><strong>壓力等級</strong>：ANSI Class 150 / 300 / 600 / 900 / 1500 / 2500</li>
+<li><strong>尺寸</strong>：DN15 - DN1500（½″ - 60″）</li>
+<li><strong>測試</strong>：殼體水壓測試、密封座測試、Anti-blow-out 測試（防閥桿吹出）</li>
+</ul>
+
+<h2>API 6A vs API 6D — 怎麼分？</h2>
+
+<table>
+<tr><th>項目</th><th>API 6A</th><th>API 6D</th></tr>
+<tr><td>應用</td><td>井口、Christmas tree</td><td>輸送管線、製程管路</td></tr>
+<tr><td>環境</td><td>井口 → 高壓含硫氣體環境</td><td>管線 → 一般輸送（部分含硫）</td></tr>
+<tr><td>典型客戶</td><td>NOC、井口設備品牌（FMC、Cameron）</td><td>EPC 承包商、管線業主</td></tr>
+<tr><td>取得難度</td><td>較高（測試嚴格）</td><td>中高</td></tr>
+</table>
+
+<p>簡單講：<strong>井口用 6A、管路用 6D</strong>。一個品牌可能同時取得兩種認證以擴大產品線。</p>
+
+<h2>還有 NORSOK M-650</h2>
+
+<p>歐洲北海油氣產業（特別是挪威 Equinor）採用 NORSOK 規範，比 API 更嚴苛。<strong>NORSOK M-650</strong> 是材料製造商鑑定（Material Manufacturer Qualification），規定材料製造廠必須通過審核才能供材給北海油氣項目。</p>
+
+<p>這對加工廠的影響：用的材料是否來自 NORSOK M-650 認證的鋼廠，會直接影響你能不能切入北海項目。</p>
+
+<h2>取得認證的成本與難度</h2>
+
+<p>API 認證不是廉價投資：</p>
+
+<ul>
+<li><strong>API Spec Q1（品質系統）</strong>：API 認證的前置條件，是 ISO 9001 的「進階版」</li>
+<li><strong>產品認證費用</strong>：依規模約是中小企業半年到一年的營收佔比較大投入</li>
+<li><strong>每年維護</strong>：年費 + 重新審核 + 抽樣測試</li>
+<li><strong>時程</strong>：從 0 到取得通常 12-24 個月</li>
+</ul>
+
+<p>對於初次進入油氣市場的台灣加工廠 / 品牌商，這是不小的門檻。</p>
+
+<h2>三種務實切入策略</h2>
+
+<h3>策略 1：直接申請 API 認證（適合品牌商）</h3>
+<p>適合：已有自有閥門 / 法蘭品牌、年營收充足、長期經營油氣市場決心強。</p>
+
+<h3>策略 2：成為 API 認證品牌的 OEM 加工夥伴（適合加工廠）</h3>
+<p>不直接申請 API，而是承接 Cameron、Emerson、Flowserve、KSB 等已認證品牌的 OEM 訂單。客戶的 API 認證涵蓋整個供應鏈，加工廠提供材料追溯（Mill Test Cert）+ 加工品質紀錄即可。</p>
+<p>這是台灣加工廠最務實的切入路徑 — 投入低、見效快。</p>
+
+<h3>策略 3：MRO（保養維修）切入（適合中型加工廠）</h3>
+<p>不挑戰新建專案（new build），從 spare parts、後市場維修件切入。許多中東、北海營運中的油氣設施需要替換零件，認證要求相對寬鬆（MRO 替換件不一定需要原廠 API 認證，但需材質證明 + 量測報告）。</p>
+
+<h2>偉勇的定位</h2>
+
+<p>我們不是 API 直接認證的閥門品牌商，但長期承接：</p>
+<ul>
+<li>歐美閥門品牌（Cameron、Emerson、Flowserve、KSB 等）的 OEM 加工</li>
+<li>油氣 MRO 替換零件的精密加工</li>
+<li>中東 EPC 承包商的小批量 / 緊急零件需求</li>
+</ul>
+
+<p>對應的能力：</p>
+<ul>
+<li>SUS316L、Duplex S31803、Super Duplex S32750 加工經驗</li>
+<li>Inconel 625 / 718、Monel 400 難切削合金</li>
+<li>提供 Mill Test Cert（材質證明）+ 完整批次追溯</li>
+<li>可配合 PED 2014/68/EU、AS9100 等其他規範客戶要求</li>
+<li>FAI / 量測報告依客戶需求出具</li>
+</ul>
+
+<h2>結語</h2>
+
+<p>API 認證是油氣產業的進場票，但不是「沒有就完全沒機會」。透過成為已認證品牌的 OEM 夥伴、或從 MRO 後市場切入，台灣加工廠仍能參與這個全球高毛利市場。</p>
+
+<p>關鍵不是認證標籤本身，而是<strong>真實的材料能力 + 加工精度 + 品管紀錄</strong> — 這些是認證背後想保證的東西。偉勇 40 年的難切削材料經驗，正是這些能力的累積。</p>
+
+<p>如果您是已認證的閥門品牌、油氣 EPC 承包商、或中東 distributor — 歡迎透過<a href="/contact">詢價表單</a>聯絡我們，討論潛在合作。</p>`,
+      en: `<p>Want to enter Middle East, North Sea, or North American oil &amp; gas supply chains? API 6A and 6D are the basic entry tickets — without them, distributors filter you out.</p>
+
+<h2>What is API?</h2>
+<p>The American Petroleum Institute publishes industry-consensus standards covering wellhead equipment, pipelines, valves, and refining gear. Not government-mandated, but globally accepted — effectively a market gate.</p>
+
+<h2>API 6A vs API 6D</h2>
+<ul>
+<li><strong>API 6A</strong> — Wellhead and Christmas Tree equipment. High-pressure (2K-20K psi), sour gas environments. Materials: 4130, F22, 316L, Duplex, Inconel 625, Monel.</li>
+<li><strong>API 6D</strong> — Pipeline and piping valves (ball, gate, check, plug). ANSI Class 150-2500, sizes DN15-DN1500. Materials: A105, LF2, 316L, Duplex S31803, Super Duplex S32750.</li>
+</ul>
+<p>Simple rule: <strong>wellhead → 6A, pipeline → 6D</strong>.</p>
+
+<h2>NORSOK M-650</h2>
+<p>European/North Sea standard for material manufacturer qualification. Stricter than API. Required for Norwegian/UK offshore projects.</p>
+
+<h2>Three pragmatic entry strategies</h2>
+<ol>
+<li><strong>Direct API certification</strong> — for brand owners with capital and long-term commitment. 12-24 months to obtain.</li>
+<li><strong>OEM subcontracting to API-certified brands</strong> — most practical for machining shops. Customer's certification covers the supply chain; you provide material traceability and quality records.</li>
+<li><strong>MRO / aftermarket</strong> — replacement parts for operating facilities. Lower certification bar.</li>
+</ol>
+
+<h2>Weiyon's positioning</h2>
+<p>Not directly API-certified; rather, OEM partner to European/American valve brands (Cameron, Emerson, Flowserve, KSB). We deliver SUS316L, Duplex, Super Duplex, Inconel 625/718, and Monel 400 with mill test certificates, FAI reports, and full batch traceability — the substance behind the certification labels.</p>`,
+      de: `<p>Möchten Sie in die Öl- und Gas-Lieferketten im Nahen Osten, der Nordsee oder Nordamerika einsteigen? API 6A und 6D sind die grundlegenden Eintrittskarten — ohne sie filtern Vertriebshändler Sie heraus.</p>
+
+<h2>Was ist API?</h2>
+<p>Das American Petroleum Institute veröffentlicht branchenweit anerkannte Standards für Bohrlochkopfausrüstung, Rohrleitungen, Ventile und Raffineriegeräte. Nicht staatlich vorgeschrieben, aber weltweit akzeptiert — faktisch ein Markteintrittstor.</p>
+
+<h2>API 6A vs. API 6D</h2>
+<ul>
+<li><strong>API 6A</strong> — Bohrlochkopf und Christmas-Tree-Ausrüstung. Hochdruck (2K-20K psi), Sauergas-Umgebungen. Werkstoffe: 4130, F22, 316L, Duplex, Inconel 625, Monel.</li>
+<li><strong>API 6D</strong> — Rohrleitungs- und Prozessventile (Kugel-, Schieber-, Rückschlag-, Hahnventile). ANSI Klasse 150-2500, Größen DN15-DN1500. Werkstoffe: A105, LF2, 316L, Duplex S31803, Super Duplex S32750.</li>
+</ul>
+<p>Einfache Regel: <strong>Bohrlochkopf → 6A, Rohrleitung → 6D</strong>.</p>
+
+<h2>NORSOK M-650</h2>
+<p>Europäischer/Nordsee-Standard zur Werkstoffherstellerqualifikation. Strenger als API. Erforderlich für norwegische/britische Offshore-Projekte.</p>
+
+<h2>Drei pragmatische Einstiegsstrategien</h2>
+<ol>
+<li><strong>Direkte API-Zertifizierung</strong> — für Markeninhaber mit Kapital und langfristigem Engagement. 12-24 Monate Dauer.</li>
+<li><strong>OEM-Zulieferung für API-zertifizierte Marken</strong> — am praktikabelsten für Bearbeitungswerkstätten. Die Kundenzertifizierung deckt die Lieferkette ab; Sie liefern Werkstoffnachweise und Qualitätsdokumente.</li>
+<li><strong>MRO / Aftermarket</strong> — Ersatzteile für laufende Anlagen. Niedrigere Zertifizierungshürde.</li>
+</ol>
+
+<h2>Weiyons Positionierung</h2>
+<p>Nicht direkt API-zertifiziert, sondern OEM-Partner europäischer und amerikanischer Ventilmarken (Cameron, Emerson, Flowserve, KSB). Wir liefern SUS316L, Duplex, Super Duplex, Inconel 625/718 und Monel 400 mit Werkszeugnissen, FAI-Berichten und vollständiger Chargenrückverfolgbarkeit — das Substantielle hinter den Zertifizierungen.</p>`,
+    },
+  },
+  {
+    slug: "tuning-exhaust-material-selection",
+    title: {
+      zh: "改裝排氣材料選擇：SUS304 / SUS321 / Ti-6Al-4V 完整比較",
+      en: "Tuning Exhaust Materials: SUS304 vs SUS321 vs Ti-6Al-4V",
+      de: "Tuning-Auspuff-Werkstoffe: SUS304 vs. SUS321 vs. Ti-6Al-4V",
+    },
+    excerpt: {
+      zh: "改裝排氣選錯材料 — 輕則出鏽斑、重則高溫變色甚至開裂。本文比較三種主流改裝排氣材料的耐溫、耐蝕、加工性與重量，協助玩家跟改裝品牌選對料。",
+      en: "Pick the wrong exhaust material and you'll see rust spots — or worse, high-temp discoloration and cracking. We compare the three mainstream tuning exhaust materials on heat, corrosion, machinability, and weight.",
+      de: "Falsches Auspuffmaterial bedeutet Rostflecken — oder schlimmer: Hochtemperatur-Verfärbung und Risse. Wir vergleichen die drei gängigen Tuning-Auspuffwerkstoffe nach Hitze-, Korrosionsbeständigkeit, Zerspanbarkeit und Gewicht.",
+    },
+    category: { zh: "改裝專欄", en: "Tuning Column", de: "Tuning-Kolumne" },
+    date: "2026-05-04",
+    imageUrl:
+      "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>改裝排氣的材料選擇，跟一般機械零件不太一樣 — 排氣管段的工作溫度高（從中段約 400°C 到頭段近 900°C）、要面對排氣冷凝水的腐蝕、要兼顧重量、有時候還要 deliver 漂亮的視覺效果。</p>
+
+<p>市場上九成以上的改裝排氣，材料落在 <strong>SUS304</strong>、<strong>SUS321</strong>、<strong>Ti-6Al-4V</strong> 這三種之間。本文逐項對比，協助玩家、改裝品牌、車隊選對料。</p>
+
+<h2>SUS304 — 入門首選</h2>
+<p>市場上最常見的改裝排氣材料。一般街道用、輕度改裝、自然進氣車的中尾段都用這級。</p>
+<ul>
+<li><strong>耐溫上限</strong>：約 400-500°C 連續工作</li>
+<li><strong>耐蝕性</strong>：耐一般大氣與冷凝水 OK，海邊環境會點蝕</li>
+<li><strong>加工性</strong>：好切、好彎、好焊接</li>
+<li><strong>重量</strong>：標準 — 鋼系排氣的基準</li>
+<li><strong>表面</strong>：可拋光成鏡面，焊道高溫後會變色</li>
+<li><strong>適合</strong>：中段、尾段、消音器外殼、自然進氣車全段</li>
+<li><strong>不適合</strong>：渦輪車頭段（溫度超標）</li>
+</ul>
+
+<h2>SUS321 — 渦輪頭段專用</h2>
+<p>SUS304 的「耐高溫加強版」— 加了鈦元素（Titanium-stabilized）抑制高溫晶界腐蝕。是渦輪改裝車頭段（Manifold / Downpipe）的主流選擇。</p>
+<ul>
+<li><strong>耐溫上限</strong>：約 700-900°C 連續工作</li>
+<li><strong>耐蝕性</strong>：跟 SUS304 接近</li>
+<li><strong>加工性</strong>：可加工、可焊接，但需用對應的 SUS321 焊條</li>
+<li><strong>重量</strong>：與 SUS304 接近（同為鐵基不鏽鋼）</li>
+<li><strong>價格</strong>：約 SUS304 的 <strong>1.3-1.6 倍</strong></li>
+<li><strong>適合</strong>：渦輪頭段、Downpipe、高溫排氣岐管</li>
+</ul>
+
+<h3>為什麼渦輪頭段不能用 SUS304？</h3>
+<p>渦輪車頭段（manifold）持續工作溫度可達 800°C 以上。SUS304 在 600°C 以上會發生「敏化」現象 — 晶界析出鉻碳化物，導致晶界腐蝕、最終出現裂紋。SUS321 加了鈦穩定，避免這個問題。</p>
+
+<h2>Ti-6Al-4V（鈦合金）— 高階首選</h2>
+<p>頂級改裝排氣材料。重量輕、強度高、耐高溫、耐蝕一流，但價格高、加工難。常見於賽車、Hyper Car、頂級改裝套件。</p>
+<ul>
+<li><strong>耐溫上限</strong>：可達 600°C 連續工作（純鈦更高，可達 800°C）</li>
+<li><strong>耐蝕性</strong>：頂級 — 幾乎不畏海水、酸鹼、冷凝水</li>
+<li><strong>加工性</strong>：難加工 — 刀具消耗快、需慢轉速 + 充足冷卻</li>
+<li><strong>焊接性</strong>：可焊接，但需在惰性氣體保護環境下，焊道處理技術門檻高</li>
+<li><strong>重量</strong>：約 SUS304 的 <strong>56%</strong>（顯著減重）</li>
+<li><strong>價格</strong>：材料本身約 SUS304 的 <strong>15-25 倍</strong>，加上加工費總成本可達 5-8 倍</li>
+<li><strong>外觀</strong>：可加熱形成漸變藍紫色（俗稱「彩虹效果」）— 改裝圈最愛</li>
+<li><strong>適合</strong>：賽車全段、頂級改裝中尾段、Hyper Car</li>
+</ul>
+
+<h2>選擇 flowchart</h2>
+<ol>
+<li><strong>渦輪頭段嗎？</strong> → SUS321（不要省這個錢）</li>
+<li><strong>預算充裕想要極致減重 + 視覺？</strong> → Ti-6Al-4V</li>
+<li><strong>一般街道用，自然進氣或輕度增壓？</strong> → SUS304（最划算）</li>
+</ol>
+
+<h2>常見錯誤</h2>
+
+<h3>錯誤 1：渦輪頭段用 SUS304 省錢</h3>
+<p>短期看不出來，但 6-12 個月後焊道會出現裂紋。一旦頭段裂了，渦輪可能受損 — 換一支總成本遠高於當初省下的錢。</p>
+
+<h3>錯誤 2：用 Ti 排氣展示，沒做防熱保護</h3>
+<p>Ti 在 500°C 以上會與環境氧結合產生氧化層 — 表面顏色會逐漸變灰、失去原本的視覺效果。要保留漂亮的彩虹色，最好用熱阻擋（heat shield）或不要長時間運轉至高負載。</p>
+
+<h3>錯誤 3：不分等級的「不鏽鋼」報價</h3>
+<p>有些工廠賣便宜的「不鏽鋼排氣」實際是 SUS201、SUS430 等劣質等級 — 耐蝕性遠低於 SUS304。要求供應商提供 Mill Test Cert（材質報告）才能確認。</p>
+
+<h2>偉勇承接的改裝排氣項目</h2>
+<p>我們做改裝品牌、賽車隊、個人玩家的客製排氣零件多年。常見項目：</p>
+<ul>
+<li><strong>頭段 / Manifold</strong>：SUS321 為主，可整合 TIG 焊接</li>
+<li><strong>中段 / 尾段</strong>：SUS304（多數）、SUS316（沿海客戶）、Ti（高階訂單）</li>
+<li><strong>法蘭、消音器外殼</strong>：可雷雕 logo / 序號</li>
+<li><strong>客製管徑、彎管、合流接頭</strong></li>
+</ul>
+<p>1 件起接、設計修正彈性配合 — 詳見<a href="/industries/tuning">改裝車產業頁</a>。</p>`,
+      en: `<p>Picking the wrong exhaust material means rust spots — or high-temp discoloration and cracking. The three mainstream materials are SUS304, SUS321, and Ti-6Al-4V.</p>
+<h2>SUS304 — entry choice</h2>
+<p>Most common, good for ~400-500°C continuous. Mid- and tail-section, naturally aspirated. Not for turbo manifolds — fails above 600°C.</p>
+<h2>SUS321 — turbo manifold standard</h2>
+<p>Titanium-stabilized stainless. Handles 700-900°C continuous. Resists grain-boundary corrosion that destroys SUS304 at high temps. Costs ~1.3-1.6× SUS304. Don't skimp here.</p>
+<h2>Ti-6Al-4V — premium</h2>
+<p>~56% the weight of SUS304. Excellent corrosion resistance. The "rainbow blue" heat-tint is the tuning aesthetic. Material costs 15-25× SUS304; total fabricated cost 5-8×. Used for race cars and hyper-car kits.</p>
+<h2>Decision flow</h2>
+<ol>
+<li>Turbo manifold? → SUS321 (don't cheap out)</li>
+<li>Budget for premium weight + aesthetics? → Ti-6Al-4V</li>
+<li>Street use, NA or light boost? → SUS304</li>
+</ol>
+<h2>Common mistakes</h2>
+<p>Using SUS304 on a turbo manifold (will crack at welds in 6-12 months). Running Ti exhaust at high load without heat shielding (loses the rainbow tint). Accepting "stainless" exhausts that are secretly SUS201/430 — always require mill test certs.</p>`,
+      de: `<p>Falsches Auspuffmaterial = Rostflecken oder Hochtemperatur-Verfärbung und Risse. Die drei gängigen Werkstoffe sind SUS304, SUS321 und Ti-6Al-4V.</p>
+<h2>SUS304 — Einstieg</h2>
+<p>Am häufigsten, dauerfest bis ca. 400-500 °C. Mittel- und Endschalldämpferabschnitte, Saugmotoren. Nicht für Turbo-Krümmer — versagt über 600 °C.</p>
+<h2>SUS321 — Standard für Turbo-Krümmer</h2>
+<p>Titanstabilisierter Edelstahl. Dauerfest 700-900 °C. Beständig gegen Korngrenzenkorrosion, die SUS304 bei hohen Temperaturen zerstört. Kostet ca. 1,3-1,6× SUS304. Hier nicht sparen.</p>
+<h2>Ti-6Al-4V — Premium</h2>
+<p>Etwa 56 % des Gewichts von SUS304. Hervorragende Korrosionsbeständigkeit. Der „Regenbogen-Blau"-Anlauffilm ist die Tuning-Ästhetik. Material kostet 15-25× SUS304; Gesamtfertigungskosten 5-8×. Für Rennwagen und Hyper-Car-Kits.</p>
+<h2>Entscheidungsbaum</h2>
+<ol>
+<li>Turbo-Krümmer? → SUS321 (hier nicht sparen)</li>
+<li>Budget für Premium-Gewicht + Optik? → Ti-6Al-4V</li>
+<li>Straße, Saugmotor oder leichter Boost? → SUS304</li>
+</ol>
+<h2>Häufige Fehler</h2>
+<p>SUS304 für Turbo-Krümmer verwenden (führt nach 6-12 Monaten zu Schweißnahtrissen). Ti-Auspuff bei hoher Last ohne Hitzeschild fahren (verliert die Regenbogen-Optik). „Edelstahl"-Auspuffe akzeptieren, die in Wirklichkeit SUS201/430 sind — immer Werkszeugnis verlangen.</p>`,
+    },
+  },
+  {
+    slug: "surface-treatment-selection-guide",
+    title: {
+      zh: "表面處理選擇指南：陽極、鍍鎳、發黑、鈍化、PVD 怎麼選？",
+      en: "Surface Treatment Guide: Anodizing, Nickel Plating, Blackening, Passivation, PVD",
+      de: "Oberflächenbehandlungs-Leitfaden: Eloxieren, Vernickeln, Brünieren, Passivieren, PVD",
+    },
+    excerpt: {
+      zh: "加工件的「外觀」與「壽命」往往決定客戶滿意度。本文整理 8 種常見表面處理的差異、適用材料、成本範圍，協助設計者做出對的選擇。",
+      en: "A part's appearance and longevity often determine customer satisfaction. We compare 8 common surface treatments — differences, compatible materials, and relative costs.",
+      de: "Aussehen und Lebensdauer eines Bauteils bestimmen oft die Kundenzufriedenheit. Wir vergleichen 8 gängige Oberflächenbehandlungen — Unterschiede, kompatible Werkstoffe und relative Kosten.",
+    },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
+    date: "2026-04-22",
+    imageUrl:
+      "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>CNC 加工出來的零件，多數情況下不會直接出貨 — 而是要再經過「表面處理」這一道。為什麼？因為原始素材表面：易刮傷、易氧化、外觀單調、耐磨性不夠、有時還會生鏽。表面處理同時解決這些問題，並提升零件的視覺價值。</p>
+
+<p>本文整理業界最常見的 8 種表面處理，幫您快速做選擇。</p>
+
+<h2>1. 陽極處理（Anodizing）— 鋁件首選</h2>
+<p>用電化學在鋁件表面長出一層緻密氧化鋁膜。是 A6061、A7075 鋁合金最常見的後處理。</p>
+<ul>
+<li><strong>顏色</strong>：透明、黑、紅、藍、金、灰...幾乎任何顏色</li>
+<li><strong>膜厚</strong>：5-25 μm（透明陽極）</li>
+<li><strong>耐磨</strong>：中等（一般陽極）</li>
+<li><strong>適合</strong>：消費電子外殼、改裝零件、機構件</li>
+</ul>
+
+<h2>2. 硬質陽極（Hard Anodizing）— 耐磨升級版</h2>
+<ul>
+<li><strong>膜厚</strong>：25-50 μm（厚膜）</li>
+<li><strong>硬度</strong>：可達 HV 400 以上</li>
+<li><strong>耐磨</strong>：明顯優於普通陽極</li>
+<li><strong>顏色</strong>：黑、灰、深棕等深色為主</li>
+<li><strong>適合</strong>：氣壓缸活塞、半導體腔體、工業耐磨件</li>
+<li><strong>價格</strong>：約普通陽極的 <strong>1.5-2 倍</strong></li>
+</ul>
+
+<h2>3. 電鍍鎳（Nickel Plating）— 通用耐蝕</h2>
+<p>適用範圍極廣 — 鋼、銅、鋁都能鍍。</p>
+<ul>
+<li><strong>分類</strong>：電解鎳、無電解鎳（化學鎳）</li>
+<li><strong>無電解鎳優勢</strong>：膜厚均勻、可鍍複雜形狀內外</li>
+<li><strong>耐蝕</strong>：優於陽極、低於電解拋光不鏽鋼</li>
+<li><strong>外觀</strong>：銀白色、可拋光呈鏡面</li>
+<li><strong>適合</strong>：機械零件、電子接點、模具導引件</li>
+</ul>
+
+<h2>4. 電鍍鉻（Chrome Plating）— 經典耐磨</h2>
+<ul>
+<li><strong>分類</strong>：硬鉻（耐磨）、裝飾鉻（薄膜美觀）</li>
+<li><strong>硬度</strong>：硬鉻可達 HV 800 以上</li>
+<li><strong>外觀</strong>：銀白色高光澤</li>
+<li><strong>適合</strong>：油壓桿、模具、活塞桿、機械耐磨件</li>
+<li><strong>注意</strong>：歐盟對六價鉻有環保限制，部分需用三價鉻替代</li>
+</ul>
+
+<h2>5. 發黑 / 染黑（Blackening / Bluing）— 鋼件防鏽</h2>
+<ul>
+<li><strong>原理</strong>：在鋼鐵表面形成黑色氧化亞鐵 + 油浸</li>
+<li><strong>外觀</strong>：消光黑或亮黑</li>
+<li><strong>耐蝕</strong>：弱（仰賴油膜，需定期保養）</li>
+<li><strong>價格</strong>：最便宜的鋼件處理之一</li>
+<li><strong>適合</strong>：工具、刀具、槍械零件、室內機構件</li>
+<li><strong>不適合</strong>：戶外、高濕度環境</li>
+</ul>
+
+<h2>6. 鈍化（Passivation）— 不鏽鋼專用</h2>
+<ul>
+<li><strong>原理</strong>：用酸（硝酸或檸檬酸）去除表面雜質鐵屑，加速氧化鉻保護膜形成</li>
+<li><strong>效果</strong>：提升不鏽鋼本身的耐蝕性</li>
+<li><strong>外觀變化</strong>：肉眼幾乎看不出</li>
+<li><strong>適合</strong>：所有不鏽鋼零件出廠前的「最後一道」</li>
+<li><strong>幾乎必做</strong>：醫療、半導體、生醫不鏽鋼件標配</li>
+</ul>
+
+<h2>7. PVD / DLC 塗層 — 極致耐磨</h2>
+<ul>
+<li><strong>類型</strong>：TiN（金色）、CrN（銀灰）、AlTiN（深灰）、DLC（黑色類鑽碳）</li>
+<li><strong>硬度</strong>：可達 HV 2000 以上</li>
+<li><strong>摩擦係數</strong>：DLC 極低（適合滑動配合）</li>
+<li><strong>適合</strong>：刀具、模具、高耐磨機構、航太零件</li>
+<li><strong>價格</strong>：明顯高於普通電鍍（約 <strong>3-5 倍</strong>）</li>
+</ul>
+
+<h2>8. 粉體塗裝（Powder Coating）— 大件、低成本</h2>
+<ul>
+<li><strong>原理</strong>：靜電吸附粉末 + 高溫熔融成膜</li>
+<li><strong>顏色</strong>：任意（RAL 色卡）</li>
+<li><strong>厚度</strong>：60-100 μm（厚）</li>
+<li><strong>適合</strong>：機殼、結構件、戶外設備</li>
+<li><strong>不適合</strong>：精度配合面（厚度會影響尺寸）</li>
+</ul>
+
+<h2>選擇 flowchart</h2>
+<ol>
+<li><strong>什麼材料？</strong>
+<ul>
+<li>鋁合金 → 陽極 / 硬質陽極</li>
+<li>不鏽鋼 → 鈍化 + 拋光（基本）；極端耐磨 → PVD</li>
+<li>鋼 / 鐵 → 發黑（內部）/ 鍍鋅（戶外）/ 鍍鎳（通用）</li>
+</ul>
+</li>
+<li><strong>主要訴求？</strong>
+<ul>
+<li>外觀 → 陽極多色 / 粉體塗裝</li>
+<li>耐磨 → 硬陽 / 硬鉻 / PVD</li>
+<li>耐蝕 → 鈍化 + 鍍鎳 / 達克鋅</li>
+<li>絕緣 → 陽極（鋁）</li>
+<li>導電 → 鍍鎳 / 鍍金</li>
+</ul>
+</li>
+<li><strong>預算？</strong>
+<ul>
+<li>低 → 發黑 / 一般陽極 / 鈍化</li>
+<li>中 → 硬陽 / 鍍鎳 / 粉體</li>
+<li>高 → PVD / DLC / 客製多層處理</li>
+</ul>
+</li>
+</ol>
+
+<h2>偉勇的整合服務</h2>
+<p>我們本身專做 CNC 加工，表面處理透過長期合作的外協廠完成 — 從陽極、鍍鎳、發黑到 PVD、DLC 都能整合。</p>
+<p>客戶下一張單，從加工到表面處理我們統一窗口為您處理。圖面 + 您要的處理規格送來，我們會協助評估、報價、品管確認。</p>`,
+      en: `<p>CNC parts rarely ship as-machined. Surface treatment improves wear, corrosion, appearance, and longevity. Here's a quick map of the 8 most common options.</p>
+<h2>For aluminum</h2>
+<ul>
+<li><strong>Anodizing</strong> (clear, color, black, etc.) — corrosion + decorative</li>
+<li><strong>Hard anodizing</strong> (25-50 μm, HV 400+) — premium wear resistance, ~1.5-2× the cost</li>
+</ul>
+<h2>For stainless steel</h2>
+<ul>
+<li><strong>Passivation</strong> — nitric/citric acid bath; standard for medical, semiconductor</li>
+<li><strong>Electropolishing</strong> — mirror finish + improved corrosion resistance</li>
+<li><strong>PVD coating</strong> (TiN, CrN, DLC) — extreme wear, low friction; ~3-5× standard plating</li>
+</ul>
+<h2>For steel</h2>
+<ul>
+<li><strong>Blackening / bluing</strong> — cheapest, indoor only</li>
+<li><strong>Nickel plating</strong> — versatile, good corrosion resistance</li>
+<li><strong>Hard chrome plating</strong> — HV 800+, classic for hydraulic rods, dies</li>
+<li><strong>Powder coating</strong> — RAL colors, thick (60-100 μm), for housings and structural parts</li>
+</ul>
+<h2>Decision priorities</h2>
+<p>Choose by material first, then by primary requirement (appearance / wear / corrosion / electrical), then by budget. The wrong treatment can fail in months; the right one extends part life 3-5×.</p>`,
+      de: `<p>CNC-Teile werden selten unbearbeitet ausgeliefert. Oberflächenbehandlung verbessert Verschleiß, Korrosion, Aussehen und Lebensdauer. Eine schnelle Übersicht der 8 gängigen Optionen.</p>
+<h2>Für Aluminium</h2>
+<ul>
+<li><strong>Eloxieren</strong> (klar, farbig, schwarz etc.) — Korrosion + Optik</li>
+<li><strong>Harteloxieren</strong> (25-50 μm, HV 400+) — Premium-Verschleißfestigkeit, ca. 1,5-2× Kosten</li>
+</ul>
+<h2>Für Edelstahl</h2>
+<ul>
+<li><strong>Passivieren</strong> — Salpeter-/Citronensäurebad; Standard für Medizin, Halbleiter</li>
+<li><strong>Elektropolieren</strong> — Hochglanz + verbesserte Korrosionsbeständigkeit</li>
+<li><strong>PVD-Beschichtung</strong> (TiN, CrN, DLC) — extremer Verschleiß, geringe Reibung; ca. 3-5× Standardbeschichtung</li>
+</ul>
+<h2>Für Stahl</h2>
+<ul>
+<li><strong>Brünieren</strong> — günstigste Lösung, nur innen</li>
+<li><strong>Vernickeln</strong> — vielseitig, gute Korrosionsbeständigkeit</li>
+<li><strong>Hartverchromen</strong> — HV 800+, klassisch für Hydraulikkolben, Werkzeuge</li>
+<li><strong>Pulverbeschichten</strong> — RAL-Farben, dick (60-100 μm), für Gehäuse und Strukturteile</li>
+</ul>
+<h2>Auswahlpriorität</h2>
+<p>Zuerst nach Werkstoff wählen, dann nach Hauptanforderung (Optik / Verschleiß / Korrosion / elektrisch), dann nach Budget. Die falsche Behandlung versagt in Monaten; die richtige verlängert die Bauteillebensdauer um das 3- bis 5-Fache.</p>`,
+    },
+  },
+  {
     slug: "stainless-steel-grades-selection-guide",
     title: {
       zh: "不鏽鋼選擇指南：SUS304 / SUS316 / SUS440C 何時用哪個？",
