@@ -43,13 +43,13 @@ export const blogPosts: BlogPost[] = [
 <p>鉻決定耐蝕性、鎳決定韌性、鉬決定耐氯化物腐蝕能力、碳決定可否熱處理 — 從成分就能初步判斷材料適合什麼場合。</p>
 
 <h2>SUS304 — 最通用的不鏽鋼</h2>
-<p>市場主流，台灣加工廠庫存最大、價格最便宜。一般機械、食品、建築、家電零件大多用這級。</p>
+<p>市場主流，台灣加工廠庫存最大、相對便宜。一般機械、食品、建築、家電零件大多用這級。</p>
 <ul>
 <li><strong>耐蝕性</strong>：耐一般大氣、清水、弱酸鹼，可長年無鏽</li>
 <li><strong>強度</strong>：屈服強度約 215 MPa，抗拉約 520 MPa</li>
 <li><strong>加工性</strong>：好切，可拉伸、可焊接、可拋光成鏡面</li>
 <li><strong>限制</strong>：怕海水、強氯化物、高溫氯離子環境</li>
-<li><strong>價格</strong>：約 NT$ 80-120 / kg（板料）</li>
+<li><strong>定位</strong>：價格基準（後續其他等級皆以此比較）</li>
 </ul>
 
 <h2>SUS316 — 海洋 / 化工等級</h2>
@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>強度</strong>：與 SUS304 接近</li>
 <li><strong>加工性</strong>：與 SUS304 接近，但刀具壽命略短</li>
 <li><strong>典型應用</strong>：化工管路、海洋零件、半導體製程腔體、醫療器械（SUS316L 是生醫等級）</li>
-<li><strong>價格</strong>：約 NT$ 130-180 / kg（板料），約 SUS304 的 1.5 倍</li>
+<li><strong>價格</strong>：約 SUS304 的 <strong>1.5-1.8 倍</strong>（依時點材料行情而異）</li>
 </ul>
 
 <h3>SUS316 vs SUS316L 怎麼選？</h3>
@@ -72,7 +72,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>強度</strong>：熱處理後極高，硬度 HRC 56-60</li>
 <li><strong>加工性</strong>：軟態時可加工，硬化後幾乎只能磨削</li>
 <li><strong>典型應用</strong>：軸承、刀具、模具導引件、需要硬度 + 部分耐蝕的場合</li>
-<li><strong>價格</strong>：約 NT$ 150-220 / kg（圓棒），加上熱處理成本</li>
+<li><strong>價格</strong>：圓棒約 SUS304 的 <strong>1.7-2.2 倍</strong>，再加上熱處理整合成本</li>
 </ul>
 
 <h2>選擇 flowchart — 一張圖快速決定</h2>
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
       en: `<p>Stainless steel is the most common CNC material, but SUS304, SUS316, and SUS440C differ significantly. The wrong choice means premature corrosion, insufficient strength, or unnecessary cost.</p>
 <h2>Quick comparison</h2>
 <ul>
-<li><strong>SUS304:</strong> General-purpose, best price/performance, ~NT$ 80-120/kg. Good for general machinery, fails in saltwater/strong chlorides.</li>
+<li><strong>SUS304:</strong> General-purpose, the price baseline. Good for general machinery, fails in saltwater/strong chlorides.</li>
 <li><strong>SUS316:</strong> Adds 2-3% molybdenum, resists saltwater and chlorides. ~1.5× the cost of SUS304. Choice for marine, chemical, semiconductor, medical.</li>
 <li><strong>SUS440C:</strong> Martensitic, high-carbon, heat-treatable to HRC 58+. Used for bearings, cutting tools, mold guides. Weaker corrosion resistance — not for prolonged liquid contact.</li>
 </ul>
@@ -142,32 +142,40 @@ export const blogPosts: BlogPost[] = [
     },
     excerpt: {
       zh: "第一次找 CNC 加工，看到報價單常霧煞煞 — 為什麼這個零件 200 元、那個 2000 元？本文拆解 CNC 報價的 5 大成本構成，並提供降低成本的實用設計建議。",
-      en: "First time working with a CNC shop and confused why one part costs $5 and another $50? We break down the 5 cost components in every CNC quote and how to design parts that quote cheaper.",
-      de: "Zum ersten Mal mit einer CNC-Werkstatt arbeiten und unsicher, warum ein Teil 5 € und ein anderes 50 € kostet? Wir zerlegen die 5 Kostenkomponenten jedes CNC-Angebots — und wie sich Teile günstiger konstruieren lassen.",
+      en: "First time working with a CNC shop and confused why prices for similar-looking parts can differ 10× or more? We break down the 5 cost components in every CNC quote and how to design parts that quote cheaper.",
+      de: "Zum ersten Mal mit einer CNC-Werkstatt arbeiten und unsicher, warum sich ähnlich aussehende Teile preislich um das 10-Fache oder mehr unterscheiden können? Wir zerlegen die 5 Kostenkomponenten jedes CNC-Angebots — und wie sich Teile günstiger konstruieren lassen.",
     },
     category: { zh: "採購指南", en: "Procurement Guide", de: "Einkaufsleitfaden" },
     date: "2026-04-28",
     imageUrl:
       "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
     content: {
-      zh: `<p>第一次找 CNC 加工，看到報價單常常霧煞煞 — 為什麼這個零件 200 元、那個 2000 元？同樣是「鋁合金小零件」，價差怎麼可以到 10 倍？</p>
+      zh: `<p>第一次找 CNC 加工，看到報價單常常霧煞煞 — 為什麼同樣看起來都是「鋁合金小零件」，價差可以到 10 倍以上？</p>
 
 <p>答案是：CNC 加工費不是看「材料 × 重量」算的，而是 <strong>5 大成本因子</strong>共同決定。本文拆解這 5 項，讓您看懂報價、也學會怎麼設計「便宜的零件」。</p>
+
+<p><em>※ 本文僅說明各成本項目的相對比例與影響因素，實際金額會因材料行情、訂單規模、加工複雜度而異 — 請以個別報價為準。</em></p>
 
 <h2>成本因子 1：材料費</h2>
 <p>佔總成本約 <strong>20-40%</strong>，看材料種類差距很大：</p>
 <ul>
-<li>普通鋁合金 A6061：約 NT$ 80-120 / kg</li>
-<li>不鏽鋼 SUS304：約 NT$ 80-120 / kg</li>
-<li>不鏽鋼 SUS316：約 NT$ 130-180 / kg</li>
-<li>鈦合金 Ti-6Al-4V：約 NT$ 1,500-2,500 / kg</li>
+<li><strong>通用級</strong>（A6061 鋁合金、SUS304 不鏽鋼）：相對便宜、最常用</li>
+<li><strong>進階不鏽鋼</strong>（SUS316）：比 SUS304 約貴 <strong>50-80%</strong>，耐蝕性更好</li>
+<li><strong>銅合金</strong>（黃銅、青銅）：比鋁合金貴 <strong>2-4 倍</strong></li>
+<li><strong>難加工材料</strong>（鈦合金 Ti-6Al-4V）：材料費可達鋁合金的 <strong>15-25 倍</strong></li>
+<li><strong>特殊合金</strong>（Inconel、Hastelloy）：依規格不同，更高</li>
 </ul>
 <p>關鍵：CNC 加工是<strong>從一塊大料切下來</strong>，多餘的部分變成切屑（chip）丟掉。所以你付的不是成品重量，而是<strong>毛坯重量</strong>。</p>
 <p><strong>省錢做法</strong>：設計零件時讓外形接近標準棒材 / 板材尺寸，減少「切掉的部分」。</p>
 
 <h2>成本因子 2：機台時間</h2>
 <p>佔總成本約 <strong>30-50%</strong>，是<strong>最大變數</strong>。</p>
-<p>機台時間 = 加工時間 + 換刀時間 + 量測時間。一般 CNC 機台運轉成本約 <strong>NT$ 800-1,500 / 小時</strong>（含設備折舊 + 電費 + 人工）。</p>
+<p>機台時間 = 加工時間 + 換刀時間 + 量測時間。機台越精密、運轉成本越高（含設備折舊 + 電費 + 人工）。常見差異：</p>
+<ul>
+<li>3 軸 CNC 銑床：基準</li>
+<li>5 軸聯動 CNC：時薪約為 3 軸的 <strong>1.5-2.5 倍</strong></li>
+<li>精密磨床 / 線切割：另計、依精度需求加價</li>
+</ul>
 <p>哪些設計會讓機台時間爆增？</p>
 <ul>
 <li><strong>過深的內穴</strong>：刀具懸長、要慢慢切才不會斷</li>
@@ -199,7 +207,7 @@ export const blogPosts: BlogPost[] = [
 <p>普通鋁合金刀具消耗低，幾乎不影響報價。但這幾種會讓刀具費爆增：</p>
 <ul>
 <li><strong>鈦合金 / Inconel</strong>：刀具壽命可能只剩鋁合金的 1/10</li>
-<li><strong>硬度 HRC 50+ 材料</strong>：要用陶瓷或 CBN 刀片，每片 NT$ 1,000-3,000</li>
+<li><strong>硬度 HRC 50+ 材料</strong>：需用陶瓷或 CBN 刀片，單價是普通硬質合金刀片的 <strong>5-15 倍</strong></li>
 <li><strong>特殊刀型（小直徑 + 長刃）</strong>：脆弱、易斷</li>
 </ul>
 <p><strong>省錢做法</strong>：除非真的需要，避免使用鈦合金、超硬材料；用標準刀具能加工到的特徵。</p>
@@ -240,26 +248,28 @@ export const blogPosts: BlogPost[] = [
 <p>但如果有一家報價遠低於市場行情（< 60%）— 要小心：可能是用次級材料、跳過量測流程、或單純不想接這單故意亂報。<strong>太便宜的不一定划算</strong>，重做一批的成本比省下的還多。</p>
 
 <p>偉勇報價的原則：透明、合理、長期合作 — 我們不打殺價戰，但保證「給的單價背後的品質一定到位」。</p>`,
-      en: `<p>First time working with a CNC shop and confused why one part costs $5 and another $50? CNC pricing isn't simple "material × weight" — it's driven by 5 key cost components.</p>
+      en: `<p>First time working with a CNC shop and confused why prices for similar-looking parts can differ 10× or more? CNC pricing isn't simple "material × weight" — it's driven by 5 key cost components.</p>
+<p><em>Note: this article describes proportions and relative impact only. Actual quotes vary with market prices, batch size, and complexity — always rely on individual quotes.</em></p>
 <h2>The 5 cost drivers</h2>
 <ol>
-<li><strong>Material (20-40%):</strong> You pay for the billet, not the finished part. Designing parts close to standard stock sizes saves money.</li>
-<li><strong>Machine time (30-50%):</strong> ~$25-50/hr machine cost. Tight tolerances, deep pockets, thin walls, complex surfaces all multiply time.</li>
+<li><strong>Material (20-40%):</strong> You pay for the billet, not the finished part. SUS316 typically costs ~50-80% more than SUS304; titanium can be 15-25× the cost of aluminum.</li>
+<li><strong>Machine time (30-50%):</strong> The biggest variable. 5-axis machine time is 1.5-2.5× the rate of 3-axis. Tight tolerances, deep pockets, thin walls, complex surfaces all multiply time.</li>
 <li><strong>Programming & setup (5-20%):</strong> Fixed cost. Small batches pay disproportionately. Combine orders to amortize.</li>
-<li><strong>Tooling (5-15%):</strong> Negligible for aluminum, can dominate for titanium/Inconel.</li>
+<li><strong>Tooling (5-15%):</strong> Negligible for aluminum. For titanium/Inconel, tool life can drop to 1/10 — and ceramic/CBN inserts cost 5-15× standard carbide.</li>
 <li><strong>Surface treatment (10-30%):</strong> Often overlooked. Anodizing +5-10%, hard anodizing +15-25%, PVD coating +30-50%.</li>
 </ol>
 <h2>How to design cheaper parts</h2>
 <p>Avoid unnecessary tight tolerances, minimize machined faces, avoid thin walls under 1mm, batch orders, standardize designs across SKUs.</p>
 <h2>Reading a quote</h2>
 <p>A proper quote breaks out material, machining, and surface treatment separately. Lump-sum quotes hide markup. Compare 3 quotes — variance under 30% is normal; quotes 60%+ below market often indicate cut corners.</p>`,
-      de: `<p>Zum ersten Mal mit einer CNC-Werkstatt arbeiten und unsicher, warum ein Teil 5 € und ein anderes 50 € kostet? CNC-Preise folgen nicht der einfachen Formel „Material × Gewicht" — sie werden von 5 Faktoren bestimmt.</p>
+      de: `<p>Zum ersten Mal mit einer CNC-Werkstatt arbeiten und unsicher, warum sich ähnlich aussehende Teile preislich um das 10-Fache oder mehr unterscheiden können? CNC-Preise folgen nicht der einfachen Formel „Material × Gewicht" — sie werden von 5 Faktoren bestimmt.</p>
+<p><em>Hinweis: Dieser Artikel beschreibt nur Anteile und relative Auswirkungen. Tatsächliche Angebote variieren mit Marktpreisen, Losgrößen und Komplexität — verbindlich ist stets das individuelle Angebot.</em></p>
 <h2>Die 5 Kostentreiber</h2>
 <ol>
-<li><strong>Werkstoff (20-40 %):</strong> Sie bezahlen den Rohling, nicht das Fertigteil. Konstruktionen nahe an Standardabmessungen sparen Geld.</li>
-<li><strong>Maschinenzeit (30-50 %):</strong> Etwa 25-50 €/h Maschinenkosten. Enge Toleranzen, tiefe Kavitäten, dünne Wände und komplexe Flächen vervielfachen die Zeit.</li>
+<li><strong>Werkstoff (20-40 %):</strong> Sie bezahlen den Rohling, nicht das Fertigteil. SUS316 kostet typischerweise 50-80 % mehr als SUS304; Titan kann das 15- bis 25-Fache von Aluminium kosten.</li>
+<li><strong>Maschinenzeit (30-50 %):</strong> Der größte Kostentreiber. 5-Achs-Maschinenzeit ist das 1,5- bis 2,5-Fache von 3-Achs. Enge Toleranzen, tiefe Kavitäten, dünne Wände und komplexe Flächen vervielfachen die Zeit.</li>
 <li><strong>Programmierung & Rüsten (5-20 %):</strong> Fixkosten. Kleinmengen tragen unverhältnismäßig viel. Aufträge bündeln amortisiert.</li>
-<li><strong>Werkzeuge (5-15 %):</strong> Bei Aluminium kaum spürbar, bei Titan/Inconel dominant.</li>
+<li><strong>Werkzeuge (5-15 %):</strong> Bei Aluminium kaum spürbar. Bei Titan/Inconel kann die Standzeit auf 1/10 fallen — und Keramik-/CBN-Wendeschneidplatten kosten das 5- bis 15-Fache von Standard-Hartmetall.</li>
 <li><strong>Oberflächenbehandlung (10-30 %):</strong> Oft unterschätzt. Eloxieren +5-10 %, Harteloxieren +15-25 %, PVD-Beschichtung +30-50 %.</li>
 </ol>
 <h2>Günstiger konstruieren</h2>
@@ -494,12 +504,12 @@ export const blogPosts: BlogPost[] = [
 </ul>
 
 <h2>實務數字參考</h2>
-<p>業界粗估：</p>
+<p>業界粗略比例（不公開絕對金額，請以實際採購報價為準）：</p>
 <ul>
-<li>3 軸 CNC 銑床：新機台價格約 NT$ 200-500 萬</li>
-<li>5 軸聯動 CNC：新機台價格約 NT$ 800-3000 萬（依軸配置與規格）</li>
-<li>5 軸操作人員時薪約為 3 軸的 1.5-2 倍</li>
-<li>5 軸刀具消耗略高（複雜路徑 + 高速進給）</li>
+<li>5 軸聯動 CNC 機台採購成本：約 3 軸機台的 <strong>3-6 倍</strong>（依軸配置與規格）</li>
+<li>5 軸操作人員時薪：約為 3 軸的 <strong>1.5-2 倍</strong></li>
+<li>5 軸刀具消耗：略高於 3 軸（複雜路徑 + 高速進給）</li>
+<li>5 軸折舊攤提：通常需要量產訂單支撐才划算</li>
 </ul>
 
 <h2>結論：先看訂單結構</h2>
@@ -599,13 +609,13 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p>結果反映在加工成本：同樣形狀的零件，鈦合金加工費可能是鋁合金的 3-8 倍。</p>
 
-<h2>價格比較（材料本身）</h2>
+<h2>材料價位比較（相對比例）</h2>
 <ul>
-<li>A6061：約 NT$ 200-300 / kg</li>
-<li>A7075：約 NT$ 350-500 / kg</li>
-<li>Ti-6Al-4V：約 NT$ 1,500-2,500 / kg</li>
+<li>A6061：價格基準（業界最常用、最便宜的航太鋁）</li>
+<li>A7075：約 A6061 的 <strong>1.3-1.7 倍</strong>（高強度航太級）</li>
+<li>Ti-6Al-4V：約 A6061 的 <strong>6-10 倍</strong>（依時點鈦原料行情而異）</li>
 </ul>
-<p>鈦的材料成本約為鋁的 6-10 倍，加上加工費也高，所以總成本差距更大。</p>
+<p>加上鈦合金加工費也明顯高於鋁，所以總成本差距更大。實際金額請以個別報價為準。</p>
 
 <h2>各自適合的應用場景</h2>
 
@@ -695,7 +705,7 @@ export const blogPosts: BlogPost[] = [
 <li>累積每日 / 每月實際開機率（OEE）</li>
 <li>遠端查看進度，老闆不必每小時去現場巡視</li>
 </ul>
-<p>投資門檻：每機台約 NT$ 1-3 萬的閘道器 + 雲端平台月費 NT$ 1-3 千。</p>
+<p>投資門檻屬於低成本可入手 — 主要是每機台一個聯網閘道器 + 雲端平台月費。具體金額視供應商方案而定。</p>
 
 <h3>第 2 階段：刀具與品質追溯（1 年內）</h3>
 <ul>
@@ -708,7 +718,7 @@ export const blogPosts: BlogPost[] = [
 <p>機台主軸振動、伺服馬達電流、潤滑油溫度等數據累積夠多後，可訓練 AI 模型，在故障發生前 1-2 週就警告。可大幅減少非預期停機。</p>
 
 <h3>第 4 階段：自動化串接（3-5 年）</h3>
-<p>機械手臂自動裝卸料、AGV 搬運成品、無人倉儲。這階段投資較大（單機械手臂 NT$ 100-300 萬），但對於量產類訂單可大幅降低人力依賴。</p>
+<p>機械手臂自動裝卸料、AGV 搬運成品、無人倉儲。這階段資本投入較大（單機械手臂的價位通常是中階 CNC 機台的 1-2 倍），但對於量產類訂單可大幅降低人力依賴。</p>
 
 <h2>中小廠常見的迷思與破解</h2>
 
@@ -716,7 +726,7 @@ export const blogPosts: BlogPost[] = [
 <p>實際上：規模小的好處是<strong>系統部署更快、改變更靈活</strong>。大廠要動 IT 系統往往要半年以上跨部門協調；小廠老闆一句話，下週就能上線。</p>
 
 <h3>迷思 2：「導入要花很多錢」</h3>
-<p>實際上：第 1 階段（機台聯網）總投資不到 NT$ 50 萬，但可立刻看到 OEE 提升 5-10%。投資回收期通常 6-12 個月。</p>
+<p>實際上：第 1 階段（機台聯網）屬於低投資門檻，但可立刻看到 OEE 提升 <strong>5-10%</strong>。投資回收期通常 6-12 個月。</p>
 
 <h3>迷思 3：「員工不會用」</h3>
 <p>實際上：現在主流系統的介面都已經像手機 APP 般直觀。重點是<strong>讓員工感受到好處</strong> — 例如「以前要手寫日報，現在系統自動生成」— 而不是強迫他們學新技術。</p>
