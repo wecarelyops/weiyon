@@ -351,7 +351,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>標配公差</strong>：±0.005 mm（IT5-IT6 級）</li>
 <li><strong>表面粗糙度</strong>：Ra 0.4 ~ Ra 6.3 可選</li>
-<li><strong>GD&T</strong>：CMM 三次元量測支援所有形位公差</li>
+<li><strong>形位公差</strong>：可承接 GD&T 規範要求，量測透過合作量測廠執行</li>
 <li><strong>量測報告</strong>：可附完整尺寸 + GD&T 量測值（依客戶需求）</li>
 </ul>
 

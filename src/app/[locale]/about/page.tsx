@@ -161,12 +161,6 @@ export default async function AboutPage({
                 detail: t("milestone4Detail"),
               },
               {
-                value: "±0.005",
-                unit: "mm",
-                label: t("milestone5Label"),
-                detail: t("milestone5Detail"),
-              },
-              {
                 value: "14",
                 unit: t("milestone6Unit"),
                 label: t("milestone6Label"),
