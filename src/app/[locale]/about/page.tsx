@@ -17,6 +17,11 @@ import {
   Sparkles,
   Phone,
   ArrowRight,
+  PackageCheck,
+  ScanSearch,
+  Repeat,
+  ShieldCheck,
+  FileCheck2,
 } from "lucide-react";
 
 export async function generateMetadata({
@@ -318,6 +323,137 @@ export default async function AboutPage({
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Quality Control Flow — 進料 → 首件 → 製程 → 完工 + 報告 */}
+          <div className="mb-16">
+            <h3 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-2 text-center">
+              {t("qcFlowTitle")}
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] text-center mb-8 max-w-3xl mx-auto leading-relaxed">
+              {t("qcFlowSubtitle")}
+            </p>
+
+            {/* 4 步驟：手機直排、平板以上水平排（卡片之間用箭頭連接） */}
+            <div className="grid md:grid-cols-4 gap-4 lg:gap-3 relative">
+              {[
+                {
+                  icon: PackageCheck,
+                  step: "01",
+                  title: t("qcStep1Title"),
+                  short: t("qcStep1Short"),
+                  items: [
+                    t("qcStep1Item1"),
+                    t("qcStep1Item2"),
+                    t("qcStep1Item3"),
+                  ],
+                },
+                {
+                  icon: ScanSearch,
+                  step: "02",
+                  title: t("qcStep2Title"),
+                  short: t("qcStep2Short"),
+                  items: [
+                    t("qcStep2Item1"),
+                    t("qcStep2Item2"),
+                    t("qcStep2Item3"),
+                  ],
+                },
+                {
+                  icon: Repeat,
+                  step: "03",
+                  title: t("qcStep3Title"),
+                  short: t("qcStep3Short"),
+                  items: [
+                    t("qcStep3Item1"),
+                    t("qcStep3Item2"),
+                    t("qcStep3Item3"),
+                  ],
+                },
+                {
+                  icon: ShieldCheck,
+                  step: "04",
+                  title: t("qcStep4Title"),
+                  short: t("qcStep4Short"),
+                  items: [
+                    t("qcStep4Item1"),
+                    t("qcStep4Item2"),
+                    t("qcStep4Item3"),
+                  ],
+                },
+              ].map((stage, idx, arr) => (
+                <div key={stage.step} className="relative flex">
+                  <div className="flex-1 p-5 lg:p-6 bg-white rounded-xl border border-[var(--border)] hover:border-[var(--accent)] transition-colors">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <stage.icon className="w-5 h-5 text-[var(--accent)]" />
+                      </div>
+                      <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                        {stage.step}
+                      </div>
+                    </div>
+                    <h4 className="font-bold text-base lg:text-lg text-[var(--primary)] mb-1.5 leading-tight">
+                      {stage.title}
+                    </h4>
+                    <p className="text-xs text-[var(--text-secondary)] mb-3 leading-relaxed">
+                      {stage.short}
+                    </p>
+                    <ul className="space-y-1.5">
+                      {stage.items.map((item) => (
+                        <li
+                          key={item}
+                          className="text-xs text-[var(--text-secondary)] flex items-start gap-1.5 leading-relaxed"
+                        >
+                          <span className="text-[var(--accent)] flex-shrink-0">
+                            ‧
+                          </span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {/* 箭頭 — 平板以上才出現；最後一張不顯示 */}
+                  {idx < arr.length - 1 && (
+                    <div
+                      aria-hidden
+                      className="hidden md:flex items-center px-1 text-[var(--text-muted)]"
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* 文件產出 callout */}
+            <div className="mt-6 p-5 lg:p-6 bg-[var(--surface)] border border-[var(--border)] rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="w-11 h-11 bg-[var(--primary)] rounded-xl flex items-center justify-center flex-shrink-0">
+                <FileCheck2 className="w-5 h-5 text-[var(--accent)]" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-base text-[var(--primary)] mb-1">
+                  {t("qcDocsTitle")}
+                </h4>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {t("qcDocsSubtitle")}
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  t("qcDoc1"),
+                  t("qcDoc2"),
+                  t("qcDoc3"),
+                  t("qcDoc4"),
+                ].map((doc) => (
+                  <span
+                    key={doc}
+                    className="px-3 py-1 text-xs bg-white border border-[var(--border)] rounded-full text-[var(--text-secondary)]"
+                  >
+                    {doc}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 

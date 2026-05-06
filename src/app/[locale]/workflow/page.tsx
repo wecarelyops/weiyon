@@ -9,6 +9,13 @@ import {
   Wrench,
   Factory,
   Truck,
+  Settings,
+  Sparkles,
+  Clock,
+  CreditCard,
+  Globe,
+  DollarSign,
+  AlertTriangle,
 } from "lucide-react";
 import { buildAlternates } from "@/lib/hreflang";
 
@@ -161,6 +168,101 @@ export default async function WorkflowPage({
         </div>
       </section>
 
+      {/* 詢價前準備 — 4 個 prep items 讓報價更快 */}
+      <section className="py-16 lg:py-24 bg-[var(--surface)] border-t border-[var(--border)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-12 max-w-3xl">
+            <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+              <span className="block w-10 h-px bg-[var(--accent)]" />
+              {t("prepLabel")}
+            </div>
+            <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight leading-[1.1]">
+              {t("prepTitle")}
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] mt-6">
+              {t("prepSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                icon: FileText,
+                step: "01",
+                title: t("prep1Title"),
+                desc: t("prep1Desc"),
+                items: [t("prep1Item1"), t("prep1Item2"), t("prep1Item3")],
+              },
+              {
+                icon: Settings,
+                step: "02",
+                title: t("prep2Title"),
+                desc: t("prep2Desc"),
+                items: [t("prep2Item1"), t("prep2Item2"), t("prep2Item3")],
+              },
+              {
+                icon: Sparkles,
+                step: "03",
+                title: t("prep3Title"),
+                desc: t("prep3Desc"),
+                items: [t("prep3Item1"), t("prep3Item2"), t("prep3Item3")],
+              },
+              {
+                icon: Clock,
+                step: "04",
+                title: t("prep4Title"),
+                desc: t("prep4Desc"),
+                items: [t("prep4Item1"), t("prep4Item2"), t("prep4Item3")],
+              },
+            ].map((p) => (
+              <div
+                key={p.step}
+                className="p-6 bg-[var(--bg)] border border-[var(--border)] rounded-xl hover:border-[var(--accent)] transition-colors"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <p.icon className="w-5 h-5 text-[var(--accent)]" />
+                  </div>
+                  <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                    {p.step}
+                  </div>
+                </div>
+                <h3 className="font-bold text-base lg:text-lg text-[var(--primary)] mb-1.5 leading-tight">
+                  {p.title}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] mb-3 leading-relaxed">
+                  {p.desc}
+                </p>
+                <ul className="space-y-1.5">
+                  {p.items.map((item) => (
+                    <li
+                      key={item}
+                      className="text-xs text-[var(--text-secondary)] flex items-start gap-1.5 leading-relaxed"
+                    >
+                      <span className="text-[var(--accent)] flex-shrink-0">
+                        ‧
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Tip — 不全部備齊也沒關係 */}
+          <div className="mt-6 p-4 bg-[var(--bg)] border border-[var(--accent)]/30 rounded-lg flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-[var(--accent)] flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <span className="font-medium text-[var(--primary)]">
+                {t("prepTipLabel")}
+              </span>{" "}
+              {t("prepTip")}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Lead Time 參考表 — B2B 採購最關心 */}
       <section className="py-16 lg:py-24 bg-[var(--bg)] border-t border-[var(--border)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
@@ -267,6 +369,127 @@ export default async function WorkflowPage({
                 {t("leadTimeFootnoteLabel")}
               </span>{" "}
               {t("leadTimeFootnote")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 付款與貿易條件 — B2B / 海外採購商在意的 */}
+      <section className="py-16 lg:py-24 bg-[var(--surface)] border-t border-[var(--border)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-12 max-w-3xl">
+            <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+              <span className="block w-10 h-px bg-[var(--accent)]" />
+              {t("paymentLabel")}
+            </div>
+            <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight leading-[1.1]">
+              {t("paymentTitle")}
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] mt-6">
+              {t("paymentSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--border)] border border-[var(--border)] rounded-xl overflow-hidden">
+            {/* 國內付款 */}
+            <div className="p-6 lg:p-8 bg-[var(--bg)]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <CreditCard className="w-5 h-5 text-[var(--accent)]" />
+                </div>
+                <h3 className="font-bold text-base lg:text-lg text-[var(--primary)] leading-tight">
+                  {t("paymentDomesticTitle")}
+                </h3>
+              </div>
+              <ul className="space-y-2">
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("paymentDomesticItem1")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("paymentDomesticItem2")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("paymentDomesticItem3")}
+                </li>
+              </ul>
+            </div>
+
+            {/* 海外付款 */}
+            <div className="p-6 lg:p-8 bg-[var(--bg)]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Globe className="w-5 h-5 text-[var(--accent)]" />
+                </div>
+                <h3 className="font-bold text-base lg:text-lg text-[var(--primary)] leading-tight">
+                  {t("paymentOverseasTitle")}
+                </h3>
+              </div>
+              <ul className="space-y-2">
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("paymentOverseasItem1")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("paymentOverseasItem2")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("paymentOverseasItem3")}
+                </li>
+              </ul>
+            </div>
+
+            {/* INCOTERMS */}
+            <div className="p-6 lg:p-8 bg-[var(--bg)]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Truck className="w-5 h-5 text-[var(--accent)]" />
+                </div>
+                <h3 className="font-bold text-base lg:text-lg text-[var(--primary)] leading-tight">
+                  {t("incotermsTitle")}
+                </h3>
+              </div>
+              <ul className="space-y-2">
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("incotermsItem1")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("incotermsItem2")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("incotermsItem3")}
+                </li>
+              </ul>
+            </div>
+
+            {/* 計價貨幣 */}
+            <div className="p-6 lg:p-8 bg-[var(--bg)]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <DollarSign className="w-5 h-5 text-[var(--accent)]" />
+                </div>
+                <h3 className="font-bold text-base lg:text-lg text-[var(--primary)] leading-tight">
+                  {t("currencyTitle")}
+                </h3>
+              </div>
+              <ul className="space-y-2">
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("currencyItem1")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("currencyItem2")}
+                </li>
+                <li className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  ‧ {t("currencyItem3")}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 bg-[var(--bg)] border border-[var(--border)] rounded-lg">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <span className="font-medium text-[var(--primary)]">
+                {t("paymentFootnoteLabel")}
+              </span>{" "}
+              {t("paymentFootnote")}
             </p>
           </div>
         </div>
