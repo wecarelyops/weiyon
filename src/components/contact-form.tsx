@@ -312,11 +312,6 @@ export default function ContactForm() {
               <option value="EXW">EXW (Ex Works)</option>
               <option value="FCA">FCA (Free Carrier)</option>
               <option value="FOB">FOB (Free on Board)</option>
-              <option value="CIF">CIF (Cost, Insurance, Freight)</option>
-              <option value="CFR">CFR (Cost and Freight)</option>
-              <option value="CPT">CPT (Carriage Paid To)</option>
-              <option value="DAP">DAP (Delivered at Place)</option>
-              <option value="DDP">DDP (Delivered Duty Paid)</option>
               <option value="discuss">{t("formIncotermsDiscuss")}</option>
             </select>
           </div>
