@@ -245,6 +245,8 @@
     "specsTitle": "規格與精度",
     "otherProcessesLabel": "其他製程",
     "otherProcessesTitle": "探索我們的完整加工能力",
+    "relatedIndustriesLabel": "適用產業",
+    "relatedIndustriesTitle": "這個製程常服務的產業",
     "learnMore": "了解詳情",
     "ctaTitle": "需要客製化加工解決方案？"
   },
@@ -294,6 +296,8 @@
     "industryLabel": "產業專區",
     "backLabel": "返回關於我們",
     "introLabel": "產業概況",
+    "relatedProcessesLabel": "對應加工製程",
+    "relatedProcessesTitle": "這個產業常用的精密加工製程",
     "ctaTitle": "您的零件需求，是否在我們服務範圍內？",
     "ctaSubtitle": "提供圖面或描述需求，1-2 工作天內收到我們的回覆。",
     "ctaQuoteButton": "立即詢價"

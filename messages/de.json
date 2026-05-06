@@ -246,6 +246,8 @@
     "specsTitle": "Spezifikationen & Toleranzen",
     "otherProcessesLabel": "Weitere Prozesse",
     "otherProcessesTitle": "Entdecken Sie unsere kompletten Bearbeitungsfähigkeiten",
+    "relatedIndustriesLabel": "Anwendbare Branchen",
+    "relatedIndustriesTitle": "Branchen, die dieses Verfahren häufig nutzen",
     "learnMore": "Mehr erfahren",
     "ctaTitle": "Brauchen Sie eine maßgeschneiderte Bearbeitungslösung?"
   },
@@ -290,6 +292,8 @@
     "industryLabel": "Branchen-Fokus",
     "backLabel": "Zurück zu Über uns",
     "introLabel": "Branchenkontext",
+    "relatedProcessesLabel": "Verfahren",
+    "relatedProcessesTitle": "Präzisionsverfahren, die in dieser Branche häufig zum Einsatz kommen",
     "ctaTitle": "Liegt Ihr Teil in unserem Servicebereich?",
     "ctaSubtitle": "Senden Sie eine Zeichnung oder beschreiben Sie Ihre Anforderungen — wir antworten in 1-2 Werktagen.",
     "ctaQuoteButton": "Angebot anfordern"

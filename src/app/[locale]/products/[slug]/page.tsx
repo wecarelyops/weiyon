@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, ChevronLeft, Phone } from "lucide-react";
 import { processes, getProcessBySlug, type Locale } from "@/data/processes";
+import { industries } from "@/data/industries";
 import { routing } from "@/i18n/routing";
 
 export async function generateStaticParams() {
@@ -201,6 +202,38 @@ export default async function ProcessDetailPage({
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Industries — 內鏈到適用產業頁 */}
+      <section className="py-16 lg:py-24 bg-[var(--bg)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-6">
+            <span className="block w-10 h-px bg-[var(--accent)]" />
+            {t("relatedIndustriesLabel")}
+          </div>
+          <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] mb-12 leading-tight max-w-3xl">
+            {t("relatedIndustriesTitle")}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
+            {industries.map((ind) => (
+              <Link
+                key={ind.slug}
+                href={`/industries/${ind.slug}`}
+                className="group p-6 lg:p-8 bg-[var(--bg)] hover:bg-[var(--surface)] transition-colors"
+              >
+                <h3 className="text-lg lg:text-xl font-bold text-[var(--primary)] mb-2 group-hover:text-[var(--accent)] transition-colors">
+                  {ind.title[lang]}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 line-clamp-2">
+                  {ind.heroSubtitle[lang]}
+                </p>
+                <div className="flex items-center gap-2 text-sm text-[var(--accent)] group-hover:gap-3 transition-all">
+                  <span>→</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

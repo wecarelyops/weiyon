@@ -245,6 +245,8 @@
     "specsTitle": "Specs & Tolerances",
     "otherProcessesLabel": "Other Processes",
     "otherProcessesTitle": "Explore our complete machining capabilities",
+    "relatedIndustriesLabel": "Applicable Industries",
+    "relatedIndustriesTitle": "Industries this process commonly serves",
     "learnMore": "Learn more",
     "ctaTitle": "Need a custom machining solution?"
   },
@@ -294,6 +296,8 @@
     "industryLabel": "Industry Focus",
     "backLabel": "Back to About",
     "introLabel": "Industry Context",
+    "relatedProcessesLabel": "Processes",
+    "relatedProcessesTitle": "Precision processes commonly used in this industry",
     "ctaTitle": "Is your part within our service scope?",
     "ctaSubtitle": "Send a drawing or describe your needs — we'll respond within 1-2 business days.",
     "ctaQuoteButton": "Request a Quote"
