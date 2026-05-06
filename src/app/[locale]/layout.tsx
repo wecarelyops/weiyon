@@ -101,6 +101,10 @@ function buildJsonLd(locale: string) {
     ? "A precision metal parts manufacturer in central Taiwan with 40+ years of CNC machining expertise. We specialize in difficult-to-machine materials and one-stop integrated manufacturing for semiconductor, medical, aerospace, automotive, and precision machinery industries."
     : "深耕產業 40 餘年的台灣中部精密金屬零件加工專家，擅長處理難加工材料，提供一站式整合製造服務。服務半導體、醫療、航太、汽車、精密機械等產業。";
 
+  // OG image — 直接指向 Next.js 動態生成的 opengraph-image
+  // （file: [locale]/opengraph-image.tsx，URL: /{locale}/opengraph-image）
+  const ogImageUrl = `${SITE_URL}/${locale}/opengraph-image`;
+
   return {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Organization"],
@@ -108,8 +112,8 @@ function buildJsonLd(locale: string) {
     name: orgName,
     alternateName: altName,
     url: SITE_URL,
-    logo: `${SITE_URL}/icon.png`,
-    image: `${SITE_URL}/og-image.jpg`,
+    logo: ogImageUrl,
+    image: ogImageUrl,
     description,
     foundingDate: "1986",
     address: {
