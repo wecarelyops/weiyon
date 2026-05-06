@@ -28,8 +28,30 @@ export default async function FaqPage({
 
   const data = faqData[locale === "zh" ? "zh" : locale === "de" ? "de" : "en"];
 
+  // JSON-LD FAQPage schema — 讓 Google 在搜尋結果展開問答 rich snippet
+  // 取所有分類所有題目，依 schema.org/FAQPage 規格組裝
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.flatMap((category) =>
+      category.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="pt-20 lg:pt-24 py-16 lg:py-24 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
