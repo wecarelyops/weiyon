@@ -133,21 +133,21 @@ export const industries: Industry[] = [
     standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
-        "公差控制：可達 ±0.005 mm",
+        "公差控制：依客戶圖面要求承接",
         "表面處理：電解拋光、陽極氧化、鈍化",
         "潔淨度：Class 100 / Class 10 包裝",
         "量測報告：尺寸量測書、材質證明（Mill Cert）",
         "可配合 ASTM、JIS、SEMI 規範",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm",
+        "Tolerance: per customer drawing specification",
         "Surface: electropolishing, anodizing, passivation",
         "Cleanliness: Class 100 / Class 10 packaging",
         "Documentation: dimensional inspection reports, mill test certs",
         "Compliance with ASTM, JIS, SEMI as required",
       ],
       de: [
-        "Toleranzen: bis ±0,005 mm",
+        "Toleranzen: gemäß Kundenzeichnung",
         "Oberflächen: Elektropolieren, Eloxieren, Passivieren",
         "Reinheit: Class 100 / Class 10 Verpackung",
         "Dokumentation: Maßprüfberichte, Werksattestate (Mill Cert)",
@@ -193,7 +193,7 @@ export const industries: Industry[] = [
     whyPoints: {
       zh: [
         "鈦合金、Inconel 等難切削材料加工經驗",
-        "高精度公差控制（標配 ±0.005 mm）",
+        "依航太圖面公差需求承接，含形位公差規範",
         "完整的量測 / 追溯流程",
         "可承接從單件試做到小批量（適合 R&D 階段）",
         "材料供應商 / 表面處理外協廠長期合作",
@@ -201,7 +201,7 @@ export const industries: Industry[] = [
       ],
       en: [
         "Experience with titanium, Inconel, and other difficult alloys",
-        "Tight tolerance control (±0.005 mm standard)",
+        "Tolerance per aerospace drawing specifications, including GD&T",
         "Full measurement and traceability workflow",
         "Single-piece prototyping through small-batch production (R&D-friendly)",
         "Long-term partnerships with material suppliers and surface treatment shops",
@@ -209,7 +209,7 @@ export const industries: Industry[] = [
       ],
       de: [
         "Erfahrung mit Titan, Inconel und weiteren schwer zerspanbaren Legierungen",
-        "Enge Toleranzführung (±0,005 mm Standard)",
+        "Toleranzen gemäß Luftfahrt-Zeichnungsspezifikation, inkl. GD&T",
         "Vollständiger Mess- und Rückverfolgbarkeits-Workflow",
         "Einzelstück-Prototyping bis zur Kleinserienfertigung (F&E-freundlich)",
         "Langjährige Partnerschaften mit Werkstoff- und Oberflächenbehandlungs-Lieferanten",
@@ -273,21 +273,21 @@ export const industries: Industry[] = [
     standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
-        "公差控制：標配 ±0.005 mm，特殊規格可洽",
+        "公差控制：依圖面公差規範承接，特殊精度可洽",
         "表面粗糙度：Ra 0.4 ~ Ra 1.6（精車 / 精銑）",
         "材質證明：Mill Test Cert（航太級材料供應）",
         "尺寸檢驗報告：每批附量測紀錄",
         "可配合 AS9100 客戶供應鏈品管要求",
       ],
       en: [
-        "Tolerance: ±0.005 mm standard, tighter on inquiry",
+        "Tolerance: per drawing specification, tighter precision on inquiry",
         "Surface finish: Ra 0.4 ~ Ra 1.6 (precision turning / milling)",
         "Material certs: aerospace-grade Mill Test Certificates",
         "Dimensional reports: measurement records per batch",
         "Compatible with AS9100 customer supply-chain QC requirements",
       ],
       de: [
-        "Toleranzen: ±0,005 mm Standard, engere Werte auf Anfrage",
+        "Toleranzen: gemäß Zeichnungsspezifikation, engere Werte auf Anfrage",
         "Oberflächengüte: Ra 0,4 – Ra 1,6 (Präzisionsdrehen / -fräsen)",
         "Werkszeugnisse: Mill Test Certificates in Luftfahrtqualität",
         "Maßprüfberichte: Messprotokolle pro Charge",
@@ -410,21 +410,21 @@ export const industries: Industry[] = [
     standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
-        "公差控制：可達 ±0.005 mm",
+        "公差控制：依客戶圖面要求承接",
         "表面處理：電解拋光、鈍化、Ra 0.2 鏡面",
         "材質證明：Mill Test Cert + 生醫等級認證",
         "包裝：依客戶需求（潔淨包裝可配合）",
         "可配合 ISO 13485 供應鏈品管要求",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm",
+        "Tolerance: per customer drawing specification",
         "Surface: electropolishing, passivation, Ra 0.2 mirror finish",
         "Mill test certs + medical-grade material verification",
         "Packaging: per customer requirement (cleanroom packaging available)",
         "Compatible with ISO 13485 supply-chain QC",
       ],
       de: [
-        "Toleranzen: bis ±0,005 mm",
+        "Toleranzen: gemäß Kundenzeichnung",
         "Oberflächen: Elektropolieren, Passivieren, Ra 0,2 Hochglanz",
         "Werkszeugnisse plus medizinische Werkstoffprüfung",
         "Verpackung: nach Kundenanforderung (Reinraumverpackung möglich)",
@@ -547,21 +547,21 @@ export const industries: Industry[] = [
     standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
-        "公差控制：可達 ±0.005 mm",
+        "公差控制：依客戶圖面要求承接",
         "表面處理：電鍍鋅、發黑、粉體塗裝、達克鋅",
         "熱處理：淬火、回火、滲碳、氮化",
         "批次追溯與 PPAP 文件配合",
         "SPC 統計製程管制（量產訂單）",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm",
+        "Tolerance: per customer drawing specification",
         "Surface: zinc plating, blackening, powder coating, Dacromet",
         "Heat treatment: quench, temper, carburize, nitride",
         "Batch traceability and PPAP documentation",
         "SPC statistical process control for volume orders",
       ],
       de: [
-        "Toleranzen: bis ±0,005 mm",
+        "Toleranzen: gemäß Kundenzeichnung",
         "Oberflächen: Verzinken, Brünieren, Pulverbeschichten, Dacromet",
         "Wärmebehandlung: Härten, Anlassen, Aufkohlen, Nitrieren",
         "Chargenrückverfolgbarkeit und PPAP-Dokumentation",
@@ -684,21 +684,21 @@ export const industries: Industry[] = [
     standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
-        "公差控制：可達 ±0.005 mm",
+        "公差控制：依客戶圖面要求承接",
         "形位公差：平行度、垂直度、平面度檢驗",
         "表面處理：陽極氧化（鋁件）、發黑（鋼件）、鈍化（不鏽鋼）",
         "量測報告 + 形位公差檢驗",
         "可配合客戶供應商品管要求",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm",
+        "Tolerance: per customer drawing specification",
         "Geometric tolerances: parallelism, perpendicularity, flatness inspected",
         "Surface: anodizing (aluminum), blackening (steel), passivation (stainless)",
         "Measurement reports with geometric tolerance verification",
         "Compatible with customer supplier QC requirements",
       ],
       de: [
-        "Toleranzen: bis ±0,005 mm",
+        "Toleranzen: gemäß Kundenzeichnung",
         "Form-/Lagetoleranzen: Prüfung von Parallelität, Rechtwinkligkeit, Ebenheit",
         "Oberflächen: Eloxieren (Aluminium), Brünieren (Stahl), Passivieren (Edelstahl)",
         "Messprotokolle mit Form-/Lagetoleranzprüfung",
@@ -958,21 +958,21 @@ export const industries: Industry[] = [
     standardsTitle: { zh: "規格與品管", en: "Quality & Standards", de: "Qualität & Normen" },
     standards: {
       zh: [
-        "公差控制：可達 ±0.005 mm",
+        "公差控制：依客戶圖面要求承接",
         "材質證明：Mill Test Cert（全程追溯）",
         "可配合 API 6A、API 6D、NORSOK M-650 客戶要求",
         "FAI / PPAP 報告（依客戶需求）",
         "PED 2014/68/EU 歐系壓力設備指令可整合",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm",
+        "Tolerance: per customer drawing specification",
         "Mill Test Certificates (full traceability)",
         "Compatible with API 6A, API 6D, NORSOK M-650 customer requirements",
         "FAI / PPAP reports (per customer specification)",
         "PED 2014/68/EU European pressure equipment directive integration",
       ],
       de: [
-        "Toleranzen: bis ±0,005 mm",
+        "Toleranzen: gemäß Kundenzeichnung",
         "Werkszeugnisse (Mill Test Cert) — vollständige Rückverfolgbarkeit",
         "Konform mit Kundenanforderungen API 6A, API 6D, NORSOK M-650",
         "FAI- / PPAP-Berichte (je nach Kundenvorgabe)",

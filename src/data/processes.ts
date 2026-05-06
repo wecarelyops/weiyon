@@ -102,19 +102,19 @@ export const processes: Process[] = [
     },
     specs: {
       zh: [
-        "加工精度：可達 ±0.005 mm（依工件特性）",
+        "加工精度：依工件特性與圖面要求承接",
         "粗糙度：Ra 0.8 ~ Ra 3.2（標準）",
         "最大工件尺寸：依機台配置，請於詢價時告知",
         "支援 4 軸聯動加工",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm (depending on part characteristics)",
+        "Tolerance: per part characteristics and drawing specs",
         "Surface finish: Ra 0.8 ~ Ra 3.2 (standard)",
         "Max workpiece size: depends on machine setup — please specify when quoting",
         "4-axis simultaneous machining supported",
       ],
       de: [
-        "Toleranz: bis zu ±0,005 mm (je nach Teilemerkmalen)",
+        "Toleranz: gemäß Teilemerkmalen und Zeichnungsvorgaben",
         "Oberflächenrauheit: Ra 0,8 ~ Ra 3,2 (Standard)",
         "Max. Werkstückgröße: maschinenabhängig — bei der Anfrage angeben",
         "4-Achs-Simultan-Bearbeitung unterstützt",
@@ -137,9 +137,9 @@ export const processes: Process[] = [
       de: "CNC-Drehmaschinen, Langdrehautomaten, klassische Drehbänke",
     },
     description: {
-      zh: "高精度 CNC 車削加工，承接軸類、套筒、銷類、特殊規格緊固件等迴轉體零件。CNC 自動車床支援連續批量生產，通用車床搭配老師傅調機，靈活處理試做與小量訂單。\n\n典型承接案例包括：精密軸類（馬達軸、傳動軸）、特殊規格螺絲螺帽、氣壓缸活塞、軸承內外環、電子接頭等。對於外徑精度 ±0.005 mm 或表面粗糙度 Ra 0.4 以下的需求，可進一步整合精磨處理。",
-      en: "High-precision CNC turning for shafts, sleeves, pins, and custom fasteners. Automatic CNC lathes support continuous volume production, while conventional lathes — operated by senior technicians — handle prototypes and small-batch orders flexibly.\n\nTypical projects include: precision shafts (motor and drive shafts), custom screws and nuts, pneumatic cylinder pistons, bearing rings, and electrical connectors. For OD tolerances within ±0.005 mm or surface finish Ra 0.4 or better, we can integrate precision grinding.",
-      de: "Hochpräzises CNC-Drehen für Wellen, Hülsen, Bolzen und kundenspezifische Verbindungselemente. Langdrehautomaten unterstützen kontinuierliche Serienproduktion, während klassische Drehbänke — von erfahrenen Technikern bedient — Prototypen und Kleinserien flexibel bearbeiten.\n\nTypische Projekte: Präzisionswellen (Motor- und Antriebswellen), kundenspezifische Schrauben und Muttern, Pneumatikzylinder-Kolben, Lagerringe und Elektroverbinder. Für Außendurchmesser-Toleranzen unter ±0,005 mm oder Oberflächengüten ab Ra 0,4 integrieren wir Präzisionsschleifen.",
+      zh: "高精度 CNC 車削加工，承接軸類、套筒、銷類、特殊規格緊固件等迴轉體零件。CNC 自動車床支援連續批量生產，通用車床搭配老師傅調機，靈活處理試做與小量訂單。\n\n典型承接案例包括：精密軸類（馬達軸、傳動軸）、特殊規格螺絲螺帽、氣壓缸活塞、軸承內外環、電子接頭等。對於外徑高精度或鏡面表面需求，可進一步整合精磨處理。",
+      en: "High-precision CNC turning for shafts, sleeves, pins, and custom fasteners. Automatic CNC lathes support continuous volume production, while conventional lathes — operated by senior technicians — handle prototypes and small-batch orders flexibly.\n\nTypical projects include: precision shafts (motor and drive shafts), custom screws and nuts, pneumatic cylinder pistons, bearing rings, and electrical connectors. For tighter OD tolerances or mirror-finish surfaces, we can integrate precision grinding.",
+      de: "Hochpräzises CNC-Drehen für Wellen, Hülsen, Bolzen und kundenspezifische Verbindungselemente. Langdrehautomaten unterstützen kontinuierliche Serienproduktion, während klassische Drehbänke — von erfahrenen Technikern bedient — Prototypen und Kleinserien flexibel bearbeiten.\n\nTypische Projekte: Präzisionswellen (Motor- und Antriebswellen), kundenspezifische Schrauben und Muttern, Pneumatikzylinder-Kolben, Lagerringe und Elektroverbinder. Für engere Außendurchmesser-Toleranzen oder Spiegelglanz-Oberflächen integrieren wir Präzisionsschleifen.",
     },
     equipment: {
       zh: [
@@ -209,19 +209,19 @@ export const processes: Process[] = [
     },
     specs: {
       zh: [
-        "加工精度：可達 ±0.005 mm",
+        "加工精度：依圖面要求承接",
         "粗糙度：Ra 0.4 ~ Ra 1.6（精車）",
         "棒材直徑：Φ3 ~ Φ200 mm（依機台）",
         "最小批量：1 件起",
       ],
       en: [
-        "Tolerance: down to ±0.005 mm",
+        "Tolerance: per drawing specification",
         "Surface finish: Ra 0.4 ~ Ra 1.6 (finish turning)",
         "Bar diameter: Φ3 ~ Φ200 mm (machine-dependent)",
         "MOQ: from 1 piece",
       ],
       de: [
-        "Toleranz: bis zu ±0,005 mm",
+        "Toleranz: gemäß Zeichnungsspezifikation",
         "Oberflächenrauheit: Ra 0,4 ~ Ra 1,6 (Feindrehen)",
         "Stangendurchmesser: Φ3 ~ Φ200 mm (maschinenabhängig)",
         "MOQ: ab 1 Stück",
