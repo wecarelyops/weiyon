@@ -323,6 +323,22 @@
     "ctaSubtitle": "Senden Sie uns Zeichnungen oder eine Beschreibung — wir antworten in 1-2 Werktagen mit einem Angebot.",
     "ctaQuoteButton": "Angebot anfordern"
   },
+  "Industries": {
+    "metaTitle": "Belieferte Branchen — Halbleiter, Luftfahrt, Medizin, Automobil, Öl & Gas, Tuning | Weiyon Industry",
+    "metaDescription": "Weiyon Industrys 40 Jahre Erfahrung in 8 Branchen — Halbleiterausrüstung, Luftfahrt, Medizintechnik, Automobil, Automatisierung, Tuning, Öl- & Gas, Präzisionsmaschinenbau. Lieferketten in GCC, Europa und Amerika. Branchenspezifische Werkstoffe, Zertifizierungen und Bearbeitungserfahrung.",
+    "heroLabel": "Branchen",
+    "heroTitle": "Acht Branchen, die wir bedienen",
+    "heroSubtitle": "Von Halbleiter-Vakuumkammern und Luftfahrt-Titanstrukturen bis zu Öl- & Gas-Inconel-Ventilen und Tuning-Auspuffteilen — Weiyons 40-jährige Erfahrung mit schwer zerspanbaren Werkstoffen erfüllt die spezifischen Anforderungen jeder Branche.",
+    "learnMore": "Mehr erfahren",
+    "capabilitySummaryTitle": "Möchten Sie das vollständige Leistungsspektrum sehen?",
+    "capabilitySummarySubtitle": "Verfahren, Werkstoffe, Ablauf — drei Einstiegspunkte zu Weiyons komplettem Angebot.",
+    "linkProcesses": "Verfahren",
+    "linkMaterials": "Werkstoffe",
+    "linkWorkflow": "Ablauf",
+    "ctaTitle": "Welche Branche passt zu Ihrem Bauteil?",
+    "ctaSubtitle": "Senden Sie eine Zeichnung oder beschreiben Sie Ihre Anforderungen — wir antworten in 1-2 Werktagen.",
+    "ctaQuoteButton": "Angebot anfordern"
+  },
   "IndustryDetail": {
     "industryLabel": "Branchen-Fokus",
     "backLabel": "Zurück zu Über uns",

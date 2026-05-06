@@ -327,6 +327,22 @@
     "ctaSubtitle": "傳圖面或描述需求給我們，1-2 工作天內回覆報價。",
     "ctaQuoteButton": "立即詢價"
   },
+  "Industries": {
+    "metaTitle": "服務產業 — 半導體、航太、醫療、汽車、油氣、改裝 | 偉勇工業社",
+    "metaDescription": "偉勇工業社 40 年服務 8 大產業 — 半導體設備、航太、醫療器材、汽車零組件、自動化機械、改裝車、油氣產業、精密機械。對應 GCC、歐美客戶供應鏈。各產業專屬材料能力、認證對應、加工經驗。",
+    "heroLabel": "服務產業",
+    "heroTitle": "我們服務的 8 大產業",
+    "heroSubtitle": "從半導體真空腔體、航太鈦合金結構件，到油氣 Inconel 閥門、改裝車排氣件 — 偉勇 40 年累積的「難加工材料 + 短交期 + 客製化」能力，對應每個產業的特殊需求。",
+    "learnMore": "了解詳情",
+    "capabilitySummaryTitle": "想了解我們的完整能力？",
+    "capabilitySummarySubtitle": "從加工製程、材料清單、到合作流程 — 三個入口讓您快速掌握偉勇的全貌。",
+    "linkProcesses": "加工項目",
+    "linkMaterials": "材料能力",
+    "linkWorkflow": "合作流程",
+    "ctaTitle": "您的零件需求對應哪個產業？",
+    "ctaSubtitle": "提供圖面或描述需求，1-2 工作天內收到我們的回覆。",
+    "ctaQuoteButton": "立即詢價"
+  },
   "IndustryDetail": {
     "industryLabel": "產業專區",
     "backLabel": "返回關於我們",

@@ -327,6 +327,22 @@
     "ctaSubtitle": "Send us drawings or a description — we'll quote within 1-2 business days.",
     "ctaQuoteButton": "Request a Quote"
   },
+  "Industries": {
+    "metaTitle": "Industries Served — Semiconductor, Aerospace, Medical, Automotive, Oil & Gas, Tuning | Weiyon Industry",
+    "metaDescription": "Weiyon Industry's 40 years of service across 8 industries — semiconductor equipment, aerospace, medical devices, automotive, automation, tuning, oil & gas, precision machinery. Supply chains in GCC, Europe, and the Americas. Industry-specific materials, certifications, and machining experience.",
+    "heroLabel": "Industries",
+    "heroTitle": "Eight Industries We Serve",
+    "heroSubtitle": "From semiconductor vacuum chambers and aerospace titanium structures to oil & gas Inconel valves and tuning exhaust components — Weiyon's 40 years of difficult-material expertise meets each industry's specific demands.",
+    "learnMore": "Learn more",
+    "capabilitySummaryTitle": "Want the full capability picture?",
+    "capabilitySummarySubtitle": "Processes, materials, workflow — three entry points to understand Weiyon's full offering.",
+    "linkProcesses": "Processes",
+    "linkMaterials": "Materials",
+    "linkWorkflow": "Workflow",
+    "ctaTitle": "Which industry does your part fit?",
+    "ctaSubtitle": "Send a drawing or describe your needs — we'll respond within 1-2 business days.",
+    "ctaQuoteButton": "Request a Quote"
+  },
   "IndustryDetail": {
     "industryLabel": "Industry Focus",
     "backLabel": "Back to About",
