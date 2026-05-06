@@ -3,10 +3,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, ChevronLeft, Phone } from "lucide-react";
+import { ArrowRight, Check, Phone } from "lucide-react";
 import { industries, getIndustryBySlug, type IndustryLocale } from "@/data/industries";
 import { processes } from "@/data/processes";
 import { routing } from "@/i18n/routing";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -46,6 +47,7 @@ export default async function IndustryPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("IndustryDetail");
+  const tNav = await getTranslations("Nav");
 
   const ind = getIndustryBySlug(slug);
   if (!ind) notFound();
@@ -92,13 +94,14 @@ export default async function IndustryPage({
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-16 lg:pb-20 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors mb-8"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            {t("backLabel")}
-          </Link>
+          <Breadcrumbs
+            locale={locale}
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("about"), href: "/about" },
+              { label: ind.title[lang] },
+            ]}
+          />
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <div className="lg:col-span-7">

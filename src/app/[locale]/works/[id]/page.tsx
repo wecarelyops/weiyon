@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { routing } from "@/i18n/routing";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 const TOTAL_WORKS = 32;
 
@@ -39,6 +40,7 @@ export default async function WorkDetailPage({
   const { locale, id } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("Works");
+  const tNav = await getTranslations("Nav");
 
   const idNum = parseInt(id, 10);
   if (isNaN(idNum) || idNum < 1 || idNum > TOTAL_WORKS) {
@@ -54,6 +56,15 @@ export default async function WorkDetailPage({
   return (
     <section className="pt-20 lg:pt-24 pb-16 lg:pb-24 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          locale={locale}
+          items={[
+            { label: tNav("home"), href: "/" },
+            { label: tNav("gallery"), href: "/gallery" },
+            { label: `#${padded}` },
+          ]}
+        />
+
         {/* INDEX 回實績列表 */}
         <div className="flex justify-center mb-8 lg:mb-12">
           <Link

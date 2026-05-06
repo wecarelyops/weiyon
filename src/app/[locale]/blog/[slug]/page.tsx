@@ -3,9 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { Calendar, ChevronLeft, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { blogPosts, getPostBySlug } from "@/data/blog";
 import { routing } from "@/i18n/routing";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -47,6 +48,7 @@ export default async function BlogPostPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("BlogDetail");
+  const tNav = await getTranslations("Nav");
 
   const post = getPostBySlug(slug);
   if (!post) notFound();
@@ -98,14 +100,14 @@ export default async function BlogPostPage({
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-12 lg:pb-16 bg-[var(--surface)]">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-          {/* Back link */}
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors mb-8"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            {t("backToBlog")}
-          </Link>
+          <Breadcrumbs
+            locale={locale}
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("blog"), href: "/blog" },
+              { label: post.title[lang] },
+            ]}
+          />
 
           <div className="flex items-center gap-4 mb-6">
             <span className="px-3 py-1 bg-[var(--accent)]/10 text-[var(--accent)] text-xs font-medium rounded-full">

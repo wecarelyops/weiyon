@@ -3,10 +3,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, ChevronLeft, Phone } from "lucide-react";
+import { ArrowRight, Check, Phone } from "lucide-react";
 import { processes, getProcessBySlug, type Locale } from "@/data/processes";
 import { industries } from "@/data/industries";
 import { routing } from "@/i18n/routing";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -43,6 +44,7 @@ export default async function ProcessDetailPage({
   setRequestLocale(locale);
   const t = await getTranslations("ProcessDetail");
   const tProducts = await getTranslations("Products");
+  const tNav = await getTranslations("Nav");
 
   const proc = getProcessBySlug(slug);
   if (!proc) notFound();
@@ -89,14 +91,14 @@ export default async function ProcessDetailPage({
       {/* Hero */}
       <section className="relative pt-28 lg:pt-36 pb-16 lg:pb-24 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
-          {/* Back link */}
-          <Link
-            href="/products"
-            className="inline-flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors mb-8"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            {t("backToProducts")}
-          </Link>
+          <Breadcrumbs
+            locale={locale}
+            items={[
+              { label: tNav("home"), href: "/" },
+              { label: tNav("products"), href: "/products" },
+              { label: proc.title[lang] },
+            ]}
+          />
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             <div className="lg:col-span-7">
