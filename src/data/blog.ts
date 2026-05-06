@@ -346,15 +346,6 @@ export const blogPosts: BlogPost[] = [
 
 <p>之後再依實際組裝測試結果，必要時局部加嚴。</p>
 
-<h2>偉勇的標配公差能力</h2>
-
-<ul>
-<li><strong>標配公差</strong>：±0.005 mm（IT5-IT6 級）</li>
-<li><strong>表面粗糙度</strong>：Ra 0.4 ~ Ra 6.3 可選</li>
-<li><strong>形位公差</strong>：可承接 GD&T 規範要求，量測透過合作量測廠執行</li>
-<li><strong>量測報告</strong>：可附完整尺寸 + GD&T 量測值（依客戶需求）</li>
-</ul>
-
 <p>如果您在公差規格上不確定，告訴我們零件的<strong>使用情境 + 配合對象 + 受力方式</strong>，我們可以協助您訂出合理的規格。</p>`,
       en: `<p>Tolerance callouts on drawings directly drive machining cost. Tight to ±0.005 mm vs ±0.1 mm can mean 5-10× the price.</p>
 
@@ -383,8 +374,7 @@ export const blogPosts: BlogPost[] = [
 <li>GD&T: 2-3 critical features at ~0.05 mm</li>
 </ul>
 
-<h2>Weiyon's standard capability</h2>
-<p>±0.005 mm tolerance, Ra 0.4 to Ra 6.3 surface options, full GD&T via CMM measurement, complete inspection reports per customer requirement.</p>`,
+<p>If you're unsure about tolerances, share the part's <strong>use case + mating partner + load conditions</strong> — we'll help define a sensible spec.</p>`,
       de: `<p>Toleranzangaben auf Zeichnungen bestimmen direkt die Bearbeitungskosten. Eng wie ±0,005 mm gegenüber ±0,1 mm kann das 5- bis 10-Fache des Preises bedeuten.</p>
 
 <h2>Drei Toleranzsysteme</h2>
@@ -412,8 +402,7 @@ export const blogPosts: BlogPost[] = [
 <li>GD&T: 2-3 kritische Merkmale bei ca. 0,05 mm</li>
 </ul>
 
-<h2>Weiyons Standardkompetenz</h2>
-<p>±0,005 mm Toleranz, Ra 0,4 bis Ra 6,3 Oberflächenoptionen, vollständiges GD&T über KMG-Messung, komplette Prüfberichte je nach Kundenanforderung.</p>`,
+<p>Bei Unsicherheit zur Tolerierung — schicken Sie uns <strong>Einsatzfall, Gegenstück und Belastungsart</strong>. Wir helfen, eine sinnvolle Spezifikation festzulegen.</p>`,
     },
   },
   {

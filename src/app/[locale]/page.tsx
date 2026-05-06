@@ -15,6 +15,7 @@ import {
   Timer,
 } from "lucide-react";
 import { industries, type IndustryLocale } from "@/data/industries";
+import CountUp from "@/components/count-up";
 
 export default async function Home({
   params,
@@ -75,15 +76,15 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Stats Strip */}
+      {/* Stats Strip — 含 count-up 動畫 */}
       <section className="border-y border-[var(--border)] bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[var(--border)]">
             {[
-              { label: t("statsExperience"), value: "40+" },
-              { label: t("statsEquipment"), value: "10+" },
-              { label: t("statsCustomers"), value: "500+" },
-              { label: t("statsProducts"), value: "1000+" },
+              { label: t("statsExperience"), end: 40, suffix: "+", duration: 1800 },
+              { label: t("statsEquipment"), end: 10, suffix: "+", duration: 1400 },
+              { label: t("statsCustomers"), end: 500, suffix: "+", duration: 2000 },
+              { label: t("statsProducts"), end: 1000, suffix: "+", duration: 2200 },
             ].map((stat, idx) => (
               <div
                 key={stat.label}
@@ -91,8 +92,12 @@ export default async function Home({
                   idx === 0 ? "border-l-0" : ""
                 }`}
               >
-                <p className="text-4xl lg:text-6xl font-bold text-[var(--primary)] mb-2 leading-none">
-                  {stat.value}
+                <p className="text-4xl lg:text-6xl font-bold text-[var(--primary)] mb-2 leading-none tabular-nums">
+                  <CountUp
+                    end={stat.end}
+                    suffix={stat.suffix}
+                    duration={stat.duration}
+                  />
                 </p>
                 <p className="text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)]">
                   {stat.label}
@@ -119,7 +124,7 @@ export default async function Home({
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-px bg-[var(--border)] border border-[var(--border)]">
+          <div className="grid md:grid-cols-2 gap-px bg-[var(--border)] border border-[var(--border)]">
             {/* Materials */}
             <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
               <div className="flex items-center gap-3 mb-6">
@@ -156,57 +161,6 @@ export default async function Home({
               >
                 <span className="border-b border-current pb-0.5">
                   {t("capability1Link")}
-                </span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            {/* Tolerance */}
-            <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
-              <div className="flex items-center gap-3 mb-6">
-                <Crosshair className="w-5 h-5 text-[var(--accent)]" />
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)]">
-                  {t("capability2Label")}
-                </div>
-              </div>
-              <div className="text-5xl lg:text-6xl font-bold text-[var(--primary)] mb-3 leading-none">
-                ±0.005<span className="text-3xl ml-1">mm</span>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-1">
-                {t("capability2Desc")}
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="flex justify-between text-sm">
-                  <span className="text-[var(--text-secondary)]">
-                    {t("capability2Item1Label")}
-                  </span>
-                  <span className="text-[var(--primary)] font-medium font-mono">
-                    {t("capability2Item1Value")}
-                  </span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[var(--text-secondary)]">
-                    {t("capability2Item2Label")}
-                  </span>
-                  <span className="text-[var(--primary)] font-medium font-mono">
-                    {t("capability2Item2Value")}
-                  </span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[var(--text-secondary)]">
-                    {t("capability2Item3Label")}
-                  </span>
-                  <span className="text-[var(--primary)] font-medium font-mono">
-                    {t("capability2Item3Value")}
-                  </span>
-                </div>
-              </div>
-              <Link
-                href="/blog/machining-tolerance-standards-guide"
-                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
-              >
-                <span className="border-b border-current pb-0.5">
-                  {t("capability2Link")}
                 </span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
