@@ -9,9 +9,265 @@ export type BlogPost = {
   content: { zh: string; en: string; de: string };
 };
 
-// 6 篇部落格實質內容（中文完整版；英 / 德為精簡摘要）
+// 部落格實質內容（中文完整版；英 / 德為精簡摘要）
 // 內容均為原創，依業界通用知識撰寫
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "stainless-steel-grades-selection-guide",
+    title: {
+      zh: "不鏽鋼選擇指南：SUS304 / SUS316 / SUS440C 何時用哪個？",
+      en: "Stainless Steel Selection Guide: SUS304 vs SUS316 vs SUS440C",
+      de: "Edelstahl-Auswahlleitfaden: SUS304 vs. SUS316 vs. SUS440C",
+    },
+    excerpt: {
+      zh: "不鏽鋼是 CNC 加工最常用的金屬，但 SUS304、SUS316、SUS440C 三種的耐蝕性、強度、加工性差很大，選錯材料會讓零件壽命大打折扣。本文逐項對比，幫您快速決定該用哪一級。",
+      en: "Stainless steel is the most common CNC material, but SUS304, SUS316, and SUS440C differ significantly in corrosion resistance, strength, and machinability. A side-by-side comparison.",
+      de: "Edelstahl ist der häufigste CNC-Werkstoff, doch SUS304, SUS316 und SUS440C unterscheiden sich erheblich in Korrosionsbeständigkeit, Festigkeit und Zerspanbarkeit. Ein direkter Vergleich.",
+    },
+    category: { zh: "知識庫", en: "Knowledge Base", de: "Wissen" },
+    date: "2026-05-05",
+    imageUrl:
+      "https://images.pexels.com/photos/12951626/pexels-photo-12951626.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>不鏽鋼是 CNC 加工最普遍的金屬之一。市場上九成以上的不鏽鋼零件，都落在 <strong>SUS304</strong>、<strong>SUS316</strong>、<strong>SUS440C</strong> 這三個等級之間。但這三種雖然都叫「不鏽鋼」，特性卻有明顯落差 — 用錯了會讓零件提早生鏽、強度不足，或是加工費用爆增。</p>
+
+<p>本文逐項對比這三個等級，協助設計者跟採購快速做出對的選擇。</p>
+
+<h2>化學成分對比</h2>
+<table>
+<tr><th>等級</th><th>鉻 (Cr)</th><th>鎳 (Ni)</th><th>鉬 (Mo)</th><th>碳 (C)</th></tr>
+<tr><td>SUS304</td><td>18-20%</td><td>8-10.5%</td><td>—</td><td>≤ 0.08%</td></tr>
+<tr><td>SUS316</td><td>16-18%</td><td>10-14%</td><td>2-3%</td><td>≤ 0.08%</td></tr>
+<tr><td>SUS440C</td><td>16-18%</td><td>—</td><td>≤ 0.75%</td><td>0.95-1.2%</td></tr>
+</table>
+<p>鉻決定耐蝕性、鎳決定韌性、鉬決定耐氯化物腐蝕能力、碳決定可否熱處理 — 從成分就能初步判斷材料適合什麼場合。</p>
+
+<h2>SUS304 — 最通用的不鏽鋼</h2>
+<p>市場主流，台灣加工廠庫存最大、價格最便宜。一般機械、食品、建築、家電零件大多用這級。</p>
+<ul>
+<li><strong>耐蝕性</strong>：耐一般大氣、清水、弱酸鹼，可長年無鏽</li>
+<li><strong>強度</strong>：屈服強度約 215 MPa，抗拉約 520 MPa</li>
+<li><strong>加工性</strong>：好切，可拉伸、可焊接、可拋光成鏡面</li>
+<li><strong>限制</strong>：怕海水、強氯化物、高溫氯離子環境</li>
+<li><strong>價格</strong>：約 NT$ 80-120 / kg（板料）</li>
+</ul>
+
+<h2>SUS316 — 海洋 / 化工等級</h2>
+<p>SUS304 的加強版，加了 2-3% 鉬之後，耐氯化物腐蝕能力大幅提升。</p>
+<ul>
+<li><strong>耐蝕性</strong>：耐海水、強氯化物、化工製程環境</li>
+<li><strong>強度</strong>：與 SUS304 接近</li>
+<li><strong>加工性</strong>：與 SUS304 接近，但刀具壽命略短</li>
+<li><strong>典型應用</strong>：化工管路、海洋零件、半導體製程腔體、醫療器械（SUS316L 是生醫等級）</li>
+<li><strong>價格</strong>：約 NT$ 130-180 / kg（板料），約 SUS304 的 1.5 倍</li>
+</ul>
+
+<h3>SUS316 vs SUS316L 怎麼選？</h3>
+<p>L 是 Low Carbon 的意思（含碳量 ≤ 0.03%）。低碳的 SUS316L 焊接後不會在熱影響區產生晶界腐蝕，是<strong>需要焊接 + 高耐蝕</strong>的應用首選 — 化工管路焊接件、生醫植入物、半導體腔體。如果不焊接，一般 SUS316 就夠用、便宜一點。</p>
+
+<h2>SUS440C — 高碳可熱處理</h2>
+<p>SUS440C 跟前兩級不同 — 它是<strong>馬氏體不鏽鋼</strong>，含碳量高（0.95-1.2%），可以淬火熱處理到 HRC 58 以上。</p>
+<ul>
+<li><strong>耐蝕性</strong>：弱於 SUS304，怕酸 / 鹽霧</li>
+<li><strong>強度</strong>：熱處理後極高，硬度 HRC 56-60</li>
+<li><strong>加工性</strong>：軟態時可加工，硬化後幾乎只能磨削</li>
+<li><strong>典型應用</strong>：軸承、刀具、模具導引件、需要硬度 + 部分耐蝕的場合</li>
+<li><strong>價格</strong>：約 NT$ 150-220 / kg（圓棒），加上熱處理成本</li>
+</ul>
+
+<h2>選擇 flowchart — 一張圖快速決定</h2>
+<ol>
+<li><strong>會接觸海水或強氯化物嗎？</strong> → Yes：SUS316（焊接件用 SUS316L）</li>
+<li><strong>需要硬度 HRC 50+？</strong> → Yes：SUS440C</li>
+<li><strong>以上都不是？</strong> → SUS304（最便宜、最通用、最多現貨）</li>
+</ol>
+
+<h2>常見錯誤</h2>
+
+<h3>錯誤 1：不鏽鋼就是不會生鏽</h3>
+<p>所有不鏽鋼在「對的」（錯的）環境下都會生鏽。SUS304 在高鹽分環境會出現點蝕；SUS440C 在淡水長期浸泡也會出鏽斑。沒有萬靈丹。</p>
+
+<h3>錯誤 2：用 SUS316 取代 SUS304 一定比較好</h3>
+<p>SUS316 比 SUS304 貴 50%，但在<strong>非氯化物環境</strong>下，耐蝕性沒有優勢。一般機械零件用 SUS304 就好，把預算花在更需要的地方。</p>
+
+<h3>錯誤 3：SUS440C 當作通用結構材料</h3>
+<p>SUS440C 不是「更強的不鏽鋼」— 它是「會生鏽的工具鋼」。設計成持續接觸液體的結構件絕對不適合。</p>
+
+<h2>偉勇承接的不鏽鋼項目</h2>
+<p>我們三種等級都有經驗：</p>
+<ul>
+<li><strong>SUS304</strong>：機構件、結構件、客製夾具最常用</li>
+<li><strong>SUS316 / 316L</strong>：半導體腔體、醫療器械、化工零件</li>
+<li><strong>SUS440C</strong>：軸承、刀具、模具零件（含熱處理整合）</li>
+</ul>
+<p>如果不確定該選哪一級，告訴我們零件的<strong>使用環境 + 受力大小 + 加工後表面要求</strong>，我們會建議最合適也最划算的選擇。</p>`,
+      en: `<p>Stainless steel is the most common CNC material, but SUS304, SUS316, and SUS440C differ significantly. The wrong choice means premature corrosion, insufficient strength, or unnecessary cost.</p>
+<h2>Quick comparison</h2>
+<ul>
+<li><strong>SUS304:</strong> General-purpose, best price/performance, ~NT$ 80-120/kg. Good for general machinery, fails in saltwater/strong chlorides.</li>
+<li><strong>SUS316:</strong> Adds 2-3% molybdenum, resists saltwater and chlorides. ~1.5× the cost of SUS304. Choice for marine, chemical, semiconductor, medical.</li>
+<li><strong>SUS440C:</strong> Martensitic, high-carbon, heat-treatable to HRC 58+. Used for bearings, cutting tools, mold guides. Weaker corrosion resistance — not for prolonged liquid contact.</li>
+</ul>
+<h2>Decision flow</h2>
+<ol>
+<li>Saltwater / chlorides? → SUS316 (use SUS316L for welded parts)</li>
+<li>Need hardness HRC 50+? → SUS440C</li>
+<li>Otherwise → SUS304</li>
+</ol>
+<h2>Common mistakes</h2>
+<p><strong>"Stainless steel never rusts"</strong> — wrong, every grade rusts in the wrong environment. <strong>"SUS316 is always better than SUS304"</strong> — only when chlorides matter; otherwise it's just 50% more expensive. <strong>"SUS440C is the strongest stainless"</strong> — it's a hard-but-rust-prone tool steel, not a structural material.</p>`,
+      de: `<p>Edelstahl ist der häufigste CNC-Werkstoff, doch SUS304, SUS316 und SUS440C unterscheiden sich erheblich. Die falsche Wahl bedeutet vorzeitige Korrosion, mangelnde Festigkeit oder unnötige Kosten.</p>
+<h2>Kurzvergleich</h2>
+<ul>
+<li><strong>SUS304:</strong> Universeller Allrounder, bestes Preis-Leistungs-Verhältnis. Für allgemeinen Maschinenbau gut, versagt in Salzwasser/starken Chloriden.</li>
+<li><strong>SUS316:</strong> Mit 2-3 % Molybdän — beständig gegen Salzwasser und Chloride. Etwa 1,5× der Kosten von SUS304. Erste Wahl für Meer-, Chemie-, Halbleiter- und Medizintechnik.</li>
+<li><strong>SUS440C:</strong> Martensitisch, hoher Kohlenstoffgehalt, härtbar bis HRC 58+. Für Lager, Schneidwerkzeuge, Formgeber. Geringere Korrosionsbeständigkeit — nicht für längeren Flüssigkeitskontakt.</li>
+</ul>
+<h2>Entscheidungsbaum</h2>
+<ol>
+<li>Salzwasser / Chloride? → SUS316 (für Schweißteile SUS316L)</li>
+<li>Härte HRC 50+ erforderlich? → SUS440C</li>
+<li>Sonst → SUS304</li>
+</ol>
+<h2>Häufige Irrtümer</h2>
+<p><strong>„Edelstahl rostet nie"</strong> — falsch, jede Sorte rostet in der falschen Umgebung. <strong>„SUS316 ist immer besser als SUS304"</strong> — nur bei Chloriden; sonst nur 50 % teurer. <strong>„SUS440C ist der festeste Edelstahl"</strong> — es ist ein harter, aber rostanfälliger Werkzeugstahl, kein Strukturwerkstoff.</p>`,
+    },
+  },
+  {
+    slug: "cnc-machining-cost-calculation-guide",
+    title: {
+      zh: "CNC 加工費怎麼算？採購新手必看的 5 大成本項目",
+      en: "How CNC Machining Costs Are Calculated: 5 Key Cost Drivers",
+      de: "Wie sich CNC-Bearbeitungskosten zusammensetzen: 5 entscheidende Faktoren",
+    },
+    excerpt: {
+      zh: "第一次找 CNC 加工，看到報價單常霧煞煞 — 為什麼這個零件 200 元、那個 2000 元？本文拆解 CNC 報價的 5 大成本構成，並提供降低成本的實用設計建議。",
+      en: "First time working with a CNC shop and confused why one part costs $5 and another $50? We break down the 5 cost components in every CNC quote and how to design parts that quote cheaper.",
+      de: "Zum ersten Mal mit einer CNC-Werkstatt arbeiten und unsicher, warum ein Teil 5 € und ein anderes 50 € kostet? Wir zerlegen die 5 Kostenkomponenten jedes CNC-Angebots — und wie sich Teile günstiger konstruieren lassen.",
+    },
+    category: { zh: "採購指南", en: "Procurement Guide", de: "Einkaufsleitfaden" },
+    date: "2026-04-28",
+    imageUrl:
+      "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>第一次找 CNC 加工，看到報價單常常霧煞煞 — 為什麼這個零件 200 元、那個 2000 元？同樣是「鋁合金小零件」，價差怎麼可以到 10 倍？</p>
+
+<p>答案是：CNC 加工費不是看「材料 × 重量」算的，而是 <strong>5 大成本因子</strong>共同決定。本文拆解這 5 項，讓您看懂報價、也學會怎麼設計「便宜的零件」。</p>
+
+<h2>成本因子 1：材料費</h2>
+<p>佔總成本約 <strong>20-40%</strong>，看材料種類差距很大：</p>
+<ul>
+<li>普通鋁合金 A6061：約 NT$ 80-120 / kg</li>
+<li>不鏽鋼 SUS304：約 NT$ 80-120 / kg</li>
+<li>不鏽鋼 SUS316：約 NT$ 130-180 / kg</li>
+<li>鈦合金 Ti-6Al-4V：約 NT$ 1,500-2,500 / kg</li>
+</ul>
+<p>關鍵：CNC 加工是<strong>從一塊大料切下來</strong>，多餘的部分變成切屑（chip）丟掉。所以你付的不是成品重量，而是<strong>毛坯重量</strong>。</p>
+<p><strong>省錢做法</strong>：設計零件時讓外形接近標準棒材 / 板材尺寸，減少「切掉的部分」。</p>
+
+<h2>成本因子 2：機台時間</h2>
+<p>佔總成本約 <strong>30-50%</strong>，是<strong>最大變數</strong>。</p>
+<p>機台時間 = 加工時間 + 換刀時間 + 量測時間。一般 CNC 機台運轉成本約 <strong>NT$ 800-1,500 / 小時</strong>（含設備折舊 + 電費 + 人工）。</p>
+<p>哪些設計會讓機台時間爆增？</p>
+<ul>
+<li><strong>過深的內穴</strong>：刀具懸長、要慢慢切才不會斷</li>
+<li><strong>很多小孔（< 1 mm）</strong>：每孔換鑽頭、每孔慢進給</li>
+<li><strong>複雜曲面</strong>：需要 5 軸機 + 長路徑</li>
+<li><strong>過嚴公差（< ±0.005 mm）</strong>：精車精銑 + 多次量測</li>
+<li><strong>薄壁（厚度 < 1 mm）</strong>：易振動、需慢速切削</li>
+</ul>
+<p><strong>省錢做法</strong>：避免不必要的嚴公差、減少加工面數、避開薄壁設計。</p>
+
+<h2>成本因子 3：程式 / 設定費</h2>
+<p>佔總成本約 <strong>5-20%</strong>，這是<strong>固定成本</strong>，跟生產數量無關。</p>
+<p>包含：</p>
+<ul>
+<li>CAM 編程（讀圖、規劃刀路、模擬碰撞）</li>
+<li>機台對刀、夾具設定</li>
+<li>首件試切、量測校正</li>
+</ul>
+<p>一支單純零件約 30 分鐘到 2 小時，複雜零件可能要 4-8 小時。<strong>所以小批量訂單的單件單價特別高</strong> — 因為固定成本被攤到少數件上。</p>
+<p><strong>省錢做法</strong>：</p>
+<ul>
+<li>下單盡量批量化（例：要 10 件就一次下，別分 5 次各 2 件）</li>
+<li>同款零件不同尺寸 → 一張訂單下，省設定費</li>
+<li>標準化設計：複用既有零件的程式</li>
+</ul>
+
+<h2>成本因子 4：刀具費</h2>
+<p>佔總成本約 <strong>5-15%</strong>。</p>
+<p>普通鋁合金刀具消耗低，幾乎不影響報價。但這幾種會讓刀具費爆增：</p>
+<ul>
+<li><strong>鈦合金 / Inconel</strong>：刀具壽命可能只剩鋁合金的 1/10</li>
+<li><strong>硬度 HRC 50+ 材料</strong>：要用陶瓷或 CBN 刀片，每片 NT$ 1,000-3,000</li>
+<li><strong>特殊刀型（小直徑 + 長刃）</strong>：脆弱、易斷</li>
+</ul>
+<p><strong>省錢做法</strong>：除非真的需要，避免使用鈦合金、超硬材料；用標準刀具能加工到的特徵。</p>
+
+<h2>成本因子 5：表面處理</h2>
+<p>佔總成本約 <strong>10-30%</strong>，可選但常被低估。</p>
+<p>常見處理及概略加價：</p>
+<ul>
+<li>陽極處理（透明 / 黑色）：+5-10%</li>
+<li>硬質陽極：+15-25%</li>
+<li>電解拋光（不鏽鋼）：+10-15%</li>
+<li>鍍鎳：+10-20%</li>
+<li>PVD 塗層（如 TiN）：+30-50%</li>
+<li>達克鋅（Dacromet）：+8-15%</li>
+</ul>
+<p><strong>省錢做法</strong>：</p>
+<ul>
+<li>內部使用、不接觸液體 → 直接用素材，不做處理</li>
+<li>美觀需求 → 噴砂（最便宜）就有效果</li>
+<li>耐蝕需求 → 選對材料就好（如 SUS316），不一定要表面處理</li>
+</ul>
+
+<h2>實用：報價單該看什麼</h2>
+<p>正規的 CNC 報價單應該至少列出：</p>
+<ul>
+<li>單件單價</li>
+<li>數量</li>
+<li>材料規格 / 等級</li>
+<li>表面處理（如有）</li>
+<li>交期</li>
+<li>付款條件</li>
+<li>是否含稅</li>
+</ul>
+<p>如果報價單只給一個總價、沒拆細項 — 建議要求拆細，至少看出「材料」「加工」「表面處理」三大項，比較不會被當凱子。</p>
+
+<h2>給採購的最終建議</h2>
+<p>同一張圖找 3 家報價，差距 30% 以內都算正常 — 加工費受工廠機台水準、訂單滿載率、客戶結構影響。</p>
+<p>但如果有一家報價遠低於市場行情（< 60%）— 要小心：可能是用次級材料、跳過量測流程、或單純不想接這單故意亂報。<strong>太便宜的不一定划算</strong>，重做一批的成本比省下的還多。</p>
+
+<p>偉勇報價的原則：透明、合理、長期合作 — 我們不打殺價戰，但保證「給的單價背後的品質一定到位」。</p>`,
+      en: `<p>First time working with a CNC shop and confused why one part costs $5 and another $50? CNC pricing isn't simple "material × weight" — it's driven by 5 key cost components.</p>
+<h2>The 5 cost drivers</h2>
+<ol>
+<li><strong>Material (20-40%):</strong> You pay for the billet, not the finished part. Designing parts close to standard stock sizes saves money.</li>
+<li><strong>Machine time (30-50%):</strong> ~$25-50/hr machine cost. Tight tolerances, deep pockets, thin walls, complex surfaces all multiply time.</li>
+<li><strong>Programming & setup (5-20%):</strong> Fixed cost. Small batches pay disproportionately. Combine orders to amortize.</li>
+<li><strong>Tooling (5-15%):</strong> Negligible for aluminum, can dominate for titanium/Inconel.</li>
+<li><strong>Surface treatment (10-30%):</strong> Often overlooked. Anodizing +5-10%, hard anodizing +15-25%, PVD coating +30-50%.</li>
+</ol>
+<h2>How to design cheaper parts</h2>
+<p>Avoid unnecessary tight tolerances, minimize machined faces, avoid thin walls under 1mm, batch orders, standardize designs across SKUs.</p>
+<h2>Reading a quote</h2>
+<p>A proper quote breaks out material, machining, and surface treatment separately. Lump-sum quotes hide markup. Compare 3 quotes — variance under 30% is normal; quotes 60%+ below market often indicate cut corners.</p>`,
+      de: `<p>Zum ersten Mal mit einer CNC-Werkstatt arbeiten und unsicher, warum ein Teil 5 € und ein anderes 50 € kostet? CNC-Preise folgen nicht der einfachen Formel „Material × Gewicht" — sie werden von 5 Faktoren bestimmt.</p>
+<h2>Die 5 Kostentreiber</h2>
+<ol>
+<li><strong>Werkstoff (20-40 %):</strong> Sie bezahlen den Rohling, nicht das Fertigteil. Konstruktionen nahe an Standardabmessungen sparen Geld.</li>
+<li><strong>Maschinenzeit (30-50 %):</strong> Etwa 25-50 €/h Maschinenkosten. Enge Toleranzen, tiefe Kavitäten, dünne Wände und komplexe Flächen vervielfachen die Zeit.</li>
+<li><strong>Programmierung & Rüsten (5-20 %):</strong> Fixkosten. Kleinmengen tragen unverhältnismäßig viel. Aufträge bündeln amortisiert.</li>
+<li><strong>Werkzeuge (5-15 %):</strong> Bei Aluminium kaum spürbar, bei Titan/Inconel dominant.</li>
+<li><strong>Oberflächenbehandlung (10-30 %):</strong> Oft unterschätzt. Eloxieren +5-10 %, Harteloxieren +15-25 %, PVD-Beschichtung +30-50 %.</li>
+</ol>
+<h2>Günstiger konstruieren</h2>
+<p>Unnötig enge Toleranzen vermeiden, Bearbeitungsflächen minimieren, dünne Wände unter 1 mm meiden, Aufträge bündeln, Konstruktionen über SKUs hinweg standardisieren.</p>
+<h2>Angebot richtig lesen</h2>
+<p>Ein gutes Angebot weist Werkstoff, Bearbeitung und Oberfläche getrennt aus. Pauschalpreise verschleiern Aufschläge. 3 Angebote vergleichen — Streuung unter 30 % ist normal; mehr als 60 % unter Markt deutet meist auf Kompromisse hin.</p>`,
+    },
+  },
   {
     slug: "cnc-machining-aerospace-applications",
     title: {
