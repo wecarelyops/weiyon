@@ -11,7 +11,6 @@ import {
   Layers,
   Clock,
   Beaker,
-  Crosshair,
   Timer,
 } from "lucide-react";
 import { industries, type IndustryLocale } from "@/data/industries";

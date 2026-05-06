@@ -28,9 +28,9 @@ export async function generateMetadata({
   const proc = getProcessBySlug(slug);
   if (!proc) return {};
   const lang = (locale === "zh" ? "zh" : locale === "de" ? "de" : "en") as Locale;
-  const suffix = lang === "zh" ? "偉勇工業社" : "Weiyon Industry";
+  // 不手動加品牌後綴 — layout 的 title template 會自動加
   return {
-    title: `${proc.title[lang]} | ${suffix}`,
+    title: proc.title[lang],
     description: proc.description[lang].slice(0, 160),
   };
 }

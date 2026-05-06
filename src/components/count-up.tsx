@@ -25,14 +25,11 @@ export default function CountUp({ end, suffix = "", duration = 1800 }: Props) {
     const element = ref.current;
     if (!element) return;
 
-    // 尊重使用者「減少動畫」偏好設定
+    // 尊重使用者「減少動畫」偏好設定 — 初始 count 已是 end，直接 return 不啟動動畫
     const prefersReducedMotion =
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      setCount(end);
-      return;
-    }
+    if (prefersReducedMotion) return;
 
     const observer = new IntersectionObserver(
       (entries) => {

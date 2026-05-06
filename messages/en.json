@@ -3,7 +3,7 @@
     "title": "Taichung CNC Machining | Weiyon Industry — 40+ Year Precision Parts (Semiconductor / Aerospace / Medical)",
     "description": "Taichung-based CNC precision machining shop with 40+ years experience, serving clients across Taiwan (Hsinchu, Taoyuan, Taichung, Tainan, Kaohsiung) and overseas. We manufacture semiconductor equipment parts, aerospace components, robotics mechanisms, medical devices, and pneumatic cylinder parts. Difficult-material specialist (stainless steel, titanium, molybdenum, cemented carbide). Short lead times from prototype to production.",
     "keywords": "Taichung CNC machining, Taiwan CNC manufacturer, Hsinchu semiconductor parts, precision metal parts Taiwan, semiconductor parts Taiwan, aerospace machining Asia, titanium machining, stainless steel precision machining, difficult material machining, custom CNC parts, Taoyuan CNC supplier, Kaohsiung CNC machining, Tainan precision parts, Taiwan metal manufacturer, CNC milling Taichung, CNC turning Taiwan",
-    "ogTitle": "Taichung CNC Precision Machining | Weiyon Industry",
+    "ogTitle": "Taichung CNC Precision Machining",
     "ogDescription": "40+ years of precision metal parts manufacturing — semiconductor / aerospace / medical / automation. Difficult-material specialist."
   },
   "Nav": {
@@ -256,7 +256,7 @@
     "formError": "Submission failed. Please try again later or call +886-4-2335-6451."
   },
   "Products": {
-    "metaTitle": "CNC Services — Milling / Turning / EDM / Sheet Metal / Surface Treatment | Weiyon Industry",
+    "metaTitle": "CNC Services — Milling / Turning / EDM / Sheet Metal / Surface Treatment",
     "metaDescription": "Complete CNC precision machining services from Weiyon Industry — CNC milling, CNC turning, precision EDM, sheet metal fabrication, surface treatment. Serving semiconductor, aerospace, medical, automotive, and automation industries. From single prototypes to production runs. Taichung, Taiwan, 40+ years.",
     "heroTitle": "Services",
     "heroTagline": "Precision Metal Parts Specialist",
@@ -326,12 +326,12 @@
     "ctaTitle": "Need a custom machining solution?"
   },
   "Gallery": {
-    "metaTitle": "Works — Precision Machining Portfolio | Weiyon Industry",
+    "metaTitle": "Works — Precision Machining Portfolio",
     "metaDescription": "Selected machining works from Weiyon Industry: semiconductor equipment parts, aerospace components, automation mechanisms, pneumatic cylinder parts, and automotive components — real customer shipments.",
     "heroTitle": "Works"
   },
   "Materials": {
-    "metaTitle": "Materials Capability — CNC Machinable Materials List | Weiyon Industry",
+    "metaTitle": "Materials Capability — CNC Machinable Materials List",
     "metaDescription": "Complete list of materials Weiyon Industry can machine: stainless (SUS304 / 316 / 316L / 321 / 440C / 17-4PH), aluminum (A6061 / A7075 / A2024), titanium, copper alloys, structural / tool / mold steel, difficult alloys (Inconel / Monel / Duplex / Super Duplex), engineering plastics (POM / PEEK / PTFE). 40 years of difficult-material expertise.",
     "heroLabel": "Materials",
     "heroTitle": "Materials We Machine",
@@ -344,7 +344,7 @@
     "ctaQuoteButton": "Request a Quote"
   },
   "Workflow": {
-    "metaTitle": "Workflow — From Inquiry to Shipment in 5 Steps | Weiyon Industry",
+    "metaTitle": "Workflow — From Inquiry to Shipment in 5 Steps",
     "metaDescription": "Weiyon Industry's CNC precision machining workflow: inquiry, quote, prototype, production, delivery — five clear stages. Each stage spells out what you do and what we do, with realistic timelines.",
     "workflowLabel": "Workflow",
     "heroTitle": "From Inquiry to Shipment\nFive Clear Stages",
@@ -414,7 +414,7 @@
     "ctaQuoteButton": "Request a Quote"
   },
   "Industries": {
-    "metaTitle": "Industries Served — Semiconductor, Aerospace, Medical, Automotive, Oil & Gas, Tuning | Weiyon Industry",
+    "metaTitle": "Industries Served — Semiconductor, Aerospace, Medical, Automotive, Oil & Gas, Tuning",
     "metaDescription": "Weiyon Industry's 40 years of service across 8 industries — semiconductor equipment, aerospace, medical devices, automotive, automation, tuning, oil & gas, precision machinery. Supply chains in GCC, Europe, and the Americas. Industry-specific materials, certifications, and machining experience.",
     "heroLabel": "Industries",
     "heroTitle": "Eight Industries We Serve",
@@ -440,7 +440,7 @@
     "ctaQuoteButton": "Request a Quote"
   },
   "Faq": {
-    "metaTitle": "FAQ — CNC Machining Quotes, Lead Time, Materials | Weiyon Industry",
+    "metaTitle": "FAQ — CNC Machining Quotes, Lead Time, Materials",
     "metaDescription": "Frequently asked questions about Weiyon Industry's CNC precision machining service: quoting process, response time, MOQ, lead times, payment terms, supported materials (stainless, aluminum, copper, titanium, difficult alloys), processes, and shipping.",
     "heroTitle": "Frequently Asked Questions",
     "heroSubtitle": "Common questions about quoting, machining, lead times, and more.\nIf your question isn't covered, please contact us — we'll respond as quickly as possible.",
@@ -450,7 +450,7 @@
     "ctaButtonPhone": "Call +886-4-2335-6451"
   },
   "Blog": {
-    "metaTitle": "Blog | Weiyon Industry",
+    "metaTitle": "Blog",
     "metaDescription": "Read the latest news, industry trends, technical articles, and company updates from Weiyon Industry.",
     "heroTitle": "Blog",
     "heroSubtitle": "Latest news, industry trends, technical articles, and company updates",
@@ -473,7 +473,7 @@
     "readMore": "Read more"
   },
   "Works": {
-    "detailTitle": "Work #{id} | Weiyon Industry",
+    "detailTitle": "Work #{id}",
     "detailDescription": "Weiyon Industry CNC precision machining work #{id}",
     "indexLabel": "INDEX",
     "prevAriaLabel": "Previous ({id})",

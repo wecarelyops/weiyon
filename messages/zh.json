@@ -3,7 +3,7 @@
     "title": "台中 CNC 精密加工廠 | 偉勇工業社 — 40 年精密零件製造（半導體 / 航太 / 醫療）",
     "description": "台中烏日 CNC 精密加工廠，服務全台（含新竹、桃園、高雄、台南）與海外客戶，深耕 40 年金屬零件製造。專業承接半導體設備零件、航太零件、機器人自動化機構、醫療器材零件、氣壓缸零件加工。難加工材料（不鏽鋼、鈦合金、鉬、硬質合金）專家，從單件試作到量產皆短交期、高品質。",
     "keywords": "台中 CNC 加工廠, CNC 精密加工 台中, 精密零件加工, 半導體零件加工 新竹, 半導體零件加工 台中, 航太零件加工, 鈦合金加工, 不鏽鋼精密加工, 難切削加工, 金屬零件製造, 烏日 CNC, 桃園 CNC 加工廠, 高雄 CNC 加工, 台南精密加工, 新竹精密零件, 客製零件加工, Taiwan precision machining, Taichung CNC manufacturer",
-    "ogTitle": "台中 CNC 精密加工 | 偉勇工業社",
+    "ogTitle": "台中 CNC 精密加工",
     "ogDescription": "40 年精密金屬零件製造 — 半導體 / 航太 / 醫療 / 自動化 / 難加工材料專家"
   },
   "Nav": {
@@ -326,12 +326,12 @@
     "ctaTitle": "需要客製化加工解決方案？"
   },
   "Gallery": {
-    "metaTitle": "實績展示 — 精密加工作品集 | 偉勇工業社",
+    "metaTitle": "實績展示 — 精密加工作品集",
     "metaDescription": "偉勇工業社多年精密加工實績展示。涵蓋半導體設備零件、航太零件、自動化機構件、氣壓缸零件、汽車配件等各類型實際出貨案例。",
     "heroTitle": "實績展示"
   },
   "Materials": {
-    "metaTitle": "材料能力總表 — CNC 精密加工材料清單 | 偉勇工業社",
+    "metaTitle": "材料能力總表 — CNC 精密加工材料清單",
     "metaDescription": "偉勇工業社可加工材料完整清單：不鏽鋼系列（SUS304 / 316 / 316L / 321 / 440C / 17-4PH）、鋁合金（A6061 / A7075 / A2024）、鈦合金、銅合金、結構鋼 / 工具鋼 / 模具鋼、難切削合金（Inconel / Monel / Duplex / Super Duplex）、工程塑膠（POM / PEEK / PTFE）。40 年加工經驗，難切削材料專家。",
     "heroLabel": "材料能力",
     "heroTitle": "我們能加工的材料",
@@ -344,7 +344,7 @@
     "ctaQuoteButton": "立即詢價"
   },
   "Workflow": {
-    "metaTitle": "合作流程 — 從詢價到出貨 5 步驟 | 偉勇工業社",
+    "metaTitle": "合作流程 — 從詢價到出貨 5 步驟",
     "metaDescription": "偉勇工業社 CNC 精密加工合作流程：詢價、報價、打樣、量產、出貨 5 個階段清楚分明。每個階段告訴您「您要做什麼」與「我們會做什麼」，讓專案推進有節奏可循。",
     "workflowLabel": "合作流程",
     "heroTitle": "從詢價到出貨\n5 個階段，清楚分明",
@@ -414,7 +414,7 @@
     "ctaQuoteButton": "立即詢價"
   },
   "Industries": {
-    "metaTitle": "服務產業 — 半導體、航太、醫療、汽車、油氣、改裝 | 偉勇工業社",
+    "metaTitle": "服務產業 — 半導體、航太、醫療、汽車、油氣、改裝",
     "metaDescription": "偉勇工業社 40 年服務 8 大產業 — 半導體設備、航太、醫療器材、汽車零組件、自動化機械、改裝車、油氣產業、精密機械。對應 GCC、歐美客戶供應鏈。各產業專屬材料能力、認證對應、加工經驗。",
     "heroLabel": "服務產業",
     "heroTitle": "我們服務的 8 大產業",
@@ -440,7 +440,7 @@
     "ctaQuoteButton": "立即詢價"
   },
   "Faq": {
-    "metaTitle": "常見問題 — CNC 加工詢價、交期、材質 | 偉勇工業社",
+    "metaTitle": "常見問題 — CNC 加工詢價、交期、材質",
     "metaDescription": "偉勇工業社 CNC 精密加工常見問題彙整：詢價流程、報價時間、最小起訂量（MOQ）、交期、付款條件、可加工材質（不鏽鋼、鋁合金、銅、鈦、難切削合金）、加工製程與物流配送等說明。",
     "heroTitle": "常見問題",
     "heroSubtitle": "關於詢價、加工、交期等常見疑問，請參考以下說明。\n若仍有不清楚之處，歡迎來電或來信，我們會盡快回覆。",
@@ -450,7 +450,7 @@
     "ctaButtonPhone": "直撥 04-23356451"
   },
   "Blog": {
-    "metaTitle": "部落格 | 偉勇工業社",
+    "metaTitle": "部落格",
     "metaDescription": "閱讀偉勇工業社的最新消息、產業趨勢分享、技術文章與公司動態",
     "heroTitle": "部落格",
     "heroSubtitle": "最新消息、產業趨勢、技術文章與公司動態",
@@ -473,7 +473,7 @@
     "readMore": "閱讀更多"
   },
   "Works": {
-    "detailTitle": "實績 #{id} | 偉勇工業社",
+    "detailTitle": "實績 #{id}",
     "detailDescription": "偉勇工業社 CNC 精密加工實績 #{id}",
     "indexLabel": "INDEX",
     "prevAriaLabel": "上一張（{id}）",

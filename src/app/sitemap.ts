@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { processes } from "@/data/processes";
 import { industries } from "@/data/industries";
+import { blogPosts } from "@/data/blog";
 
 const BASE = "https://www.weiyon.com";
 const TOTAL_WORKS = 32;
@@ -97,10 +98,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly" as const,
   }));
 
+  // Blog 文章子頁
+  const blogPostPages: Page[] = blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+
   return [
     ...localizedEntries(mainPages),
     ...localizedEntries(processPages),
     ...localizedEntries(industryPages),
     ...localizedEntries(worksPages),
+    ...localizedEntries(blogPostPages),
   ];
 }

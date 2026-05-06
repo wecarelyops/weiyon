@@ -32,9 +32,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "半導體", en: "Semiconductor", de: "Halbleiter" },
     metaTitle: {
-      zh: "半導體設備零件加工 | 真空腔體 / 晶圓搬運機構 — 偉勇工業社",
-      en: "Semiconductor Equipment Parts Machining | Vacuum Chambers, Wafer Handling — Weiyon Industry",
-      de: "Halbleiter-Präzisionsteile | Vakuumkammern, Wafer-Handling — Weiyon Industry",
+      zh: "半導體設備零件加工 | 真空腔體 / 晶圓搬運機構",
+      en: "Semiconductor Equipment Parts Machining | Vacuum Chambers, Wafer Handling",
+      de: "Halbleiter-Präzisionsteile | Vakuumkammern, Wafer-Handling",
     },
     metaDescription: {
       zh: "偉勇工業社 40 年加工經驗，專業承接半導體製造設備關鍵零件 — 真空腔體、晶圓搬運機構、機台結構件、氣體閥相關零件。提供 SUS304/316、A6061 加工、Class 100 潔淨包裝、表面處理整合。台中烏日精密加工廠。",
@@ -166,9 +166,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "航太", en: "Aerospace", de: "Luft- & Raumfahrt" },
     metaTitle: {
-      zh: "航太零件加工 | 鈦合金 / 高強度鋁 / 5 軸 CNC — 偉勇工業社",
-      en: "Aerospace Parts Machining | Titanium, High-Strength Aluminum, 5-Axis CNC — Weiyon Industry",
-      de: "Luft- & Raumfahrt-Präzisionsteile | Titan, hochfestes Aluminium, 5-Achs-CNC — Weiyon Industry",
+      zh: "航太零件加工 | 鈦合金 / 高強度鋁 / 5 軸 CNC",
+      en: "Aerospace Parts Machining | Titanium, High-Strength Aluminum, 5-Axis CNC",
+      de: "Luft- & Raumfahrt-Präzisionsteile | Titan, hochfestes Aluminium, 5-Achs-CNC",
     },
     metaDescription: {
       zh: "偉勇工業社承接航太精密零件加工 — 衛星零件、無人機機構件、結構骨架接頭、引擎周邊零件。鈦合金（Ti-6Al-4V）、A7075、A2024 等難切削材料加工經驗。提供材質證明、量測報告、追溯紀錄。台中 40 年精密加工廠。",
@@ -306,9 +306,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "醫療", en: "Medical", de: "Medizintechnik" },
     metaTitle: {
-      zh: "醫療器材零件加工 | 生醫不鏽鋼 SUS316L / 純鈦 — 偉勇工業社",
-      en: "Medical Device Parts Machining | SUS316L, Pure Titanium — Weiyon Industry",
-      de: "Medizintechnik-Präzisionsteile | SUS316L, Reintitan — Weiyon Industry",
+      zh: "醫療器材零件加工 | 生醫不鏽鋼 SUS316L / 純鈦",
+      en: "Medical Device Parts Machining | SUS316L, Pure Titanium",
+      de: "Medizintechnik-Präzisionsteile | SUS316L, Reintitan",
     },
     metaDescription: {
       zh: "偉勇工業社承接醫療器材精密零件加工 — 手術器械、檢測設備機構件、影像系統零件。提供 SUS316L 生醫不鏽鋼、純鈦 Grade 1-4、Ti-6Al-4V ELI、PEEK 等生物相容材料加工經驗。可配合 ISO 13485 供應鏈品管。台中 40 年精密加工廠。",
@@ -443,9 +443,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "汽車", en: "Automotive", de: "Automobil" },
     metaTitle: {
-      zh: "汽車零件加工 | 引擎 / 傳動 / 底盤精密零件 — 偉勇工業社",
-      en: "Automotive Parts Machining | Engine, Drivetrain, Chassis — Weiyon Industry",
-      de: "Automobilteile-Bearbeitung | Motor, Antriebsstrang, Fahrwerk — Weiyon Industry",
+      zh: "汽車零件加工 | 引擎 / 傳動 / 底盤精密零件",
+      en: "Automotive Parts Machining | Engine, Drivetrain, Chassis",
+      de: "Automobilteile-Bearbeitung | Motor, Antriebsstrang, Fahrwerk",
     },
     metaDescription: {
       zh: "偉勇工業社承接汽車零組件精密加工 — 引擎周邊、傳動系統零件、底盤結構件、車載感測器外殼。SCM440、S45C、A6061、SUS304 等汽車常用材料加工經驗，可配合 IATF 16949 客戶 PPAP 文件、批次追溯需求。台中 40 年精密加工廠。",
@@ -580,9 +580,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "自動化", en: "Automation", de: "Automatisierung" },
     metaTitle: {
-      zh: "自動化零件加工 | 機器人 / 機構件 / 夾爪 — 偉勇工業社",
-      en: "Automation Parts Machining | Robotics, Mechanisms, Grippers — Weiyon Industry",
-      de: "Automatisierungs-Präzisionsteile | Robotik, Mechaniken, Greifer — Weiyon Industry",
+      zh: "自動化零件加工 | 機器人 / 機構件 / 夾爪",
+      en: "Automation Parts Machining | Robotics, Mechanisms, Grippers",
+      de: "Automatisierungs-Präzisionsteile | Robotik, Mechaniken, Greifer",
     },
     metaDescription: {
       zh: "偉勇工業社承接自動化機械精密零件加工 — 機器人關節座、線軌座、夾爪、定位塊、滑軌座、感測器固定座等。A6061、SUS304、SUS440C 等自動化常用材料加工，重複精度與長期穩定性兼顧。台中 40 年精密加工廠。",
@@ -717,9 +717,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "改裝車", en: "Tuning", de: "Tuning" },
     metaTitle: {
-      zh: "改裝車零件加工 | 排氣 / 進氣 / 底盤強化件 — 偉勇工業社",
-      en: "Aftermarket & Tuning Parts | Exhaust, Intake, Chassis — Weiyon Industry",
-      de: "Tuning-Teile-Bearbeitung | Auspuff, Ansaugung, Fahrwerk — Weiyon Industry",
+      zh: "改裝車零件加工 | 排氣 / 進氣 / 底盤強化件",
+      en: "Aftermarket & Tuning Parts | Exhaust, Intake, Chassis",
+      de: "Tuning-Teile-Bearbeitung | Auspuff, Ansaugung, Fahrwerk",
     },
     metaDescription: {
       zh: "偉勇工業社承接改裝車零件精密加工 — 排氣管路、進氣管段、防傾桿座、引擎室件、底盤強化件、客製化緊固件。SUS304、A6061、SCM440 等改裝常用材料，從 1 件起接、設計修正彈性配合、表面處理整合。台中 40 年精密加工廠，改裝品牌與車隊長期合作。",
@@ -854,9 +854,9 @@ export const industries: Industry[] = [
     },
     shortTitle: { zh: "油氣", en: "Oil & Gas", de: "Öl & Gas" },
     metaTitle: {
-      zh: "油氣零件加工 | 閥門內件 / 法蘭 / 泵浦零件 — 偉勇工業社",
-      en: "Oil & Gas Precision Parts | Valve Internals, Flanges, Pump Parts — Weiyon Industry",
-      de: "Öl- & Gas-Präzisionsteile | Ventilteile, Flansche, Pumpenteile — Weiyon Industry",
+      zh: "油氣零件加工 | 閥門內件 / 法蘭 / 泵浦零件",
+      en: "Oil & Gas Precision Parts | Valve Internals, Flanges, Pump Parts",
+      de: "Öl- & Gas-Präzisionsteile | Ventilteile, Flansche, Pumpenteile",
     },
     metaDescription: {
       zh: "偉勇工業社承接油氣產業精密金屬零件加工 — 閥門內件（seat / disc / stem / bonnet）、管接頭、法蘭、泵浦零件、Christmas tree 配件、儀錶接頭。對應 SUS316L、Duplex、Super Duplex、Inconel、Monel 等耐蝕難切削合金。可配合 API 6A、API 6D、NORSOK M-650 客戶供應鏈品管。服務 GCC（UAE / 沙烏地 / 卡達 / 科威特 / 阿曼）油氣 MRO 與 EPC 採購鏈。台中 40 年精密加工廠。",

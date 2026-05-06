@@ -35,12 +35,14 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
   const isEn = locale === "en";
+  // 中文用「偉勇工業社」、en/de 用「Weiyon Industry」（德文不翻品牌名）
+  const brandSuffix = locale === "zh" ? "偉勇工業社" : "Weiyon Industry";
 
   return {
     metadataBase: new URL(SITE_URL),
     title: {
       default: t("title"),
-      template: `%s | ${isEn ? "Weiyon Industry" : "偉勇工業社"}`,
+      template: `%s | ${brandSuffix}`,
     },
     description: t("description"),
     keywords: t("keywords"),
