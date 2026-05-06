@@ -13,6 +13,606 @@ export type BlogPost = {
 // 內容均為原創，依業界通用知識撰寫
 export const blogPosts: BlogPost[] = [
   {
+    slug: "titanium-alloy-grades-comparison",
+    title: {
+      zh: "鈦合金等級完整指南：Grade 1-4 / Ti-6Al-4V / ELI 怎麼選？",
+      en: "Titanium Alloy Grades Complete Guide: Grade 1-4 vs Ti-6Al-4V vs ELI",
+      de: "Vollständiger Leitfaden zu Titanlegierungen: Grade 1-4 vs. Ti-6Al-4V vs. ELI",
+    },
+    excerpt: {
+      zh: "鈦合金不只「Grade 5」一種 — 從純鈦 Grade 1-4 到航太級 Ti-6Al-4V、生醫 ELI 等級，性能差距很大。本文逐項對比常用鈦合金等級的耐蝕性、強度、加工性、應用場景。",
+      en: "Titanium isn't just 'Grade 5' — from pure titanium Grade 1-4 to aerospace Ti-6Al-4V to medical-grade ELI, performance varies widely. We compare common titanium grades on corrosion, strength, machinability, and applications.",
+      de: "Titan ist nicht nur Grade 5 — von Reintitan Grade 1-4 über Luftfahrt-Ti-6Al-4V bis zu medizinischem ELI variiert die Leistung erheblich. Wir vergleichen gängige Titansorten nach Korrosion, Festigkeit, Zerspanbarkeit und Anwendungen.",
+    },
+    category: { zh: "知識庫", en: "Knowledge Base", de: "Wissen" },
+    date: "2026-05-02",
+    imageUrl:
+      "https://images.pexels.com/photos/8865187/pexels-photo-8865187.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>鈦合金一向被當成「高階金屬」— 但很多採購跟工程師會把所有鈦都統稱「Ti」或「鈦合金」，忽略了不同等級之間的差距。Grade 1 跟 Grade 5（Ti-6Al-4V）在強度上差 3 倍、價格差 2 倍、加工性也完全不同。</p>
+
+<p>本文整理常用鈦合金等級的特性對比，協助設計者跟採購做出對的選擇。</p>
+
+<h2>鈦合金的兩大類別</h2>
+
+<p>商業鈦合金分兩大家族：</p>
+<ul>
+<li><strong>純鈦（Commercially Pure, CP）</strong>：Grade 1、2、3、4 — 含氧量、鐵量遞增，強度遞增、耐蝕性遞減</li>
+<li><strong>鈦合金（Alloyed）</strong>：加入鋁、釩、鉬等合金元素提升強度。Grade 5（Ti-6Al-4V）為市場主流</li>
+</ul>
+
+<h2>純鈦 Grade 1-4</h2>
+
+<h3>Grade 1 — 最軟、最耐蝕</h3>
+<ul>
+<li>抗拉強度約 240 MPa（最低）</li>
+<li>耐蝕性最佳，可成形性極佳</li>
+<li>典型應用：化工反應器內襯、海水管路、電鍍夾具</li>
+</ul>
+
+<h3>Grade 2 — 通用商業純鈦</h3>
+<ul>
+<li>抗拉強度約 345 MPa</li>
+<li>市場上「純鈦」最常用 — 強度與耐蝕性平衡</li>
+<li>典型應用：醫療器械、化工設備、海洋零件、建築裝飾件</li>
+</ul>
+
+<h3>Grade 3 / Grade 4 — 高強度純鈦</h3>
+<ul>
+<li>Grade 4 抗拉強度可達 550 MPa（接近一般合金鋼）</li>
+<li>仍保持純鈦的耐蝕性</li>
+<li>典型應用：航太緊固件、軍工結構件</li>
+</ul>
+
+<h2>鈦合金 Ti-6Al-4V（Grade 5）— 業界主流</h2>
+
+<p>俗稱「64 鈦」（含 6% 鋁、4% 釩），佔全球鈦合金消費量的 50% 以上。原因：強度跟重量比優於大多數金屬。</p>
+
+<ul>
+<li><strong>抗拉強度</strong>：950-1100 MPa（接近高強度鋼）</li>
+<li><strong>密度</strong>：4.43 g/cm³（鋼的 56%）</li>
+<li><strong>強度重量比</strong>：頂級</li>
+<li><strong>耐溫</strong>：可在 400°C 連續工作</li>
+<li><strong>典型應用</strong>：航太結構件、軍機零件、衛星、頂級改裝排氣、高階自行車架、植入物（搭配 ELI）</li>
+</ul>
+
+<h2>Ti-6Al-4V ELI — 生醫植入物專用</h2>
+
+<p>ELI = Extra Low Interstitial（超低間隙元素）。同樣是 6Al-4V 成分，但氧、氮、碳、鐵含量更低。差異：</p>
+
+<ul>
+<li>氧 ≤ 0.13%（一般 Grade 5 為 0.20%）</li>
+<li>韌性更佳、抗疲勞性更好</li>
+<li>強度略低（抗拉約 860 MPa）</li>
+<li>價格高於一般 Grade 5 約 30-50%</li>
+</ul>
+
+<p>典型應用：人工關節、骨釘、牙科植入物、心臟支架。<strong>非生醫應用幾乎不需要 ELI</strong>，用一般 Grade 5 就夠。</p>
+
+<h2>其他鈦合金（簡介）</h2>
+
+<table>
+<tr><th>等級</th><th>俗稱</th><th>特性</th><th>應用</th></tr>
+<tr><td>Grade 7</td><td>鈀鈦</td><td>含 0.15% 鈀，極致耐蝕</td><td>強腐蝕化工環境</td></tr>
+<tr><td>Grade 9</td><td>3-2.5</td><td>含 3% Al、2.5% V，中強度</td><td>運動器材、自行車管</td></tr>
+<tr><td>Grade 12</td><td>—</td><td>含 0.3% Mo、0.8% Ni</td><td>耐蝕熱交換器</td></tr>
+<tr><td>Grade 19</td><td>Beta-C</td><td>β 鈦合金，超高強度可熱處理</td><td>賽車彈簧、特殊緊固件</td></tr>
+<tr><td>Grade 23</td><td>Ti-6Al-4V ELI</td><td>同 ELI，正式 ASTM 編號</td><td>生醫植入物</td></tr>
+</table>
+
+<h2>價格與加工成本（相對比例）</h2>
+
+<p>以 Grade 2 純鈦為基準：</p>
+<ul>
+<li>Grade 1 純鈦：約 Grade 2 的 0.95 倍</li>
+<li>Grade 4 純鈦：約 Grade 2 的 1.2 倍</li>
+<li>Ti-6Al-4V（Grade 5）：約 Grade 2 的 <strong>1.5-1.8 倍</strong></li>
+<li>Ti-6Al-4V ELI：約 Grade 5 的 <strong>1.3-1.5 倍</strong></li>
+<li>Grade 7 鈀鈦：約 Grade 2 的 <strong>3-5 倍</strong>（含貴金屬）</li>
+</ul>
+
+<p>加工成本：所有鈦合金的切削成本約是 Aluminum A6061 的 <strong>3-8 倍</strong>（刀具消耗 + 慢進給 + 高壓冷卻）。實際金額請以個別報價為準。</p>
+
+<h2>選擇 flowchart</h2>
+
+<ol>
+<li><strong>需要植入人體？</strong> → Ti-6Al-4V ELI（Grade 23）</li>
+<li><strong>需要極致耐蝕（化工 / 海水）？</strong> → Grade 1-2 純鈦或 Grade 7</li>
+<li><strong>強度為首要（航太 / 軍工 / 高階改裝）？</strong> → Ti-6Al-4V（Grade 5）</li>
+<li><strong>中強度 + 耐蝕（運動器材）？</strong> → Grade 9</li>
+<li><strong>不確定？</strong> → 從 Grade 5（Ti-6Al-4V）起步，這是 90% 應用的合理預設</li>
+</ol>
+
+<h2>加工注意事項</h2>
+
+<p>所有鈦合金加工都要面對：</p>
+<ul>
+<li><strong>低熱導率</strong> → 切削熱集中於刀刃，刀具壽命短</li>
+<li><strong>易加工硬化</strong> → 不能太慢進給</li>
+<li><strong>反應性高</strong> → 高溫易與氧氮反應，需充足冷卻</li>
+<li><strong>需要塗層硬質合金或陶瓷刀片</strong></li>
+</ul>
+
+<p>不同等級的加工難度排序：純鈦 Grade 1-2（最易）&lt; Grade 4 &lt; Ti-6Al-4V &lt; β 系列鈦（最難）。</p>
+
+<h2>偉勇承接的鈦合金加工</h2>
+
+<p>我們長期承接：</p>
+<ul>
+<li>Ti-6Al-4V（Grade 5）：航太結構件、衛星零件、頂級改裝排氣</li>
+<li>Ti-6Al-4V ELI（Grade 23）：醫療植入物、骨科器械（提供材料追溯）</li>
+<li>純鈦 Grade 1-4：化工設備、海洋零件、客製化緊固件</li>
+</ul>
+
+<p>所有鈦合金加工皆可附材質證明（Mill Test Cert）+ 量測報告。圖面與規格傳給我們即可評估。</p>`,
+      en: `<p>Titanium isn't just "Grade 5" — performance varies widely across grades.</p>
+
+<h2>Pure Titanium (Grade 1-4)</h2>
+<ul>
+<li><strong>Grade 1</strong>: Softest, most corrosion-resistant. ~240 MPa tensile. Chemical reactor liners, seawater piping.</li>
+<li><strong>Grade 2</strong>: General-purpose CP titanium. ~345 MPa. Medical, chemical, marine.</li>
+<li><strong>Grade 3-4</strong>: Higher strength CP. Grade 4 reaches ~550 MPa. Aerospace fasteners.</li>
+</ul>
+
+<h2>Ti-6Al-4V (Grade 5) — the workhorse</h2>
+<p>The standard. 950-1100 MPa tensile, 56% the density of steel. ~50%+ of all titanium consumption. Aerospace structures, satellites, high-end exhaust, premium bicycles.</p>
+
+<h2>Ti-6Al-4V ELI (Grade 23)</h2>
+<p>Extra Low Interstitial — lower oxygen, nitrogen, carbon, iron. Better toughness and fatigue. Reserved for medical implants. ~30-50% more expensive than standard Grade 5.</p>
+
+<h2>Other grades (briefly)</h2>
+<ul>
+<li>Grade 7 (Pd-Ti): extreme corrosion resistance, costly</li>
+<li>Grade 9 (3-2.5): mid-strength, sports equipment</li>
+<li>Grade 12: corrosion-resistant heat exchangers</li>
+<li>Grade 19 (Beta-C): heat-treatable beta alloy</li>
+</ul>
+
+<h2>Selection guide</h2>
+<ol>
+<li>Body implant? → Grade 23 (ELI)</li>
+<li>Extreme corrosion? → Grade 1-2 or Grade 7</li>
+<li>Strength priority? → Grade 5</li>
+<li>Default fallback? → Grade 5 covers 90% of applications</li>
+</ol>
+
+<h2>Machining notes</h2>
+<p>All titanium grades demand low thermal conductivity, work-hardening tendency, and reactivity at elevated temperatures. Coated carbide or ceramic inserts required. Difficulty: pure Ti < Grade 4 < Ti-6Al-4V < beta alloys.</p>`,
+      de: `<p>Titan ist nicht nur „Grade 5" — die Leistung variiert erheblich zwischen den Sorten.</p>
+
+<h2>Reintitan (Grade 1-4)</h2>
+<ul>
+<li><strong>Grade 1</strong>: Weichste Sorte, höchste Korrosionsbeständigkeit. ~240 MPa Zugfestigkeit. Chemiereaktorauskleidungen, Meerwasserrohre.</li>
+<li><strong>Grade 2</strong>: Allzweck-CP-Titan. ~345 MPa. Medizin, Chemie, Marine.</li>
+<li><strong>Grade 3-4</strong>: Höhere Festigkeit. Grade 4 erreicht ~550 MPa. Luftfahrt-Verbindungselemente.</li>
+</ul>
+
+<h2>Ti-6Al-4V (Grade 5) — der Standard</h2>
+<p>Die Standardsorte. 950-1100 MPa Zugfestigkeit, 56 % der Stahldichte. Über 50 % des gesamten Titanverbrauchs. Luftfahrtstrukturen, Satelliten, High-End-Auspuffanlagen, Premium-Fahrräder.</p>
+
+<h2>Ti-6Al-4V ELI (Grade 23)</h2>
+<p>Extra Low Interstitial — niedrigere Sauerstoff-, Stickstoff-, Kohlenstoff- und Eisengehalte. Bessere Zähigkeit und Ermüdungsbeständigkeit. Speziell für medizinische Implantate. Etwa 30-50 % teurer als Standard-Grade-5.</p>
+
+<h2>Weitere Sorten (kurz)</h2>
+<ul>
+<li>Grade 7 (Pd-Ti): extreme Korrosionsbeständigkeit, teuer</li>
+<li>Grade 9 (3-2.5): mittlere Festigkeit, Sportgeräte</li>
+<li>Grade 12: korrosionsbeständige Wärmetauscher</li>
+<li>Grade 19 (Beta-C): härtbare Beta-Legierung</li>
+</ul>
+
+<h2>Auswahlleitfaden</h2>
+<ol>
+<li>Körperimplantat? → Grade 23 (ELI)</li>
+<li>Extreme Korrosion? → Grade 1-2 oder Grade 7</li>
+<li>Festigkeit prioritär? → Grade 5</li>
+<li>Default? → Grade 5 deckt 90 % der Anwendungen ab</li>
+</ol>
+
+<h2>Bearbeitungshinweise</h2>
+<p>Alle Titansorten erfordern wegen niedriger Wärmeleitfähigkeit, Kaltverfestigungsneigung und Reaktivität bei höheren Temperaturen besondere Strategien. Beschichtetes Hartmetall oder Keramikeinsätze erforderlich. Schwierigkeit: Reintitan < Grade 4 < Ti-6Al-4V < Beta-Legierungen.</p>`,
+    },
+  },
+  {
+    slug: "machining-tolerance-standards-guide",
+    title: {
+      zh: "CNC 加工公差規範入門：ISO 2768、IT 等級、GD&T 怎麼看？",
+      en: "CNC Machining Tolerance Standards Guide: ISO 2768, IT Grades, GD&T",
+      de: "Leitfaden zu CNC-Toleranznormen: ISO 2768, IT-Toleranzklassen, GD&T",
+    },
+    excerpt: {
+      zh: "圖面上的公差標註，直接決定加工成本。標太嚴 — 報價爆增；標太寬 — 零件裝不上。本文介紹 ISO 2768、IT 等級、GD&T 三大公差體系，協助採購跟設計者做出合理的公差規格。",
+      en: "Tolerance callouts on drawings directly drive machining cost. Too tight — quote skyrockets; too loose — parts don't fit. We cover ISO 2768, IT grades, and GD&T to help engineers and buyers spec sensibly.",
+      de: "Toleranzangaben auf Zeichnungen bestimmen direkt die Bearbeitungskosten. Zu eng — Preis explodiert; zu locker — Teile passen nicht. Wir behandeln ISO 2768, IT-Toleranzklassen und GD&T für sinnvolle Spezifikationen.",
+    },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
+    date: "2026-04-25",
+    imageUrl:
+      "https://images.pexels.com/photos/1476318/pexels-photo-1476318.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>圖面上的公差，是 CNC 加工成本的最大決定因素之一。同一個零件，公差從 ±0.1 mm 改到 ±0.005 mm，加工費可能差 5-10 倍。</p>
+
+<p>但很多採購、設計新手不熟悉公差規範，容易犯兩種錯：要嘛全部標 ±0.05 mm 太籠統，要嘛把每個尺寸都標到 ±0.005 mm 過度嚴格。本文整理三大公差體系，協助你做出合理的規格。</p>
+
+<h2>三大公差體系</h2>
+
+<p>業界主要的公差規範有：</p>
+<ol>
+<li><strong>ISO 2768</strong>：一般公差（沒有特別標註時的預設）</li>
+<li><strong>IT 等級</strong>：精密配合（軸 / 孔的標準公差）</li>
+<li><strong>GD&T（Geometric Dimensioning &amp; Tolerancing）</strong>：形位公差（垂直度 / 平行度 / 圓度等）</li>
+</ol>
+
+<h2>體系 1：ISO 2768 一般公差</h2>
+
+<p>當圖面尺寸沒有單獨標註公差時，使用 ISO 2768 為「預設公差」。分四個等級：</p>
+
+<table>
+<tr><th>等級</th><th>名稱</th><th>適用</th></tr>
+<tr><td>f（fine）</td><td>精</td><td>精密機構件</td></tr>
+<tr><td>m（medium）</td><td>中</td><td>一般機械（最常用）</td></tr>
+<tr><td>c（coarse）</td><td>粗</td><td>結構件、焊接件</td></tr>
+<tr><td>v（very coarse）</td><td>很粗</td><td>鑄件、粗加工</td></tr>
+</table>
+
+<p>不同尺寸範圍對應不同公差值。例如「ISO 2768-m」（中等級）的常見值：</p>
+
+<table>
+<tr><th>尺寸範圍</th><th>m 級公差</th></tr>
+<tr><td>0.5 ~ 3 mm</td><td>±0.1 mm</td></tr>
+<tr><td>3 ~ 6 mm</td><td>±0.1 mm</td></tr>
+<tr><td>6 ~ 30 mm</td><td>±0.2 mm</td></tr>
+<tr><td>30 ~ 120 mm</td><td>±0.3 mm</td></tr>
+<tr><td>120 ~ 400 mm</td><td>±0.5 mm</td></tr>
+</table>
+
+<p><strong>實務建議</strong>：90% 的零件，圖面上寫「ISO 2768-m（中）」就夠用。只在配合面、關鍵尺寸用更嚴的單獨標註。</p>
+
+<h2>體系 2：IT 等級（國際公差等級）</h2>
+
+<p>IT（International Tolerance）等級用於精密配合 — 軸 / 孔的標準公差體系。從 IT01（最嚴）到 IT18（最鬆），共 20 級。</p>
+
+<p>常見等級的應用：</p>
+<ul>
+<li><strong>IT5-IT6</strong>：精密軸承配合（公差約 ±0.005 mm）</li>
+<li><strong>IT7</strong>：齒輪、滑動配合（公差約 ±0.012 mm）— <strong>機械業最常用</strong></li>
+<li><strong>IT8</strong>：一般配合面（公差約 ±0.02 mm）</li>
+<li><strong>IT9-IT10</strong>：粗略配合（公差約 ±0.05 mm）</li>
+<li><strong>IT11+</strong>：免配合（一般加工面）</li>
+</ul>
+
+<h3>軸 / 孔的配合代號</h3>
+<p>常見配合：</p>
+<ul>
+<li><strong>H7/h6</strong>：精密滑動配合（齒輪箱齒輪）</li>
+<li><strong>H7/g6</strong>：間隙配合（精密滑塊）</li>
+<li><strong>H7/k6</strong>：過渡配合（軸承內圈）</li>
+<li><strong>H7/p6</strong>：過盈配合（緊配合，需壓入）</li>
+</ul>
+
+<h2>體系 3：GD&T 形位公差</h2>
+
+<p>除了「尺寸公差」之外，零件還需要「形狀」與「位置」的規範。GD&T 是國際標準（ASME Y14.5 / ISO 1101）。常見符號：</p>
+
+<table>
+<tr><th>符號</th><th>名稱</th><th>用途</th></tr>
+<tr><td>—</td><td>直度（Straightness）</td><td>軸是不是直的</td></tr>
+<tr><td>○</td><td>圓度（Roundness）</td><td>圓形是不是真圓</td></tr>
+<tr><td>⊥</td><td>垂直度（Perpendicularity）</td><td>面對面 90 度</td></tr>
+<tr><td>∥</td><td>平行度（Parallelism）</td><td>兩面平行</td></tr>
+<tr><td>◎</td><td>同心度（Concentricity）</td><td>軸心對軸心</td></tr>
+<tr><td>⊕</td><td>位置度（Position）</td><td>孔位是否在規定位置</td></tr>
+<tr><td>✓</td><td>輪廓度（Profile）</td><td>曲面整體形狀</td></tr>
+</table>
+
+<p>GD&T 配合「基準（Datum）」使用 — 例如「⊥ 0.02 A」表示「相對於基準 A 的垂直度公差為 0.02 mm」。</p>
+
+<h2>表面粗糙度 Ra</h2>
+
+<p>除尺寸與形位之外，表面粗糙度（Ra）也直接影響加工成本：</p>
+
+<ul>
+<li><strong>Ra 6.3</strong>：粗銑、粗車（一般加工面）</li>
+<li><strong>Ra 3.2</strong>：精銑、精車（標準）</li>
+<li><strong>Ra 1.6</strong>：精車（配合面）</li>
+<li><strong>Ra 0.8</strong>：精磨</li>
+<li><strong>Ra 0.4</strong>：細磨、研磨（密封配合）</li>
+<li><strong>Ra 0.1</strong>：鏡面（拋光）</li>
+</ul>
+
+<p>Ra 每嚴一級，加工費約 +20-50%。鏡面拋光的成本可能是標準粗糙度的 3-5 倍。</p>
+
+<h2>常見過度規格的錯誤</h2>
+
+<h3>錯誤 1：全部尺寸都標 ±0.005 mm</h3>
+<p>大部分尺寸不需要這麼嚴。讓圖面默認 ISO 2768-m，只標註關鍵尺寸的嚴格公差。</p>
+
+<h3>錯誤 2：表面粗糙度全標 Ra 0.4</h3>
+<p>除非真的需要密封或鏡面外觀，Ra 1.6 對大部分配合面已經夠用。</p>
+
+<h3>錯誤 3：沒標基準就用 GD&T</h3>
+<p>GD&T 沒有指定基準（Datum）等於沒講。加工廠不知道「相對於哪個面」量測。</p>
+
+<h2>給採購的合理規格起點</h2>
+
+<p>如果不確定該標多嚴，從這個合理預設開始：</p>
+
+<ul>
+<li><strong>一般尺寸</strong>：ISO 2768-m（中等級）</li>
+<li><strong>軸 / 孔配合</strong>：IT7（H7/h6 或 H7/g6）</li>
+<li><strong>表面粗糙度</strong>：Ra 3.2（一般）/ Ra 1.6（配合面）</li>
+<li><strong>形位公差</strong>：關鍵的兩三個（垂直度、平行度），標 0.05 mm 起跳</li>
+</ul>
+
+<p>之後再依實際組裝測試結果，必要時局部加嚴。</p>
+
+<h2>偉勇的標配公差能力</h2>
+
+<ul>
+<li><strong>標配公差</strong>：±0.005 mm（IT5-IT6 級）</li>
+<li><strong>表面粗糙度</strong>：Ra 0.4 ~ Ra 6.3 可選</li>
+<li><strong>GD&T</strong>：CMM 三次元量測支援所有形位公差</li>
+<li><strong>量測報告</strong>：可附完整尺寸 + GD&T 量測值（依客戶需求）</li>
+</ul>
+
+<p>如果您在公差規格上不確定，告訴我們零件的<strong>使用情境 + 配合對象 + 受力方式</strong>，我們可以協助您訂出合理的規格。</p>`,
+      en: `<p>Tolerance callouts on drawings directly drive machining cost. Tight to ±0.005 mm vs ±0.1 mm can mean 5-10× the price.</p>
+
+<h2>Three tolerance systems</h2>
+<ol>
+<li><strong>ISO 2768</strong> — general tolerances (default when not otherwise specified). Four grades: f (fine), m (medium), c (coarse), v (very coarse).</li>
+<li><strong>IT grades</strong> — precision fits for shafts and holes. IT5-IT6 for bearings, IT7 standard for gears and slides, IT8 for general fits.</li>
+<li><strong>GD&T</strong> — geometric dimensioning &amp; tolerancing. Symbols for straightness, roundness, perpendicularity, parallelism, concentricity, position, profile. Always paired with a Datum.</li>
+</ol>
+
+<h2>Surface roughness Ra</h2>
+<p>Ra 6.3 for rough machining → Ra 0.4 for sealing fits → Ra 0.1 for mirror polish. Each step tighter adds ~20-50% cost.</p>
+
+<h2>Common over-specification mistakes</h2>
+<ul>
+<li>Marking every dimension to ±0.005 mm (most don't need it — use ISO 2768-m default + tighten only the critical ones)</li>
+<li>Specifying Ra 0.4 across the board (Ra 1.6 covers most fits)</li>
+<li>Using GD&T without a Datum reference (meaningless — the shop can't measure "relative to what")</li>
+</ul>
+
+<h2>Sensible starting spec</h2>
+<ul>
+<li>General dimensions: ISO 2768-m</li>
+<li>Shaft/hole fits: IT7 (H7/h6 or H7/g6)</li>
+<li>Surface: Ra 3.2 general, Ra 1.6 for fits</li>
+<li>GD&T: 2-3 critical features at ~0.05 mm</li>
+</ul>
+
+<h2>Weiyon's standard capability</h2>
+<p>±0.005 mm tolerance, Ra 0.4 to Ra 6.3 surface options, full GD&T via CMM measurement, complete inspection reports per customer requirement.</p>`,
+      de: `<p>Toleranzangaben auf Zeichnungen bestimmen direkt die Bearbeitungskosten. Eng wie ±0,005 mm gegenüber ±0,1 mm kann das 5- bis 10-Fache des Preises bedeuten.</p>
+
+<h2>Drei Toleranzsysteme</h2>
+<ol>
+<li><strong>ISO 2768</strong> — Allgemeintoleranzen (Standard, wenn nicht anders angegeben). Vier Stufen: f (fein), m (mittel), c (grob), v (sehr grob).</li>
+<li><strong>IT-Toleranzklassen</strong> — Präzisionspassungen für Wellen und Bohrungen. IT5-IT6 für Lager, IT7 Standard für Zahnräder und Gleitbahnen, IT8 für allgemeine Passungen.</li>
+<li><strong>GD&T</strong> — Form- und Lagetoleranzen. Symbole für Geradheit, Rundheit, Rechtwinkligkeit, Parallelität, Konzentrizität, Position, Profil. Immer mit Bezugselement (Datum) gepaart.</li>
+</ol>
+
+<h2>Oberflächenrauheit Ra</h2>
+<p>Ra 6,3 für Schruppen → Ra 0,4 für Dichtpassungen → Ra 0,1 für Hochglanz. Jede engere Stufe erhöht die Kosten um 20-50 %.</p>
+
+<h2>Häufige Überspezifikations-Fehler</h2>
+<ul>
+<li>Alle Maße mit ±0,005 mm bemaßen (die meisten brauchen es nicht — ISO 2768-m als Standard, nur kritische enger toleriert)</li>
+<li>Ra 0,4 pauschal vorschreiben (Ra 1,6 deckt die meisten Passungen)</li>
+<li>GD&T ohne Bezugselement (sinnlos — die Werkstatt kann „relativ wozu" nicht messen)</li>
+</ul>
+
+<h2>Sinnvolle Ausgangsspezifikation</h2>
+<ul>
+<li>Allgemeine Maße: ISO 2768-m</li>
+<li>Wellen-/Bohrungspassungen: IT7 (H7/h6 oder H7/g6)</li>
+<li>Oberfläche: Ra 3,2 allgemein, Ra 1,6 für Passungen</li>
+<li>GD&T: 2-3 kritische Merkmale bei ca. 0,05 mm</li>
+</ul>
+
+<h2>Weiyons Standardkompetenz</h2>
+<p>±0,005 mm Toleranz, Ra 0,4 bis Ra 6,3 Oberflächenoptionen, vollständiges GD&T über KMG-Messung, komplette Prüfberichte je nach Kundenanforderung.</p>`,
+    },
+  },
+  {
+    slug: "industry-certifications-iatf-as9100-iso13485",
+    title: {
+      zh: "三大產業認證對比：IATF 16949 / AS9100 / ISO 13485 哪個適合你？",
+      en: "Three Industry Certifications Compared: IATF 16949 vs AS9100 vs ISO 13485",
+      de: "Drei Branchenzertifizierungen im Vergleich: IATF 16949 vs. AS9100 vs. ISO 13485",
+    },
+    excerpt: {
+      zh: "ISO 9001 是基礎，但要進汽車、航太、醫療三大高毛利市場，得拿產業專屬認證。本文比較 IATF 16949（汽車）/ AS9100（航太）/ ISO 13485（醫療）的差異、取得難度、適合的供應商規模。",
+      en: "ISO 9001 is the foundation, but entering high-margin automotive, aerospace, and medical markets requires industry-specific certifications. We compare IATF 16949, AS9100, and ISO 13485 — differences, difficulty, and which supplier size fits each.",
+      de: "ISO 9001 ist die Basis, doch der Einstieg in margenstarke Automobil-, Luftfahrt- und Medizinmärkte erfordert branchenspezifische Zertifizierungen. Vergleich von IATF 16949, AS9100 und ISO 13485 — Unterschiede, Schwierigkeit, und passende Zulieferergröße.",
+    },
+    category: { zh: "採購指南", en: "Procurement Guide", de: "Einkaufsleitfaden" },
+    date: "2026-04-18",
+    imageUrl:
+      "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>「我們的供應商需要什麼認證？」是 B2B 採購最常被問的問題之一。答案不是「越多越好」 — 而是「對的客戶，對的認證」。</p>
+
+<p>本文整理三大產業專屬認證：<strong>IATF 16949（汽車）</strong>、<strong>AS9100（航太）</strong>、<strong>ISO 13485（醫療）</strong> — 比較它們的差異、取得邏輯、與供應商投入回報。</p>
+
+<h2>共同基礎：ISO 9001</h2>
+
+<p>三大認證都是「在 ISO 9001 之上加產業特殊要求」。所以投入順序通常是：</p>
+<ol>
+<li>先取得 ISO 9001（品質管理系統基礎）</li>
+<li>依客戶需求加上 IATF 16949 / AS9100 / ISO 13485</li>
+</ol>
+
+<p>沒 ISO 9001 直接申請產業認證？理論上可以，但實務上幾乎都先有 9001。</p>
+
+<h2>IATF 16949 — 汽車產業</h2>
+
+<h3>背景</h3>
+<p>由 IATF（International Automotive Task Force）制定，2016 年取代舊的 TS 16949。是全球汽車產業的「進場票」 — Toyota、Ford、Volkswagen、GM、BMW 等大廠的 Tier 1、Tier 2 供應商幾乎都需要。</p>
+
+<h3>核心要求</h3>
+<ul>
+<li><strong>製程方法（Process Approach）</strong>：所有製造活動視為連續流程</li>
+<li><strong>失效模式分析（FMEA）</strong>：事前預測風險點</li>
+<li><strong>製程控制計畫（Control Plan）</strong>：每道工序的監控細節</li>
+<li><strong>SPC（統計製程管制）</strong>：用統計監控量產品質</li>
+<li><strong>PPAP（量產零件認可程序）</strong>：量產前的完整文件包</li>
+<li><strong>追溯性</strong>：每件產品可追到原料、機台、操作員</li>
+</ul>
+
+<h3>適合誰</h3>
+<ul>
+<li>已有汽車 OEM / Tier 1 客戶 = <strong>必投</strong></li>
+<li>計畫進軍汽車市場 = 投資前先確認潛在客戶量足夠</li>
+<li>純改裝後市場（不接 OEM）= 通常不需要</li>
+</ul>
+
+<h3>取得難度</h3>
+<p>高。要建立完整 QMS、PPAP 流程、FMEA 文件、SPC 系統。從 0 到取得約 12-18 個月。每年維護 + 抽樣稽核。</p>
+
+<h2>AS9100 — 航太產業</h2>
+
+<h3>背景</h3>
+<p>由 SAE International 與 IAQG（International Aerospace Quality Group）制定。Boeing、Airbus、Lockheed Martin 等航太 OEM 與 Tier 1 供應商通用標準。</p>
+
+<h3>核心要求（在 ISO 9001 之上）</h3>
+<ul>
+<li><strong>產品安全（Product Safety）</strong>：航太對失效零容忍</li>
+<li><strong>FOD（Foreign Object Debris）控制</strong>：避免異物殘留</li>
+<li><strong>關鍵特性（Key Characteristics）</strong>：明確標示安全相關尺寸</li>
+<li><strong>第一件檢驗（First Article Inspection, FAI）</strong>：依 AS9102 標準</li>
+<li><strong>反偽材料管制（Counterfeit Parts Prevention）</strong>：防止偽造原料</li>
+<li><strong>軟體配置管理</strong>（若有電子零件）</li>
+</ul>
+
+<h3>適合誰</h3>
+<ul>
+<li>航太 Tier 1 / Tier 2 供應商 = 必投</li>
+<li>無人機 / 衛星新創 = 看客戶要求</li>
+<li>純改裝航空件（私人飛機）= 視客戶</li>
+</ul>
+
+<h3>取得難度</h3>
+<p>很高。比 IATF 嚴。產品追溯到「批料每根原料 + 加工每一步」都要紀錄。從 0 到取得 12-24 個月。文件量極大。</p>
+
+<h2>ISO 13485 — 醫療器材</h2>
+
+<h3>背景</h3>
+<p>醫療器材製造的品質管理系統標準。Stryker、Medtronic、Johnson &amp; Johnson、Becton Dickinson 等醫療大廠的供應商標配。同時也是<strong>進入歐盟醫療器材法規（MDR）的基本要求</strong>。</p>
+
+<h3>核心要求（在 ISO 9001 之上）</h3>
+<ul>
+<li><strong>風險管理（依 ISO 14971）</strong>：每項產品的風險評估</li>
+<li><strong>無菌 / 潔淨環境</strong>：依產品分級</li>
+<li><strong>追溯性與唯一識別碼（UDI）</strong>：每件可追到病人</li>
+<li><strong>不良事件追蹤</strong>：發現問題後的回溯機制</li>
+<li><strong>滅菌驗證</strong>（若產品需滅菌）</li>
+<li><strong>軟體生命週期管理</strong>（若涉及醫療軟體）</li>
+</ul>
+
+<h3>適合誰</h3>
+<ul>
+<li>醫療器材 OEM / Tier 1 = 必投</li>
+<li>植入物製造 = 必投 + 加 ISO 14971 風險管理</li>
+<li>醫療輔具（非植入）= 視客戶要求</li>
+</ul>
+
+<h3>取得難度</h3>
+<p>中高。文件嚴謹度跟 IATF 接近，但風險管理面更深入。從 0 到取得 9-15 個月。需要醫療專業背景的品保人員。</p>
+
+<h2>三大認證對比表</h2>
+
+<table>
+<tr><th>項目</th><th>IATF 16949</th><th>AS9100</th><th>ISO 13485</th></tr>
+<tr><td>產業</td><td>汽車</td><td>航太</td><td>醫療</td></tr>
+<tr><td>取得難度</td><td>高</td><td>很高</td><td>中高</td></tr>
+<tr><td>取得時程</td><td>12-18 個月</td><td>12-24 個月</td><td>9-15 個月</td></tr>
+<tr><td>關鍵附加要求</td><td>PPAP / FMEA / SPC</td><td>FOD / FAI / 反偽</td><td>ISO 14971 風險 / UDI</td></tr>
+<tr><td>典型客戶</td><td>Toyota、Ford、VW</td><td>Boeing、Airbus、Lockheed</td><td>Stryker、Medtronic、J&amp;J</td></tr>
+<tr><td>市場毛利</td><td>中（量大）</td><td>高（單價高）</td><td>很高（單價最高）</td></tr>
+<tr><td>追溯深度</td><td>批次</td><td>每根原料 + 每件</td><td>每件 + UDI</td></tr>
+</table>
+
+<h2>該投資哪個？戰略思考</h2>
+
+<h3>決策關鍵：客戶結構，不是技術</h3>
+<p>不是「想做汽車就投 IATF」 — 而是<strong>已有 / 即將有 OEM 客戶</strong>才投。沒客戶投認證 = 純粹燒錢，因為認證費用 + 維護年費 + 內部人力，每年都要花。</p>
+
+<h3>三種典型策略</h3>
+
+<h4>策略 1：客戶集中於某一產業 → 投對應認證</h4>
+<p>例如已有 3 家汽車 Tier 1 客戶 → 投 IATF 16949。</p>
+
+<h4>策略 2：多產業混合 → 不投產業認證，靠 ISO 9001 + 客戶供應鏈代理</h4>
+<p>適合中小加工廠。客戶的認證涵蓋整個供應鏈，你只需要 ISO 9001 + 材質追溯 + 量測報告，仍可承接 Tier 2 / Tier 3 訂單。<strong>這是台灣中小加工廠最常見的路線</strong>。</p>
+
+<h4>策略 3：先後市場（aftermarket）切入 → 不需產業認證</h4>
+<p>改裝車、油氣 MRO 等後市場，認證壓力低很多。等業績穩定再評估投資。</p>
+
+<h2>偉勇的定位</h2>
+
+<p>我們目前持有 <strong>ISO 9001</strong> 品質管理系統認證。針對：</p>
+<ul>
+<li>汽車產業：以 ISO 9001 + 完整批次追溯 + PPAP / FAI 文件，承接 Tier 2 / Tier 3 OEM 訂單與後市場</li>
+<li>航太產業：與 AS9100 認證的 Tier 1 客戶 OEM 合作，提供精密加工 + 材質證明</li>
+<li>醫療產業：與 ISO 13485 客戶合作，提供 SUS316L、純鈦、Ti-ELI 等生醫材料加工，含完整追溯</li>
+<li>油氣產業：對應 API / NORSOK 客戶供應鏈品管要求（詳見<a href="/blog/api-certification-guide-oil-gas">API 6A / 6D 認證指南</a>）</li>
+</ul>
+
+<p>對於想跨入這三大產業但還沒拿認證的客戶，我們也能擔任「OEM 加工夥伴」，讓您的產品能透過已認證品牌進入這些市場。</p>`,
+      en: `<p>"What certifications does our supplier need?" is one of the most common B2B procurement questions. The answer isn't "as many as possible" — it's "the right ones for the right customers".</p>
+
+<h2>Common foundation: ISO 9001</h2>
+<p>All three industry certifications build on ISO 9001. Get 9001 first, then add industry-specific layers.</p>
+
+<h2>IATF 16949 — Automotive</h2>
+<p>Replaced TS 16949 in 2016. Required by Toyota, Ford, VW, GM Tier 1/2 suppliers. Adds: process approach, FMEA, control plans, SPC, PPAP (production part approval), batch traceability. 12-18 months to obtain.</p>
+
+<h2>AS9100 — Aerospace</h2>
+<p>By SAE/IAQG. Standard for Boeing, Airbus, Lockheed supply chains. Adds: product safety, FOD control, key characteristics, AS9102 First Article Inspection, counterfeit parts prevention. 12-24 months — most rigorous of the three.</p>
+
+<h2>ISO 13485 — Medical Devices</h2>
+<p>Required for Stryker, Medtronic, J&amp;J supply chains and EU MDR market access. Adds: ISO 14971 risk management, sterile/clean environments, UDI traceability, adverse event tracking. 9-15 months.</p>
+
+<h2>Which to invest in?</h2>
+<p>Decision driver: <strong>customer mix, not technology</strong>. Don't invest in IATF if you don't have automotive OEM customers — annual costs add up. Three typical strategies:</p>
+<ol>
+<li>Customer concentration in one industry → invest in matching certification</li>
+<li>Mixed customer base → ISO 9001 + customer supply-chain coverage (most common for mid-size shops)</li>
+<li>Aftermarket only → industry cert pressure low</li>
+</ol>
+
+<h2>Weiyon's positioning</h2>
+<p>ISO 9001 certified. We support automotive Tier 2/3, AS9100 Tier 1 OEM partners, ISO 13485 medical customers, and API/NORSOK oil &amp; gas supply chains via integrated material traceability, FAI reports, and full batch records — the substance behind the certifications.</p>`,
+      de: `<p>„Welche Zertifizierungen braucht unser Lieferant?" ist eine der häufigsten B2B-Beschaffungsfragen. Die Antwort lautet nicht „so viele wie möglich" — sondern „die richtigen für die richtigen Kunden".</p>
+
+<h2>Gemeinsame Basis: ISO 9001</h2>
+<p>Alle drei Branchenzertifizierungen bauen auf ISO 9001 auf. Erst 9001, dann branchenspezifische Schichten.</p>
+
+<h2>IATF 16949 — Automobil</h2>
+<p>Ersetzte 2016 TS 16949. Erforderlich bei Toyota, Ford, VW, GM Tier-1/2-Lieferanten. Ergänzt: Prozessansatz, FMEA, Lenkungspläne, SPC, PPAP (Produktteil-Freigabe), Chargenrückverfolgbarkeit. 12-18 Monate Dauer.</p>
+
+<h2>AS9100 — Luftfahrt</h2>
+<p>Von SAE/IAQG. Standard für Boeing, Airbus, Lockheed-Lieferketten. Ergänzt: Produktsicherheit, FOD-Kontrolle, Schlüsselmerkmale, AS9102-Erstmusterprüfung, Schutz vor gefälschten Teilen. 12-24 Monate — die strengste der drei.</p>
+
+<h2>ISO 13485 — Medizinprodukte</h2>
+<p>Erforderlich für Stryker-, Medtronic-, J&amp;J-Lieferketten und EU-MDR-Marktzugang. Ergänzt: ISO-14971-Risikomanagement, Sterile/Reinraumumgebungen, UDI-Rückverfolgbarkeit, Vorfallverfolgung. 9-15 Monate.</p>
+
+<h2>Welche Zertifizierung lohnt sich?</h2>
+<p>Entscheidungstreiber: <strong>Kundenmix, nicht Technologie</strong>. Nicht in IATF investieren ohne Automobil-OEM-Kunden — laufende Kosten summieren sich. Drei typische Strategien:</p>
+<ol>
+<li>Kundenkonzentration in einer Branche → passende Zertifizierung</li>
+<li>Gemischter Kundenstamm → ISO 9001 + Abdeckung über Kundenlieferketten (am häufigsten für mittelständische Werkstätten)</li>
+<li>Nur Aftermarket → geringer Zertifizierungsdruck</li>
+</ol>
+
+<h2>Weiyons Positionierung</h2>
+<p>ISO-9001-zertifiziert. Wir unterstützen Automotive-Tier-2/3, AS9100-Tier-1-OEM-Partner, ISO-13485-Medizinkunden und API/NORSOK-Öl-&amp;-Gas-Lieferketten durch integrierte Werkstoffrückverfolgbarkeit, FAI-Berichte und vollständige Chargendokumentation — das Substantielle hinter den Zertifizierungen.</p>`,
+    },
+  },
+  {
     slug: "api-certification-guide-oil-gas",
     title: {
       zh: "API 6A / 6D 認證指南：油氣產業精密零件的進場票",
