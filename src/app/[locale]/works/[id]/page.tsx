@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -77,17 +78,16 @@ export default async function WorkDetailPage({
             />
           </Link>
 
-          <div
-            className="flex-1 max-w-4xl aspect-[3/2] bg-[var(--surface)]"
-            style={{
-              backgroundImage: `url(${imageUrl})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-            role="img"
-            aria-label={t("imageAriaLabel", { id: String(idNum) })}
-          />
+          <div className="relative flex-1 max-w-4xl aspect-[3/2] bg-[var(--surface)]">
+            <Image
+              src={imageUrl}
+              alt={t("imageAriaLabel", { id: String(idNum) })}
+              fill
+              sizes="(max-width: 640px) 80vw, (max-width: 1024px) 70vw, 1024px"
+              className="object-contain"
+              priority
+            />
+          </div>
 
           <Link
             href={`/works/${nextId}`}

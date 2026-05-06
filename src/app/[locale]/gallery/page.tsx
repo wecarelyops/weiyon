@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { CSSProperties } from "react";
 
@@ -58,15 +59,19 @@ export default async function GalleryPage({
                 <Link
                   key={work.id}
                   href={`/works/${work.id}`}
-                  className="aspect-[279/186] bg-cover bg-center md:col-start-[var(--col-start)] block hover:opacity-80 transition-opacity"
-                  style={
-                    {
-                      backgroundImage: `url(${work.image})`,
-                      "--col-start": colStart,
-                    } as CSSProperties
-                  }
+                  className="relative aspect-[279/186] md:col-start-[var(--col-start)] block hover:opacity-80 transition-opacity overflow-hidden"
+                  style={{ "--col-start": colStart } as CSSProperties}
                   aria-label={`查看實績 ${work.id} 詳細`}
-                />
+                >
+                  <Image
+                    src={work.image}
+                    alt={`實績 ${work.id}`}
+                    fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                    className="object-cover"
+                    loading={i < 12 ? "eager" : "lazy"}
+                  />
+                </Link>
               );
             })}
           </div>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { Calendar, ArrowRight } from "lucide-react";
 import { blogPosts } from "@/data/blog";
@@ -82,12 +83,14 @@ export default async function BlogPage({
                 href={`/blog/${post.slug}`}
                 className="group flex flex-col"
               >
-                <div
-                  className="aspect-video rounded-xl border border-[var(--border)] overflow-hidden mb-4 relative bg-cover bg-center"
-                  style={{ backgroundImage: `url('${post.imageUrl}')` }}
-                  role="img"
-                  aria-label={post.title[lang]}
-                >
+                <div className="relative aspect-video rounded-xl border border-[var(--border)] overflow-hidden mb-4">
+                  <Image
+                    src={post.imageUrl}
+                    alt={post.title[lang]}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-[var(--primary)]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="text-white font-medium">
                       {t("readMore")}

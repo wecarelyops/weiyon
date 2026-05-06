@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { Calendar, ChevronLeft, ArrowRight } from "lucide-react";
@@ -92,12 +93,16 @@ export default async function BlogPostPage({
       {/* Featured Image */}
       <section className="bg-[var(--surface)]">
         <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 pb-16">
-          <div
-            className="aspect-[16/9] rounded-xl overflow-hidden bg-cover bg-center border border-[var(--border)]"
-            style={{ backgroundImage: `url('${post.imageUrl}')` }}
-            role="img"
-            aria-label={post.title[lang]}
-          />
+          <div className="relative aspect-[16/9] rounded-xl overflow-hidden border border-[var(--border)]">
+            <Image
+              src={post.imageUrl}
+              alt={post.title[lang]}
+              fill
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -128,12 +133,15 @@ export default async function BlogPostPage({
                 href={`/blog/${p.slug}`}
                 className="group bg-[var(--surface)] hover:bg-[var(--bg)] transition-colors p-6 lg:p-8 flex flex-col"
               >
-                <div
-                  className="aspect-[16/9] rounded-lg overflow-hidden bg-cover bg-center border border-[var(--border)] mb-4"
-                  style={{ backgroundImage: `url('${p.imageUrl}')` }}
-                  role="img"
-                  aria-label={p.title[lang]}
-                />
+                <div className="relative aspect-[16/9] rounded-lg overflow-hidden border border-[var(--border)] mb-4">
+                  <Image
+                    src={p.imageUrl}
+                    alt={p.title[lang]}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
                 <span className="text-xs text-[var(--accent)] mb-2">
                   {p.category[lang]}
                 </span>

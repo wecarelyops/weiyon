@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check, ChevronLeft, Phone } from "lucide-react";
@@ -78,12 +79,16 @@ export default async function IndustryPage({
             </div>
 
             <div className="lg:col-span-5">
-              <div
-                className="aspect-[4/3] rounded-xl overflow-hidden bg-cover bg-center border border-[var(--border)]"
-                style={{ backgroundImage: `url('${ind.imageUrl}')` }}
-                role="img"
-                aria-label={ind.title[lang]}
-              />
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[var(--border)]">
+                <Image
+                  src={ind.imageUrl}
+                  alt={ind.title[lang]}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
