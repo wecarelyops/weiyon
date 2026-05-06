@@ -95,6 +95,17 @@ export default function Header() {
           )}
         >
           <div className="flex flex-col gap-2 pt-4 border-t border-[var(--border)]">
+            {/* 電話 + 語言切換 — 移到頂部，方便快速操作 */}
+            <div className="flex items-center justify-between gap-4 pb-4 mb-2 border-b border-[var(--border)] px-2">
+              <a
+                href="tel:0423356451"
+                className="flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)]"
+              >
+                <Phone className="w-4 h-4" />
+                {t("phone")}
+              </a>
+              <LanguageSwitcher />
+            </div>
             {navigation.map((item) => (
               <Link
                 key={item.href}
@@ -105,16 +116,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center justify-between gap-4 pt-4 border-t border-[var(--border)] mt-2 px-2">
-              <a
-                href="tel:0423356451"
-                className="flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)]"
-              >
-                <Phone className="w-4 h-4" />
-                {t("phone")}
-              </a>
-              <LanguageSwitcher />
-            </div>
           </div>
         </div>
       </nav>
