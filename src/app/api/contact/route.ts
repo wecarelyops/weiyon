@@ -76,12 +76,21 @@ function getClientIp(request: Request): string {
   return "unknown";
 }
 
+// 把 Supabase error 物件 sanitize 成只剩 message（避免 schema/query 細節進 log）
+function safeErrMsg(e: unknown): string {
+  if (e instanceof Error) return e.message;
+  if (typeof e === "object" && e !== null && "message" in e) {
+    return String((e as { message: unknown }).message);
+  }
+  return "unknown error";
+}
+
 async function ensureBucket(): Promise<boolean> {
   if (!supabaseAdmin) return false;
   try {
     const { data: buckets, error } = await supabaseAdmin.storage.listBuckets();
     if (error) {
-      console.error("listBuckets error:", error);
+      console.error("listBuckets:", safeErrMsg(error));
       return false;
     }
     const exists = buckets?.some((b) => b.name === BUCKET_NAME);
@@ -94,13 +103,13 @@ async function ensureBucket(): Promise<boolean> {
         }
       );
       if (createErr) {
-        console.error("createBucket error:", createErr);
+        console.error("createBucket:", safeErrMsg(createErr));
         return false;
       }
     }
     return true;
   } catch (e) {
-    console.error("ensureBucket exception:", e);
+    console.error("ensureBucket:", safeErrMsg(e));
     return false;
   }
 }
@@ -257,17 +266,18 @@ export async function POST(request: Request) {
           });
 
         if (uploadError) {
-          console.error("Upload error:", uploadError);
+          console.error("Upload:", safeErrMsg(uploadError));
           return NextResponse.json(
-            { error: `檔案「${file.name}」上傳失敗` },
+            { error: "附件上傳失敗，請稍後再試" },
             { status: 500 }
           );
         }
 
-        // 簽署 URL 有效 1 年（業主可在 Supabase dashboard 直接看到原檔）
+        // 簽署 URL 有效 90 天（業主一般 30 天內處理；超過 90 天可在 Supabase dashboard 直接重新取得）
+        // 縮短 TTL 是為了限制 URL 若意外洩漏（信箱被入侵）的暴露窗口
         const { data: urlData } = await supabaseAdmin.storage
           .from(BUCKET_NAME)
-          .createSignedUrl(filename, 60 * 60 * 24 * 365);
+          .createSignedUrl(filename, 60 * 60 * 24 * 90);
 
         if (urlData?.signedUrl) {
           attachmentLinks.push({ name: file.name, url: urlData.signedUrl });
@@ -299,23 +309,23 @@ export async function POST(request: Request) {
       .single();
 
     if (error) {
-      console.error("Supabase error:", error);
+      console.error("Insert:", safeErrMsg(error));
       return NextResponse.json(
         { error: "提交失敗，請稍後再試" },
         { status: 500 }
       );
     }
 
+    // 不回傳 raw DB row（含 internal id / timestamps），只回必要欄位
     return NextResponse.json(
       {
         success: true,
-        data,
         attachments: attachmentLinks.length,
       },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Contact form error:", error);
+    console.error("Contact:", safeErrMsg(error));
     return NextResponse.json(
       { error: "伺服器錯誤，請稍後再試" },
       { status: 500 }
