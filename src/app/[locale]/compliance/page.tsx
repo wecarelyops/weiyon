@@ -9,8 +9,6 @@ import {
   FileCheck2,
   Users,
   Lock,
-  Award,
-  AlertCircle,
 } from "lucide-react";
 import { buildAlternates } from "@/lib/hreflang";
 
@@ -71,31 +69,31 @@ export default async function CompliancePage({
           <div className="grid md:grid-cols-2 gap-px bg-[var(--border)] border border-[var(--border)]">
             <div className="p-6 lg:p-8 bg-[var(--surface)]">
               <div className="flex items-center gap-3 mb-3">
-                <Award className="w-5 h-5 text-[var(--accent)]" />
-                <span className="text-xs tracking-[0.25em] uppercase text-green-700 font-medium">
-                  {t("currentLabel")}
+                <ShieldCheck className="w-5 h-5 text-[var(--accent)]" />
+                <span className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                  {t("qcFlowLabel")}
                 </span>
               </div>
               <h3 className="text-lg lg:text-xl font-bold text-[var(--primary)] mb-2">
-                ISO 9001:2015
+                {t("qcFlowTitle")}
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                {t("iso9001Desc")}
+                {t("qcFlowDesc")}
               </p>
             </div>
 
             <div className="p-6 lg:p-8 bg-[var(--surface)]">
               <div className="flex items-center gap-3 mb-3">
-                <Award className="w-5 h-5 text-[var(--text-muted)]" />
-                <span className="text-xs tracking-[0.25em] uppercase text-[var(--text-muted)] font-medium">
-                  {t("plannedLabel")}
+                <FileCheck2 className="w-5 h-5 text-[var(--accent)]" />
+                <span className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                  {t("docsLabel")}
                 </span>
               </div>
               <h3 className="text-lg lg:text-xl font-bold text-[var(--primary)] mb-2">
-                ISO 14001:2015
+                {t("docsTitle")}
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                {t("iso14001Desc")}
+                {t("docsDesc")}
               </p>
             </div>
           </div>
@@ -112,13 +110,13 @@ export default async function CompliancePage({
           <div className="mb-10 max-w-3xl">
             <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--text-secondary)] mb-4">
               <span className="block w-10 h-px bg-[var(--accent)]" />
-              {t("cbamLabel")}
+              {t("ghgLabel")}
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary)] tracking-tight leading-tight">
-              {t("cbamTitle")}
+              {t("ghgTitle")}
             </h2>
             <p className="text-base text-[var(--text-secondary)] mt-4 leading-relaxed">
-              {t("cbamSubtitle")}
+              {t("ghgSubtitle")}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -128,13 +126,40 @@ export default async function CompliancePage({
               </span>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] rounded-full text-xs font-medium text-[var(--text-secondary)]">
                 <Leaf className="w-3.5 h-3.5" />
+                {t("voluntaryBadge")}
+              </span>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] rounded-full text-xs font-medium text-[var(--text-secondary)]">
+                <FileCheck2 className="w-3.5 h-3.5" />
                 {t("cbamServiceBadge")}
               </span>
             </div>
           </div>
 
+          {/* 年度數據 — 可展開折疊（為未來逐年新增鋪路） */}
+          <details
+            open
+            className="group border border-[var(--border)] rounded-xl bg-[var(--surface)] overflow-hidden"
+          >
+            <summary className="flex items-center justify-between gap-4 px-5 lg:px-6 py-4 lg:py-5 cursor-pointer list-none hover:bg-[var(--bg)] transition-colors">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] font-mono font-bold text-sm">
+                  2025
+                </span>
+                <div>
+                  <div className="text-base lg:text-lg font-bold text-[var(--primary)] leading-tight">
+                    {t("yearTitle2025")}
+                  </div>
+                  <div className="text-xs text-[var(--text-muted)] mt-0.5">
+                    {t("yearSubtitle2025")}
+                  </div>
+                </div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-[var(--text-muted)] group-open:rotate-90 transition-transform flex-shrink-0" />
+            </summary>
+
+            <div className="px-5 lg:px-6 pb-6 lg:pb-8">
           {/* Scope 表格 */}
-          <div className="border border-[var(--border)] rounded-xl overflow-hidden bg-[var(--surface)]">
+          <div className="border border-[var(--border)] rounded-lg overflow-hidden bg-[var(--bg)]">
             <table className="w-full">
               <thead>
                 <tr className="bg-[var(--bg)] border-b border-[var(--border)]">
@@ -216,13 +241,13 @@ export default async function CompliancePage({
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-[var(--surface)] border border-[var(--border)] rounded-lg">
               <div className="text-xs tracking-[0.2em] uppercase text-[var(--text-secondary)] mb-1">
-                {t("perEmployeeLabel")}
+                {t("perTonneLabel")}
               </div>
-              <div className="text-xl font-bold text-[var(--primary)]">
-                ~37 tCO₂e
+              <div className="text-xl font-bold text-[var(--primary)] font-mono">
+                ~4.4 kgCO₂e/kg
               </div>
               <div className="text-xs text-[var(--text-muted)] mt-1">
-                {t("perEmployeeNote")}
+                {t("perTonneNote")}
               </div>
             </div>
             <div className="p-4 bg-[var(--surface)] border border-[var(--border)] rounded-lg">
@@ -241,7 +266,7 @@ export default async function CompliancePage({
                 {t("reportingYearLabel")}
               </div>
               <div className="text-xl font-bold text-[var(--primary)]">
-                2026
+                2025
               </div>
               <div className="text-xs text-[var(--text-muted)] mt-1">
                 {t("reportingYearNote")}
@@ -251,6 +276,12 @@ export default async function CompliancePage({
 
           <p className="mt-6 text-xs text-[var(--text-muted)] leading-relaxed">
             {t("cbamFootnote")}
+          </p>
+            </div>
+          </details>
+
+          <p className="mt-4 text-xs text-[var(--text-muted)] italic">
+            {t("yearArchiveNote")}
           </p>
         </div>
       </section>
@@ -363,32 +394,6 @@ export default async function CompliancePage({
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Request formal PDF */}
-      <section className="py-16 lg:py-24 bg-[var(--surface)] border-t border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="p-6 lg:p-10 bg-[var(--bg)] border border-[var(--border)] rounded-xl">
-            <div className="flex items-start gap-4 mb-6">
-              <AlertCircle className="w-6 h-6 text-[var(--accent)] flex-shrink-0 mt-1" />
-              <div>
-                <h2 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-2 leading-tight">
-                  {t("pdfRequestTitle")}
-                </h2>
-                <p className="text-sm lg:text-base text-[var(--text-secondary)] leading-relaxed">
-                  {t("pdfRequestSubtitle")}
-                </p>
-              </div>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary)] text-[var(--bg)] font-medium rounded-full hover:bg-[var(--secondary)] transition-colors"
-            >
-              {t("pdfRequestButton")}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>
