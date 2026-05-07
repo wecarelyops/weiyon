@@ -45,7 +45,7 @@ export default async function Home({
           </div>
 
           {/* Massive Title */}
-          <h1 className="text-center lg:text-left text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem] font-bold text-[var(--primary)] tracking-tight leading-[0.95] mb-12 lg:mb-16">
+          <h1 className="text-center lg:text-left text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[8rem] xl:text-[9rem] font-bold text-[var(--primary)] tracking-tight leading-[0.95] mb-10 sm:mb-12 lg:mb-16 break-words">
             {t("heroTitleLine1")}
             <br />
             <span className="text-[var(--accent)]">

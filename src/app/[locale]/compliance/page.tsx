@@ -140,16 +140,16 @@ export default async function CompliancePage({
             open
             className="group border border-[var(--border)] rounded-xl bg-[var(--surface)] overflow-hidden"
           >
-            <summary className="flex items-center justify-between gap-4 px-5 lg:px-6 py-4 lg:py-5 cursor-pointer list-none hover:bg-[var(--bg)] transition-colors">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] font-mono font-bold text-sm">
+            <summary className="flex items-center justify-between gap-3 px-4 lg:px-6 py-4 lg:py-5 cursor-pointer list-none hover:bg-[var(--bg)] transition-colors">
+              <div className="flex items-center gap-3 min-w-0">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] font-mono font-bold text-sm flex-shrink-0">
                   2025
                 </span>
-                <div>
-                  <div className="text-base lg:text-lg font-bold text-[var(--primary)] leading-tight">
+                <div className="min-w-0">
+                  <div className="text-sm sm:text-base lg:text-lg font-bold text-[var(--primary)] leading-tight">
                     {t("yearTitle2025")}
                   </div>
-                  <div className="text-xs text-[var(--text-muted)] mt-0.5">
+                  <div className="text-[0.7rem] sm:text-xs text-[var(--text-muted)] mt-0.5 hidden sm:block">
                     {t("yearSubtitle2025")}
                   </div>
                 </div>
@@ -157,80 +157,80 @@ export default async function CompliancePage({
               <ArrowRight className="w-5 h-5 text-[var(--text-muted)] group-open:rotate-90 transition-transform flex-shrink-0" />
             </summary>
 
-            <div className="px-5 lg:px-6 pb-6 lg:pb-8">
+            <div className="px-4 lg:px-6 pb-6 lg:pb-8">
           {/* Scope 表格 */}
           <div className="border border-[var(--border)] rounded-lg overflow-hidden bg-[var(--bg)]">
             <table className="w-full">
               <thead>
                 <tr className="bg-[var(--bg)] border-b border-[var(--border)]">
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
                     {t("scopeColScope")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
                     {t("scopeColSource")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium">
                     {t("scopeColAnnual")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden lg:table-cell">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden lg:table-cell">
                     {t("scopeColMethod")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-[var(--border)]">
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
                     Scope 1
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-[var(--text-secondary)] break-words">
                     {t("scope1Source")}
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)] whitespace-nowrap">
                     ~5 tCO₂e
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
                     {t("scope1Method")}
                   </td>
                 </tr>
                 <tr className="border-b border-[var(--border)]">
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
                     Scope 2
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-[var(--text-secondary)] break-words">
                     {t("scope2Source")}
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)] whitespace-nowrap">
                     ~60 tCO₂e
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
                     {t("scope2Method")}
                   </td>
                 </tr>
                 <tr className="border-b border-[var(--border)]">
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
                     Scope 3
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-[var(--text-secondary)] break-words">
                     {t("scope3Source")}
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)] whitespace-nowrap">
                     ~46 tCO₂e
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
                     {t("scope3Method")}
                   </td>
                 </tr>
                 <tr className="bg-[var(--accent)]/5">
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-bold text-[var(--primary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-bold text-[var(--primary)]">
                     {t("scopeTotalLabel")}
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-[var(--text-secondary)] break-words">
                     —
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-base lg:text-lg font-mono font-bold text-[var(--accent)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-base lg:text-lg font-mono font-bold text-[var(--accent)] whitespace-nowrap">
                     ~111 tCO₂e
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
                     {t("scopeTotalMethod")}
                   </td>
                 </tr>

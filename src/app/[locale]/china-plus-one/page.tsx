@@ -133,46 +133,46 @@ export default async function ChinaPlusOnePage({
             <table className="w-full">
               <thead>
                 <tr className="bg-[var(--bg)] border-b border-[var(--border)]">
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
                     {t("tariffColOrigin")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
                     {t("tariffColRate")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden sm:table-cell">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden sm:table-cell">
                     {t("tariffColExample")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
                     {t("tariffColYour")}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-[var(--border)] bg-red-50/30">
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-medium text-[var(--primary)] whitespace-nowrap">
                     🇨🇳 {t("tariffChinaName")}
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-2xl font-mono font-bold text-red-600">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xl lg:text-2xl font-mono font-bold text-red-600 whitespace-nowrap">
                     32%
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)] hidden sm:table-cell font-mono">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-[var(--text-secondary)] hidden sm:table-cell font-mono">
                     USD 100k → +USD 32k
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-red-600 font-medium">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-red-600 font-medium break-words">
                     {t("tariffChinaImpact")}
                   </td>
                 </tr>
                 <tr className="bg-green-50/30">
-                  <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-medium text-[var(--primary)]">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-sm lg:text-base font-medium text-[var(--primary)] whitespace-nowrap">
                     🇹🇼 {t("tariffTaiwanName")}
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-2xl font-mono font-bold text-green-700">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xl lg:text-2xl font-mono font-bold text-green-700 whitespace-nowrap">
                     10%
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-[var(--text-secondary)] hidden sm:table-cell font-mono">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-[var(--text-secondary)] hidden sm:table-cell font-mono">
                     USD 100k → +USD 10k
                   </td>
-                  <td className="px-4 lg:px-6 py-4 text-sm text-green-700 font-medium">
+                  <td className="px-3 lg:px-6 py-3 lg:py-4 text-xs lg:text-sm text-green-700 font-medium break-words">
                     {t("tariffTaiwanImpact")}
                   </td>
                 </tr>

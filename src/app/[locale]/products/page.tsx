@@ -55,7 +55,7 @@ export default async function ProductsPage({
             <span className="block w-10 h-px bg-[var(--accent)]" />
             {t("heroTagline")}
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-[var(--primary)] tracking-tight leading-[1.05] mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-[var(--primary)] tracking-tight leading-[1.05] mb-6 break-words">
             {t("heroTitle")}
           </h1>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl">
