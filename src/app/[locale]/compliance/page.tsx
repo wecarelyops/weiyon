@@ -150,7 +150,7 @@ export default async function CompliancePage({
                     {t("scope1Source")}
                   </td>
                   <td className="px-4 lg:px-6 py-4 text-sm lg:text-base font-mono font-medium text-[var(--accent)]">
-                    &lt; 1 tCO₂e
+                    ~5 tCO₂e
                   </td>
                   <td className="px-4 lg:px-6 py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
                     {t("scope1Method")}
@@ -192,7 +192,7 @@ export default async function CompliancePage({
                     —
                   </td>
                   <td className="px-4 lg:px-6 py-4 text-base lg:text-lg font-mono font-bold text-[var(--accent)]">
-                    ~107 tCO₂e
+                    ~111 tCO₂e
                   </td>
                   <td className="px-4 lg:px-6 py-4 text-xs text-[var(--text-secondary)] hidden lg:table-cell">
                     {t("scopeTotalMethod")}
@@ -208,7 +208,7 @@ export default async function CompliancePage({
                 {t("perEmployeeLabel")}
               </div>
               <div className="text-xl font-bold text-[var(--primary)]">
-                ~36 tCO₂e
+                ~37 tCO₂e
               </div>
               <div className="text-xs text-[var(--text-muted)] mt-1">
                 {t("perEmployeeNote")}
