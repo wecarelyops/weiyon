@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { buildAlternates } from "@/lib/hreflang";
+import CountUp from "@/components/count-up";
 import {
   Award,
   Users,
@@ -148,39 +149,53 @@ export default async function AboutPage({
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--border)] border border-[var(--border)]">
             {[
               {
-                value: "40+",
+                end: 40,
+                suffix: "+",
+                duration: 1800,
                 label: t("milestone1Label"),
                 detail: t("milestone1Detail"),
               },
               {
-                value: "500+",
+                end: 500,
+                suffix: "+",
+                duration: 2000,
                 label: t("milestone2Label"),
                 detail: t("milestone2Detail"),
               },
               {
-                value: "1,000+",
+                end: 1000,
+                suffix: "+",
+                duration: 2200,
                 label: t("milestone3Label"),
                 detail: t("milestone3Detail"),
               },
               {
-                value: "8",
+                end: 8,
+                suffix: "",
+                duration: 1400,
                 label: t("milestone4Label"),
                 detail: t("milestone4Detail"),
               },
               {
-                value: "14",
+                end: 14,
+                suffix: "",
+                duration: 1500,
                 unit: t("milestone6Unit"),
                 label: t("milestone6Label"),
                 detail: t("milestone6Detail"),
               },
               {
-                value: "3",
+                end: 3,
+                suffix: "",
+                duration: 1200,
                 unit: t("milestone7Unit"),
                 label: t("milestone7Label"),
                 detail: t("milestone7Detail"),
               },
               {
-                value: "1986",
+                end: 1986,
+                suffix: "",
+                duration: 2400,
                 label: t("milestone8Label"),
                 detail: t("milestone8Detail"),
               },
@@ -189,8 +204,12 @@ export default async function AboutPage({
                 key={idx}
                 className="bg-[var(--bg)] p-6 lg:p-8 hover:bg-[var(--surface)] transition-colors"
               >
-                <p className="text-3xl lg:text-5xl font-bold text-[var(--primary)] leading-none mb-2 tracking-tight">
-                  {item.value}
+                <p className="text-3xl lg:text-5xl font-bold text-[var(--primary)] leading-none mb-2 tracking-tight tabular-nums">
+                  <CountUp
+                    end={item.end}
+                    suffix={item.suffix}
+                    duration={item.duration}
+                  />
                   {item.unit && (
                     <span className="text-base lg:text-xl ml-1 font-medium text-[var(--text-secondary)]">
                       {item.unit}
