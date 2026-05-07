@@ -10,8 +10,425 @@ export type BlogPost = {
 };
 
 // 部落格實質內容（中文完整版；英 / 德為精簡摘要）
+// 部分文章專為德國 Mittelstand 採購商寫，主文用德文、zh/en 為摘要。
 // 內容均為原創，依業界通用知識撰寫
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "lohnfertigung-taiwan-mittelstand",
+    title: {
+      zh: "台灣 vs 中國精密加工外包：給德國 Mittelstand 採購商的決策指南",
+      en: "Subcontract Manufacturing in Taiwan vs. China: A Decision Guide for German Mittelstand Buyers",
+      de: "Lohnfertigung in Taiwan vs. China: Was Mittelstand-Einkäufer wissen müssen",
+    },
+    excerpt: {
+      zh: "德國中小企業採購精密零件時，預設選項通常是中國。但越來越多採購商發現台灣是更好的選擇 — 品質、智財保護、地緣風險、溝通效率全面領先。本文從德國採購立場深度比較。",
+      en: "German Mittelstand companies sourcing precision parts in Asia traditionally default to China. But more buyers are discovering Taiwan — for quality, IP protection, lower geopolitical risk, and clearer communication. A side-by-side comparison.",
+      de: "Wenn deutsche Mittelständler Präzisionsteile in Asien beschaffen, fällt die Wahl traditionell auf China. Doch immer mehr Einkäufer entdecken Taiwan als Alternative — wegen Qualität, IP-Schutz, geringerem geopolitischen Risiko und besserer Kommunikation. Ein direkter Vergleich.",
+    },
+    category: { zh: "採購指南", en: "Procurement Guide", de: "Einkaufsleitfaden" },
+    date: "2026-05-06",
+    imageUrl:
+      "https://images.pexels.com/photos/32845674/pexels-photo-32845674.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      de: `<p>Wenn deutsche Mittelständler Präzisionsteile in Asien fertigen lassen, fällt die Wahl traditionell auf China. Doch in den letzten Jahren haben geopolitische Spannungen, Lieferkettenstörungen und Qualitätserfahrungen viele Einkäufer dazu bewegt, Taiwan als ernsthafte Alternative zu prüfen. Dieser Artikel ordnet die wichtigsten Faktoren ein, die deutsche Einkäufer beim Vergleich kennen sollten.</p>
+
+<h2>Die Ausgangslage: Warum überhaupt Asien?</h2>
+
+<p>Die Argumente sind seit Jahren stabil: Lohnkosten, Werkzeugstahl-Verfügbarkeit, breite Materialpalette, kürzere Wege zwischen Designänderung und Probemuster. Was sich geändert hat: Der Lohnkostenvorteil ist nicht mehr das einzige Kriterium. Mittelständler bewerten heute Total Cost of Ownership — inklusive Qualitätsrisiko, Lieferzeit-Stabilität, Kommunikationsaufwand und Compliance.</p>
+
+<h2>Taiwan vs. China — die wichtigsten Unterschiede</h2>
+
+<h3>1. Qualitätsniveau</h3>
+<p>Beide Länder haben hochwertige Anbieter — und beide haben Werkstätten, die man meiden sollte. Der Unterschied liegt im Median: Taiwan hat eine kleinere, spezialisiertere Industriebasis mit langer Tradition in Halbleiter-, Luftfahrt- und Medizinzulieferung. Das durchschnittliche Qualitätsniveau ist dadurch tendenziell näher an japanischen oder schweizerischen Standards.</p>
+<p>China bietet eine viel größere Bandbreite — von Tier-1-Spitzenfertigern (oft mit deutschen Beteiligungen) bis zu Werkstätten ohne dokumentierte QM-Prozesse. Auswahl ist aufwändiger.</p>
+
+<h3>2. Sprachbarrieren und Kommunikation</h3>
+<p>Englisch ist in beiden Ländern in Engineering-Funktionen verbreitet, aber Taiwan hat etablierte Geschäftsbeziehungen mit Deutschland und Europa, was sich in der Bereitschaft zur direkten technischen Kommunikation bemerkbar macht. Reaktionszeiten sind oft schneller (1-2 Werktage statt 3-5).</p>
+
+<h3>3. Geopolitik und Lieferkettenrisiko</h3>
+<p>Dies ist der härteste Punkt seit 2022. Sanktionen, Exportkontrollen und politische Volatilität haben China-Lieferketten unkalkulierbarer gemacht. Taiwan ist zwar nicht risikofrei (Spannungen mit dem Festland), aber für deutsche Einkäufer ist die rechtliche und logistische Lage stabiler — Taiwan hat eine WTO-Mitgliedschaft, lange Handelsbeziehungen mit der EU und ist nicht direkt von westlichen Sanktionen betroffen.</p>
+
+<h3>4. IP-Schutz</h3>
+<p>Taiwan hat eines der strikteren IP-Schutzsysteme Asiens — gestützt durch seine eigene Halbleiter- und Hightech-Industrie, die selbst auf IP-Schutz angewiesen ist. Beim Outsourcing nach China ist IP-Risikomanagement ein Dauerthema (NDAs, Stufen-Offenlegung der Designs, etc.); in Taiwan fällt dieser Aufwand spürbar geringer aus.</p>
+
+<h3>5. Mindestbestellmengen und Flexibilität</h3>
+<p>Chinesische Großfertiger fokussieren oft auf Stückzahlen ab mehreren Tausend. Taiwanesische Werkstätten mittlerer Größe nehmen typischerweise auch Klein- und Mittelserien ab 1 Stück — was für Mittelstand-Beschaffung mit oft kleineren Losen ideal ist.</p>
+
+<h2>Total Cost of Ownership: Mehr als nur der Stückpreis</h2>
+
+<p>Der reine Stückpreis ist in China meist 10-25 % niedriger. Aber TCO berücksichtigt:</p>
+
+<ul>
+<li><strong>Ausschuss / Reklamation:</strong> Höher in China bei breiter Anbieterstreuung. Selbst 2-3 % höhere Ausschussquote frisst den Stückpreisvorteil schnell auf.</li>
+<li><strong>Kommunikationsaufwand:</strong> Längere Klärungszyklen verzögern Projekte. Bei Kalkulation mit Stundensätzen für Einkauf / Engineering relevant.</li>
+<li><strong>Lieferzeit-Risiko:</strong> Logistikstörungen (Hafenüberlastung, Frachtraten-Schwankungen) sind in beiden Ländern ein Thema, in China oft volatiler.</li>
+<li><strong>Compliance und Dokumentation:</strong> Für PED 2014/68/EU, RoHS / REACH etc. brauchen Sie sauber dokumentierte Werkstoffzeugnisse. Taiwan-Anbieter sind hier oft erfahrener im EU-Standard.</li>
+</ul>
+
+<p>Bei mittelständischen Stückzahlen (typischerweise 50-1000 Stück) konvergiert TCO in vielen Fällen — der Stückpreisvorteil Chinas wird durch indirekte Kosten neutralisiert.</p>
+
+<h2>Worauf deutsche Einkäufer achten sollten</h2>
+
+<ol>
+<li><strong>Werkstoffrückverfolgbarkeit:</strong> Werkszeugnisse (Mill Test Certificates) müssen vorlegbar sein. Frage: stammt das Material aus westlichen Stahlwerken, oder ist die Quelle nicht eindeutig?</li>
+<li><strong>JIS vs. DIN-Werkstoffsortennummern:</strong> Asiatische Lieferanten arbeiten meist mit JIS (SUS304, SCM440 etc.). Klären Sie die Zuordnung zu DIN-Nummern (1.4301, 25CrMo4 etc.) frühzeitig im Pflichtenheft.</li>
+<li><strong>Toleranz- und GD&T-Spezifikation:</strong> Klare Bezugselemente (Datums) sind essenziell. Vermeiden Sie unnötig enge Toleranzen — sie erhöhen den Preis dramatisch ohne Funktionsgewinn.</li>
+<li><strong>NDA und IP-Schutz:</strong> Auch in Taiwan empfehlen wir eine NDA, aber Durchsetzbarkeit ist realistischer als auf dem Festland.</li>
+<li><strong>Erstmuster und Freigabe:</strong> Erstmusterprüfbericht (EMPB / FAI) vor Serienstart ist Standard. Verlangen Sie diesen explizit.</li>
+</ol>
+
+<h2>Fazit: Wann lohnt sich Taiwan?</h2>
+
+<p>Taiwan ist die richtige Wahl, wenn:</p>
+<ul>
+<li>Sie schwer zerspanbare Werkstoffe (Edelstahl, Titan, Inconel, Werkzeugstahl) bearbeiten lassen</li>
+<li>Klein- bis Mittelserien (1 bis ca. 1000 Stück) im Vordergrund stehen</li>
+<li>IP-Schutz und stabile Lieferkette wichtiger sind als der absolut niedrigste Stückpreis</li>
+<li>Sie deutsche Engineering-Standards (PED, EU MDR, AS9100, IATF 16949) nachvollziehbar dokumentiert haben möchten</li>
+<li>Sie eine kontinuierliche Lieferantenbeziehung mit kurzen Reaktionszeiten suchen</li>
+</ul>
+
+<p>China bleibt sinnvoll bei sehr großen Stückzahlen (10.000+) mit standardisierten Werkstoffen und unkritischer IP-Lage.</p>
+
+<p>Bei Weiyon Industry beraten wir deutsche Einkäufer seit Jahren zu Materialwahl, JIS/DIN-Zuordnung und Lieferketten-Dokumentation. Wenn Sie ein konkretes Teil oder eine Anfrage besprechen möchten, erreichen Sie uns über das <a href="/de/contact">Kontaktformular</a> — Antwort in 1-2 Werktagen.</p>`,
+      en: `<p>German Mittelstand companies sourcing precision parts in Asia traditionally default to China. But geopolitical tensions, supply-chain disruptions, and quality experiences have led many buyers to evaluate Taiwan as a serious alternative.</p>
+
+<h2>Taiwan vs. China — the key differences</h2>
+<ul>
+<li><strong>Quality median:</strong> Taiwan's smaller, more specialized industrial base trends closer to Japanese/Swiss standards. China spans a wider range — Tier-1 excellence to undocumented shops.</li>
+<li><strong>Communication:</strong> Faster response times in Taiwan (1-2 days vs. 3-5).</li>
+<li><strong>Geopolitical risk:</strong> Taiwan's legal/logistical situation is more stable for German buyers post-2022 sanctions and export controls.</li>
+<li><strong>IP protection:</strong> Taiwan has stricter enforcement, supported by its own semiconductor industry that depends on IP.</li>
+<li><strong>MOQ flexibility:</strong> Taiwan accepts 1-piece minimums; China typically focuses on thousands.</li>
+</ul>
+
+<h2>Total Cost of Ownership</h2>
+<p>China's unit price is typically 10-25% lower. But TCO factors in scrap rate, communication overhead, lead-time risk, and compliance documentation. For 50-1000 piece runs typical of Mittelstand procurement, TCO often converges.</p>
+
+<h2>What German buyers should watch</h2>
+<p>Material traceability (Mill Test Certs), JIS vs. DIN designation mapping, GD&T specification clarity, NDA enforcement, and First Article Inspection. Taiwan suppliers experienced with EU standards (PED, RoHS/REACH) are easier to work with.</p>
+
+<h2>When Taiwan is the right call</h2>
+<p>Difficult materials (stainless, titanium, Inconel, tool steel), small-to-mid runs, IP-sensitive parts, EU compliance documentation needed. China still wins on very high volumes (10,000+) of standardized parts.</p>`,
+      zh: `<p>德國中小企業（Mittelstand）採購精密零件時，預設選項常是中國。但近年地緣風險、供應鏈中斷、品質經驗讓越來越多採購把台灣當作真正的替代方案。</p>
+
+<h2>台灣 vs 中國 — 五大差異</h2>
+<ul>
+<li><strong>品質中位數</strong>：台灣產業較專業集中、接近日瑞水平；中國差距大。</li>
+<li><strong>溝通效率</strong>：台灣 1-2 天回覆，中國常 3-5 天。</li>
+<li><strong>地緣風險</strong>：2022 後制裁 / 出口管制讓中國供應鏈不穩；台灣相對穩定。</li>
+<li><strong>智財保護</strong>：台灣執法較嚴格（半導體產業靠智財）。</li>
+<li><strong>MOQ 彈性</strong>：台灣 1 件起接、中國多以千件為目標。</li>
+</ul>
+
+<h2>Total Cost of Ownership</h2>
+<p>中國單價通常便宜 10-25%。但 TCO 加上不良率、溝通成本、交期風險、合規文件 — 50-1000 件的訂單規模下，TCO 常常收斂。</p>
+
+<h2>德國買家該注意的</h2>
+<p>材質追溯（Mill Cert）、JIS vs DIN 對照、GD&T 清晰度、NDA 執行、首件檢驗。熟悉 EU 規範（PED、RoHS / REACH）的台灣供應商溝通更省力。</p>
+
+<h2>什麼時候選台灣</h2>
+<p>難切削材料（不鏽鋼、鈦、Inconel、工具鋼）、中小批量、IP 敏感件、需要 EU 合規文件。中國仍在超大批量（10,000+）標準件有優勢。</p>`,
+    },
+  },
+  {
+    slug: "edelstahl-sorten-din-bezeichnungen",
+    title: {
+      zh: "不鏽鋼 JIS vs DIN 對照：給德國採購商的精密加工指南",
+      en: "Stainless Steel Grades — JIS vs. DIN Cross-Reference for German Buyers",
+      de: "Edelstahl-Sorten in der Präzisionsbearbeitung: DIN-Bezeichnungen für Lohnfertiger",
+    },
+    excerpt: {
+      zh: "德國採購商在亞洲下單時常遇到一個問題：亞洲供應商用 JIS 編號（SUS304），德國圖面用 DIN 編號（1.4301）。本文整理對照表 + 實務溝通要點，避免採購誤會。",
+      en: "Sourcing in Asia means dealing with JIS designations (SUS304) on the supplier side, while German drawings use DIN material numbers (1.4301). A practical cross-reference and communication guide.",
+      de: "Wer als deutscher Einkäufer in Asien fertigen lässt, stößt auf eine Doppelnomenklatur: JIS-Bezeichnungen (SUS304) versus DIN-Werkstoffnummern (1.4301). Ein praktischer Leitfaden mit Zuordnungstabelle und Kommunikationstipps.",
+    },
+    category: { zh: "知識庫", en: "Knowledge Base", de: "Wissen" },
+    date: "2026-05-04",
+    imageUrl:
+      "https://images.pexels.com/photos/12951626/pexels-photo-12951626.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      de: `<p>Wer als deutscher Einkäufer Edelstahlteile in Asien fertigen lässt, stößt auf eine wiederkehrende Herausforderung: Asiatische Lieferanten arbeiten mit den japanischen JIS-Bezeichnungen (SUS304, SUS316), während deutsche Konstruktionszeichnungen DIN-Werkstoffnummern (1.4301, 1.4404) tragen. Diese Doppelnomenklatur kann zu Missverständnissen führen, wenn die Zuordnung nicht eindeutig dokumentiert wird.</p>
+
+<p>Dieser Leitfaden ordnet die wichtigsten Sorten zu und zeigt, was deutsche Einkäufer in der Anfrage und im Werkszeugnis erwarten sollten.</p>
+
+<h2>JIS vs. DIN — die zentralen Entsprechungen</h2>
+
+<table>
+<tr><th>JIS</th><th>DIN / EN</th><th>Kurzcharakteristik</th><th>Typische Anwendung</th></tr>
+<tr><td>SUS304</td><td>1.4301 (X5CrNi18-10)</td><td>Universal-Austenitstahl</td><td>Maschinenbau, Lebensmittel, allgemeine Korrosionsumgebungen</td></tr>
+<tr><td>SUS304L</td><td>1.4307 (X2CrNi18-9)</td><td>Niedrig gekohlt, schweißbar</td><td>Geschweißte Konstruktionen mittlerer Größe</td></tr>
+<tr><td>SUS316</td><td>1.4401 (X5CrNiMo17-12-2)</td><td>Mit Mo, chloridbeständiger</td><td>Marine, Chemie, Halbleiter</td></tr>
+<tr><td>SUS316L</td><td>1.4404 (X2CrNiMo17-12-2)</td><td>Niedrig gekohlt, geschweißt</td><td>Lebensmittelprozesse, Pharma, Implantate</td></tr>
+<tr><td>SUS316Ti</td><td>1.4571 (X6CrNiMoTi17-12-2)</td><td>Ti-stabilisiert, hochtemperaturbeständig</td><td>Anlagenbau, Petrochemie</td></tr>
+<tr><td>SUS321</td><td>1.4541 (X6CrNiTi18-10)</td><td>Ti-stabilisiert, 700-900 °C</td><td>Auspuff (Tuning, Turbo), Anlagenkomponenten</td></tr>
+<tr><td>SUS440C</td><td>1.4125 (X105CrMo17)</td><td>Martensitisch, härtbar HRC 58+</td><td>Lager, Schneidwerkzeuge, Formführungen</td></tr>
+<tr><td>SUS630 / 17-4PH</td><td>1.4542 (X5CrNiCuNb16-4)</td><td>Ausscheidungsgehärtet</td><td>Luftfahrt-Strukturteile, Öl- & Gas-Spindeln</td></tr>
+<tr><td>—</td><td>1.4462 (Duplex)</td><td>S31803, etwa doppelte Festigkeit von SUS316</td><td>Offshore, Sauergas, Meerwasser</td></tr>
+<tr><td>—</td><td>1.4410 (Super Duplex)</td><td>S32750</td><td>Aggressive Sauergas-Umgebungen</td></tr>
+</table>
+
+<h2>Wann welche Sorte? Praxisleitfaden</h2>
+
+<h3>Standardanwendung — 1.4301 (SUS304)</h3>
+<p>Die Allroundsorte. Für allgemeinen Maschinenbau, Lebensmittel, Innenanwendungen. Wenn keine spezifische Korrosionsanforderung besteht: bestes Preis-Leistungs-Verhältnis.</p>
+
+<h3>Chloride / Salzwasser — 1.4404 (SUS316L)</h3>
+<p>Sobald Meerwasser, salzhaltige Atmosphäre oder chloridhaltige Prozessmedien im Spiel sind, ist 1.4404 die erste Wahl. L-Variante (niedriger Kohlenstoff) bei Schweißverbindungen — vermeidet Korngrenzenkorrosion.</p>
+
+<h3>Hochtemperatur (700-900 °C) — 1.4541 (SUS321)</h3>
+<p>Titan-stabilisiert. Für Auspuffanlagen (Turbo-Krümmer), Hochtemperatur-Rohrleitungen und Anlagenkomponenten. Beständig gegen Korngrenzenkorrosion bei Schweißungen unter Hitze.</p>
+
+<h3>Hohe Härte mit Korrosionsresistenz — 1.4125 (SUS440C)</h3>
+<p>Härtbar bis HRC 58+. Für Lager, Schneidwerkzeuge, Formführungen. Nicht für dauerhaften Flüssigkeitskontakt geeignet — die Korrosionsbeständigkeit ist deutlich niedriger als bei 1.4301/1.4404.</p>
+
+<h3>Hochfest mit Korrosionsschutz — 1.4542 (17-4PH)</h3>
+<p>Ausscheidungsgehärteter Edelstahl. Vereint hohe Festigkeit (über 1000 MPa) mit guter Korrosionsbeständigkeit. Luftfahrt-Strukturteile, hochbelastete Wellen.</p>
+
+<h3>Aggressive Korrosion — Duplex 1.4462 / Super Duplex 1.4410</h3>
+<p>Sauergas-Service, Meerwasserbehandlung, Offshore-Bohrungen. Höhere Festigkeit als SUS316, bessere Beständigkeit gegen Lochfraß und Spannungsrisskorrosion.</p>
+
+<h2>PED 2014/68/EU und Werkstoffzeugnisse</h2>
+
+<p>Für Druckgeräte unter PED 2014/68/EU sind Werkstoffzeugnisse nach EN 10204 erforderlich. Die wichtigsten Stufen:</p>
+
+<ul>
+<li><strong>3.1</strong> — Werkszeugnis vom Stahlwerk, durch unabhängige Prüfstelle bestätigt. Standard für die meisten Druckanwendungen.</li>
+<li><strong>3.2</strong> — Zusätzlich von einem benannten Prüfer (Notified Body) abgenommen. Erforderlich für höhere PED-Kategorien.</li>
+</ul>
+
+<p>Klären Sie diese Anforderung früh in der Anfrage. Asiatische Lieferanten haben oft Erfahrung mit 3.1, aber 3.2 erfordert Vorlauf und Koordination mit der Prüfstelle.</p>
+
+<h2>Was Sie in der Anfrage angeben sollten</h2>
+
+<ol>
+<li><strong>Werkstoff in beiden Bezeichnungen</strong> — DIN-Nummer plus die JIS-Entsprechung in Klammern, z. B. „1.4404 (SUS316L)". Vermeidet Missverständnisse.</li>
+<li><strong>Werkszeugnis-Anforderung</strong> — explizit „EN 10204 3.1" oder „3.2".</li>
+<li><strong>Korrosionsumgebung</strong> — Salzwasser? Sauergas? Lebensmittel? Hilft dem Lieferanten bei Plausibilitätsprüfung der Werkstoffwahl.</li>
+<li><strong>Schweiß- oder Zerspanungsanteil</strong> — entscheidet über Wahl L-Variante.</li>
+<li><strong>Wärmebehandlungsstatus</strong> — vergütet, lösungsgeglüht, ausscheidungsgehärtet?</li>
+</ol>
+
+<h2>Was Sie vom Lieferanten erwarten sollten</h2>
+
+<ul>
+<li>Werkszeugnis nach EN 10204 mit eindeutiger Werkstoffsortenangabe (DIN + JIS möglich)</li>
+<li>Chargenrückverfolgbarkeit bis zum Stahlwerk</li>
+<li>Maßprüfbericht (FAI) bei Serienstart</li>
+<li>Bei sicherheitsrelevanten Anwendungen: Erstbemusterung mit dokumentierter Werkstoffanalyse</li>
+</ul>
+
+<h2>Bei Weiyon Industry</h2>
+
+<p>Wir bearbeiten alle in der Tabelle aufgeführten Edelstahlsorten und stellen Werkszeugnisse nach EN 10204 3.1 standardmäßig aus. Für höhere PED-Kategorien (3.2) koordinieren wir mit der vom Kunden benannten Prüfstelle. Bei Fragen zur Werkstoffwahl für eine konkrete Anwendung erreichen Sie uns über das <a href="/de/contact">Kontaktformular</a>.</p>`,
+      en: `<p>German buyers sourcing in Asia face a recurring challenge: Asian suppliers use JIS designations (SUS304, SUS316) while German drawings carry DIN material numbers (1.4301, 1.4404). Mismapping causes misunderstandings.</p>
+
+<h2>Cross-reference table</h2>
+<ul>
+<li>SUS304 ↔ 1.4301 (X5CrNi18-10)</li>
+<li>SUS304L ↔ 1.4307</li>
+<li>SUS316 ↔ 1.4401</li>
+<li>SUS316L ↔ 1.4404</li>
+<li>SUS316Ti ↔ 1.4571</li>
+<li>SUS321 ↔ 1.4541</li>
+<li>SUS440C ↔ 1.4125</li>
+<li>SUS630 / 17-4PH ↔ 1.4542</li>
+<li>Duplex S31803 ↔ 1.4462</li>
+<li>Super Duplex S32750 ↔ 1.4410</li>
+</ul>
+
+<h2>PED 2014/68/EU material certificates</h2>
+<p>For pressure equipment under PED, EN 10204 certificates are required:</p>
+<ul>
+<li><strong>3.1</strong> — mill cert verified by independent inspector. Standard for most pressure applications.</li>
+<li><strong>3.2</strong> — additional acceptance by Notified Body. Required for higher PED categories.</li>
+</ul>
+
+<h2>What to specify in your inquiry</h2>
+<p>Material in both designations (DIN + JIS), EN 10204 cert level, corrosion environment, weld vs. machined, heat treatment state.</p>
+
+<h2>What to expect from the supplier</h2>
+<p>EN 10204 mill cert with unambiguous material designation, batch traceability to the steel mill, FAI report at production start, and documented material analysis for safety-critical parts.</p>`,
+      zh: `<p>德國買家在亞洲採購不鏽鋼零件時遇到一個常見問題：亞洲供應商用 JIS 編號（SUS304、SUS316），德國圖面用 DIN 編號（1.4301、1.4404）。對應錯誤會造成誤會。</p>
+
+<h2>對照表</h2>
+<ul>
+<li>SUS304 ↔ 1.4301</li>
+<li>SUS304L ↔ 1.4307</li>
+<li>SUS316 ↔ 1.4401</li>
+<li>SUS316L ↔ 1.4404</li>
+<li>SUS316Ti ↔ 1.4571</li>
+<li>SUS321 ↔ 1.4541</li>
+<li>SUS440C ↔ 1.4125</li>
+<li>SUS630 / 17-4PH ↔ 1.4542</li>
+<li>Duplex S31803 ↔ 1.4462</li>
+<li>Super Duplex S32750 ↔ 1.4410</li>
+</ul>
+
+<h2>PED 2014/68/EU 材質證明</h2>
+<p>歐盟壓力設備指令下，依 EN 10204 出材質證明：</p>
+<ul>
+<li><strong>3.1</strong> — 鋼廠材質證明 + 獨立檢驗員確認。多數壓力應用適用。</li>
+<li><strong>3.2</strong> — 加由 Notified Body 認可。較高 PED 類別需要。</li>
+</ul>
+
+<h2>詢價時提供</h2>
+<p>材料雙編號（DIN + JIS）、EN 10204 等級、腐蝕環境、是否焊接、熱處理狀態。</p>
+
+<h2>對供應商的期待</h2>
+<p>EN 10204 材質證明含明確材料編號、可追溯到鋼廠的批次紀錄、量產前 FAI 報告、安全件附完整材料分析。</p>`,
+    },
+  },
+  {
+    slug: "werkzeugstahl-deutsche-formenbauer",
+    title: {
+      zh: "工具鋼在台灣加工：給德國模具製造商的 SKD11 / SKD61 / NAK80 採購指南",
+      en: "Tool Steel Machining in Taiwan: SKD11, SKD61, NAK80 for German Mold Makers",
+      de: "Werkzeugstahl-Bearbeitung in Taiwan: SKD11, SKD61, NAK80 für deutsche Formen- und Werkzeugbauer",
+    },
+    excerpt: {
+      zh: "德國模具廠常面臨兩難：國內高端工廠檔期滿或太貴，但精度、硬度、表面要求不能讓步。台灣對 JIS 工具鋼（SKD11、SKD61、NAK80）有經驗。本文整理 JIS-DIN 對照與外包注意事項。",
+      en: "German tool and mold makers face a dilemma: domestic high-end shops are booked or pricey, but tolerance, hardness, and finish are non-negotiable. Taiwan offers a credible alternative — experienced in JIS tool steels used internationally. JIS-DIN cross-reference and outsourcing checklist.",
+      de: "Deutsche Formen- und Werkzeugbauer stehen vor einem Dilemma: Spitzenfertiger im Inland sind ausgebucht oder teuer, aber Maßhaltigkeit, Härte und Oberflächengüte sind unverhandelbar. Taiwan bietet eine ernsthafte Alternative — mit Erfahrung in den international gebräuchlichen JIS-Werkzeugstahl-Sorten.",
+    },
+    category: { zh: "技術分享", en: "Technical", de: "Technik" },
+    date: "2026-04-30",
+    imageUrl:
+      "https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      de: `<p>Deutsche Formen- und Werkzeugbauer stehen oft vor einem Engpass: Hochwertige inländische Fertiger für Werkzeug- und Formenstahl sind entweder ausgelastet oder preislich anspruchsvoll. Gleichzeitig sind Anforderungen an Maßhaltigkeit, Härte und Oberflächengüte nicht verhandelbar — eine schlecht gefertigte Form kostet im Serienstart oder Qualitätsausschuss ein Vielfaches der vermeintlichen Einsparung.</p>
+
+<p>Taiwan bietet hier eine bemerkenswerte Alternative. Die taiwanesische Industrie hat über Jahrzehnte Erfahrung mit den japanischen JIS-Werkzeugstahl-Sorten gesammelt, die international weit verbreitet sind und sich in vielen Fällen mit DIN-Sorten überschneiden oder ersetzen lassen.</p>
+
+<h2>Die wichtigsten Werkzeugstahl-Sorten — JIS vs. DIN</h2>
+
+<h3>Kaltarbeitsstähle</h3>
+<table>
+<tr><th>JIS</th><th>DIN</th><th>Charakteristik</th><th>Anwendung</th></tr>
+<tr><td>SK3 / SK4</td><td>C100W1 / C105W1</td><td>Kohlenstoff-Werkzeugstahl, Basisqualität</td><td>Einfache Werkzeuge, Lehren</td></tr>
+<tr><td>SKS3</td><td>1.2510</td><td>Niedrig legiert, verzugsarm</td><td>Schnitt-, Stanzwerkzeuge</td></tr>
+<tr><td>SKD11</td><td>1.2379 (X153CrMoV12)</td><td>Hochchrom, verschleißfest</td><td>Stanz-, Schneid-, Schermesser</td></tr>
+<tr><td>SKD12</td><td>1.2363</td><td>Mit Vanadium, hohe Zähigkeit</td><td>Schlagende Werkzeuge</td></tr>
+</table>
+
+<h3>Warmarbeitsstähle</h3>
+<table>
+<tr><th>JIS</th><th>DIN</th><th>Charakteristik</th><th>Anwendung</th></tr>
+<tr><td>SKD61</td><td>1.2344 (X40CrMoV5-1)</td><td>Universal-Warmarbeitsstahl</td><td>Druckguss-, Schmiedeformen</td></tr>
+<tr><td>SKD7</td><td>1.2367</td><td>Höhere Warmfestigkeit</td><td>Hochbeanspruchte Druckgussformen</td></tr>
+</table>
+
+<h3>Schnellarbeitsstähle (HSS)</h3>
+<table>
+<tr><th>JIS</th><th>DIN</th><th>Charakteristik</th><th>Anwendung</th></tr>
+<tr><td>SKH51</td><td>1.3343 (HS6-5-2)</td><td>Universal-HSS</td><td>Bohrer, Fräser, Stempel</td></tr>
+<tr><td>SKH9</td><td>1.3343</td><td>Identisch mit SKH51</td><td>Standard-HSS-Anwendungen</td></tr>
+</table>
+
+<h3>Vorvergütete Formenstähle</h3>
+<table>
+<tr><th>JIS / Bezeichnung</th><th>DIN-Nähe</th><th>Charakteristik</th><th>Anwendung</th></tr>
+<tr><td>NAK55 / NAK80</td><td>näher 1.2738 / 1.2767</td><td>HRC 30-40 ab Werk, polierbar</td><td>Kunststoffformen mit Hochglanz-Oberfläche</td></tr>
+<tr><td>HPM38 / HPM1</td><td>—</td><td>Korrosionsbeständig, polierbar</td><td>Optische Formen, medizinische Kunststoffteile</td></tr>
+<tr><td>GO40F / PXS</td><td>—</td><td>Universaler vorvergüteter Formenstahl</td><td>Allgemeine Kunststoffformen</td></tr>
+</table>
+
+<h2>Wärmebehandlung: integrierte Lieferkette</h2>
+
+<p>Werkzeugstahl-Fertigung erfordert in vielen Fällen eine Wärmebehandlung nach der Vorbearbeitung — Härten, Anlassen, ggf. Tiefkühlen, Nitrieren. Der Engpass deutscher Lieferanten ist häufig die Koordination mit externen Härtereien.</p>
+
+<p>In Taiwan ist die Wärmebehandlungs-Infrastruktur dicht — viele Bearbeiter arbeiten mit Härtereien im Umkreis weniger Kilometer. Das verkürzt Durchlaufzeiten und reduziert Logistikbrüche. Erfahrene Anbieter koordinieren die Wärmebehandlung als integrierten Service.</p>
+
+<h2>Spiegelpolieren — was möglich ist</h2>
+
+<p>Für Kunststoffformen ist Hochglanzpolieren oft entscheidend. Erreichbare Qualitätsstufen:</p>
+
+<ul>
+<li><strong>SPI A1 / A2 / A3</strong> — Diamantpolitur, Spiegelglanz. Für hochtransparente Optikteile.</li>
+<li><strong>SPI B1 / B2 / B3</strong> — Feinschliff. Für matte oder leicht texturierte Oberflächen.</li>
+<li><strong>SPI C / D</strong> — Geschliffen / strahltexturiert. Funktionale Oberflächen.</li>
+</ul>
+
+<p>NAK80 und HPM38 lassen sich auf SPI A1 polieren. SKD61 erreicht meist B-Klassen ohne weitere Beschichtung.</p>
+
+<h2>Worauf Sie achten sollten beim Outsourcing nach Taiwan</h2>
+
+<ol>
+<li><strong>Werkstoffherkunft</strong> — Premium-Werkzeugstähle stammen oft aus Japan (Daido, Hitachi) oder Schweden (Uddeholm). Das Stahlwerk beeinflusst Reinheit und Konsistenz spürbar. Lassen Sie sich die Herkunft im Werkszeugnis bestätigen.</li>
+<li><strong>Härte-Toleranz</strong> — typisch ±2 HRC. Bei sicherheitsrelevanten Werkzeugen enger spezifizieren.</li>
+<li><strong>Maßhaltigkeit nach Wärmebehandlung</strong> — Verzug ist Stahl- und prozessabhängig. Klären Sie, ob Endbearbeitung (Schleifen, Erodieren) nach der Wärmebehandlung erfolgt.</li>
+<li><strong>Polierfähigkeit</strong> — bei Glanzpolitur Anforderungen explizit auf SPI-Klasse spezifizieren.</li>
+<li><strong>Erstmuster mit Härteprüfung</strong> — Erstbemusterung sollte Härtemessung an mehreren Stellen umfassen.</li>
+</ol>
+
+<h2>Beispiele aus der Praxis</h2>
+
+<ul>
+<li><strong>Stanzwerkzeug aus 1.2379 (SKD11)</strong> — gehärtet HRC 60, geschliffen auf ±0,01 mm Maßgenauigkeit. Lieferzeit 4-6 Wochen inkl. Wärmebehandlung.</li>
+<li><strong>Druckgussform aus 1.2344 (SKD61)</strong> — vergütet HRC 44-46, mit Konturkühlung. Lieferzeit 8-12 Wochen.</li>
+<li><strong>Kunststoff-Spritzgussform aus NAK80</strong> — Hochglanzpolitur SPI A2, mit Auswerfer-Stiftbohrungen. Lieferzeit 6-10 Wochen je nach Komplexität.</li>
+</ul>
+
+<h2>Bei Weiyon Industry</h2>
+
+<p>Wir bearbeiten alle gängigen JIS-Werkzeugstähle und koordinieren Wärmebehandlung über langjährige Partnerbetriebe. Werkszeugnisse mit Werkstoffherkunft (Daido, Hitachi etc.) und Härteprüfprotokoll sind Standard. Bei spezifischen Werkzeugstahl-Anforderungen für eine deutsche Form- oder Werkzeuganwendung erreichen Sie uns über das <a href="/de/contact">Kontaktformular</a> — Antwort in 1-2 Werktagen.</p>`,
+      en: `<p>German tool and mold makers face a bottleneck: domestic high-end shops are booked or expensive, but tolerance, hardness, and finish are non-negotiable. Taiwan offers a credible alternative — decades of experience with JIS tool steels widely used internationally.</p>
+
+<h2>Key tool steel grades — JIS vs. DIN</h2>
+<ul>
+<li><strong>Cold work:</strong> SKD11 ↔ 1.2379 (X153CrMoV12); SKS3 ↔ 1.2510</li>
+<li><strong>Hot work:</strong> SKD61 ↔ 1.2344 (X40CrMoV5-1); SKD7 ↔ 1.2367</li>
+<li><strong>HSS:</strong> SKH51 ↔ 1.3343 (HS6-5-2)</li>
+<li><strong>Pre-hardened:</strong> NAK80 (close to 1.2767); HPM38 (corrosion-resistant)</li>
+</ul>
+
+<h2>Heat treatment integration</h2>
+<p>Taiwan's heat treatment infrastructure is dense — many shops work with hardening houses within miles, reducing turnaround. Experienced suppliers coordinate this as an integrated service.</p>
+
+<h2>Polish quality (SPI standards)</h2>
+<p>NAK80 and HPM38 polish to SPI A1. SKD61 typically reaches B-class without coating.</p>
+
+<h2>Key checks when outsourcing to Taiwan</h2>
+<ol>
+<li>Material origin (Daido, Hitachi, Uddeholm) documented in mill cert</li>
+<li>Hardness tolerance specification (typically ±2 HRC)</li>
+<li>Dimensional stability after heat treatment</li>
+<li>Polish finish per SPI class</li>
+<li>FAI with hardness verification at multiple points</li>
+</ol>
+
+<h2>Typical lead times</h2>
+<ul>
+<li>SKD11 stamping tool, ground to ±0.01mm: 4-6 weeks</li>
+<li>SKD61 die-cast mold with conformal cooling: 8-12 weeks</li>
+<li>NAK80 plastic injection mold, SPI A2 polish: 6-10 weeks</li>
+</ul>`,
+      zh: `<p>德國模具廠常面臨：國內高端工廠檔期滿或太貴，但精度、硬度、表面要求不能妥協。台灣對 JIS 工具鋼有數十年經驗 — 國際通用，多數可對應 DIN 等級。</p>
+
+<h2>主要工具鋼 — JIS vs DIN</h2>
+<ul>
+<li><strong>冷作</strong>：SKD11 ↔ 1.2379；SKS3 ↔ 1.2510</li>
+<li><strong>熱作</strong>：SKD61 ↔ 1.2344；SKD7 ↔ 1.2367</li>
+<li><strong>HSS</strong>：SKH51 ↔ 1.3343</li>
+<li><strong>預硬</strong>：NAK80（近 1.2767）；HPM38（耐蝕）</li>
+</ul>
+
+<h2>熱處理整合</h2>
+<p>台灣熱處理基礎設施密集，多數加工廠與淬火廠近距合作，可整合為一站式服務。</p>
+
+<h2>拋光等級（SPI 標準）</h2>
+<p>NAK80、HPM38 可拋至 SPI A1。SKD61 一般到 B 級無需鍍膜。</p>
+
+<h2>外包到台灣注意事項</h2>
+<ol>
+<li>材料來源（Daido / Hitachi / Uddeholm）須在材質證明上載明</li>
+<li>硬度公差（一般 ±2 HRC）</li>
+<li>熱處理後尺寸穩定性</li>
+<li>拋光等級依 SPI 標明</li>
+<li>FAI 多點硬度驗證</li>
+</ol>`,
+    },
+  },
   {
     slug: "titanium-alloy-grades-comparison",
     title: {
