@@ -120,6 +120,17 @@ export default async function CompliancePage({
             <p className="text-base text-[var(--text-secondary)] mt-4 leading-relaxed">
               {t("cbamSubtitle")}
             </p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--accent)]/10 border border-[var(--accent)]/20 rounded-full text-xs font-medium text-[var(--accent)]">
+                <FileCheck2 className="w-3.5 h-3.5" />
+                {t("methodologyBadge")}
+              </span>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] rounded-full text-xs font-medium text-[var(--text-secondary)]">
+                <Leaf className="w-3.5 h-3.5" />
+                {t("cbamServiceBadge")}
+              </span>
+            </div>
           </div>
 
           {/* Scope 表格 */}

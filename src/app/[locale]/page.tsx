@@ -12,6 +12,10 @@ import {
   Clock,
   Beaker,
   Timer,
+  ShieldCheck,
+  Leaf,
+  FileCheck2,
+  ClipboardList,
 } from "lucide-react";
 import { industries, type IndustryLocale } from "@/data/industries";
 import CountUp from "@/components/count-up";
@@ -322,6 +326,61 @@ export default async function Home({
               className="inline-flex items-center gap-2 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
             >
               <span className="border-b border-current pb-1">{t("viewAllIndustries")}</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance & Trust Strip — EU/Mittelstand 採購商 5 秒判讀 */}
+      <section className="py-20 lg:py-28 bg-[var(--bg)] border-y border-[var(--border)]">
+        <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-6">
+            <span className="block w-10 h-px bg-[var(--accent)]" />
+            {t("trustLabel")}
+          </div>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight leading-[1.1] max-w-4xl">
+              {t("trustTitle")}
+            </h2>
+            <p className="text-base lg:text-lg text-[var(--text-secondary)] max-w-xl">
+              {t("trustSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            {[
+              { icon: ShieldCheck, title: t("trust1Title"), desc: t("trust1Desc") },
+              { icon: Leaf, title: t("trust2Title"), desc: t("trust2Desc") },
+              { icon: FileCheck2, title: t("trust3Title"), desc: t("trust3Desc") },
+              { icon: ClipboardList, title: t("trust4Title"), desc: t("trust4Desc") },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={idx}
+                  href="/compliance"
+                  className="group relative p-6 lg:p-8 bg-[var(--surface)] border border-[var(--border)] rounded-lg hover:border-[var(--accent)] transition-colors"
+                >
+                  <Icon className="w-8 h-8 lg:w-10 lg:h-10 text-[var(--accent)] mb-4" />
+                  <h3 className="text-base lg:text-lg font-bold text-[var(--primary)] mb-2 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    {item.desc}
+                  </p>
+                  <ArrowRight className="absolute top-6 right-6 w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 transition-all" />
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-10 lg:mt-12 text-center">
+            <Link
+              href="/compliance"
+              className="inline-flex items-center gap-3 text-sm lg:text-base font-medium text-[var(--accent)] group"
+            >
+              <span className="border-b border-current pb-1">{t("trustCta")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
