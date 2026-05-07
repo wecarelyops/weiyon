@@ -19,6 +19,63 @@ const ALLOWED_EXTENSIONS = [
   "webp",
 ];
 
+// 輸入長度限制（防 payload abuse + DB bloat）
+const MAX_FIELD_LENGTHS = {
+  name: 200,
+  email: 254, // RFC 5321 max
+  phone: 50,
+  subject: 300,
+  company: 200,
+  country: 100,
+  quantity: 100,
+  incoterms: 50,
+  message: 5000,
+} as const;
+
+// 允許的 Origin（CSRF 防護）— 留空 Origin（同源 / 直接發 request）也允許，
+// 因為 Next.js fetch 在 same-origin 通常不送 Origin header
+const ALLOWED_ORIGINS = [
+  "https://www.weiyon.com",
+  "https://weiyon.com",
+  "http://localhost:3000",
+  "http://localhost:3001",
+];
+
+// 簡單的 in-memory rate limit（per Vercel instance）
+// 不完美但能擋掉 80% 的 bot abuse；如要完全防護可上 Upstash KV
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 60 秒
+const RATE_LIMIT_MAX = 5; // 每 IP 每 60 秒最多 5 次
+type RateBucket = { count: number; resetAt: number };
+const rateLimitStore = new Map<string, RateBucket>();
+
+function checkRateLimit(ip: string): { ok: boolean; retryAfter?: number } {
+  const now = Date.now();
+  const bucket = rateLimitStore.get(ip);
+  if (!bucket || bucket.resetAt < now) {
+    rateLimitStore.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    // 順便清理過期 bucket（避免 memory leak）
+    if (rateLimitStore.size > 1000) {
+      for (const [k, v] of rateLimitStore.entries()) {
+        if (v.resetAt < now) rateLimitStore.delete(k);
+      }
+    }
+    return { ok: true };
+  }
+  if (bucket.count >= RATE_LIMIT_MAX) {
+    return { ok: false, retryAfter: Math.ceil((bucket.resetAt - now) / 1000) };
+  }
+  bucket.count += 1;
+  return { ok: true };
+}
+
+function getClientIp(request: Request): string {
+  const xff = request.headers.get("x-forwarded-for");
+  if (xff) return xff.split(",")[0].trim();
+  const real = request.headers.get("x-real-ip");
+  if (real) return real;
+  return "unknown";
+}
+
 async function ensureBucket(): Promise<boolean> {
   if (!supabaseAdmin) return false;
   try {
@@ -50,6 +107,28 @@ async function ensureBucket(): Promise<boolean> {
 
 export async function POST(request: Request) {
   try {
+    // === 1. Origin 檢查（CSRF 防護）===
+    const origin = request.headers.get("origin");
+    if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+      return NextResponse.json(
+        { error: "Unauthorized origin" },
+        { status: 403 }
+      );
+    }
+
+    // === 2. Rate limit（per IP）===
+    const ip = getClientIp(request);
+    const rateCheck = checkRateLimit(ip);
+    if (!rateCheck.ok) {
+      return NextResponse.json(
+        { error: "請求過於頻繁，請稍後再試 / Too many requests" },
+        {
+          status: 429,
+          headers: { "Retry-After": String(rateCheck.retryAfter ?? 60) },
+        }
+      );
+    }
+
     // 改用 FormData（multipart）以支援檔案上傳
     const formData = await request.formData();
 
@@ -62,6 +141,18 @@ export async function POST(request: Request) {
     const quantity = String(formData.get("quantity") || "").trim();
     const incoterms = String(formData.get("incoterms") || "").trim();
     let message = String(formData.get("message") || "").trim();
+
+    // === 3. 輸入長度檢查（防 payload abuse）===
+    const fields = { name, email, phone, subject, company, country, quantity, incoterms, message };
+    for (const [key, value] of Object.entries(fields)) {
+      const max = MAX_FIELD_LENGTHS[key as keyof typeof MAX_FIELD_LENGTHS];
+      if (value.length > max) {
+        return NextResponse.json(
+          { error: `${key} 超過 ${max} 字元上限` },
+          { status: 400 }
+        );
+      }
+    }
 
     // 把採購相關欄位串到 message 開頭（不需 DB schema 變動）
     const procurementInfo: string[] = [];

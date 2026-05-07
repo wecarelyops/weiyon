@@ -163,6 +163,8 @@ export default function ContactForm() {
               id="name"
               name="name"
               required
+              maxLength={200}
+              autoComplete="name"
               placeholder={t("formNamePlaceholder")}
               className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
             />
@@ -182,6 +184,8 @@ export default function ContactForm() {
               type="tel"
               id="phone"
               name="phone"
+              maxLength={50}
+              autoComplete="tel"
               placeholder={t("formPhonePlaceholder")}
               className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
             />
@@ -204,6 +208,8 @@ export default function ContactForm() {
             id="email"
             name="email"
             required
+            maxLength={254}
+            autoComplete="email"
             placeholder={t("formEmailPlaceholder")}
             className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
           />
@@ -225,6 +231,8 @@ export default function ContactForm() {
               type="text"
               id="company"
               name="company"
+              maxLength={200}
+              autoComplete="organization"
               placeholder={t("formCompanyPlaceholder")}
               className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
             />
@@ -244,6 +252,8 @@ export default function ContactForm() {
               type="text"
               id="country"
               name="country"
+              maxLength={100}
+              autoComplete="country-name"
               placeholder={t("formCountryPlaceholder")}
               className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
             />
@@ -288,6 +298,7 @@ export default function ContactForm() {
               type="text"
               id="quantity"
               name="quantity"
+              maxLength={100}
               placeholder={t("formQuantityPlaceholder")}
               className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
             />
@@ -333,6 +344,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
+            maxLength={5000}
             placeholder={t("formMessagePlaceholder")}
             className="w-full pl-10 pr-4 py-3 border border-[var(--border-strong)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent)] resize-none"
           />
