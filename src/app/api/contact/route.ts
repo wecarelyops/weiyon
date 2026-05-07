@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase";
+import { sendContactNotification } from "@/lib/email";
 
 const BUCKET_NAME = "contact-attachments";
 const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
@@ -149,7 +150,8 @@ export async function POST(request: Request) {
     const country = String(formData.get("country") || "").trim();
     const quantity = String(formData.get("quantity") || "").trim();
     const incoterms = String(formData.get("incoterms") || "").trim();
-    let message = String(formData.get("message") || "").trim();
+    const originalMessage = String(formData.get("message") || "").trim();
+    let message = originalMessage;
 
     // === 3. 輸入長度檢查（防 payload abuse）===
     const fields = { name, email, phone, subject, company, country, quantity, incoterms, message };
@@ -314,6 +316,25 @@ export async function POST(request: Request) {
         { error: "提交失敗，請稍後再試" },
         { status: 500 }
       );
+    }
+
+    // === 寄送通知信給業主（fail-soft：失敗不阻擋 user 看到 success）===
+    // Supabase 已經把資料存好；email 是「方便」不是「必要」
+    const emailResult = await sendContactNotification({
+      name,
+      email,
+      phone,
+      subject,
+      company,
+      country,
+      quantity,
+      incoterms,
+      message: originalMessage,
+      attachments: attachmentLinks,
+    });
+    if (!emailResult.ok) {
+      console.error("Email notification:", emailResult.reason);
+      // 不 return error — Supabase 有資料，業主可在 dashboard 查看
     }
 
     // 不回傳 raw DB row（含 internal id / timestamps），只回必要欄位
