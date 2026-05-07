@@ -51,6 +51,14 @@ export default async function WorkflowPage({
       description: t("step1Description"),
       yourRole: t("step1Your"),
       ourRole: t("step1Ours"),
+      fileFormats: [
+        "STEP (.stp)",
+        "IGES (.igs)",
+        "STL",
+        "DWG / DXF",
+        "PDF",
+        "JPG / PNG",
+      ],
     },
     {
       icon: FileText,
@@ -141,6 +149,25 @@ export default async function WorkflowPage({
                     <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
                       {step.description}
                     </p>
+
+                    {/* 步驟 1：顯示支援的圖檔格式 chips */}
+                    {step.fileFormats && (
+                      <div className="mb-6">
+                        <div className="text-xs tracking-[0.2em] uppercase text-[var(--text-secondary)] mb-3">
+                          {t("step1FormatsLabel")}
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {step.fileFormats.map((fmt) => (
+                            <span
+                              key={fmt}
+                              className="inline-flex items-center px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] rounded-full text-xs lg:text-sm font-medium text-[var(--text-primary)]"
+                            >
+                              {fmt}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="border-l-2 border-[var(--accent)] pl-4">

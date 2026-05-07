@@ -1,6 +1,16 @@
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Upload,
+  FileText,
+  Box,
+  Image as ImageIcon,
+  Clock4,
+} from "lucide-react";
 import ContactForm from "@/components/contact-form";
 import TrackedLink from "@/components/tracked-link";
 import { buildAlternates } from "@/lib/hreflang";
@@ -40,6 +50,46 @@ export default async function ContactPage({
             <p className="text-xl text-[var(--text-secondary)]">
               {t("heroSubtitle")}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CAD Upload + DFM Banner — 突顯支援的檔案格式與回覆時間 */}
+      <section className="py-12 lg:py-14 bg-[var(--bg)] border-y border-[var(--border)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-10">
+            <div className="flex-shrink-0 w-14 h-14 bg-[var(--primary)] rounded-xl flex items-center justify-center">
+              <Upload className="w-7 h-7 text-[var(--accent)]" />
+            </div>
+
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-2">
+                <h2 className="text-xl lg:text-2xl font-bold text-[var(--primary)] leading-tight">
+                  {t("cadBannerTitle")}
+                </h2>
+              </div>
+              <p className="text-sm lg:text-base text-[var(--text-secondary)] leading-relaxed">
+                {t("cadBannerSubtitle")}
+              </p>
+            </div>
+
+            {/* 檔案格式圖示 */}
+            <div className="flex flex-wrap gap-2 md:gap-3">
+              {[
+                { icon: Box, label: "STEP / IGES" },
+                { icon: FileText, label: "DWG / DXF" },
+                { icon: ImageIcon, label: "PDF / JPG" },
+                { icon: Clock4, label: t("cadBannerLeadTime") },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--surface)] border border-[var(--border)] rounded-full text-xs lg:text-sm text-[var(--text-primary)]"
+                >
+                  <item.icon className="w-3.5 h-3.5 text-[var(--accent)]" />
+                  <span className="font-medium">{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
