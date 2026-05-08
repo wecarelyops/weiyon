@@ -36,8 +36,48 @@ export default async function ChinaPlusOnePage({
   setRequestLocale(locale);
   const t = await getTranslations("ChinaPlusOne");
 
+  // JSON-LD Service schema：把 China+1 包裝成可索引的 procurement 服務
+  const SITE_URL = "https://www.weiyon.com";
+  const localePrefix = locale === "zh" ? "" : `/${locale}`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: t("metaTitle"),
+    description: t("metaDescription"),
+    provider: {
+      "@type": "Organization",
+      name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      url: SITE_URL,
+      telephone: "+886-4-2335-6451",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: locale === "zh" ? "烏日區" : "Wuri District",
+        addressRegion: locale === "zh" ? "台中市" : "Taichung City",
+        addressCountry: "TW",
+      },
+    },
+    serviceType: "Power-of-Two / China+1 Procurement Sourcing",
+    areaServed: [
+      { "@type": "Country", name: "Germany" },
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "European Union" },
+      { "@type": "Place", name: "Worldwide" },
+    ],
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Procurement Manager / Supply Chain Director / Mittelstand Buyer",
+    },
+    url: `${SITE_URL}${localePrefix}/china-plus-one`,
+    inLanguage: locale === "zh" ? "zh-TW" : locale,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-16 lg:pb-24 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">

@@ -35,8 +35,56 @@ export default async function CompliancePage({
   setRequestLocale(locale);
   const t = await getTranslations("Compliance");
 
+  // JSON-LD WebPage + AboutPage schema：傳達這頁是「公司合規與永續資訊揭露」
+  // 加上 hasPart Dataset：明確告訴 Google 這頁含結構化排放數據
+  const SITE_URL = "https://www.weiyon.com";
+  const localePrefix = locale === "zh" ? "" : `/${locale}`;
+  const compliancePageUrl = `${SITE_URL}${localePrefix}/compliance`;
+  const compliancePageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: t("metaTitle"),
+    description: t("metaDescription"),
+    url: compliancePageUrl,
+    inLanguage: locale === "zh" ? "zh-TW" : locale,
+    isPartOf: {
+      "@type": "WebSite",
+      name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      url: SITE_URL,
+    },
+    about: {
+      "@type": "Organization",
+      name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      url: SITE_URL,
+    },
+    // 結構化的排放數據 — 採購商 / 搜尋引擎 / 第三方審核工具可機讀
+    hasPart: {
+      "@type": "Dataset",
+      name: locale === "zh"
+        ? "偉勇 2025 年度溫室氣體排放估算"
+        : "Weiyon 2025 Annual GHG Emissions Estimate",
+      description:
+        locale === "zh"
+          ? "依 GHG Protocol Corporate Standard 自願性揭露 Scope 1/2/3 排放估算"
+          : "Voluntary disclosure of Scope 1/2/3 emissions estimates per GHG Protocol Corporate Standard",
+      keywords: ["CBAM", "GHG Protocol", "Scope 1", "Scope 2", "Scope 3", "Taiwan precision machining"],
+      creator: {
+        "@type": "Organization",
+        name: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
+      },
+      temporalCoverage: "2025",
+      isAccessibleForFree: true,
+      license: "https://creativecommons.org/licenses/by/4.0/",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(compliancePageJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-16 lg:pb-24 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">

@@ -15,6 +15,7 @@ export default function Header() {
     { name: t("home"), href: "/" },
     { name: t("about"), href: "/about" },
     { name: t("products"), href: "/products" },
+    { name: t("chinaPlusOne"), href: "/china-plus-one" },
     { name: t("workflow"), href: "/workflow" },
     { name: t("gallery"), href: "/gallery" },
     { name: t("blog"), href: "/blog" },
@@ -42,7 +43,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6">
             {navigation.map((item) => (
               <Link
                 key={item.href}

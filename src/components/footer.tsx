@@ -17,13 +17,12 @@ export default function Footer() {
     { name: tNav("contact"), href: "/contact" },
   ];
 
-  const services = [
-    t("service1"),
-    t("service2"),
-    t("service3"),
-    t("service4"),
-    t("service5"),
-    t("service6"),
+  // Resources：策略性內鏈 + 之前曝光不足的孤兒頁
+  const resources = [
+    { name: tNav("industries"), href: "/industries" },
+    { name: tNav("materials"), href: "/materials" },
+    { name: tNav("chinaPlusOne"), href: "/china-plus-one" },
+    { name: tNav("compliance"), href: "/compliance" },
   ];
 
   return (
@@ -63,14 +62,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Resources — 策略性內鏈，取代之前的純文字 Services 欄 */}
           <div>
             <h3 className="font-semibold text-sm uppercase tracking-wider mb-4">
-              {t("services")}
+              {tNav("resources")}
             </h3>
-            <ul className="space-y-2 text-sm text-gray-400">
-              {services.map((s) => (
-                <li key={s}>{s}</li>
+            <ul className="space-y-2">
+              {resources.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-gray-400 hover:text-[var(--accent)] transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
