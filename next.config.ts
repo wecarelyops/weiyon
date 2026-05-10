@@ -3,29 +3,27 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
-// Content Security Policy — 目前用 Report-Only 模式
-// 觀察一週瀏覽器 console / GA4 違規事件，確認沒誤殺再切換到 enforce
-// 列出所有合法第三方來源；沒在這清單內的會在 DevTools 跳警告（但不阻擋運作）
-const CSP_REPORT_ONLY = [
+// Content Security Policy — 正式 enforce 模式（無痕測試 0 違規後升級）
+// 違規會被瀏覽器直接擋下，包含攻擊者的注入腳本
+// 觀察期間如要新增第三方服務（例如 HubSpot、Calendly），白名單要對應更新
+const CSP_POLICY = [
   "default-src 'self'",
-  // Next.js 需要 unsafe-inline（hydration script + JSON-LD），暫時保留
-  // 已拿掉 'unsafe-eval' — 我們是純靜態 B2B 網站，無需 eval/Function；
-  // 若 Report-Only 觀察期出現 eval 違規再加回（很可能是擴充元件，可忽略）
-  // 未來可改用 nonce-based CSP（更嚴格但要改 layout.tsx）
+  // 'unsafe-inline' 給 Next.js 16 hydration script + 我們自家的 JSON-LD schema 用
+  // 沒有 'unsafe-eval' — 靜態 B2B 網站不需要 eval/Function，連擴充元件想 inject eval 也擋下
+  // 未來可改 nonce-based CSP（更嚴格，但要改 layout.tsx 大幅）
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
   "style-src 'self' 'unsafe-inline'",
-  // Pexels 圖、GA4 追蹤像素、Supabase signed URL 都要允許
+  // Pexels 圖、GA4 追蹤像素、Supabase signed URL（contact form 附件下載）
   "img-src 'self' data: blob: https://images.pexels.com https://www.googletagmanager.com https://www.google-analytics.com https://biqdmpyzjnobqpvadfsi.supabase.co",
   "font-src 'self' data:",
-  // GA4 collect endpoint + Supabase REST/Storage API + Resend (server-only, 但保留以防 client SDK)
+  // GA4 collect / Supabase REST + Storage API
   "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://biqdmpyzjnobqpvadfsi.supabase.co",
   "frame-src 'self' https://www.google.com",  // Google Maps iframe（如未來嵌入）
-  "frame-ancestors 'none'",  // 防點擊劫持，等同 X-Frame-Options: DENY
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  // 註：upgrade-insecure-requests 在 Report-Only 模式不生效（瀏覽器規範限制），
-  // 等改 enforce 模式時再加回。HSTS 已強制全站 HTTPS，這條重要性不高。
+  "frame-ancestors 'none'",  // 防點擊劫持，與 X-Frame-Options: DENY 形成雙保險
+  "object-src 'none'",  // 禁用 <object> / <embed>（古老的 Flash / Java applet 攻擊面）
+  "base-uri 'self'",  // 禁止注入 <base> 標籤改變相對路徑解析
+  "form-action 'self'",  // 表單只能送回自己的網域
+  "upgrade-insecure-requests",  // 任何 http:// 資源自動升級為 https://（雙保險，HSTS 已防）
 ].join("; ");
 
 // Security headers — 涵蓋 OWASP 主要建議項目
@@ -45,9 +43,9 @@ const SECURITY_HEADERS = [
   },
   // 防 XSS 反射（雖然 Next.js 預設已防，多一層保險）
   { key: "X-XSS-Protection", value: "1; mode=block" },
-  // CSP — Report-Only 模式：違規記錄到 console 但不阻擋運作
-  // 觀察一週後若無誤殺，可改成 "Content-Security-Policy" enforce
-  { key: "Content-Security-Policy-Report-Only", value: CSP_REPORT_ONLY },
+  // CSP — Enforce 模式：違規直接被瀏覽器擋下，攻擊者注入腳本無效
+  // 從 Report-Only 升級而來，無痕測試確認 0 誤殺
+  { key: "Content-Security-Policy", value: CSP_POLICY },
 ];
 
 const nextConfig: NextConfig = {
