@@ -77,6 +77,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/faq", priority: 0.8, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
     { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
+    { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
+    { path: "/imprint", priority: 0.3, changeFrequency: "yearly" },
   ];
 
   // 產業 landing pages

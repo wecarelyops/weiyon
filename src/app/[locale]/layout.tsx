@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import GoogleAnalytics from "@/components/google-analytics";
 import MobileFloatingCTA from "@/components/mobile-floating-cta";
 import LineFloatingButton from "@/components/line-floating-button";
+import CookieConsent from "@/components/cookie-consent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -202,6 +203,7 @@ export default async function LocaleLayout({
           <Footer />
           <MobileFloatingCTA />
           <LineFloatingButton />
+          <CookieConsent />
         </NextIntlClientProvider>
         <GoogleAnalytics />
       </body>

@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import FooterLegalLinks from "./footer-legal-links";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -150,11 +151,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} {t("copyright")}
-          </p>
-          <p className="text-sm text-gray-500">{t("subtitle")}</p>
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <p className="text-sm text-gray-500">
+              © {new Date().getFullYear()} {t("copyright")}
+            </p>
+            <p className="text-sm text-gray-500">{t("subtitle")}</p>
+          </div>
+          {/* Legal links — Privacy / Imprint / Cookie Settings */}
+          <FooterLegalLinks />
         </div>
       </div>
     </footer>
