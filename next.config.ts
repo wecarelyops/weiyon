@@ -22,7 +22,8 @@ const CSP_REPORT_ONLY = [
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
-  "upgrade-insecure-requests",
+  // 註：upgrade-insecure-requests 在 Report-Only 模式不生效（瀏覽器規範限制），
+  // 等改 enforce 模式時再加回。HSTS 已強制全站 HTTPS，這條重要性不高。
 ].join("; ");
 
 // Security headers — 涵蓋 OWASP 主要建議項目
