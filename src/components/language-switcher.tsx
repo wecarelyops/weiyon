@@ -7,10 +7,11 @@ import { Globe } from "lucide-react";
 
 type SupportedLocale = "zh" | "en" | "de";
 
-const LOCALES: { code: SupportedLocale; label: string }[] = [
-  { code: "zh", label: "中文" },
-  { code: "en", label: "EN" },
-  { code: "de", label: "DE" },
+// fullName 給 aria-label 用 — 螢幕閱讀器朗讀完整語言名稱而非縮寫
+const LOCALES: { code: SupportedLocale; label: string; fullName: string }[] = [
+  { code: "zh", label: "中文", fullName: "繁體中文 / Traditional Chinese" },
+  { code: "en", label: "EN", fullName: "English" },
+  { code: "de", label: "DE", fullName: "Deutsch / German" },
 ];
 
 export default function LanguageSwitcher() {
@@ -27,15 +28,17 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="inline-flex items-center gap-1 text-sm">
-      <Globe className="w-4 h-4 text-[var(--text-muted)] mr-1" />
+    <div className="inline-flex items-center gap-1 text-sm" role="group" aria-label="Language selection">
+      <Globe className="w-4 h-4 text-[var(--text-muted)] mr-1" aria-hidden="true" />
       {LOCALES.map((l, idx) => (
         <span key={l.code} className="inline-flex items-center">
-          {idx > 0 && <span className="text-[var(--text-muted)] mx-0.5">/</span>}
+          {idx > 0 && <span className="text-[var(--text-muted)] mx-0.5" aria-hidden="true">/</span>}
           <button
             type="button"
             onClick={() => switchTo(l.code)}
             disabled={isPending}
+            aria-label={`Switch to ${l.fullName}`}
+            aria-current={locale === l.code ? "true" : undefined}
             className={`px-2 py-1 rounded transition-colors ${
               locale === l.code
                 ? "text-[var(--primary)] font-bold"

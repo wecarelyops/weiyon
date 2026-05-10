@@ -15,11 +15,13 @@ import LineFloatingButton from "@/components/line-floating-button";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // 防 FOIT — 字型載入前先用 fallback，避免文字隱形
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const SITE_URL = "https://www.weiyon.com";

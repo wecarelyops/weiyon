@@ -12,6 +12,7 @@ import {
   Factory,
 } from "lucide-react";
 import { buildAlternates } from "@/lib/hreflang";
+import TariffSavingsCalculator from "@/components/tariff-savings-calculator";
 
 export async function generateMetadata({
   params,
@@ -237,6 +238,11 @@ export default async function ChinaPlusOnePage({
           <p className="mt-4 text-xs text-[var(--text-muted)] leading-relaxed">
             {t("tariffSource")}
           </p>
+
+          {/* Interactive Calculator — 採購商輸入年金額立即看節省，最強的 lead magnet */}
+          <div className="mt-12 lg:mt-16">
+            <TariffSavingsCalculator />
+          </div>
         </div>
       </section>
 

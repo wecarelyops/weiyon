@@ -27,6 +27,38 @@ export default function Footer() {
 
   return (
     <footer className="bg-[var(--primary)] text-[var(--bg)]">
+      {/* Social proof bar — 簡短 4 個指標放在 footer 最上方，全站可見 */}
+      <div className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8 text-center md:text-left">
+            <div>
+              <div className="text-2xl lg:text-3xl font-bold text-[var(--accent)] tabular-nums">
+                {t("statYears")}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">{t("statYearsLabel")}</div>
+            </div>
+            <div>
+              <div className="text-2xl lg:text-3xl font-bold text-[var(--accent)] tabular-nums">
+                {t("statIndustries")}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">{t("statIndustriesLabel")}</div>
+            </div>
+            <div>
+              <div className="text-2xl lg:text-3xl font-bold text-[var(--accent)] tabular-nums">
+                {t("statCustomers")}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">{t("statCustomersLabel")}</div>
+            </div>
+            <div>
+              <div className="text-2xl lg:text-3xl font-bold text-[var(--accent)] tabular-nums">
+                {t("statLanguages")}
+              </div>
+              <div className="text-xs text-gray-400 mt-1">{t("statLanguagesLabel")}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}

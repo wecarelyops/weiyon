@@ -66,7 +66,8 @@ export default function CountUp({ end, suffix = "", duration = 1800 }: Props) {
   }, [end, duration]);
 
   return (
-    <span ref={ref}>
+    // tabular-nums + inline-block：確保 0/1/2/...9 等寬，動畫期間數字寬度不會跳動 → 0 CLS
+    <span ref={ref} className="tabular-nums inline-block">
       {count}
       {suffix}
     </span>

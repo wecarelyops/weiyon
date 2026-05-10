@@ -3,9 +3,29 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
+// Content Security Policy — 目前用 Report-Only 模式
+// 觀察一週瀏覽器 console / GA4 違規事件，確認沒誤殺再切換到 enforce
+// 列出所有合法第三方來源；沒在這清單內的會在 DevTools 跳警告（但不阻擋運作）
+const CSP_REPORT_ONLY = [
+  "default-src 'self'",
+  // Next.js 需要 unsafe-inline（hydration script + JSON-LD），暫時保留
+  // 未來可改用 nonce-based CSP（更嚴格但要改 layout.tsx）
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+  "style-src 'self' 'unsafe-inline'",
+  // Pexels 圖、GA4 追蹤像素、Supabase signed URL 都要允許
+  "img-src 'self' data: blob: https://images.pexels.com https://www.googletagmanager.com https://www.google-analytics.com https://biqdmpyzjnobqpvadfsi.supabase.co",
+  "font-src 'self' data:",
+  // GA4 collect endpoint + Supabase REST/Storage API + Resend (server-only, 但保留以防 client SDK)
+  "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://biqdmpyzjnobqpvadfsi.supabase.co",
+  "frame-src 'self' https://www.google.com",  // Google Maps iframe（如未來嵌入）
+  "frame-ancestors 'none'",  // 防點擊劫持，等同 X-Frame-Options: DENY
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
+
 // Security headers — 涵蓋 OWASP 主要建議項目
-// 故意不啟用嚴格 CSP（會破壞 GA4 / Supabase / line.me 整合）；如要上 CSP
-// 建議先用 Content-Security-Policy-Report-Only 觀察一週再切換
 const SECURITY_HEADERS = [
   // 防 MIME-sniffing 攻擊（檔名 .pdf 的內容被瀏覽器重新識別為 .html 然後執行）
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -22,6 +42,9 @@ const SECURITY_HEADERS = [
   },
   // 防 XSS 反射（雖然 Next.js 預設已防，多一層保險）
   { key: "X-XSS-Protection", value: "1; mode=block" },
+  // CSP — Report-Only 模式：違規記錄到 console 但不阻擋運作
+  // 觀察一週後若無誤殺，可改成 "Content-Security-Policy" enforce
+  { key: "Content-Security-Policy-Report-Only", value: CSP_REPORT_ONLY },
 ];
 
 const nextConfig: NextConfig = {

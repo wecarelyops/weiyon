@@ -57,17 +57,30 @@ export default async function GalleryPage({
               const posInRow = i % 6;
               const colStart =
                 rowGroup % 2 === 0 ? posInRow + 2 : posInRow + 1;
+              // 依 locale 出 alt 文字，避免英文/德文版搜尋引擎讀到中文 alt
+              const workLabel =
+                locale === "zh"
+                  ? `實績 ${work.id} — 偉勇 CNC 精密加工`
+                  : locale === "de"
+                  ? `Referenz ${work.id} — Weiyon CNC-Präzisionsbearbeitung`
+                  : `Work ${work.id} — Weiyon CNC precision machining`;
+              const ariaLabel =
+                locale === "zh"
+                  ? `查看實績 ${work.id} 詳細`
+                  : locale === "de"
+                  ? `Details zu Referenz ${work.id} ansehen`
+                  : `View work ${work.id} details`;
               return (
                 <Link
                   key={work.id}
                   href={`/works/${work.id}`}
                   className="relative aspect-[279/186] md:col-start-[var(--col-start)] block hover:opacity-80 transition-opacity overflow-hidden"
                   style={{ "--col-start": colStart } as CSSProperties}
-                  aria-label={`查看實績 ${work.id} 詳細`}
+                  aria-label={ariaLabel}
                 >
                   <Image
                     src={work.image}
-                    alt={`實績 ${work.id}`}
+                    alt={workLabel}
                     fill
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
                     className="object-cover"
