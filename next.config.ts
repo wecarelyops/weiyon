@@ -9,8 +9,10 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const CSP_REPORT_ONLY = [
   "default-src 'self'",
   // Next.js 需要 unsafe-inline（hydration script + JSON-LD），暫時保留
+  // 已拿掉 'unsafe-eval' — 我們是純靜態 B2B 網站，無需 eval/Function；
+  // 若 Report-Only 觀察期出現 eval 違規再加回（很可能是擴充元件，可忽略）
   // 未來可改用 nonce-based CSP（更嚴格但要改 layout.tsx）
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
   "style-src 'self' 'unsafe-inline'",
   // Pexels 圖、GA4 追蹤像素、Supabase signed URL 都要允許
   "img-src 'self' data: blob: https://images.pexels.com https://www.googletagmanager.com https://www.google-analytics.com https://biqdmpyzjnobqpvadfsi.supabase.co",
