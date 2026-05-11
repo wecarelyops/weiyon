@@ -22,7 +22,6 @@ export default function Footer() {
   const resources = [
     { name: tNav("industries"), href: "/industries" },
     { name: tNav("materials"), href: "/materials" },
-    { name: tNav("chinaPlusOne"), href: "/china-plus-one" },
     { name: tNav("compliance"), href: "/compliance" },
   ];
 

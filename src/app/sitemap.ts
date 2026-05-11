@@ -69,7 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.9, changeFrequency: "monthly" },
     { path: "/products", priority: 0.9, changeFrequency: "monthly" },
     { path: "/industries", priority: 0.9, changeFrequency: "monthly" },
-    { path: "/china-plus-one", priority: 0.9, changeFrequency: "monthly" },
     { path: "/compliance", priority: 0.85, changeFrequency: "monthly" },
     { path: "/materials", priority: 0.85, changeFrequency: "monthly" },
     { path: "/workflow", priority: 0.85, changeFrequency: "monthly" },
