@@ -269,16 +269,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      // /china-plus-one 已下架（試算未含運費 / 通關 / 設備差價，呈現失真）
-      // 永久 301 重導到 /products，避免之前 GSC 索引過的 URL 直接 404
-      // 涵蓋三語：/, /en/, /de/
-      { source: "/china-plus-one", destination: "/products", permanent: true },
-      { source: "/en/china-plus-one", destination: "/en/products", permanent: true },
-      { source: "/de/china-plus-one", destination: "/de/products", permanent: true },
-    ];
-  },
 };
 
 export default withNextIntl(nextConfig);
