@@ -28,6 +28,17 @@
     "zh": "中文",
     "en": "English"
   },
+  "NotFound": {
+    "label": "找不到頁面",
+    "title": "這個頁面不存在",
+    "subtitle": "您要找的頁面可能已移動、更名或下架。以下是常被造訪的頁面，或直接與我們聯絡。",
+    "suggestionsTitle": "您可能想找",
+    "homeDesc": "回到首頁，了解偉勇 40 年精密加工實力",
+    "productsDesc": "CNC 車削 / 銑削 / 放電 / 鈑金 / 表面處理",
+    "complianceDesc": "CBAM 碳排揭露、供應鏈盡職調查、材質追溯",
+    "contactDesc": "傳圖面詢價，1-2 工作天回覆報價",
+    "directHelp": "或直接聯絡我們："
+  },
   "Home": {
     "heroBadge": "深耕產業 40 餘年",
     "heroTitleLine1": "客製精密零件",

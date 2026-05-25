@@ -28,6 +28,17 @@
     "zh": "中文",
     "en": "English"
   },
+  "NotFound": {
+    "label": "Page not found",
+    "title": "This page doesn't exist",
+    "subtitle": "The page you're looking for may have moved, been renamed, or been removed. Here are some commonly visited pages, or reach us directly.",
+    "suggestionsTitle": "You might be looking for",
+    "homeDesc": "Back to the homepage — 40 years of precision machining",
+    "productsDesc": "CNC turning / milling / EDM / sheet metal / surface treatment",
+    "complianceDesc": "CBAM emissions disclosure, supply-chain due diligence, traceability",
+    "contactDesc": "Send a drawing — quote within 1-2 business days",
+    "directHelp": "Or reach us directly:"
+  },
   "Home": {
     "heroBadge": "40+ Years of Industry Experience",
     "heroTitleLine1": "Custom Precision Parts.",

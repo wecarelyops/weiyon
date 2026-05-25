@@ -29,6 +29,17 @@
     "en": "English",
     "de": "Deutsch"
   },
+  "NotFound": {
+    "label": "Seite nicht gefunden",
+    "title": "Diese Seite existiert nicht",
+    "subtitle": "Die gesuchte Seite wurde möglicherweise verschoben, umbenannt oder entfernt. Hier sind häufig besuchte Seiten, oder kontaktieren Sie uns direkt.",
+    "suggestionsTitle": "Vielleicht suchen Sie",
+    "homeDesc": "Zurück zur Startseite — 40 Jahre Präzisionsbearbeitung",
+    "productsDesc": "CNC-Drehen / Fräsen / EDM / Blech / Oberflächenbehandlung",
+    "complianceDesc": "CBAM-Emissionsoffenlegung, Lieferketten-Sorgfaltspflicht, Rückverfolgbarkeit",
+    "contactDesc": "Zeichnung senden — Angebot in 1-2 Werktagen",
+    "directHelp": "Oder kontaktieren Sie uns direkt:"
+  },
   "Home": {
     "heroBadge": "Über 40 Jahre Branchenerfahrung",
     "heroTitleLine1": "Maßgefertigte Präzisionsteile.",
