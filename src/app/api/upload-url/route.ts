@@ -114,10 +114,11 @@ export async function POST(request: Request) {
       const path = buildStoragePath(name);
       const result = await signUpload(supabaseAdmin, path);
       if (result.error || !result.data) {
+        // 真因記在 server log（含 sign / createBucket / fetch failed 等）；
+        // 回給 client 的是通用訊息，不長期暴露內部細節
         console.error("signUpload:", result.error);
-        // 暫時把 sanitized 真因回傳，方便診斷（storage 錯誤不含 DB schema）
         return NextResponse.json(
-          { error: `無法建立上傳連結：${result.error || "unknown"}` },
+          { error: "附件上傳暫時無法使用，請稍後再試或直接 email 給我們" },
           { status: 500 }
         );
       }
