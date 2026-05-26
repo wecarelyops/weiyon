@@ -2369,6 +2369,188 @@ export const blogPosts: BlogPost[] = [
 <p>Kunden schätzen robuste Qualitätsprozesse, detaillierte Prüfberichte und standardisierte Reklamationsbearbeitung höher ein als die neueste Maschine. Diese „weichen" Fähigkeiten gewinnen langfristiges Vertrauen.</p>`,
     },
   },
+  {
+    slug: "cnc-machining-rfq-preparation-guide",
+    title: {
+      zh: "CNC 加工詢價怎麼準備？圖面、規格、數量一次搞懂",
+      en: "How to Prepare a CNC Machining RFQ: Drawings, Specs, Quantity",
+      de: "CNC-Anfrage richtig vorbereiten: Zeichnungen, Spezifikationen, Stückzahl",
+    },
+    excerpt: {
+      zh: "報價慢、來回問好幾次，通常不是工廠的問題，而是詢價資訊不齊。本文整理一份「一次給齊」的詢價清單 — 圖面格式、關鍵規格、數量交期、檢驗需求 — 讓你 1-2 個工作天內就拿到精準報價。",
+      en: "Slow quotes and endless back-and-forth usually come from incomplete RFQs, not the shop. Here is a complete checklist — drawing formats, key specs, quantity, inspection needs — so you get an accurate quote in 1-2 business days.",
+      de: "Langsame Angebote und endloses Hin und Her liegen meist an unvollständigen Anfragen, nicht an der Werkstatt. Eine vollständige Checkliste — Zeichnungsformate, Spezifikationen, Stückzahl, Prüfanforderungen — für ein präzises Angebot in 1-2 Werktagen.",
+    },
+    category: { zh: "採購指南", en: "Procurement Guide", de: "Einkaufsleitfaden" },
+    date: "2026-05-20",
+    imageUrl:
+      "https://images.pexels.com/photos/14593018/pexels-photo-14593018.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>很多採購反映：「同一個零件問三家，有的隔天就報、有的拖一週還在問東問西。」多數時候，報價慢與來回確認，不是工廠效率差，而是<strong>詢價時資訊不齊</strong>，工廠只能反覆追問。把該給的一次給齊，報價速度與準確度都會大幅提升。以下是一份實用的詢價準備清單。</p>
+
+<h2>一、圖面：3D + 2D 各有角色</h2>
+<p>很多人以為給一個檔案就夠，其實 3D 與 2D 扮演不同角色：</p>
+<ul>
+<li><strong>3D 模型（STEP / IGES / STL）</strong>：定義幾何形狀，讓工廠評估加工策略、刀具路徑、夾治具。STEP（.step / .stp）是最通用、資訊最完整的格式，建議優先提供。</li>
+<li><strong>2D 工程圖（PDF / DWG / DXF）</strong>：標註公差、表面粗糙度、關鍵尺寸、基準、螺紋規格、熱處理與表面處理要求。<strong>2D 圖才是報價與品檢的依據</strong> — 沒有公差標註，工廠無法判斷難易度。</li>
+</ul>
+<p>最理想：3D（STEP）+ 2D（PDF 含完整標註）一起給。只有 3D 沒 2D，工廠得用「一般公差」假設報價，後續容易產生認知落差。</p>
+
+<h2>二、關鍵規格：別讓工廠用猜的</h2>
+<ul>
+<li><strong>材質</strong>：寫清楚牌號（例：SUS304、SUS316L、A6061-T6、Ti-6Al-4V、SKD11）。只寫「不鏽鋼」太籠統，304 與 316 的價差與加工性差很多。</li>
+<li><strong>公差</strong>：關鍵尺寸標出來。全圖都標 ±0.005mm 會大幅墊高成本 — 只在真正需要的尺寸給嚴公差，其餘用一般公差（如 ISO 2768-m）即可。</li>
+<li><strong>表面處理</strong>：陽極（顏色 / 膜厚）、鍍鎳、發黑、鈍化、噴砂等。表處常需委外，會影響交期。</li>
+<li><strong>熱處理</strong>：是否需淬火、回火、調質、硬度要求（HRC）。</li>
+<li><strong>螺紋與牙規</strong>：公制 / 英制、牙距、是否需牙規檢驗。</li>
+</ul>
+
+<h2>三、數量與交期</h2>
+<p>數量直接決定單價結構：</p>
+<ul>
+<li><strong>打樣 / 單件</strong>：分攤不到治具與程式成本，單價最高，但能先驗證品質。</li>
+<li><strong>小批量（10-100 件）</strong>：中小型台廠的甜蜜點，彈性高。</li>
+<li><strong>量產（500+ 件）</strong>：可攤平前置成本，單價最低。</li>
+</ul>
+<p>請一併說明<strong>期望交期</strong>與<strong>是否為重複性訂單</strong>。重複訂單工廠願意投資治具、優化流程，長期單價更好談。</p>
+
+<h2>四、檢驗與認證需求</h2>
+<p>先講清楚，避免出貨後才補：</p>
+<ul>
+<li>是否需要<strong>首件檢驗報告（FAI）</strong>、全尺寸量測報告？</li>
+<li>是否需要<strong>原廠材質證明（Mill Cert，EN 10204 3.1 / 3.2）</strong>？</li>
+<li>是否需要<strong>批號追溯</strong>？是否有特定產業格式（AS9102、PPAP）？</li>
+</ul>
+
+<h2>五、沒有圖面怎麼辦？</h2>
+<p>沒有完整圖面也能開始 — 提供以下任一即可初步評估：樣品實物（可寄送或拍照標尺寸）、手繪草圖加關鍵尺寸、或競品 / 舊零件加上你要改的地方。許多台廠可協助逆向 / 出圖，但這部分通常另計費用與工時，建議先溝通。</p>
+
+<h2>把清單變成習慣，報價就會變快</h2>
+<p>整理成一句話：<strong>3D + 2D 圖、材質牌號、關鍵公差、表處 / 熱處理、數量交期、檢驗需求</strong> — 這六項一次給齊，多數工廠能在 1-2 個工作天回覆精準報價，不必來回追問。</p>
+<p>偉勇工業社支援 STEP / IGES / DWG / PDF 等格式上傳（詢價表單可一次傳多檔），收到圖面後我們會先做可行性評估（DFM），再以正式報價回覆。沒有圖面也歡迎先帶著樣品或草圖與我們討論。</p>`,
+      en: `<p>Slow quotes and repeated questions usually are not the shop being inefficient — they are the result of an <strong>incomplete RFQ</strong>. Give everything up front and both speed and accuracy improve dramatically. Here is a practical checklist.</p>
+
+<h2>1. Drawings: 3D and 2D each have a role</h2>
+<p><strong>3D models (STEP / IGES / STL)</strong> define geometry so the shop can plan tool paths and fixturing — STEP is the most universal. <strong>2D drawings (PDF / DWG / DXF)</strong> carry tolerances, surface finish, datums, threads, heat- and surface-treatment notes. The 2D drawing is what quoting and inspection are based on. Ideal: provide both.</p>
+
+<h2>2. Key specs — do not make the shop guess</h2>
+<ul>
+<li><strong>Material grade</strong> (e.g. SUS316L, A6061-T6, Ti-6Al-4V) — "stainless" alone is too vague.</li>
+<li><strong>Tolerances</strong> — tight-tolerance every dimension inflates cost; specify tight only where needed, general tolerance (ISO 2768-m) for the rest.</li>
+<li><strong>Surface / heat treatment</strong> — anodizing, nickel plating, passivation, hardness (HRC). Often outsourced, affects lead time.</li>
+</ul>
+
+<h2>3. Quantity and lead time</h2>
+<p>Prototype/single piece carries the highest unit price; small batch (10-100 pcs) is the sweet spot for mid-size Taiwan shops; volume (500+) amortizes setup for the lowest unit price. State your target lead time and whether it is a repeat order.</p>
+
+<h2>4. Inspection and certification</h2>
+<p>State up front whether you need FAI / full dimensional reports, mill certs (EN 10204 3.1 / 3.2), batch traceability, or industry formats (AS9102, PPAP).</p>
+
+<h2>5. No drawing yet?</h2>
+<p>You can still start with a physical sample, a hand sketch with key dimensions, or an existing part plus the changes you want. Reverse engineering is usually quoted separately.</p>
+
+<p>In short: <strong>3D + 2D drawings, material grade, key tolerances, surface/heat treatment, quantity & lead time, inspection needs</strong>. Provide these six and most shops can return an accurate quote in 1-2 business days. Weiyon Industry accepts STEP / IGES / DWG / PDF uploads (multiple files per inquiry) and replies with a DFM review and formal quote.</p>`,
+      de: `<p>Langsame Angebote und wiederholte Rückfragen liegen meist an einer <strong>unvollständigen Anfrage</strong>, nicht an der Werkstatt. Wer alles vorab liefert, bekommt schneller und präziser ein Angebot. Eine kompakte Checkliste:</p>
+<ul>
+<li><strong>Zeichnungen</strong>: 3D (STEP/IGES) für die Geometrie + 2D (PDF/DWG) mit Toleranzen, Oberfläche, Gewinden, Wärme-/Oberflächenbehandlung. Idealerweise beides.</li>
+<li><strong>Werkstoff</strong>: konkrete Sorte (z. B. 1.4404 / SUS316L), nicht nur „Edelstahl".</li>
+<li><strong>Toleranzen</strong>: eng nur wo nötig, sonst Allgemeintoleranz (ISO 2768-m) — spart Kosten.</li>
+<li><strong>Stückzahl & Liefertermin</strong>, plus Hinweis auf Wiederholaufträge.</li>
+<li><strong>Prüfung</strong>: FAI, Werkszeugnis (EN 10204 3.1/3.2), Chargenrückverfolgung, ggf. AS9102/PPAP.</li>
+</ul>
+<p>Mit diesen Angaben antworten die meisten Werkstätten in 1-2 Werktagen mit einem präzisen Angebot. Weiyon Industry nimmt STEP/IGES/DWG/PDF-Uploads (mehrere Dateien pro Anfrage) entgegen und antwortet mit DFM-Prüfung und verbindlichem Angebot.</p>`,
+    },
+  },
+  {
+    slug: "inconel-superalloy-machining-guide",
+    title: {
+      zh: "Inconel 718 / 625 與超合金加工指南：油氣、航太高溫部件",
+      en: "Inconel 718 / 625 & Superalloy Machining: Oil & Gas, Aerospace Parts",
+      de: "Inconel 718 / 625 & Superlegierungen: Öl & Gas, Luftfahrt-Bauteile",
+    },
+    excerpt: {
+      zh: "Inconel 等鎳基超合金在高溫、高壓、強腐蝕環境下無可取代 — 油氣井下工具、閥件、航太燃燒室都靠它。但它極難加工：加工硬化快、刀具磨耗高。本文說明 625 vs 718 怎麼選、為何難加工、採購要注意什麼。",
+      en: "Nickel-based superalloys like Inconel are irreplaceable under high heat, pressure and corrosion — oil & gas downhole tools, valves, aerospace combustors. But they are extremely hard to machine. Here is how to choose 625 vs 718, why they are difficult, and what buyers should know.",
+      de: "Nickelbasis-Superlegierungen wie Inconel sind bei Hitze, Druck und Korrosion unverzichtbar — Öl- & Gas-Bohrwerkzeuge, Ventile, Luftfahrt-Brennkammern. Doch sie sind extrem schwer zerspanbar. 625 vs 718, warum sie schwierig sind, worauf Einkäufer achten sollten.",
+    },
+    category: { zh: "材料知識", en: "Materials", de: "Werkstoffe" },
+    date: "2026-05-24",
+    imageUrl:
+      "https://images.pexels.com/photos/9799730/pexels-photo-9799730.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop",
+    content: {
+      zh: `<p>當零件要在攝氏數百度、高壓、強腐蝕的環境下長期服役 — 例如油氣井下工具、海上平台閥件、航太引擎燃燒室 — 一般不鏽鋼或鈦合金都不夠用，這時就輪到<strong>鎳基超合金（Nickel-based Superalloys）</strong>登場，其中最知名的就是 Inconel 系列。</p>
+
+<h2>什麼是超合金？</h2>
+<p>超合金是以鎳、鈷或鐵-鎳為基底，添加鉻、鉬、鈮、鈦、鋁等元素的高性能合金。它最大的特點是<strong>在高溫下仍能維持強度與抗腐蝕</strong> — 一般金屬在高溫會軟化，超合金卻能在 650°C 以上保持機械性能，這是它在油氣與航太無可取代的原因。</p>
+
+<h2>Inconel 625 vs 718：怎麼選？</h2>
+<ul>
+<li><strong>Inconel 625</strong>：以<strong>抗腐蝕</strong>見長，尤其耐海水、氯化物、酸性環境。常用於海上油氣、化工管件、閥座。可焊性佳，但強度靠固溶強化，硬度相對 718 低。</li>
+<li><strong>Inconel 718</strong>：以<strong>高強度 + 可熱處理時效強化</strong>見長，在 -250°C 到 700°C 都有優異機械性能。航太引擎零件、井下工具、高壓緊固件首選。是目前產量最大的超合金。</li>
+</ul>
+<p>簡單記：<strong>要極致抗腐蝕選 625，要高強度與耐高溫選 718</strong>。實務上採購應以圖面指定牌號為準。</p>
+
+<h2>為什麼超合金「極難加工」？</h2>
+<p>Inconel 被列為難加工材料的代表，原因有三：</p>
+<ul>
+<li><strong>加工硬化快</strong>：切削過程中表面會迅速硬化，刀具一旦摩擦而非切削，工件表面就硬化，後續更難切。</li>
+<li><strong>高溫強度 = 切削熱集中在刀尖</strong>：超合金導熱差，切削熱無法被切屑帶走，集中在刀刃，加速刀具磨耗。</li>
+<li><strong>對刀具親和性高</strong>：易產生積屑瘤與黏刀，影響表面品質。</li>
+</ul>
+
+<h2>加工要點（為什麼找對工廠很重要）</h2>
+<ul>
+<li><strong>低轉速、穩定進給</strong>：避免空摩擦造成加工硬化，刀刃要「咬」進材料。</li>
+<li><strong>剛性與夾持</strong>：機台、刀把、夾治具剛性要足，避免振動。</li>
+<li><strong>刀具選擇</strong>：專用塗層硬質合金或陶瓷刀具，並嚴格控管刀具壽命。</li>
+<li><strong>充足冷卻</strong>：高壓切削液帶走熱量、抑制加工硬化。</li>
+</ul>
+<p>這也說明為何超合金加工單價較高、且不是每家工廠都願意接 — 它吃刀具、吃工時、吃經驗。</p>
+
+<h2>油氣與航太應用</h2>
+<ul>
+<li><strong>油氣</strong>：井下工具、採油樹閥件、防噴器（BOP）零件、海上平台耐蝕構件。常需搭配 API 6A / 6D 規範與 NACE MR0175 抗硫化氫要求。</li>
+<li><strong>航太</strong>：引擎燃燒室、渦輪盤、高溫緊固件、排氣段結構件。</li>
+</ul>
+
+<h2>採購注意事項</h2>
+<ul>
+<li><strong>材料證明</strong>：超合金原料昂貴且有仿冒風險，務必要求原廠材質證明（Mill Cert，EN 10204 3.1 或 3.2）與爐號追溯。</li>
+<li><strong>交期</strong>：原料採購週期較長，加工工時也較高，請預留充裕交期。</li>
+<li><strong>產業規範</strong>：油氣常需 NACE / API 對應，採購時先講清楚。</li>
+</ul>
+<p>偉勇工業社累積多年難加工材料經驗，Inconel 625 / 718、Monel、Duplex / Super Duplex 等皆可承接，並可依客戶需求出具材質證明與檢驗報告。歡迎帶著圖面與規範與我們討論可行性。</p>`,
+      en: `<p>When a part must survive hundreds of degrees Celsius under high pressure and aggressive corrosion — oil & gas downhole tools, offshore valves, aerospace combustors — stainless steel and titanium are not enough. This is where <strong>nickel-based superalloys</strong> come in, the best known being the Inconel family.</p>
+
+<h2>What are superalloys?</h2>
+<p>Superalloys are nickel-, cobalt- or iron-nickel-based alloys that <strong>retain strength and corrosion resistance at high temperature</strong> — keeping mechanical properties above 650°C where ordinary metals soften. That is why they are irreplaceable in oil & gas and aerospace.</p>
+
+<h2>Inconel 625 vs 718</h2>
+<ul>
+<li><strong>Inconel 625</strong> — excels at <strong>corrosion resistance</strong> (seawater, chlorides, acids); common in offshore oil & gas, valve seats. Good weldability, solid-solution strengthened.</li>
+<li><strong>Inconel 718</strong> — excels at <strong>high strength + age-hardening</strong>, strong from -250°C to 700°C. The go-to for aerospace engine parts, downhole tools, high-pressure fasteners; the most-produced superalloy.</li>
+</ul>
+<p>Rule of thumb: <strong>625 for maximum corrosion resistance, 718 for high strength and heat</strong>.</p>
+
+<h2>Why superalloys are so hard to machine</h2>
+<ul>
+<li><strong>Rapid work hardening</strong> — the surface hardens during cutting; once the tool rubs instead of cuts, it gets worse.</li>
+<li><strong>Heat concentrates at the tool tip</strong> — poor thermal conductivity means heat is not carried away by chips, accelerating tool wear.</li>
+<li><strong>Built-up edge / galling</strong> — affects surface finish.</li>
+</ul>
+<p>Machining needs low speed with steady feed, rigid setups, coated carbide or ceramic tooling with strict tool-life control, and high-pressure coolant. This is why superalloy parts cost more and not every shop will take them.</p>
+
+<h2>Applications</h2>
+<p><strong>Oil & gas</strong>: downhole tools, Christmas-tree valves, BOP parts, offshore corrosion-resistant components — often with API 6A / 6D and NACE MR0175 (sour service) requirements. <strong>Aerospace</strong>: combustors, turbine discs, high-temperature fasteners.</p>
+
+<h2>What buyers should know</h2>
+<p>Superalloy raw material is expensive with counterfeit risk — always require mill certs (EN 10204 3.1 / 3.2) and heat-number traceability. Allow generous lead time, and state any NACE / API requirements up front. Weiyon Industry machines Inconel 625 / 718, Monel, Duplex / Super Duplex and supplies material certs and inspection reports per requirement.</p>`,
+      de: `<p>Wenn ein Bauteil bei mehreren Hundert Grad Celsius unter Druck und aggressiver Korrosion bestehen muss — Öl- & Gas-Bohrwerkzeuge, Offshore-Ventile, Luftfahrt-Brennkammern — reichen Edelstahl und Titan nicht. Hier kommen <strong>Nickelbasis-Superlegierungen</strong> ins Spiel, allen voran die Inconel-Familie.</p>
+<p><strong>Inconel 625</strong> punktet bei Korrosionsbeständigkeit (Seewasser, Chloride, Säuren). <strong>Inconel 718</strong> punktet bei hoher Festigkeit und Aushärtbarkeit, stark von -250°C bis 700°C — Standard für Luftfahrt-Triebwerksteile und Bohrwerkzeuge.</p>
+<p>Superlegierungen sind extrem schwer zerspanbar: schnelle Kaltverfestigung, Hitzekonzentration an der Schneide, Aufbauschneiden. Nötig sind niedrige Drehzahl mit stetigem Vorschub, steife Aufspannung, beschichtete Hartmetall-/Keramikwerkzeuge und Hochdruckkühlung — weshalb solche Teile teurer sind und nicht jede Werkstatt sie annimmt.</p>
+<p>Einkäufer sollten Werkszeugnisse (EN 10204 3.1/3.2) mit Chargenrückverfolgung verlangen, großzügige Lieferzeit einplanen und NACE-/API-Anforderungen vorab nennen. Weiyon Industry zerspant Inconel 625/718, Monel, Duplex/Super Duplex und liefert Werkszeugnisse und Prüfberichte nach Bedarf.</p>`,
+    },
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
