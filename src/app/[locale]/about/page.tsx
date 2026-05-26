@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { buildAlternates } from "@/lib/hreflang";
@@ -244,15 +245,15 @@ export default async function AboutPage({
               </div>
             </div>
             <div className="relative">
-              <div
-                className="aspect-square rounded-xl border border-[var(--border)] overflow-hidden bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "url('https://images.pexels.com/photos/28929510/pexels-photo-28929510.jpeg?auto=compress&cs=tinysrgb&w=1200&h=1200&fit=crop')",
-                }}
-                role="img"
-                aria-label={t("storyImagePlaceholder")}
-              />
+              <div className="relative aspect-square rounded-xl border border-[var(--border)] overflow-hidden">
+                <Image
+                  src="/images/works/05.jpg"
+                  alt={t("storyImagePlaceholder")}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
