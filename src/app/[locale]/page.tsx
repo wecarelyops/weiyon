@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { industries, type IndustryLocale } from "@/data/industries";
 import CountUp from "@/components/count-up";
+import WorkCarousel from "@/components/work-carousel";
 
 export default async function Home({
   params,
@@ -277,6 +278,14 @@ export default async function Home({
           </div>
         </div>
       </section>
+
+      {/* Work Carousel — 真實加工件輪播（取代 stock 圖的信任證據）*/}
+      <WorkCarousel
+        label={t("worksCarouselLabel")}
+        title={t("worksCarouselTitle")}
+        subtitle={t("worksCarouselSubtitle")}
+        cta={t("worksCarouselCta")}
+      />
 
       {/* Industries Grid — 6 產業 landing page 內鏈 */}
       <section className="py-24 lg:py-40 bg-[var(--surface)]">
