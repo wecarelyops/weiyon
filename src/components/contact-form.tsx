@@ -19,6 +19,14 @@ import {
   Hash,
   Truck,
 } from "lucide-react";
+import { supabase } from "@/lib/supabase";
+import {
+  BUCKET_NAME,
+  MAX_FILE_SIZE,
+  MAX_FILES,
+  ALLOWED_EXTENSIONS,
+  extOf,
+} from "@/lib/contact-constants";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -32,23 +40,18 @@ declare global {
   }
 }
 
-const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
-const MAX_FILES = 10;
 const ACCEPT_EXTENSIONS = ".pdf,.dwg,.dxf,.step,.stp,.iges,.igs,.stl,.jpg,.jpeg,.png,.webp";
-const ALLOWED_EXTENSIONS = [
-  "pdf",
-  "dwg",
-  "dxf",
-  "step",
-  "stp",
-  "iges",
-  "igs",
-  "stl",
-  "jpg",
-  "jpeg",
-  "png",
-  "webp",
-];
+
+// 安全解析 response — 即使伺服器回非 JSON（例如 413 純文字）也不會 crash
+async function parseJsonSafe(res: Response): Promise<{ error?: string; [k: string]: unknown }> {
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch {
+    if (res.status === 413) return { error: "附件太大，請壓縮後再試" };
+    return { error: `伺服器回應異常 (${res.status})` };
+  }
+}
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -69,8 +72,8 @@ export default function ContactForm() {
     let firstError = "";
 
     for (const f of newFiles) {
-      const ext = f.name.split(".").pop()?.toLowerCase() || "";
-      if (!ALLOWED_EXTENSIONS.includes(ext)) {
+      const ext = extOf(f.name);
+      if (!ALLOWED_EXTENSIONS.includes(ext as (typeof ALLOWED_EXTENSIONS)[number])) {
         if (!firstError) firstError = t("formAttachmentTypeError", { name: f.name });
         continue;
       }
@@ -103,28 +106,68 @@ export default function ContactForm() {
     setStatus("submitting");
     setErrorMessage("");
 
-    const formData = new FormData(e.currentTarget);
-
-    // 移除原本 input 內的 attachments，改用 state 內的 files
-    formData.delete("attachments");
-    files.forEach((f) => formData.append("attachments", f));
-
-    const subjectValue = String(formData.get("subject") || "");
+    // 同步擷取 form（await 後 e.currentTarget 可能被回收）
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get("name") || "").trim(),
+      email: String(fd.get("email") || "").trim(),
+      phone: String(fd.get("phone") || "").trim(),
+      subject: String(fd.get("subject") || "").trim(),
+      company: String(fd.get("company") || "").trim(),
+      country: String(fd.get("country") || "").trim(),
+      quantity: String(fd.get("quantity") || "").trim(),
+      incoterms: String(fd.get("incoterms") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
+      attachments: [] as { name: string; path: string }[],
+    };
+    const subjectValue = payload.subject;
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        body: formData,
-      });
+      // === Step 1：有附件先「直傳到 Supabase」，繞過 Vercel 4.5MB body 限制 ===
+      if (files.length > 0) {
+        if (!supabase) {
+          throw new Error("檔案上傳服務暫時無法使用，請直接 email 附件給我們");
+        }
 
-      const data = await res.json();
+        // 1a. 跟 server 要簽名上傳網址（只送 metadata，request 極小）
+        const urlRes = await fetch("/api/upload-url", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            files: files.map((f) => ({ name: f.name, size: f.size })),
+          }),
+        });
+        const urlData = await parseJsonSafe(urlRes);
+        if (!urlRes.ok) throw new Error(urlData.error || "無法建立上傳連結");
+        const uploads =
+          (urlData.uploads as { name: string; path: string; token: string }[]) || [];
 
-      if (!res.ok) {
-        throw new Error(data?.error || "Submission failed");
+        // 1b. 瀏覽器直接把檔案 PUT 到 Supabase（不經過 Vercel function）
+        for (let i = 0; i < files.length; i++) {
+          const u = uploads[i];
+          if (!u) throw new Error("上傳連結缺失，請重試");
+          const { error: upErr } = await supabase.storage
+            .from(BUCKET_NAME)
+            .uploadToSignedUrl(u.path, u.token, files[i], {
+              contentType: files[i].type || "application/octet-stream",
+            });
+          if (upErr) throw new Error(`附件「${files[i].name}」上傳失敗，請重試`);
+          payload.attachments.push({ name: files[i].name, path: u.path });
+        }
       }
 
+      // === Step 2：送出表單（純 JSON，無檔案 bytes）===
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await parseJsonSafe(res);
+      if (!res.ok) throw new Error(data.error || "Submission failed");
+
       setStatus("success");
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setFiles([]);
 
       // GA4: generate_lead 自訂事件
@@ -132,7 +175,7 @@ export default function ContactForm() {
         window.gtag("event", "generate_lead", {
           form_name: "contact_form",
           subject: subjectValue || "unspecified",
-          attachments: files.length,
+          attachments: payload.attachments.length,
           currency: "TWD",
           value: 1,
         });
