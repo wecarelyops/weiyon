@@ -51,11 +51,12 @@ function esc(s: unknown): string {
     .replace(/'/g, "&#39;");
 }
 
-// 先 escape，再把 https:// 連結轉成可點的 anchor（URL 來源是我方 Supabase 簽名網址，安全）
+// 先 escape，再把 https:// 連結轉成乾淨的「下載」按鈕（URL 來源是我方 Supabase 簽名網址，安全）
+// 不顯示整串長 URL，改為簡短可點標籤
 function linkify(escaped: string): string {
   return escaped.replace(
     /(https:\/\/[^\s<]+)/g,
-    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="dl">↗ 下載</a>'
   );
 }
 
@@ -128,6 +129,8 @@ function renderHtml(rows: Submission[]): string {
   .muted { color: var(--muted); font-size: 12px; }
   .msg { max-width: 480px; word-break: break-word; line-height: 1.5; }
   .msg a { color: var(--gold); }
+  .msg .dl { display: inline-block; padding: 2px 10px; margin: 2px 0; background: var(--gold); color: #fff; border-radius: 4px; font-size: 12px; text-decoration: none; white-space: nowrap; }
+  .msg .dl:hover { opacity: .85; }
   a { color: #1a73e8; }
   .empty { padding: 40px; text-align: center; color: var(--muted); }
 </style>
