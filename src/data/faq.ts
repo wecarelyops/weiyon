@@ -19,7 +19,7 @@ export const faqData: Record<"zh" | "en" | "de", FaqCategory[]> = {
           a: `詢價完全免費，無任何手續費。歡迎透過以下方式聯絡：
 
 ‧電話：04-23356451（週一至週五 08:00 - 17:30）
-‧Email：agesmyth@gmail.com
+‧Email：sales@weiyon.com
 
 詢價時建議提供：
 ‧圖面（2D 或 3D 皆可）或產品照片
@@ -352,7 +352,7 @@ export const faqData: Record<"zh" | "en" | "de", FaqCategory[]> = {
 
 預約方式：
 ‧電話：04-23356451
-‧Email：agesmyth@gmail.com
+‧Email：sales@weiyon.com
 
 事前確認時段跟目的，這樣我們可以安排好接待人員，也不會影響現場作業。`,
         },
@@ -374,7 +374,7 @@ export const faqData: Record<"zh" | "en" | "de", FaqCategory[]> = {
           a: `Quotes are completely free — no service fee. You can reach us via:
 
 ‧Phone: +886-4-2335-6451 (Mon - Fri 08:00 - 17:30, Taiwan time)
-‧Email: agesmyth@gmail.com
+‧Email: sales@weiyon.com
 
 When requesting a quote, please include:
 ‧Drawing (2D or 3D) or product photo
@@ -706,7 +706,7 @@ Packaging is matched to the product (rust prevention, shock protection). For spe
 
 To book a visit:
 ‧Phone: +886-4-2335-6451
-‧Email: agesmyth@gmail.com
+‧Email: sales@weiyon.com
 
 Confirming the time and purpose ahead lets us arrange the right person to host you and avoid disrupting active production.`,
         },
@@ -728,7 +728,7 @@ For urgent off-hours inquiries, drop us an email — we'll get back to you first
           a: `Anfragen sind vollkommen kostenlos — keine Bearbeitungsgebühr. Sie erreichen uns über:
 
 ‧Telefon: +886-4-2335-6451 (Mo - Fr 08:00 - 17:30, Taiwan-Zeit)
-‧E-Mail: agesmyth@gmail.com
+‧E-Mail: sales@weiyon.com
 
 Bei der Anfrage senden Sie uns idealerweise:
 ‧Zeichnung (2D oder 3D) oder Produktfoto
@@ -1061,7 +1061,7 @@ Die Verpackung wird auf das Produkt abgestimmt (Korrosions- und Stoßschutz). So
 
 Termin vereinbaren über:
 ‧Telefon: +886-4-2335-6451
-‧E-Mail: agesmyth@gmail.com
+‧E-Mail: sales@weiyon.com
 
 Eine vorherige Abstimmung von Termin und Anliegen erlaubt es uns, eine geeignete Begleitung bereitzustellen, ohne den laufenden Betrieb zu stören.`,
         },

@@ -128,7 +128,7 @@ function buildJsonLd(locale: string) {
       longitude: 120.6218,
     },
     telephone: "+886-4-2335-6451",
-    email: "agesmyth@gmail.com",
+    email: "sales@weiyon.com",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

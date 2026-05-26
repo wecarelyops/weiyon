@@ -135,10 +135,10 @@ export default function Footer() {
               <li className="flex items-center gap-2 text-sm text-gray-400">
                 <Mail className="w-4 h-4 flex-shrink-0 text-[var(--accent)]" />
                 <a
-                  href="mailto:agesmyth@gmail.com"
+                  href="mailto:sales@weiyon.com"
                   className="hover:text-[var(--bg)] transition-colors"
                 >
-                  agesmyth@gmail.com
+                  sales@weiyon.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-400">

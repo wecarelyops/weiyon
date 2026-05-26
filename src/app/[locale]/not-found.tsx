@@ -115,10 +115,10 @@ export default async function NotFoundPage() {
             </a>
             {" · "}
             <a
-              href="mailto:agesmyth@gmail.com"
+              href="mailto:sales@weiyon.com"
               className="font-medium text-[var(--accent)] underline underline-offset-2 hover:no-underline"
             >
-              agesmyth@gmail.com
+              sales@weiyon.com
             </a>
           </p>
         </div>

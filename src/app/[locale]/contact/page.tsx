@@ -147,12 +147,12 @@ export default async function ContactPage({
                       {t("emailLabel")}
                     </h3>
                     <TrackedLink
-                      href="mailto:agesmyth@gmail.com"
+                      href="mailto:sales@weiyon.com"
                       eventName="email_click"
                       eventParams={{ source: "contact_page" }}
                       className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors"
                     >
-                      agesmyth@gmail.com
+                      sales@weiyon.com
                     </TrackedLink>
                   </div>
                 </div>
