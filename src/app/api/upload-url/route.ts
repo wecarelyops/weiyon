@@ -13,8 +13,41 @@ import {
   checkRateLimit,
   getClientIp,
   safeErrMsg,
-  ensureBucket,
 } from "@/lib/contact-server";
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+// 取代脆弱的 listBuckets()/ensureBucket — 直接試 createSignedUploadUrl，
+// 只有真的「bucket 不存在」時才嘗試建立後重試。
+// 回傳 { data } 或 { error }（error 為 sanitized 訊息，供診斷）
+async function signUpload(
+  admin: SupabaseClient,
+  path: string
+): Promise<{ data?: { path: string; token: string }; error?: string }> {
+  const first = await admin.storage.from(BUCKET_NAME).createSignedUploadUrl(path);
+  if (!first.error && first.data) {
+    return { data: { path: first.data.path, token: first.data.token } };
+  }
+
+  // 可能是 bucket 不存在 → 嘗試建立（容忍「已存在」競態）
+  const msg = safeErrMsg(first.error).toLowerCase();
+  const looksMissing = msg.includes("not found") || msg.includes("does not exist") || msg.includes("bucket");
+  if (looksMissing) {
+    const createRes = await admin.storage.createBucket(BUCKET_NAME, {
+      public: false,
+      fileSizeLimit: MAX_FILE_SIZE,
+    });
+    if (createRes.error && !/exist/i.test(safeErrMsg(createRes.error))) {
+      return { error: `createBucket: ${safeErrMsg(createRes.error)}` };
+    }
+    const retry = await admin.storage.from(BUCKET_NAME).createSignedUploadUrl(path);
+    if (retry.error || !retry.data) {
+      return { error: `retrySign: ${safeErrMsg(retry.error)}` };
+    }
+    return { data: { path: retry.data.path, token: retry.data.token } };
+  }
+
+  return { error: `sign: ${safeErrMsg(first.error)}` };
+}
 
 // 簽發 Supabase 簽名上傳網址 — 讓瀏覽器「直接」上傳檔案到 Supabase，
 // 繞過 Vercel serverless function 的 4.5MB request body 硬限制。
@@ -74,30 +107,21 @@ export async function POST(request: Request) {
       }
     }
 
-    const bucketReady = await ensureBucket();
-    if (!bucketReady) {
-      return NextResponse.json(
-        { error: "儲存空間設定錯誤，請稍後再試或直接 email 附件" },
-        { status: 500 }
-      );
-    }
-
-    // 為每個檔案產生簽名上傳網址
+    // 為每個檔案產生簽名上傳網址（robust：bucket 不存在會自動建立後重試）
     const uploads: { name: string; path: string; token: string }[] = [];
     for (const f of files) {
       const name = String(f.name);
       const path = buildStoragePath(name);
-      const { data, error } = await supabaseAdmin.storage
-        .from(BUCKET_NAME)
-        .createSignedUploadUrl(path);
-      if (error || !data) {
-        console.error("createSignedUploadUrl:", safeErrMsg(error));
+      const result = await signUpload(supabaseAdmin, path);
+      if (result.error || !result.data) {
+        console.error("signUpload:", result.error);
+        // 暫時把 sanitized 真因回傳，方便診斷（storage 錯誤不含 DB schema）
         return NextResponse.json(
-          { error: "無法建立上傳連結，請稍後再試" },
+          { error: `無法建立上傳連結：${result.error || "unknown"}` },
           { status: 500 }
         );
       }
-      uploads.push({ name, path: data.path, token: data.token });
+      uploads.push({ name, path: result.data.path, token: result.data.token });
     }
 
     return NextResponse.json({ uploads }, { status: 200 });
