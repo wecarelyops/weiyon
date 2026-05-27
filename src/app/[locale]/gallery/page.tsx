@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { CSSProperties } from "react";
 import { buildAlternates } from "@/lib/hreflang";
+import WorkVideoGrid from "@/components/work-video-grid";
 
 export async function generateMetadata({
   params,
@@ -104,20 +105,7 @@ export default async function GalleryPage({
               {t("videoSubtitle")}
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4 max-w-5xl mx-auto">
-            {[1, 2, 3, 4, 5].map((num) => (
-              <video
-                key={num}
-                controls
-                preload="none"
-                playsInline
-                poster={`/videos/video-${num}.jpg`}
-                className="w-full aspect-[9/16] rounded-xl border border-[var(--border)] bg-black object-cover"
-              >
-                <source src={`/videos/video-${num}.mp4`} type="video/mp4" />
-              </video>
-            ))}
-          </div>
+          <WorkVideoGrid />
         </div>
       </section>
 
