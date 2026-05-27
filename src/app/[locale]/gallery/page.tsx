@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { CSSProperties } from "react";
 import { buildAlternates } from "@/lib/hreflang";
 import WorkVideoGrid from "@/components/work-video-grid";
+import { workAlt } from "@/data/works-alt";
 
 export async function generateMetadata({
   params,
@@ -58,13 +59,8 @@ export default async function GalleryPage({
               const posInRow = i % 6;
               const colStart =
                 rowGroup % 2 === 0 ? posInRow + 2 : posInRow + 1;
-              // 依 locale 出 alt 文字，避免英文/德文版搜尋引擎讀到中文 alt
-              const workLabel =
-                locale === "zh"
-                  ? `實績 ${work.id} — 偉勇 CNC 精密加工`
-                  : locale === "de"
-                  ? `Referenz ${work.id} — Weiyon CNC-Präzisionsbearbeitung`
-                  : `Work ${work.id} — Weiyon CNC precision machining`;
+              // 依 locale 出描述性 alt（每張圖實際內容），利於 Google 圖片搜尋與無障礙
+              const workLabel = workAlt(work.id, locale);
               const ariaLabel =
                 locale === "zh"
                   ? `查看實績 ${work.id} 詳細`

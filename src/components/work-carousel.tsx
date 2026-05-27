@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { workAlt } from "@/data/works-alt";
 
-// 精選真實加工件（取自 /gallery 的 32 件中較強的特寫 + 一張量產照）
-const IMAGES = ["01", "04", "05", "13", "17", "22", "08"].map(
-  (n) => `/images/works/${n}.jpg`
-);
+// 精選真實加工件（取自 /gallery 實績中較強的特寫 + 一張量產照）
+const IMG_IDS = [1, 4, 5, 13, 17, 22, 8];
 
 const AUTO_MS = 4500;
 
@@ -25,7 +25,8 @@ export default function WorkCarousel({
 }) {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
-  const n = IMAGES.length;
+  const n = IMG_IDS.length;
+  const locale = useLocale();
 
   const go = useCallback((i: number) => setIdx(((i % n) + n) % n), [n]);
 
@@ -63,17 +64,17 @@ export default function WorkCarousel({
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          {IMAGES.map((src, i) => (
+          {IMG_IDS.map((id, i) => (
             <div
-              key={src}
+              key={id}
               className={`absolute inset-0 transition-opacity duration-700 ${
                 i === idx ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
               aria-hidden={i !== idx}
             >
               <Image
-                src={src}
-                alt={`${title} — ${i + 1}`}
+                src={`/images/works/${String(id).padStart(2, "0")}.jpg`}
+                alt={workAlt(id, locale)}
                 fill
                 sizes="(max-width: 1024px) 100vw, 1600px"
                 className="object-cover"
@@ -105,7 +106,7 @@ export default function WorkCarousel({
 
           {/* Dots */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
-            {IMAGES.map((_, i) => (
+            {IMG_IDS.map((_, i) => (
               <button
                 key={i}
                 type="button"

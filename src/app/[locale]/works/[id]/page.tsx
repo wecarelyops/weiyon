@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/breadcrumbs";
 import { buildAlternates } from "@/lib/hreflang";
+import { workAlt } from "@/data/works-alt";
 
 const TOTAL_WORKS = 39;
 
@@ -94,7 +95,7 @@ export default async function WorkDetailPage({
           <div className="relative flex-1 max-w-4xl aspect-[3/2] bg-[var(--surface)]">
             <Image
               src={imageUrl}
-              alt={t("imageAriaLabel", { id: String(idNum) })}
+              alt={workAlt(idNum, locale)}
               fill
               sizes="(max-width: 640px) 80vw, (max-width: 1024px) 70vw, 1024px"
               className="object-contain"
