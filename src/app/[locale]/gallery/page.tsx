@@ -93,6 +93,34 @@ export default async function GalleryPage({
         </div>
       </section>
 
+      {/* 加工實況影片 — 自架 MP4，click-to-play（preload=none，不影響載入速度）*/}
+      <section className="py-12 lg:py-16 bg-[var(--surface)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-8 lg:mb-10">
+            <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)]">
+              {t("videoTitle")}
+            </h2>
+            <p className="mt-3 text-sm lg:text-base text-[var(--text-secondary)]">
+              {t("videoSubtitle")}
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4 max-w-5xl mx-auto">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <video
+                key={num}
+                controls
+                preload="none"
+                playsInline
+                poster={`/videos/video-${num}.jpg`}
+                className="w-full aspect-[9/16] rounded-xl border border-[var(--border)] bg-black object-cover"
+              >
+                <source src={`/videos/video-${num}.mp4`} type="video/mp4" />
+              </video>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="py-8 lg:py-10 bg-[var(--surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

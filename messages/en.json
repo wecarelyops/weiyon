@@ -390,7 +390,9 @@
   "Gallery": {
     "metaTitle": "Works — Precision Machining Portfolio",
     "metaDescription": "Selected machining works from Weiyon Industry: semiconductor equipment parts, aerospace components, automation mechanisms, pneumatic cylinder parts, and automotive components — real customer shipments.",
-    "heroTitle": "Works"
+    "heroTitle": "Works",
+    "videoTitle": "Machining in Action",
+    "videoSubtitle": "Real shop-floor footage of work in progress"
   },
   "Materials": {
     "metaTitle": "Materials Capability — CNC Machinable Materials List",

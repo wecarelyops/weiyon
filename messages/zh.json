@@ -390,7 +390,9 @@
   "Gallery": {
     "metaTitle": "實績展示 — 精密加工作品集",
     "metaDescription": "偉勇工業社多年精密加工實績展示。涵蓋半導體設備零件、航太零件、自動化機構件、氣壓缸零件、汽車配件等各類型實際出貨案例。",
-    "heroTitle": "實績展示"
+    "heroTitle": "實績展示",
+    "videoTitle": "加工實況影片",
+    "videoSubtitle": "實際機台運轉與加工過程"
   },
   "Materials": {
     "metaTitle": "材料能力總表 — CNC 精密加工材料清單",
