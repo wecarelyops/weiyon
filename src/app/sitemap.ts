@@ -4,7 +4,7 @@ import { industries } from "@/data/industries";
 import { blogPosts } from "@/data/blog";
 
 const BASE = "https://www.weiyon.com";
-const TOTAL_WORKS = 32;
+const TOTAL_WORKS = 39;
 
 type ChangeFreq =
   | "always"

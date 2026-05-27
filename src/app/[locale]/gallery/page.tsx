@@ -19,7 +19,7 @@ export async function generateMetadata({
   };
 }
 
-const works = Array.from({ length: 32 }, (_, i) => ({
+const works = Array.from({ length: 39 }, (_, i) => ({
   id: i + 1,
   image: `/images/works/${String(i + 1).padStart(2, "0")}.jpg`,
 }));
