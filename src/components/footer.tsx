@@ -22,6 +22,7 @@ export default function Footer() {
   const resources = [
     { name: tNav("industries"), href: "/industries" },
     { name: tNav("materials"), href: "/materials" },
+    { name: tNav("capability"), href: "/capability" },
     { name: tNav("compliance"), href: "/compliance" },
   ];
 

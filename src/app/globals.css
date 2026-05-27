@@ -136,3 +136,12 @@ body {
 .prose-content a:hover {
   color: var(--primary);
 }
+
+/* 列印（存 PDF）時隱藏全站固定元件，輸出乾淨的內容頁 */
+@media print {
+  header,
+  footer,
+  .fixed {
+    display: none !important;
+  }
+}

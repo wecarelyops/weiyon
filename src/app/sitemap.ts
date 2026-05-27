@@ -71,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/industries", priority: 0.9, changeFrequency: "monthly" },
     { path: "/compliance", priority: 0.85, changeFrequency: "monthly" },
     { path: "/materials", priority: 0.85, changeFrequency: "monthly" },
+    { path: "/capability", priority: 0.85, changeFrequency: "monthly" },
     { path: "/workflow", priority: 0.85, changeFrequency: "monthly" },
     { path: "/gallery", priority: 0.8, changeFrequency: "monthly" },
     { path: "/faq", priority: 0.8, changeFrequency: "monthly" },

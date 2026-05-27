@@ -18,6 +18,7 @@
     "compliance": "Compliance",
     "industries": "Industries",
     "materials": "Materials",
+    "capability": "Capabilities",
     "resources": "Resources",
     "getQuote": "Get a Quote",
     "callNow": "Call Now",
@@ -386,6 +387,22 @@
     "relatedIndustriesTitle": "Industries this process commonly serves",
     "learnMore": "Learn more",
     "ctaTitle": "Need a custom machining solution?"
+  },
+  "Capability": {
+    "metaTitle": "Capabilities — Weiyon Industry CNC Precision Machining",
+    "metaDescription": "Weiyon Industry CNC precision machining capabilities: processes, materials, industries served, typical parts and quality. 40 years since 1986, made to drawing, EN 10204 3.1 certificates available.",
+    "heroKicker": "CNC precision machining · since 1986 · Taichung, Taiwan",
+    "heroTitle": "Capabilities",
+    "lead": "Weiyon Industry specializes in low-to-mid volume, high-mix machining of stainless steel and alloy precision parts. Since 1986 we have served demanding industries including semiconductor, aerospace and oil & gas. Made strictly to your drawing — from one-off prototypes to small-batch production, with material certificates available.",
+    "processesTitle": "Processes",
+    "industriesTitle": "Industries served",
+    "partsTitle": "Typical parts",
+    "materialsTitle": "Materials",
+    "qualityTitle": "Quality & delivery",
+    "photosCaption": "All parts shown were actually delivered by Weiyon",
+    "ctaTitle": "Request a quote — send your drawing",
+    "ctaSubtitle": "PDF / STEP / DWG files, reply within 1–2 business days",
+    "printButton": "Download / Print PDF"
   },
   "Gallery": {
     "metaTitle": "Works — Precision Machining Portfolio",

@@ -18,6 +18,7 @@
     "compliance": "Compliance",
     "industries": "Branchen",
     "materials": "Werkstoffe",
+    "capability": "Leistungsprofil",
     "resources": "Ressourcen",
     "getQuote": "Angebot anfordern",
     "callNow": "Jetzt anrufen",
@@ -608,6 +609,22 @@
     "ctaTitle": "Liegt Ihr Teil in unserem Servicebereich?",
     "ctaSubtitle": "Senden Sie eine Zeichnung oder beschreiben Sie Ihre Anforderungen — wir antworten in 1-2 Werktagen.",
     "ctaQuoteButton": "Angebot anfordern"
+  },
+  "Capability": {
+    "metaTitle": "Leistungsprofil — Weiyon Industry CNC-Präzisionsbearbeitung",
+    "metaDescription": "CNC-Präzisionsbearbeitung von Weiyon Industry: Verfahren, Werkstoffe, Branchen, typische Teile und Qualität. 40 Jahre seit 1986, Fertigung nach Zeichnung, Werkszeugnis EN 10204 3.1 verfügbar.",
+    "heroKicker": "CNC-Präzisionsbearbeitung · seit 1986 · Taichung, Taiwan",
+    "heroTitle": "Leistungsprofil",
+    "lead": "Weiyon Industry ist spezialisiert auf die Klein- und Mittelserienfertigung von Präzisionsteilen aus Edelstahl und Legierungen. Seit 1986 beliefern wir anspruchsvolle Branchen wie Halbleiter, Luftfahrt sowie Öl & Gas. Fertigung streng nach Ihrer Zeichnung — vom Einzelprototyp bis zur Kleinserie, mit verfügbaren Werkszeugnissen.",
+    "processesTitle": "Fertigungsverfahren",
+    "industriesTitle": "Branchen",
+    "partsTitle": "Typische Teile",
+    "materialsTitle": "Werkstoffe",
+    "qualityTitle": "Qualität & Lieferung",
+    "photosCaption": "Alle gezeigten Teile wurden tatsächlich von Weiyon gefertigt",
+    "ctaTitle": "Angebot anfordern — Zeichnung senden",
+    "ctaSubtitle": "PDF / STEP / DWG, Antwort in 1–2 Werktagen",
+    "printButton": "PDF herunterladen / drucken"
   },
   "Gallery": {
     "metaTitle": "Referenzen — Präzisionsbearbeitungs-Portfolio",

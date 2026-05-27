@@ -18,6 +18,7 @@
     "compliance": "合規與永續",
     "industries": "服務產業",
     "materials": "材料能力",
+    "capability": "能力說明書",
     "resources": "資源與洞察",
     "getQuote": "取得報價",
     "callNow": "撥打電話",
@@ -386,6 +387,22 @@
     "relatedIndustriesTitle": "這個製程常服務的產業",
     "learnMore": "了解詳情",
     "ctaTitle": "需要客製化加工解決方案？"
+  },
+  "Capability": {
+    "metaTitle": "能力說明書 — 偉勇工業社 CNC 精密加工",
+    "metaDescription": "偉勇工業社 CNC 精密加工能力一覽：製程、材料、服務產業、常製零件與品質交付。自 1986 年、40 年經驗，依圖面承接，可附 EN 10204 3.1 材質證明。",
+    "heroKicker": "CNC 精密加工 · 自 1986 年 · 台灣台中",
+    "heroTitle": "能力說明書",
+    "lead": "偉勇工業社專注不鏽鋼與合金精密零件的少量多樣加工，自 1986 年起服務半導體、航太、油氣等高要求產業。依客戶圖面承接，從單件原型到小批量量產，可附材質證明。",
+    "processesTitle": "製程能力",
+    "industriesTitle": "服務產業",
+    "partsTitle": "常製零件",
+    "materialsTitle": "常用材料",
+    "qualityTitle": "品質與交付",
+    "photosCaption": "以上皆為偉勇實際交付之精密加工件",
+    "ctaTitle": "立即詢價 · 傳圖面報價",
+    "ctaSubtitle": "PDF / STEP / DWG 圖檔，1–2 個工作天回覆",
+    "printButton": "下載 / 列印 PDF"
   },
   "Gallery": {
     "metaTitle": "實績展示 — 精密加工作品集",
