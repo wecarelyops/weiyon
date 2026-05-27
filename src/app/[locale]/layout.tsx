@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import GoogleAnalytics from "@/components/google-analytics";
 import MobileFloatingCTA from "@/components/mobile-floating-cta";
 import LineFloatingButton from "@/components/line-floating-button";
+import WhatsappFloatingButton from "@/components/whatsapp-floating-button";
 import CookieConsent from "@/components/cookie-consent";
 
 const geistSans = Geist({
@@ -202,6 +203,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <MobileFloatingCTA />
+          <WhatsappFloatingButton />
           <LineFloatingButton />
           <CookieConsent />
         </NextIntlClientProvider>
