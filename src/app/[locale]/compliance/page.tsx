@@ -88,7 +88,7 @@ export default async function CompliancePage({
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-16 lg:pb-24 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-6">
+          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-6">
             <span className="block w-10 h-px bg-[var(--accent)]" />
             {t("heroLabel")}
           </div>
@@ -118,7 +118,7 @@ export default async function CompliancePage({
             <div className="p-6 lg:p-8 bg-[var(--surface)]">
               <div className="flex items-center gap-3 mb-3">
                 <ShieldCheck className="w-5 h-5 text-[var(--accent)]" />
-                <span className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                <span className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] font-medium">
                   {t("qcFlowLabel")}
                 </span>
               </div>
@@ -133,7 +133,7 @@ export default async function CompliancePage({
             <div className="p-6 lg:p-8 bg-[var(--surface)]">
               <div className="flex items-center gap-3 mb-3">
                 <FileCheck2 className="w-5 h-5 text-[var(--accent)]" />
-                <span className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                <span className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] font-medium">
                   {t("docsLabel")}
                 </span>
               </div>
@@ -217,7 +217,7 @@ export default async function CompliancePage({
                   <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium">
                     {t("scopeColSource")}
                   </th>
-                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium">
+                  <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--accent-text)] font-medium">
                     {t("scopeColAnnual")}
                   </th>
                   <th className="text-left px-3 lg:px-6 py-3 lg:py-4 text-[0.7rem] lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden lg:table-cell">

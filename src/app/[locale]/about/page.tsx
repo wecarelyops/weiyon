@@ -217,7 +217,7 @@ export default async function AboutPage({
                     </span>
                   )}
                 </p>
-                <p className="text-xs lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium mb-2">
+                <p className="text-xs lg:text-sm tracking-wider uppercase text-[var(--accent-text)] font-medium mb-2">
                   {item.label}
                 </p>
                 <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
@@ -409,7 +409,7 @@ export default async function AboutPage({
                       <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                         <stage.icon className="w-5 h-5 text-[var(--accent)]" />
                       </div>
-                      <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                      <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] font-medium">
                         {stage.step}
                       </div>
                     </div>

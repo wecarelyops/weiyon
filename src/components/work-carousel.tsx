@@ -45,7 +45,7 @@ export default function WorkCarousel({
   return (
     <section className="py-20 lg:py-28 bg-[var(--bg)]">
       <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-6">
+        <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-6">
           <span className="block w-10 h-px bg-[var(--accent)]" />
           {label}
         </div>
@@ -113,12 +113,16 @@ export default function WorkCarousel({
                 onClick={() => go(i)}
                 aria-label={`Go to slide ${i + 1}`}
                 aria-current={i === idx}
-                className={`h-2 rounded-full transition-all ${
-                  i === idx
-                    ? "w-6 bg-white"
-                    : "w-2 bg-white/50 hover:bg-white/80"
-                }`}
-              />
+                className="group flex h-6 min-w-6 items-center justify-center"
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all ${
+                    i === idx
+                      ? "w-6 bg-white"
+                      : "w-2 bg-white/50 group-hover:bg-white/80"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

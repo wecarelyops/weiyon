@@ -86,7 +86,7 @@ export default async function MaterialsPage({
                 id={cat.id}
                 className="scroll-mt-32 lg:scroll-mt-36"
               >
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
                 <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight leading-tight mb-4">

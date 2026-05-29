@@ -49,7 +49,7 @@ export default async function Home({
           <h1 className="text-center lg:text-left text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[8rem] xl:text-[9rem] font-bold text-[var(--primary)] tracking-tight leading-[0.95] mb-10 sm:mb-12 lg:mb-16 break-words">
             {t("heroTitleLine1")}
             <br />
-            <span className="text-[var(--accent)]">
+            <span className="text-[var(--accent-text)]">
               {t("heroTitleLine2")}
             </span>
           </h1>
@@ -133,7 +133,7 @@ export default async function Home({
             <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
               <div className="flex items-center gap-3 mb-6">
                 <Beaker className="w-5 h-5 text-[var(--accent)]" />
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)]">
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)]">
                   {t("capability1Label")}
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default async function Home({
             <div className="p-8 lg:p-12 bg-[var(--surface)] flex flex-col">
               <div className="flex items-center gap-3 mb-6">
                 <Timer className="w-5 h-5 text-[var(--accent)]" />
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)]">
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)]">
                   {t("capability3Label")}
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default async function Home({
                 href={`/industries/${ind.slug}`}
                 className="group relative bg-[var(--surface)] hover:bg-[var(--bg)] transition-colors p-8 lg:p-10 flex flex-col min-h-[280px]"
               >
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                   0{idx + 1}
                 </div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-3 group-hover:text-[var(--accent)] transition-colors leading-tight">
@@ -344,7 +344,7 @@ export default async function Home({
       {/* Compliance & Trust Strip — EU/Mittelstand 採購商 5 秒判讀 */}
       <section className="py-20 lg:py-28 bg-[var(--bg)] border-y border-[var(--border)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-6">
+          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-6">
             <span className="block w-10 h-px bg-[var(--accent)]" />
             {t("trustLabel")}
           </div>
@@ -406,7 +406,7 @@ export default async function Home({
 
           <p className="text-3xl sm:text-5xl lg:text-7xl font-bold text-[var(--primary)] leading-[1.1] tracking-tight mb-8 max-w-6xl">
             {t("promiseHookLine1")}
-            <span className="text-[var(--accent)]">
+            <span className="text-[var(--accent-text)]">
               {t("promiseHookHighlight")}
             </span>
             <br />
@@ -431,7 +431,7 @@ export default async function Home({
                 key={idx}
                 className="p-8 lg:p-12 bg-[var(--surface)] hover:bg-[var(--bg)] transition-colors"
               >
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-4">
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-4">
                   0{idx + 1}
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-4 leading-tight">

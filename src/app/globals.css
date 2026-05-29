@@ -6,6 +6,8 @@
   --bg: #ffffff;
   --ink: #333333;
   --accent: #d4a84b;
+  /* Darker gold for accent TEXT on light backgrounds (WCAG AA ≥4.5:1; brand gold #d4a84b is only ~2.2:1 as text). Use --accent for buttons/borders/icons/gold-on-dark. */
+  --accent-text: #8a6508;
 
   /* Primary Colors */
   --primary: #1a1a1a;

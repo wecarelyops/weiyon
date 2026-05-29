@@ -47,7 +47,7 @@ export default async function PrivacyPage({
       {/* Hero */}
       <section className="pt-28 lg:pt-36 pb-12 lg:pb-16 bg-[var(--bg)]">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-6">
+          <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-6">
             <Shield className="w-4 h-4" />
             {t("heroLabel")}
           </div>

@@ -84,7 +84,7 @@ export default async function ProductsPage({
                 href={`/products/${proc.slug}`}
                 className="group bg-[var(--bg)] hover:bg-[var(--surface)] transition-colors p-8 lg:p-10 flex flex-col"
               >
-                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+                <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                   0{idx + 1}
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-3 group-hover:text-[var(--accent)] transition-colors">
@@ -113,7 +113,7 @@ export default async function ProductsPage({
             className="group flex flex-col md:flex-row md:items-center md:justify-between gap-6 p-8 lg:p-10 bg-gradient-to-br from-[var(--surface)] to-[var(--bg)] border border-[var(--border)] rounded-2xl hover:border-[var(--accent)] transition-colors"
           >
             <div className="flex-1">
-              <div className="text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-3">
                 {t("materialsCalloutLabel")}
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-3 group-hover:text-[var(--accent)] transition-colors leading-tight">

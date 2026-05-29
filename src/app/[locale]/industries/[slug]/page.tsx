@@ -151,7 +151,7 @@ export default async function IndustryPage({
       {/* Why Weiyon */}
       <section className="py-16 lg:py-24 bg-[var(--bg)]">
         <div className="max-w-[100rem] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+          <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
             01
           </div>
           <h2 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] mb-12 tracking-tight leading-tight max-w-3xl">
@@ -174,7 +174,7 @@ export default async function IndustryPage({
           <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
             {/* Parts */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 02
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">
@@ -192,7 +192,7 @@ export default async function IndustryPage({
 
             {/* Materials */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 03
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">
@@ -210,7 +210,7 @@ export default async function IndustryPage({
 
             {/* Standards */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 04
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">

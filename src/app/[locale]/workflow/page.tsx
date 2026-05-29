@@ -171,7 +171,7 @@ export default async function WorkflowPage({
 
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="border-l-2 border-[var(--accent)] pl-4">
-                        <div className="text-xs tracking-[0.2em] uppercase text-[var(--accent)] mb-1">
+                        <div className="text-xs tracking-[0.2em] uppercase text-[var(--accent-text)] mb-1">
                           {t("yourRoleLabel")}
                         </div>
                         <p className="text-sm text-[var(--text-primary)]">
@@ -250,7 +250,7 @@ export default async function WorkflowPage({
                   <div className="w-11 h-11 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <p.icon className="w-5 h-5 text-[var(--accent)]" />
                   </div>
-                  <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] font-medium">
+                  <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] font-medium">
                     {p.step}
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export default async function WorkflowPage({
                   <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden sm:table-cell">
                     {t("leadTimeColQty")}
                   </th>
-                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--accent)] font-medium">
+                  <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--accent-text)] font-medium">
                     {t("leadTimeColTime")}
                   </th>
                   <th className="text-left px-4 lg:px-6 py-4 text-xs lg:text-sm tracking-wider uppercase text-[var(--text-secondary)] font-medium hidden lg:table-cell">

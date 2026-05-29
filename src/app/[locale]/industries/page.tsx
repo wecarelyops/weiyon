@@ -73,7 +73,7 @@ export default async function IndustriesPage({
 
                 {/* Content */}
                 <div className="p-6 lg:p-8 flex flex-col flex-1">
-                  <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+                  <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                     {String(idx + 1).padStart(2, "0")}
                   </div>
                   <h2 className="text-xl lg:text-2xl font-bold text-[var(--primary)] mb-3 group-hover:text-[var(--accent)] transition-colors leading-tight">

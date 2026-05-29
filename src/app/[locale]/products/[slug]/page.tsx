@@ -160,7 +160,7 @@ export default async function ProcessDetailPage({
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
             {/* Equipment */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 01
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">
@@ -181,7 +181,7 @@ export default async function ProcessDetailPage({
 
             {/* Applications */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 02
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">
@@ -202,7 +202,7 @@ export default async function ProcessDetailPage({
 
             {/* Materials */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 03
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">
@@ -223,7 +223,7 @@ export default async function ProcessDetailPage({
 
             {/* Specs */}
             <div>
-              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.25em] uppercase text-[var(--accent-text)] mb-3">
                 04
               </div>
               <h2 className="text-2xl lg:text-3xl font-bold text-[var(--primary)] mb-6">

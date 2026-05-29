@@ -48,7 +48,7 @@ export default async function NotFoundPage() {
     <section className="pt-28 lg:pt-36 pb-20 lg:pb-28 bg-[var(--bg)] min-h-[calc(100vh-200px)]">
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Big 404 visual */}
-        <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-4">
+        <div className="inline-flex items-center gap-3 text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-4">
           <span className="block w-10 h-px bg-[var(--accent)]" />
           {t("label")}
         </div>

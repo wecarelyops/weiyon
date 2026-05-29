@@ -68,7 +68,7 @@ export default async function CapabilityPage({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
             <div>
-              <div className="text-xs tracking-[0.3em] uppercase text-[var(--accent)] mb-3">
+              <div className="text-xs tracking-[0.3em] uppercase text-[var(--accent-text)] mb-3">
                 {t("heroKicker")}
               </div>
               <h1 className="text-3xl lg:text-5xl font-bold text-[var(--primary)] tracking-tight">
@@ -107,7 +107,7 @@ export default async function CapabilityPage({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 lg:gap-10">
           {/* Processes */}
           <div>
-            <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-4">
+            <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent-text)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-4">
               {t("processesTitle")}
             </h2>
             <ul className="space-y-1.5">
@@ -126,7 +126,7 @@ export default async function CapabilityPage({
           {/* Industries + Parts */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-3">
+              <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent-text)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-3">
                 {t("industriesTitle")}
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -141,7 +141,7 @@ export default async function CapabilityPage({
               </div>
             </div>
             <div>
-              <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-3">
+              <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent-text)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-3">
                 {t("partsTitle")}
               </h2>
               <div className="flex flex-wrap gap-2">
@@ -159,7 +159,7 @@ export default async function CapabilityPage({
 
           {/* Materials — full width */}
           <div className="md:col-span-2">
-            <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-4">
+            <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent-text)] border-b-2 border-[var(--accent)] pb-1.5 inline-block mb-4">
               {t("materialsTitle")}
             </h2>
             <div className="grid sm:grid-cols-2 gap-x-10 gap-y-2.5">
@@ -181,7 +181,7 @@ export default async function CapabilityPage({
       {/* Quality strip */}
       <section className="bg-[var(--surface)] border-y border-[var(--border)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent)] mb-3">
+          <h2 className="text-sm tracking-[0.2em] uppercase text-[var(--accent-text)] mb-3">
             {t("qualityTitle")}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
