@@ -119,7 +119,7 @@
     "worksCarouselLabel": "Our Work",
     "worksCarouselTitle": "What we make",
     "worksCarouselSubtitle": "Every item below was actually delivered by Weiyon — stainless valve bodies, hydraulic manifolds, precision-bored flanges, turn-mill components.",
-    "worksCarouselCta": "View all 32 work examples",
+    "worksCarouselCta": "View all {count} work examples",
     "promiseHookLine1": "When other shops shake their heads and say",
     "promiseHookHighlight": "\"It can't be done\"",
     "promiseHookLine2": "we are often the next call our customers make",

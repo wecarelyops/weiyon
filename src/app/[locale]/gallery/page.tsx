@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { CSSProperties } from "react";
 import { buildAlternates } from "@/lib/hreflang";
 import WorkVideoGrid from "@/components/work-video-grid";
+import { WORK_COUNT } from "@/data/works";
 import { workAlt } from "@/data/works-alt";
 
 export async function generateMetadata({
@@ -21,7 +22,7 @@ export async function generateMetadata({
   };
 }
 
-const works = Array.from({ length: 39 }, (_, i) => ({
+const works = Array.from({ length: WORK_COUNT }, (_, i) => ({
   id: i + 1,
   image: `/images/works/${String(i + 1).padStart(2, "0")}.jpg`,
 }));

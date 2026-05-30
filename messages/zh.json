@@ -119,7 +119,7 @@
     "worksCarouselLabel": "實績展示",
     "worksCarouselTitle": "我們做的成品",
     "worksCarouselSubtitle": "以下全部是偉勇實際交付的成品 — 不鏽鋼閥體、液壓歧管、精搪法蘭、車銑複合件。",
-    "worksCarouselCta": "查看全部 32 件實績",
+    "worksCarouselCta": "查看全部 {count} 件實績",
     "promiseHookLine1": "當別家工廠搖頭說",
     "promiseHookHighlight": "「這個做不出來」",
     "promiseHookLine2": "我們往往是客戶會想到的",

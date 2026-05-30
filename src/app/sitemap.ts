@@ -2,9 +2,10 @@ import { MetadataRoute } from "next";
 import { processes } from "@/data/processes";
 import { industries } from "@/data/industries";
 import { blogPosts } from "@/data/blog";
+import { WORK_COUNT } from "@/data/works";
 
 const BASE = "https://www.weiyon.com";
-const TOTAL_WORKS = 39;
+const TOTAL_WORKS = WORK_COUNT;
 
 type ChangeFreq =
   | "always"
@@ -95,7 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  // 實績詳情頁（32 件）
+  // 實績詳情頁（依實際圖檔數自動產生）
   const worksPages: Page[] = Array.from({ length: TOTAL_WORKS }, (_, i) => ({
     path: `/works/${i + 1}`,
     priority: 0.5,

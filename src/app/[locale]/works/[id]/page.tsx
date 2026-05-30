@@ -8,8 +8,9 @@ import { routing } from "@/i18n/routing";
 import Breadcrumbs from "@/components/breadcrumbs";
 import { buildAlternates } from "@/lib/hreflang";
 import { workAlt } from "@/data/works-alt";
+import { WORK_COUNT } from "@/data/works";
 
-const TOTAL_WORKS = 39;
+const TOTAL_WORKS = WORK_COUNT;
 
 export async function generateStaticParams() {
   const params: { locale: string; id: string }[] = [];

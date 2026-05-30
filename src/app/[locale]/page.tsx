@@ -20,6 +20,7 @@ import {
 import { industries, type IndustryLocale } from "@/data/industries";
 import CountUp from "@/components/count-up";
 import WorkCarousel from "@/components/work-carousel";
+import { WORK_COUNT } from "@/data/works";
 
 export default async function Home({
   params,
@@ -284,7 +285,7 @@ export default async function Home({
         label={t("worksCarouselLabel")}
         title={t("worksCarouselTitle")}
         subtitle={t("worksCarouselSubtitle")}
-        cta={t("worksCarouselCta")}
+        cta={t("worksCarouselCta", { count: WORK_COUNT })}
       />
 
       {/* Industries Grid — 6 產業 landing page 內鏈 */}

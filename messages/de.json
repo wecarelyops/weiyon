@@ -120,7 +120,7 @@
     "worksCarouselLabel": "Unsere Arbeit",
     "worksCarouselTitle": "Was wir fertigen",
     "worksCarouselSubtitle": "Jedes Teil unten wurde tatsächlich von Weiyon gefertigt — Edelstahl-Ventilkörper, Hydraulikblöcke, präzisionsgebohrte Flansche, Dreh-Fräs-Teile.",
-    "worksCarouselCta": "Alle 32 Referenzteile ansehen",
+    "worksCarouselCta": "Alle {count} Referenzteile ansehen",
     "promiseHookLine1": "Wenn andere Werkstätten den Kopf schütteln und sagen",
     "promiseHookHighlight": "„Das geht nicht\"",
     "promiseHookLine2": "sind wir oft der nächste Anruf, den Kunden tätigen",
