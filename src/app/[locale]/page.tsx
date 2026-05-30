@@ -387,7 +387,7 @@ export default async function Home({
           <div className="mt-10 lg:mt-12 text-center">
             <Link
               href="/compliance"
-              className="inline-flex items-center gap-3 text-sm lg:text-base font-medium text-[var(--accent)] group"
+              className="inline-flex items-center gap-3 text-sm lg:text-base font-medium text-[var(--accent-text)] group"
             >
               <span className="border-b border-current pb-1">{t("trustCta")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

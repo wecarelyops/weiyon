@@ -13,7 +13,7 @@ export default function FooterLegalLinks() {
   const t = useTranslations("Footer");
 
   return (
-    <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-500">
+    <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400">
       <li>
         <Link
           href="/privacy"

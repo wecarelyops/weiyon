@@ -153,10 +153,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} {t("copyright")}
             </p>
-            <p className="text-sm text-gray-500">{t("subtitle")}</p>
+            <p className="text-sm text-gray-400">{t("subtitle")}</p>
           </div>
           {/* Legal links — Privacy / Imprint / Cookie Settings */}
           <FooterLegalLinks />
