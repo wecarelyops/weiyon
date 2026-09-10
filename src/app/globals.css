@@ -130,6 +130,20 @@ body {
   color: var(--primary);
   font-weight: 600;
 }
+/* 手機版：多欄表格改為橫向捲動，每欄保留最小寬度，避免每欄被壓到 60px、列高撐到 200px+ */
+@media (max-width: 767px) {
+  .prose-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.875rem;
+  }
+  .prose-content th,
+  .prose-content td {
+    min-width: 8.5rem;
+    padding: 0.5rem 0.625rem;
+  }
+}
 .prose-content a {
   color: var(--accent);
   text-decoration: underline;
