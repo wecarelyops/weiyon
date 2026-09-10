@@ -162,7 +162,7 @@ export default async function Home({
               </div>
               <Link
                 href="/materials"
-                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
+                className="inline-flex items-center gap-2 min-h-11 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
               >
                 <span className="border-b border-current pb-0.5">
                   {t("capability1Link")}
@@ -214,7 +214,7 @@ export default async function Home({
               </div>
               <Link
                 href="/workflow"
-                className="inline-flex items-center gap-2 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
+                className="inline-flex items-center gap-2 min-h-11 text-sm text-[var(--primary)] hover:text-[var(--accent)] hover:gap-3 transition-all font-medium"
               >
                 <span className="border-b border-current pb-0.5">
                   {t("capability3Link")}
@@ -271,7 +271,7 @@ export default async function Home({
           <div className="mt-12">
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
+              className="inline-flex items-center gap-2 min-h-11 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
             >
               <span className="border-b border-current pb-1">{t("viewAllServices")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -333,7 +333,7 @@ export default async function Home({
           <div className="mt-12">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
+              className="inline-flex items-center gap-2 min-h-11 text-[var(--primary)] font-medium hover:text-[var(--accent)] transition-colors group"
             >
               <span className="border-b border-current pb-1">{t("viewAllIndustries")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -388,7 +388,7 @@ export default async function Home({
           <div className="mt-10 lg:mt-12 text-center">
             <Link
               href="/compliance"
-              className="inline-flex items-center gap-3 text-sm lg:text-base font-medium text-[var(--accent-text)] group"
+              className="inline-flex items-center gap-3 min-h-11 text-sm lg:text-base font-medium text-[var(--accent-text)] group"
             >
               <span className="border-b border-current pb-1">{t("trustCta")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

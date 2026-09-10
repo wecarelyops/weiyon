@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Script from "next/script";
+import {
+  getCookieConsent,
+  subscribeCookieConsent,
+} from "@/components/cookie-consent";
 
 const GA_MEASUREMENT_ID = "G-H5S5K1EWGK";
-const STORAGE_KEY = "weiyon-cookie-consent";
-const EVENT_NAME = "weiyon-cookie-consent-changed";
+const getServerSnapshot = () => "unknown" as const;
 
 /**
  * GA4 載入器 — GDPR 合規版
@@ -17,26 +20,14 @@ const EVENT_NAME = "weiyon-cookie-consent-changed";
  * - 設定 anonymize_ip + disable advertising features 進一步降低資料量
  */
 export default function GoogleAnalytics() {
-  const [loaded, setLoaded] = useState(false);
+  // 與 CookieConsent 共用同一個 localStorage 來源；SSR 快照為 "unknown" → 不載入 GA
+  const consent = useSyncExternalStore(
+    subscribeCookieConsent,
+    getCookieConsent,
+    getServerSnapshot
+  );
 
-  useEffect(() => {
-    // 初次 mount 讀取 localStorage
-    const stored =
-      typeof window !== "undefined"
-        ? window.localStorage.getItem(STORAGE_KEY)
-        : null;
-    if (stored === "accepted") setLoaded(true);
-
-    // 之後 banner 變更事件來時即時切換
-    const onChange = (e: Event) => {
-      const choice = (e as CustomEvent<string>).detail;
-      setLoaded(choice === "accepted");
-    };
-    window.addEventListener(EVENT_NAME, onChange);
-    return () => window.removeEventListener(EVENT_NAME, onChange);
-  }, []);
-
-  if (!loaded) return null;
+  if (consent !== "accepted") return null;
 
   return (
     <>

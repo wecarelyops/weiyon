@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Taichung CNC-Präzisionsbearbeitung | Weiyon Industry — 40 Jahre Präzisionsteile (Halbleiter / Luftfahrt / Medizintechnik)",
-    "description": "CNC-Präzisionsbearbeitungsbetrieb in Taichung, Taiwan — über 40 Jahre Erfahrung. Wir fertigen Halbleiter-Anlagenteile, Luftfahrtkomponenten, Robotik-Mechanik, Medizintechnik und Pneumatikzylinder-Teile. Spezialist für schwer zerspanbare Werkstoffe (Edelstahl, Titan, Molybdän, Hartmetall). Kurze Lieferzeiten vom Prototyp bis zur Serie. Bedienen Kunden in Taiwan und international.",
+    "title": "CNC-Präzisionsbearbeitung Taichung | Weiyon Industry",
+    "description": "CNC-Bearbeitung in Taichung, Taiwan seit 1986. Schwer zerspanbare Werkstoffe für Halbleiter, Luftfahrt und Medizintechnik. Angebot in 1-2 Werktagen.",
     "keywords": "Taiwan CNC-Bearbeitung, Präzisionsdrehteile Taiwan, Lohnfertigung Asien, CNC-Drehen Taiwan, CNC-Fräsen Taichung, Titanbearbeitung, Edelstahl-Präzisionsteile, Halbleiterteile Lieferant, Luftfahrtkomponenten Asien, schwer zerspanbare Werkstoffe, kundenspezifische CNC-Teile, Mittelstand Taiwan Lieferant",
     "ogTitle": "Taichung CNC-Präzisionsbearbeitung",
     "ogDescription": "Über 40 Jahre Präzisionsteile-Fertigung — Halbleiter / Luftfahrt / Medizintechnik / Automatisierung. Spezialist für schwer zerspanbare Werkstoffe."
@@ -121,10 +121,10 @@
     "worksCarouselTitle": "Was wir fertigen",
     "worksCarouselSubtitle": "Jedes Teil unten wurde tatsächlich von Weiyon gefertigt — Edelstahl-Ventilkörper, Hydraulikblöcke, präzisionsgebohrte Flansche, Dreh-Fräs-Teile.",
     "worksCarouselCta": "Alle {count} Referenzteile ansehen",
-    "promiseHookLine1": "Wenn andere Werkstätten den Kopf schütteln und sagen",
+    "promiseHookLine1": "Wenn andere Werkstätten den Kopf schütteln und sagen ",
     "promiseHookHighlight": "„Das geht nicht\"",
-    "promiseHookLine2": "sind wir oft der nächste Anruf, den Kunden tätigen",
-    "promiseHookCallText": "nächste Anruf",
+    "promiseHookLine2": "sind wir oft der ",
+    "promiseHookCallText": "nächste Anruf, den Kunden tätigen",
     "promiseSubtitle": "Drei Kernstärken — Qualität, Lieferzeit und faire Preise — für Kunden in Taiwan und international.",
     "promise1Title": "Spezialist für schwer zerspanbare Werkstoffe",
     "promise1Desc": "Edelstahl, Titanlegierungen, Molybdän, Hartmetall — Werkstoffe, die andere Werkstätten meiden, bearbeiten wir.",
@@ -138,8 +138,8 @@
     "ctaContact": "Kontakt aufnehmen"
   },
   "About": {
-    "metaTitle": "Über Weiyon Industry — Taichungs 40-jähriger CNC-Präzisionsspezialist",
-    "metaDescription": "Weiyon Industry bearbeitet seit über 40 Jahren Präzisionsteile in Taichung, Taiwan. Spezialisiert auf schwer zerspanbare Werkstoffe (Edelstahl, Titan, Molybdän, Hartmetall) und integrierte Fertigung (CNC-Drehen / Fräsen, EDM, Blech, Oberflächenbehandlung) für Halbleiter-, Medizintechnik-, Luftfahrt-, Automotive- und Präzisionsmaschinenbau-Kunden.",
+    "metaTitle": "Über uns — CNC-Bearbeitung seit 1986",
+    "metaDescription": "Über 40 Jahre CNC-Bearbeitung in Taichung, Taiwan. Spezialist für schwer zerspanbare Werkstoffe und Komplettfertigung für Halbleiter und Medizin.",
     "heroTitle": "Über Weiyon Industry",
     "heroSubtitle": "Präzisionsteile-Fertiger in Zentral-Taiwan mit über 40 Jahren Erfahrung.\nVom Rohmaterial zum fertigen Teil — integrierte Fertigung aus einer Hand.",
     "milestonesLabel": "Meilensteine & Kennzahlen",
@@ -258,17 +258,17 @@
     "visionStat2Label": "Bediente Kunden",
     "visionStat3Value": "99%",
     "visionStat3Label": "Kundenzufriedenheit",
-    "ctaHookLine1": "Wenn andere Werkstätten den Kopf schütteln und sagen",
+    "ctaHookLine1": "Wenn andere Werkstätten den Kopf schütteln und sagen ",
     "ctaHookHighlight": "„Das geht nicht\"",
-    "ctaHookLine2": "sind wir oft der nächste Anruf, den Kunden tätigen",
-    "ctaHookCallText": "nächste Anruf",
-    "ctaSubtitle": "Drei Kernstärken — **Qualität, Lieferzeit und faire Preise** — für Kunden in Taiwan und international.\nKontaktieren Sie uns telefonisch oder fordern Sie online ein Angebot an — wir antworten so schnell wie möglich.",
+    "ctaHookLine2": "sind wir oft der ",
+    "ctaHookCallText": "nächste Anruf, den Kunden tätigen",
+    "ctaSubtitle": "Drei Kernstärken — Qualität, Lieferzeit und faire Preise — für Kunden in Taiwan und international.\nKontaktieren Sie uns telefonisch oder fordern Sie online ein Angebot an — wir antworten so schnell wie möglich.",
     "ctaButtonQuote": "Angebot online anfordern",
     "ctaButtonPhone": "Anruf +886-4-2335-6451"
   },
   "Contact": {
-    "metaTitle": "Kontakt zu Weiyon Industry — Taichung CNC-Bearbeitung Angebotsanfrage",
-    "metaDescription": "Kontaktieren Sie Weiyon Industry für ein CNC-Präzisionsbearbeitungsangebot. Telefon +886-4-2335-6451 oder Online-Formular — Antwort in 1-2 Werktagen. In Wuri, Taichung City, Taiwan. Mo - Fr 08:00 - 17:30.",
+    "metaTitle": "Kontakt & CNC-Angebot anfragen",
+    "metaDescription": "Angebot für CNC-Präzisionsbearbeitung bei Weiyon Industry, Taichung, Taiwan. Telefon +886-4-2335-6451 oder Online-Formular. Antwort in 1-2 Werktagen.",
     "heroTitle": "Kontakt",
     "heroSubtitle": "Eine Frage oder ein Projekt? Erreichen Sie uns auf einem der folgenden Wege.",
     "cadBannerTitle": "STEP / IGES / DWG hochladen — Angebot in 1-2 Werktagen",
@@ -320,8 +320,8 @@
     "formError": "Senden fehlgeschlagen. Bitte später erneut versuchen oder unter +886-4-2335-6451 anrufen."
   },
   "Products": {
-    "metaTitle": "CNC-Leistungen — Fräsen / Drehen / EDM / Blech / Oberflächenbehandlung",
-    "metaDescription": "Komplette CNC-Präzisionsbearbeitungsleistungen von Weiyon Industry — CNC-Fräsen, CNC-Drehen, Präzisions-EDM, Blechbearbeitung, Oberflächenbehandlung. Bedient Halbleiter-, Luftfahrt-, Medizintechnik-, Automotive- und Automatisierungsindustrien. Vom Einzelprototyp bis zur Serie. Taichung, Taiwan, über 40 Jahre.",
+    "metaTitle": "CNC-Fräsen, Drehen, EDM & Oberflächen",
+    "metaDescription": "Komplette CNC-Bearbeitung in Taichung, Taiwan: Fräsen, Drehen, Präzisions-EDM, Blech und Oberflächenbehandlung. Vom Einzelprototyp bis zur Serie.",
     "heroTitle": "Leistungen",
     "heroTagline": "Präzisionsmetallteile-Spezialist",
     "heroDescription": "Ab einem einzigen Stück — flexibler Service für Ihre vielfältigen Bearbeitungsanforderungen.",
@@ -390,8 +390,8 @@
     "ctaTitle": "Brauchen Sie eine maßgeschneiderte Bearbeitungslösung?"
   },
   "Materials": {
-    "metaTitle": "Werkstoffkompetenz — CNC-bearbeitbare Werkstoffe",
-    "metaDescription": "Vollständige Liste der Werkstoffe, die Weiyon Industry zerspanen kann: Edelstahl (SUS304 / 316 / 316L / 321 / 440C / 17-4PH), Aluminium (A6061 / A7075 / A2024), Titan, Kupferlegierungen, Konstruktions- / Werkzeug- / Formenstahl, schwer zerspanbare Legierungen (Inconel / Monel / Duplex / Super Duplex), Konstruktionskunststoffe (POM / PEEK / PTFE). 40 Jahre Erfahrung mit schwer zerspanbaren Werkstoffen.",
+    "metaTitle": "Werkstoffe — CNC-bearbeitbare Werkstoffe",
+    "metaDescription": "Werkstoffe bei Weiyon Industry: Edelstahl (304/316L/17-4PH), Aluminium, Titan, Kupfer, Werkzeugstahl, Inconel, Duplex und Kunststoffe (PEEK/POM).",
     "heroLabel": "Werkstoffe",
     "heroTitle": "Werkstoffe, die wir bearbeiten",
     "heroSubtitle": "Von Allzwecklegierungen bis zu schwer zerspanbaren Werkstoffen — 8 Kategorien, über 40 Sorten. Abdeckung von Halbleiter-, Luftfahrt-, Medizin-, Automobil-, Öl- & Gas- und Tuning-Industrie. Alle Sorten mit integrierter Oberflächenbehandlung, Wärmebehandlung und Prüfberichten.",
@@ -403,8 +403,8 @@
     "ctaQuoteButton": "Angebot anfordern"
   },
   "Workflow": {
-    "metaTitle": "Ablauf — Vom Anfrage bis Versand in 5 Schritten",
-    "metaDescription": "Weiyon Industrys CNC-Präzisionsbearbeitungsablauf: Anfrage, Angebot, Prototyp, Serie, Versand — fünf klare Phasen. Jede Phase zeigt, was Sie tun und was wir tun, mit realistischen Zeiten.",
+    "metaTitle": "Ablauf — Von Anfrage bis Versand",
+    "metaDescription": "Fünf Phasen bei Weiyon Industry: Anfrage, Angebot, Prototyp, Serie und Versand. Klare Zuständigkeiten und realistische Zeiten in jeder Phase.",
     "workflowLabel": "Ablauf",
     "heroTitle": "Von der Anfrage\nbis zum Versand — 5 klare Phasen",
     "heroSubtitle": "Jede Phase zeigt klar, was Sie tun, was wir tun und wie lange es dauert — kein Rätseln.",
@@ -520,8 +520,8 @@
     "ctaQuoteButton": "Angebot anfordern"
   },
   "Compliance": {
-    "metaTitle": "Compliance & Nachhaltigkeit — THG-Offenlegung & Lieferketten-Sorgfaltspflicht",
-    "metaDescription": "Lieferketten-Compliance von Weiyon Industry: freiwillige THG-Offenlegung (Scope 1/2/3), globale Lieferketten-Sorgfaltspflichten-Erklärung, EN-10204-Werkstoffrückverfolgbarkeit, 4-stufige interne Qualitätskontrolle. Transparente Dokumentation für globale Beschaffung.",
+    "metaTitle": "Compliance & Nachhaltigkeit",
+    "metaDescription": "Compliance bei Weiyon Industry: freiwillige THG-Offenlegung (Scope 1/2/3), Sorgfaltspflicht-Erklärung, EN-10204-Rückverfolgbarkeit und 4-stufige QC.",
     "heroLabel": "Compliance & Nachhaltigkeit",
     "heroTitle": "Transparente Daten für Ihre Lieferkette",
     "heroSubtitle": "EU CBAM (ab Januar 2026 verpflichtend), nationale Lieferketten-Sorgfaltspflichtengesetze und globale Beschaffungs-Transparenzanforderungen — diese Seite veröffentlicht Weiyons Compliance-Informationen, damit Einkäufer die Lieferanten-Due-Diligence in einer Quelle abschließen können.",
@@ -585,8 +585,8 @@
     "ctaButton": "Mit uns besprechen"
   },
   "Industries": {
-    "metaTitle": "Belieferte Branchen — Halbleiter, Luftfahrt, Medizin, Automobil, Öl & Gas, Tuning",
-    "metaDescription": "Weiyon Industrys 40 Jahre Erfahrung in 8 Branchen — Halbleiterausrüstung, Luftfahrt, Medizintechnik, Automobil, Automatisierung, Tuning, Öl- & Gas, Präzisionsmaschinenbau. Lieferketten in GCC, Europa und Amerika. Branchenspezifische Werkstoffe, Zertifizierungen und Bearbeitungserfahrung.",
+    "metaTitle": "Branchen — Halbleiter bis Öl & Gas",
+    "metaDescription": "40 Jahre Erfahrung in 8 Branchen: Halbleiterausrüstung, Luftfahrt, Medizintechnik, Automobil, Automatisierung, Tuning, Öl & Gas und Präzisionsmaschinenbau.",
     "heroLabel": "Branchen",
     "heroTitle": "Acht Branchen, die wir bedienen",
     "heroSubtitle": "Von Halbleiter-Vakuumkammern und Luftfahrt-Titanstrukturen bis zu Öl- & Gas-Inconel-Ventilen und Tuning-Auspuffteilen — Weiyons 40-jährige Erfahrung mit schwer zerspanbaren Werkstoffen erfüllt die spezifischen Anforderungen jeder Branche.",
@@ -611,8 +611,8 @@
     "ctaQuoteButton": "Angebot anfordern"
   },
   "Capability": {
-    "metaTitle": "Leistungsprofil — Weiyon Industry CNC-Präzisionsbearbeitung",
-    "metaDescription": "CNC-Präzisionsbearbeitung von Weiyon Industry: Verfahren, Werkstoffe, Branchen, typische Teile und Qualität. 40 Jahre seit 1986, Fertigung nach Zeichnung, Werkszeugnis EN 10204 3.1 verfügbar.",
+    "metaTitle": "Leistungsprofil — CNC-Bearbeitung",
+    "metaDescription": "Leistungsprofil von Weiyon Industry: CNC-Verfahren, Werkstoffe, Branchen, typische Teile und Qualität. Nach Zeichnung seit 1986, Zeugnis EN 10204 3.1.",
     "heroKicker": "CNC-Präzisionsbearbeitung · seit 1986 · Taichung, Taiwan",
     "heroTitle": "Leistungsprofil",
     "lead": "Weiyon Industry ist spezialisiert auf die Klein- und Mittelserienfertigung von Präzisionsteilen aus Edelstahl und Legierungen. Seit 1986 beliefern wir anspruchsvolle Branchen wie Halbleiter, Luftfahrt sowie Öl & Gas. Fertigung streng nach Ihrer Zeichnung — vom Einzelprototyp bis zur Kleinserie, mit verfügbaren Werkszeugnissen.",
@@ -627,15 +627,15 @@
     "printButton": "PDF herunterladen / drucken"
   },
   "Gallery": {
-    "metaTitle": "Referenzen — Präzisionsbearbeitungs-Portfolio",
-    "metaDescription": "Ausgewählte Bearbeitungsarbeiten von Weiyon Industry: Halbleiter-Anlagenteile, Luftfahrtkomponenten, Automatisierungsmechanismen, Pneumatikzylinder-Teile und Automotive-Komponenten — reale Kundenlieferungen.",
+    "metaTitle": "Referenzen — Bearbeitungs-Portfolio",
+    "metaDescription": "Reale Kundenlieferungen von Weiyon Industry: Halbleiter-Anlagenteile, Luftfahrtkomponenten, Automatisierungsmechanik und Pneumatikzylinder-Teile.",
     "heroTitle": "Referenzen",
     "videoTitle": "Bearbeitung in Aktion",
     "videoSubtitle": "Echte Aufnahmen aus unserer Fertigung"
   },
   "Faq": {
-    "metaTitle": "FAQ — CNC-Bearbeitungsanfragen, Lieferzeiten, Werkstoffe",
-    "metaDescription": "Häufig gestellte Fragen zu Weiyon Industrys CNC-Präzisionsbearbeitungsservice: Angebotsprozess, Antwortzeit, MOQ, Lieferzeiten, Zahlungsbedingungen, unterstützte Werkstoffe (Edelstahl, Aluminium, Kupfer, Titan, schwer zerspanbare Legierungen), Prozesse und Versand.",
+    "metaTitle": "FAQ — Anfragen, Lieferzeiten, Werkstoffe",
+    "metaDescription": "Antworten zur CNC-Bearbeitung bei Weiyon Industry: Angebot, Antwortzeit, MOQ, Lieferzeiten, Zahlungsbedingungen, Werkstoffe, Verfahren und Versand.",
     "heroTitle": "Häufig gestellte Fragen",
     "heroSubtitle": "Häufige Fragen zu Anfragen, Bearbeitung, Lieferzeiten und mehr.\nWird Ihre Frage nicht abgedeckt, kontaktieren Sie uns — wir antworten so schnell wie möglich.",
     "ctaTitle": "Haben Sie Ihre Antwort nicht gefunden?",
@@ -710,7 +710,7 @@
   },
   "Privacy": {
     "metaTitle": "Datenschutzerklärung — Weiyon Industry",
-    "metaDescription": "Datenschutzerklärung von Weiyon Industry: wie wir personenbezogene Daten aus Kontaktformular und Google Analytics 4 erheben, verwenden und schützen. Abgestimmt auf die Informationspflichten nach Art. 13 DSGVO.",
+    "metaDescription": "Wie Weiyon Industry personenbezogene Daten aus Kontaktformular und Google Analytics 4 erhebt, verwendet und schützt – gemäß Art. 13 DSGVO.",
     "heroLabel": "DSGVO-konform",
     "heroTitle": "Datenschutzerklärung",
     "heroSubtitle": "Diese Erklärung beschreibt, wie Weiyon Industry (\"wir\") personenbezogene Daten erhebt, verwendet und schützt, wenn Sie weiyon.com besuchen oder das Kontaktformular nutzen. Sie ist abgestimmt auf die Informationspflichten nach Art. 13 DSGVO und das taiwanesische Personal Data Protection Act.",

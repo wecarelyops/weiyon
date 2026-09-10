@@ -154,7 +154,12 @@ const CSP_PRESETS: Record<string, CspPreset> = {
 // 目前空，未來要用某服務就加進來，例如：
 //   const ACTIVE_PRESETS: (keyof typeof CSP_PRESETS)[] = ["hotjar", "calendly"];
 // =====================================================================
-const ACTIVE_PRESETS: (keyof typeof CSP_PRESETS)[] = [];
+const ACTIVE_PRESETS: (keyof typeof CSP_PRESETS)[] = [
+  // Turnstile：只在 Vercel 設了 NEXT_PUBLIC_TURNSTILE_SITE_KEY 時放行（前端也只在此時渲染 widget）
+  ...(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+    ? (["cloudflareTurnstile"] as const)
+    : []),
+];
 
 // =====================================================================
 // CSP base policy — 我們本來就在用的服務
@@ -246,6 +251,11 @@ const SECURITY_HEADERS = [
 ];
 
 const nextConfig: NextConfig = {
+  // 建置時「Collecting page data」的平行 worker 數。預設 = CPU 核心數 - 1（本機 22 核 → 21 個），
+  // 在 Windows 上會撞到 commit / 執行緒上限而 OOM；4 個對 Vercel 也足夠。
+  experimental: {
+    cpus: 4,
+  },
   images: {
     // 允許 Pexels 圖透過 Next.js Image 優化
     // Next.js 會在 build/runtime 把外部圖轉成 AVIF/WebP + 響應式尺寸 + 自動 lazy load

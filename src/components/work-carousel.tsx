@@ -91,7 +91,7 @@ export default function WorkCarousel({
             type="button"
             onClick={() => go(idx - 1)}
             aria-label="Previous"
-            className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/85 hover:bg-white text-[var(--primary)] flex items-center justify-center shadow-md transition-colors"
+            className="absolute left-3 lg:left-4 top-1/2 -translate-y-1/2 w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-white/85 hover:bg-white text-[var(--primary)] flex items-center justify-center shadow-md transition-colors"
           >
             <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6" />
           </button>
@@ -99,13 +99,13 @@ export default function WorkCarousel({
             type="button"
             onClick={() => go(idx + 1)}
             aria-label="Next"
-            className="absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/85 hover:bg-white text-[var(--primary)] flex items-center justify-center shadow-md transition-colors"
+            className="absolute right-3 lg:right-4 top-1/2 -translate-y-1/2 w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-white/85 hover:bg-white text-[var(--primary)] flex items-center justify-center shadow-md transition-colors"
           >
             <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6" />
           </button>
 
           {/* Dots */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-0.5 sm:gap-2">
             {IMG_IDS.map((_, i) => (
               <button
                 key={i}
@@ -113,7 +113,7 @@ export default function WorkCarousel({
                 onClick={() => go(i)}
                 aria-label={`Go to slide ${i + 1}`}
                 aria-current={i === idx}
-                className="group flex h-6 min-w-6 items-center justify-center"
+                className="group flex h-11 min-w-11 items-center justify-center"
               >
                 <span
                   className={`block h-2 rounded-full transition-all ${

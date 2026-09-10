@@ -10,6 +10,7 @@ import {
 import {
   checkOrigin,
   checkRateLimit,
+  detectBot,
   getClientIp,
   safeErrMsg,
 } from "@/lib/contact-server";
@@ -38,6 +39,19 @@ export async function POST(request: Request) {
       body = await request.json();
     } catch {
       return NextResponse.json({ error: "請求格式錯誤" }, { status: 400 });
+    }
+
+    // === 2b. 反機器人：honeypot + 填寫時間 + Turnstile ===
+    const bot = await detectBot(body, ip);
+    if (bot === "silent") {
+      // 機器人：回假成功，不寫 DB、不寄信
+      return NextResponse.json({ success: true, attachments: 0 }, { status: 200 });
+    }
+    if (bot === "turnstile-failed") {
+      return NextResponse.json(
+        { error: "人機驗證失敗，請重新整理頁面後再試 / Verification failed, please reload and retry" },
+        { status: 400 }
+      );
     }
 
     const str = (k: string) => String(body[k] ?? "").trim();

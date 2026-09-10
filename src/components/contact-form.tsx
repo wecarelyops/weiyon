@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, FormEvent, useRef, ChangeEvent } from "react";
+import { useState, useEffect, FormEvent, useRef, ChangeEvent } from "react";
 import { useTranslations } from "next-intl";
+import Script from "next/script";
 import {
   Mail,
   MessageCircle,
@@ -37,8 +38,13 @@ declare global {
       eventName: string,
       params?: Record<string, unknown>
     ) => void;
+    turnstile?: { reset: () => void };
   }
 }
+
+// Cloudflare Turnstile（選用）：Vercel 設了 NEXT_PUBLIC_TURNSTILE_SITE_KEY 才會渲染 widget，
+// server 端則以 TURNSTILE_SECRET_KEY 驗證；兩者都沒設時表單照常運作（僅 honeypot + 填寫時間防護）
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 const ACCEPT_EXTENSIONS = ".pdf,.dwg,.dxf,.step,.stp,.iges,.igs,.stl,.jpg,.jpeg,.png,.webp";
 
@@ -65,6 +71,11 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [files, setFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  // 表單開啟時間 — 送出時算填寫秒數，server 用來擋秒填的機器人（在 effect 內取時間，避免 render 期間呼叫 Date.now）
+  const openedAtRef = useRef<number>(0);
+  useEffect(() => {
+    openedAtRef.current = Date.now();
+  }, []);
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newFiles = Array.from(e.target.files || []);
@@ -120,6 +131,10 @@ export default function ContactForm() {
       incoterms: String(fd.get("incoterms") || "").trim(),
       message: String(fd.get("message") || "").trim(),
       attachments: [] as { name: string; path: string }[],
+      // 反機器人欄位
+      extra_field: String(fd.get("extra_field") || "").trim(),
+      elapsedMs: Date.now() - openedAtRef.current,
+      turnstileToken: String(fd.get("cf-turnstile-response") || ""),
     };
     const subjectValue = payload.subject;
 
@@ -169,6 +184,8 @@ export default function ContactForm() {
       setStatus("success");
       form.reset();
       setFiles([]);
+      openedAtRef.current = Date.now();
+      window.turnstile?.reset();
 
       // GA4: generate_lead 自訂事件
       if (typeof window !== "undefined" && window.gtag) {
@@ -185,11 +202,29 @@ export default function ContactForm() {
       setErrorMessage(
         err instanceof Error ? err.message : "Submission failed"
       );
+      // Turnstile token 一次性，失敗後要重置才能再送
+      window.turnstile?.reset();
     }
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Honeypot — 視覺上隱藏、tab 跳過、autocomplete 關閉；真人不會填，機器人填了 server 靜默丟棄 */}
+      <div
+        className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden"
+        aria-hidden="true"
+      >
+        <label htmlFor="extra_field">Leave this field empty</label>
+        <input
+          type="text"
+          id="extra_field"
+          name="extra_field"
+          tabIndex={-1}
+          autoComplete="off"
+          defaultValue=""
+        />
+      </div>
+
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
           <label
@@ -469,6 +504,22 @@ export default function ContactForm() {
           <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
           <p className="text-sm text-amber-800">{errorMessage}</p>
         </div>
+      )}
+
+      {TURNSTILE_SITE_KEY && (
+        <>
+          <Script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            strategy="lazyOnload"
+          />
+          {/* implicit render：Turnstile 會自動在 form 內加 hidden input cf-turnstile-response */}
+          <div
+            className="cf-turnstile"
+            data-sitekey={TURNSTILE_SITE_KEY}
+            data-theme="light"
+            data-size="flexible"
+          />
+        </>
       )}
 
       <button

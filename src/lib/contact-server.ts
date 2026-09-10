@@ -44,6 +44,50 @@ export function checkRateLimit(ip: string): { ok: boolean; retryAfter?: number }
   return { ok: true };
 }
 
+// === 反機器人三道關卡 ===
+// 1. Honeypot：隱藏欄位有值 → 機器人
+// 2. 填寫時間：從開啟表單到送出 < 3 秒 → 機器人（真人填 3 個必填欄位不可能這麼快）
+// 3. Cloudflare Turnstile：只在 Vercel 設了 TURNSTILE_SECRET_KEY 時驗證
+// 回傳 "silent" 時呼叫端應回假成功（不讓 bot 知道被擋）；"turnstile-failed" 才回錯誤給真人重試
+const MIN_FILL_MS = 3000;
+
+export type BotCheckResult = "ok" | "silent" | "turnstile-failed";
+
+export async function detectBot(
+  body: Record<string, unknown>,
+  ip: string
+): Promise<BotCheckResult> {
+  if (String(body.extra_field ?? "").trim() !== "") return "silent";
+
+  const elapsed = Number(body.elapsedMs);
+  if (Number.isFinite(elapsed) && elapsed >= 0 && elapsed < MIN_FILL_MS) {
+    return "silent";
+  }
+
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (secret) {
+    const token = String(body.turnstileToken ?? "");
+    if (!token) return "turnstile-failed";
+    try {
+      const res = await fetch(
+        "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ secret, response: token, remoteip: ip }),
+        }
+      );
+      const data = (await res.json()) as { success?: boolean };
+      if (!data.success) return "turnstile-failed";
+    } catch (e) {
+      console.error("Turnstile verify:", safeErrMsg(e));
+      return "turnstile-failed";
+    }
+  }
+
+  return "ok";
+}
+
 export function getClientIp(request: Request): string {
   const xff = request.headers.get("x-forwarded-for");
   if (xff) return xff.split(",")[0].trim();

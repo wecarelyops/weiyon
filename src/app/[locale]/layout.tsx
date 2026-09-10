@@ -28,6 +28,13 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = "https://www.weiyon.com";
 
+// Open Graph locale 對照（分享到 LinkedIn / WhatsApp 時抓正確語言）
+const OG_LOCALES: Record<string, string> = {
+  zh: "zh_TW",
+  en: "en_US",
+  de: "de_DE",
+};
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -39,7 +46,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const isEn = locale === "en";
   // 中文用「偉勇工業社」、en/de 用「Weiyon Industry」（德文不翻品牌名）
   const brandSuffix = locale === "zh" ? "偉勇工業社" : "Weiyon Industry";
 
@@ -63,11 +69,13 @@ export async function generateMetadata({
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
-      url: isEn ? `${SITE_URL}/en` : SITE_URL,
-      siteName: isEn ? "Weiyon Industry" : "偉勇工業社",
+      url: locale === "zh" ? SITE_URL : `${SITE_URL}/${locale}`,
+      siteName: locale === "zh" ? "偉勇工業社" : "Weiyon Industry",
       type: "website",
-      locale: isEn ? "en_US" : "zh_TW",
-      alternateLocale: isEn ? ["zh_TW"] : ["en_US"],
+      locale: OG_LOCALES[locale] ?? "en_US",
+      alternateLocale: Object.entries(OG_LOCALES)
+        .filter(([l]) => l !== locale)
+        .map(([, v]) => v),
     },
     twitter: {
       card: "summary_large_image",
@@ -92,12 +100,16 @@ export async function generateMetadata({
 
 // JSON-LD：Organization + LocalBusiness（在地商家結構化資料）
 function buildJsonLd(locale: string) {
-  const isEn = locale === "en";
+  // zh 用中文；en / de 用英文品牌名與地址（Google 對德文頁一樣能讀英文結構化資料）
+  const isEn = locale !== "zh";
   const orgName = isEn ? "Weiyon Industry" : "偉勇工業社";
   const altName = isEn ? "偉勇工業社" : "Weiyon Industry";
-  const description = isEn
-    ? "A precision metal parts manufacturer in central Taiwan with 40+ years of CNC machining expertise. We specialize in difficult-to-machine materials and one-stop integrated manufacturing for semiconductor, medical, aerospace, automotive, and precision machinery industries."
-    : "深耕產業 40 餘年的台灣中部精密金屬零件加工專家，擅長處理難加工材料，提供一站式整合製造服務。服務半導體、醫療、航太、汽車、精密機械等產業。";
+  const description =
+    locale === "de"
+      ? "Präzisionsteile-Hersteller in Zentraltaiwan mit über 40 Jahren CNC-Erfahrung. Spezialisiert auf schwer zerspanbare Werkstoffe und integrierte Komplettfertigung für Halbleiter, Medizintechnik, Luftfahrt, Automobil und Präzisionsmaschinenbau."
+      : isEn
+        ? "A precision metal parts manufacturer in central Taiwan with 40+ years of CNC machining expertise. We specialize in difficult-to-machine materials and one-stop integrated manufacturing for semiconductor, medical, aerospace, automotive, and precision machinery industries."
+        : "深耕產業 40 餘年的台灣中部精密金屬零件加工專家，擅長處理難加工材料，提供一站式整合製造服務。服務半導體、醫療、航太、汽車、精密機械等產業。";
 
   // OG image — 直接指向 Next.js 動態生成的 opengraph-image
   // （file: [locale]/opengraph-image.tsx，URL: /{locale}/opengraph-image）
@@ -162,7 +174,7 @@ function buildJsonLd(locale: string) {
       { "@type": "Country", name: "Taiwan" },
       { "@type": "Place", name: "Worldwide" },
     ],
-    inLanguage: ["zh-TW", "en"],
+    inLanguage: ["zh-TW", "en", "de"],
   };
 }
 

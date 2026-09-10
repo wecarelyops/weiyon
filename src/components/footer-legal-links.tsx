@@ -17,7 +17,7 @@ export default function FooterLegalLinks() {
       <li>
         <Link
           href="/privacy"
-          className="hover:text-[var(--accent)] transition-colors"
+          className="inline-flex items-center min-h-11 hover:text-[var(--accent)] transition-colors"
         >
           {t("privacy")}
         </Link>
@@ -26,7 +26,7 @@ export default function FooterLegalLinks() {
       <li>
         <Link
           href="/imprint"
-          className="hover:text-[var(--accent)] transition-colors"
+          className="inline-flex items-center min-h-11 hover:text-[var(--accent)] transition-colors"
         >
           {t("imprint")}
         </Link>
@@ -36,7 +36,7 @@ export default function FooterLegalLinks() {
         <button
           type="button"
           onClick={reopenCookieConsent}
-          className="hover:text-[var(--accent)] transition-colors"
+          className="inline-flex items-center min-h-11 hover:text-[var(--accent)] transition-colors"
         >
           {t("cookieSettings")}
         </button>

@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
             disabled={isPending}
             aria-label={`Switch to ${l.fullName}`}
             aria-current={locale === l.code ? "true" : undefined}
-            className={`px-2 py-1 rounded transition-colors ${
+            className={`min-h-11 min-w-11 px-2 rounded transition-colors ${
               locale === l.code
                 ? "text-[var(--primary)] font-bold"
                 : "text-[var(--text-secondary)] hover:text-[var(--accent)]"

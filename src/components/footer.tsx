@@ -86,7 +86,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-gray-400 hover:text-[var(--accent)] transition-colors"
+                    className="inline-flex items-center min-h-11 text-sm text-gray-400 hover:text-[var(--accent)] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -105,7 +105,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-gray-400 hover:text-[var(--accent)] transition-colors"
+                    className="inline-flex items-center min-h-11 text-sm text-gray-400 hover:text-[var(--accent)] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -128,7 +128,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4 flex-shrink-0 text-[var(--accent)]" />
                 <a
                   href="tel:0423356451"
-                  className="hover:text-[var(--bg)] transition-colors"
+                  className="inline-flex items-center min-h-11 hover:text-[var(--bg)] transition-colors"
                 >
                   04-23356451
                 </a>
@@ -137,7 +137,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 flex-shrink-0 text-[var(--accent)]" />
                 <a
                   href="mailto:sales@weiyon.com"
-                  className="hover:text-[var(--bg)] transition-colors"
+                  className="inline-flex items-center min-h-11 hover:text-[var(--bg)] transition-colors"
                 >
                   sales@weiyon.com
                 </a>

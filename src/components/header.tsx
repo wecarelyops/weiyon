@@ -27,7 +27,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 min-h-11 min-w-11">
             <div className="w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
               <span className="text-[var(--accent)] font-bold text-lg">W</span>
             </div>
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:0423356451"
-              className="flex items-center gap-2 text-sm font-medium text-[var(--primary)] hover:text-[var(--accent)] transition-colors"
+              className="flex items-center gap-2 min-h-11 text-sm font-medium text-[var(--primary)] hover:text-[var(--accent)] transition-colors"
             >
               <Phone className="w-4 h-4" />
               {t("phone")}
@@ -75,7 +75,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="lg:hidden p-2 -mr-2"
+            className="lg:hidden p-2.5 -mr-2.5"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -99,7 +99,7 @@ export default function Header() {
             <div className="flex items-center justify-between gap-4 pb-4 mb-2 border-b border-[var(--border)] px-2">
               <a
                 href="tel:0423356451"
-                className="flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)]"
+                className="flex items-center gap-2 min-h-11 text-sm font-medium text-[var(--text-secondary)]"
               >
                 <Phone className="w-4 h-4" />
                 {t("phone")}
